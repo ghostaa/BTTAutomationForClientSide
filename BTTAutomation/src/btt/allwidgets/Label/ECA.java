@@ -58,6 +58,11 @@ public class ECA {
 	  assertEquals("ok", drv.ID_exp_getText());
   }
   
+  @Test
+  public void ID_exp1(){
+	  assertEquals("ok", drv.ID_exp_getText());
+  }
+  
 
   @AfterClass
   public static void tearDown() throws Exception {
