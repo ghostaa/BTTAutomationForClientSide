@@ -2,7 +2,7 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Testaa">
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="BTTAutomation">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="D:/cbod/automation eclipse8105/BTT_IDE"/>
     <property name="junit.output.dir" value="junit"/>
@@ -13,49 +13,51 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.8.1.v4_8_1_v20100427-1100/junit.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
     </path>
-    <path id="Testaa.classpath">
+    <path id="BTTAutomation.classpath">
         <pathelement location="bin"/>
         <path refid="JUnit 4.libraryclasspath"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/selenium-java-2.43.1.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/selenium-java-2.43.1-srcs.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/apache-mime4j-0.6.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/bsh-1.3.0.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/cglib-nodep-2.1_3.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/commons-codec-1.9.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/commons-collections-3.2.1.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/commons-exec-1.1.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/commons-io-2.4.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/commons-jxpath-1.3.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/commons-lang3-3.3.2.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/commons-logging-1.1.3.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/cssparser-0.9.14.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/guava-15.0.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/hamcrest-core-1.3.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/hamcrest-library-1.3.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/htmlunit-2.15.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/htmlunit-core-js-2.15.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/httpclient-4.3.4.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/httpcore-4.3.2.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/httpmime-4.3.4.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/ini4j-0.5.2.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/jcommander-1.29.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/jetty-websocket-8.1.8.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/jna-3.4.0.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/jna-platform-3.4.0.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/json-20080701.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/junit-dep-4.11.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/nekohtml-1.9.21.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/netty-3.5.7.Final.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/operadriver-1.5.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/phantomjsdriver-1.1.0.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/protobuf-java-2.4.1.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/sac-1.3.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/serializer-2.7.1.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/testng-6.8.5.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/xalan-2.7.1.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/xercesImpl-2.11.0.jar"/>
-        <pathelement location="D:/selenium/selenium-java-2.43.1/selenium-2.43.1/libs/xml-apis-1.4.01.jar"/>
-        <pathelement location="../../../Users/IBM_ADMIN/Desktop/selenium-java-2.33.0/selenium-2.33.0/selenium-2.33.0/selenium-2.33.0/selenium-server-standalone-2.39.0.jar"/>
+        <pathelement location="lib/apache-mime4j-0.6.jar"/>
+        <pathelement location="lib/bsh-1.3.0.jar"/>
+        <pathelement location="lib/cglib-nodep-2.1_3.jar"/>
+        <pathelement location="lib/commons-codec-1.9.jar"/>
+        <pathelement location="lib/commons-collections-3.2.1.jar"/>
+        <pathelement location="lib/commons-exec-1.1.jar"/>
+        <pathelement location="lib/commons-io-2.4.jar"/>
+        <pathelement location="lib/commons-jxpath-1.3.jar"/>
+        <pathelement location="lib/commons-lang3-3.3.2.jar"/>
+        <pathelement location="lib/commons-logging-1.1.3.jar"/>
+        <pathelement location="lib/cssparser-0.9.14.jar"/>
+        <pathelement location="lib/guava-15.0.jar"/>
+        <pathelement location="lib/hamcrest-core-1.3.jar"/>
+        <pathelement location="lib/hamcrest-library-1.3.jar"/>
+        <pathelement location="lib/htmlunit-2.15.jar"/>
+        <pathelement location="lib/htmlunit-core-js-2.15.jar"/>
+        <pathelement location="lib/httpclient-4.3.4.jar"/>
+        <pathelement location="lib/httpcore-4.3.2.jar"/>
+        <pathelement location="lib/httpmime-4.3.4.jar"/>
+        <pathelement location="lib/ini4j-0.5.2.jar"/>
+        <pathelement location="lib/jcommander-1.29.jar"/>
+        <pathelement location="lib/jetty-websocket-8.1.8.jar"/>
+        <pathelement location="lib/jna-3.4.0.jar"/>
+        <pathelement location="lib/jna-platform-3.4.0.jar"/>
+        <pathelement location="lib/json-20080701.jar"/>
+        <pathelement location="lib/junit-dep-4.11.jar"/>
+        <pathelement location="lib/nekohtml-1.9.21.jar"/>
+        <pathelement location="lib/netty-3.5.7.Final.jar"/>
+        <pathelement location="lib/operadriver-1.5.jar"/>
+        <pathelement location="lib/phantomjsdriver-1.1.0.jar"/>
+        <pathelement location="lib/protobuf-java-2.4.1.jar"/>
+        <pathelement location="lib/sac-1.3.jar"/>
+        <pathelement location="lib/selenium-java-2.33.0-srcs.jar"/>
+        <pathelement location="lib/selenium-java-2.33.0.jar"/>
+        <pathelement location="lib/selenium-java-2.43.1-srcs.jar"/>
+        <pathelement location="lib/selenium-java-2.43.1.jar"/>
+        <pathelement location="lib/selenium-server-standalone-2.39.0.jar"/>
+        <pathelement location="lib/serializer-2.7.1.jar"/>
+        <pathelement location="lib/testng-6.8.5.jar"/>
+        <pathelement location="lib/xalan-2.7.1.jar"/>
+        <pathelement location="lib/xercesImpl-2.11.0.jar"/>
+        <pathelement location="lib/xml-apis-1.4.01.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
@@ -76,7 +78,7 @@
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
             <src path="src"/>
-            <classpath refid="Testaa.classpath"/>
+            <classpath refid="BTTAutomation.classpath"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
@@ -98,7 +100,7 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="btt.allwidgets.CheckedMulTiSelect.Action_case" todir="${junit.output.dir}"/>
-            <classpath refid="Testaa.classpath"/>
+            <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
     <target name="Condition">
@@ -106,7 +108,7 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="btt.allwidgets.CheckedMulTiSelect.Condition" todir="${junit.output.dir}"/>
-            <classpath refid="Testaa.classpath"/>
+            <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
     <target name="CSS">
@@ -114,7 +116,15 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="btt.allwidgets.CheckedMulTiSelect.CSS" todir="${junit.output.dir}"/>
-            <classpath refid="Testaa.classpath"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+    </target>
+    <target name="ECA (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="btt.allwidgets.Label.ECA" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
     <target name="Event">
@@ -122,7 +132,7 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="btt.allwidgets.CheckedMulTiSelect.Event" todir="${junit.output.dir}"/>
-            <classpath refid="Testaa.classpath"/>
+            <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
     <target name="Properties">
@@ -130,12 +140,20 @@
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="btt.allwidgets.CheckedMulTiSelect.Properties" todir="${junit.output.dir}"/>
-            <classpath refid="Testaa.classpath"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+    </target>
+    <target name="Submit">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="btt.allwidgets.CheckedMulTiSelect.Submit" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
     <target name="SuiteRunner">
         <java classname="btt.testsuite.SuiteRunner" failonerror="true" fork="yes">
-            <classpath refid="Testaa.classpath"/>
+            <classpath refid="BTTAutomation.classpath"/>
         </java>
     </target>
     <target name="junitreport">
