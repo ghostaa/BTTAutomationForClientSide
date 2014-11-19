@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="IBM-STB1J0L11U5" name="btt.allwidgets.Label.ECA" tests="1" time="16.009" timestamp="2014-11-19T10:04:23">
+  <properties>
+    <property name="env.PROMPT" value="$P$G" />
+    <property name="java.home" value="D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre" />
+    <property name="env.TSMPATH" value="C:\Program Files\ThinkPad\UltraNav Utility" />
+    <property name="env.FTP_PASSIVE" value="1" />
+    <property name="env.PDBASE" value="C:\Program Files\IBM\Infoprint Select" />
+    <property name="env.PROCESSOR_ARCHITEW6432" value="AMD64" />
+    <property name="env.PD_SOCKET" value="6874" />
+    <property name="java.endorsed.dirs" value="D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\endorsed" />
+    <property name="java.assistive" value="ON" />
+    <property name="env.USERNAME" value="zhaomm" />
+    <property name="debuglevel" value="source,lines,vars" />
+    <property name="java.fullversion" value="JRE 1.6.0 IBM J9 2.4 Windows 7 x86-32 jvmwi3260sr8-20100401_55940 (JIT enabled, AOT enabled)
+J9VM - 20100401_055940
+JIT  - r9_20100401_15339
+GC   - 20100308_AA" />
+    <property name="ECLIPSE_HOME" value="D:/cbod/automation eclipse8105/BTT_IDE" />
+    <property name="env.PCOMM_Root" value="D:\Program Files (x86)\IBM\Personal Communications\" />
+    <property name="env.LG_PATH" value="D:\Program Files (x86)\HP\LoadRunner1\" />
+    <property name="env.COMMPath" value="C:\Program Files\Lenovo\Communications Utility" />
+    <property name="java.vendor.url" value="http://www.ibm.com/" />
+    <property name="env.COMPUTERNAME" value="IBM-STB1J0L11U5" />
+    <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
+    <property name="java.version" value="1.6.0" />
+    <property name="eclipse.pdebuild.home" value="/D:/cbod/automation eclipse8105/BTT_IDE/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/./" />
+    <property name="com.ibm.oti.shared.enabled" value="false" />
+    <property name="env.USERPROFILE" value="C:\Users\IBM_ADMIN" />
+    <property name="com.ibm.oti.vm.library.version" value="24" />
+    <property name="os.encoding" value="UTF8" />
+    <property name="env.SystemRoot" value="C:\windows" />
+    <property name="user.name" value="zhaomm" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="env.STAFCONVDIR" value="C:\STAF\codepage" />
+    <property name="sun.jnu.encoding" value="GB18030" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="com.ibm.jcl.checkClassPath" value="" />
+    <property name="env.LOCALAPPDATA" value="C:\Users\IBM_ADMIN\AppData\Local" />
+    <property name="ibm.system.encoding" value="GB18030" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="user.timezone" value="" />
+    <property name="java.awt.fonts" value="" />
+    <property name="path.separator" value=";" />
+    <property name="com.ibm.oti.jcl.build" value="20100326_1904" />
+    <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 42 Stepping 7, GenuineIntel" />
+    <property name="file.encoding" value="GB18030" />
+    <property name="com.ibm.oti.configuration" value="scar" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner btt.allwidgets.Label.ECA filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\BTT_IDE\8200_1013\BTTAutomation\junit\TEST-btt.allwidgets.Label.ECA.xml crashfile=C:\BTT_IDE\8200_1013\BTTAutomation\junitvmwatcher6591971982813031167.properties propsfile=C:\BTT_IDE\8200_1013\BTTAutomation\junit1897923784519188415.properties" />
+    <property name="env.NUMBER_OF_PROCESSORS" value="4" />
+    <property name="env.APPDATA" value="C:\Users\IBM_ADMIN\AppData\Roaming" />
+    <property name="ant.file" value="C:\BTT_IDE\8200_1013\BTTAutomation\build.xml" />
+    <property name="env.LOGGER_CONFIG_PATH" value="D:\Program Files (x86)\HP\LoadRunner1\dat\ltlogconf.xml" />
+    <property name="java.io.tmpdir" value="C:\Users\IBM_AD~1\AppData\Local\Temp\" />
+    <property name="user.language" value="zh" />
+    <property name="env.SystemDrive" value="C:" />
+    <property name="line.separator" value="
+" />
+    <property name="target" value="1.6" />
+    <property name="env.CURR_DIR" value="D:\Program Files (x86)\HP\LoadRunner1\dat\Setup\LoadRunner\MSBuild\..\..\..\.." />
+    <property name="jxe.lowest.romimage.version" value="15" />
+    <property name="java.vm.info" value="JRE 1.6.0 IBM J9 2.4 Windows 7 x86-32 jvmwi3260sr8-20100401_55940 (JIT enabled, AOT enabled)
+J9VM - 20100401_055940
+JIT  - r9_20100401_15339
+GC   - 20100308_AA" />
+    <property name="source" value="1.6" />
+    <property name="java.util.prefs.PreferencesFactory" value="java.util.prefs.WindowsPreferencesFactory" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" />
+    <property name="com.ibm.cpu.endian" value="little" />
+    <property name="env.LOGONSERVER" value="\\IBM-STB1J0L11U5" />
+    <property name="eclipse.pdebuild.templates" value="/D:/cbod/automation eclipse8105/BTT_IDE/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/templates/" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="com.ibm.util.extralibs.properties" value="" />
+    <property name="env.PUBLIC" value="C:\Users\Public" />
+    <property name="env.ANALYSIS_PATH" value="D:\Program Files (x86)\HP\LoadRunner1\" />
+    <property name="ant.version" value="Apache Ant version 1.7.1 compiled on June 27 2008" />
+    <property name="env.USERDOMAIN" value="IBM-STB1J0L11U5" />
+    <property name="env.TARGETDIR" value="D:\Program Files (x86)\HP\LoadRunner1\dat\Setup\LoadRunner\MSBuild\..\..\..\.." />
+    <property name="env.PROCESSOR_LEVEL" value="6" />
+    <property name="env.IBM_JAVA_COMMAND_LINE" value="D:\cbod\automation eclipse8105\BTT_IDE\jdk\bin\javaw.exe -Dant.home=D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145 -Dant.library.dir=D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib -Djava.library.path=D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\bin;.;C:\Program Files (x86)\IBM\SDP/rpt/citrixOCR;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\STAF\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\IBM\Infoprint Select;C:\Program Files\ThinkPad\Bluetooth Software\;C:\Program Files\ThinkPad\Bluetooth Software\syswow64;C:\Program Files\Broadcom\WHL\;C:\Program Files\Broadcom\WHL\syswow64;C:\Program Files\Broadcom\WHL\SysWow64\;C:\Program Files\Broadcom\WHL\SysWow64\syswow64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Lenovo\Access Connections\;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit-32;D:\website\php-5.2;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Rational\common;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;D:\Program Files (x86)\IBM\Personal Communications\;C:\Program Files (x86)\IBM\Trace Facility\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\website\php-5.4.3;D:\cbod\automation eclipse8105\BTT_IDE\configuration\org.eclipse.osgi\bundles\559\1\.cp -Dfile.encoding=UTF-8 -classpath D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-antlr.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-apache-bcel.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-apache-bsf.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-apache-log4j.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-apache-oro.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-apache-regexp.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-apache-resolver.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-commons-logging.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-commons-net.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-jai.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-javamail.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-jdepend.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-jmf.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-jsch.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-junit.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-launcher.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-netrexx.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-nodeps.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-starteam.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-stylebook.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-swing.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-trax.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-weblogic.jar;D:\cbod\automation eclipse8105\BTT_IDE\configuration\org.eclipse.osgi\bundles\118\1\.cp\lib\antdebug.jar;D:\cbod\automation eclipse8105\BTT_IDE\configuration\org.eclipse.osgi\bundles\118\1\.cp\lib\remote.jar;D:\cbod\automation eclipse8105\BTT_IDE\configuration\org.eclipse.osgi\bundles\119\1\.cp\lib\remoteAnt.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\lib\tools.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.eclipse.swt.win32.win32.x86_3.6.2.v3659c.jar org.eclipse.ant.internal.launching.remote.InternalAntRunner -Dorg.eclipse.ant.core.ANT_PROCESS_ID=1416391458261 -Declipse.connect.port=26653 -Declipse.pdebuild.home=/D:/cbod/automation eclipse8105/BTT_IDE/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/./ -Declipse.pdebuild.scripts=/D:/cbod/automation eclipse8105/BTT_IDE/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/scripts/ -Declipse.pdebuild.templates=/D:/cbod/automation eclipse8105/BTT_IDE/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/templates/ -Dant.home=D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145 -logger org.eclipse.ant.internal.launching.remote.logger.RemoteAntBuildLogger -inputhandler org.eclipse.ant.internal.ui.antsupport.inputhandler.ProxyInputHandler -buildfile C:\BTT_IDE\8200_1013\BTTAutomation\build.xml ECA (1) junitreport" />
+    <property name="env.windir" value="C:\windows" />
+    <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
+    <property name="env.ACPath" value="C:\Program Files (x86)\Lenovo\Access Connections\" />
+    <property name="env.CLASSPATH" value="C:\STAF\samples\demo\STAFDemo.jar;C:\STAF\bin\JSTAF.jar" />
+    <property name="os.name" value="Windows 7" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="env.TMP" value="C:\Users\IBM_AD~1\AppData\Local\Temp" />
+    <property name="env.TERM" value="dumb" />
+    <property name="jxe.current.romimage.version" value="15" />
+    <property name="java.vm.name" value="IBM J9 VM" />
+    <property name="env.ProgramData" value="C:\ProgramData" />
+    <property name="env.OS" value="Windows_NT" />
+    <property name="java.library.path" value="D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\bin;.;C:\Program Files (x86)\IBM\SDP/rpt/citrixOCR;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\STAF\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\IBM\Infoprint Select;C:\Program Files\ThinkPad\Bluetooth Software\;C:\Program Files\ThinkPad\Bluetooth Software\syswow64;C:\Program Files\Broadcom\WHL\;C:\Program Files\Broadcom\WHL\syswow64;C:\Program Files\Broadcom\WHL\SysWow64\;C:\Program Files\Broadcom\WHL\SysWow64\syswow64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Lenovo\Access Connections\;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit-32;D:\website\php-5.2;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Rational\common;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;D:\Program Files (x86)\IBM\Personal Communications\;C:\Program Files (x86)\IBM\Trace Facility\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\website\php-5.4.3" />
+    <property name="eclipse.pdebuild.scripts" value="/D:/cbod/automation eclipse8105/BTT_IDE/plugins/org.eclipse.pde.build_3.6.2.R36x_20110203/scripts/" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="basedir" value="C:\BTT_IDE\8200_1013\BTTAutomation" />
+    <property name="java.class.version" value="50.0" />
+    <property name="ant.home" value="D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145" />
+    <property name="java.compiler" value="j9jit24" />
+    <property name="env.Path" value="C:\Program Files (x86)\IBM\SDP/rpt/citrixOCR;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\STAF\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\IBM\Infoprint Select;C:\Program Files\ThinkPad\Bluetooth Software\;C:\Program Files\ThinkPad\Bluetooth Software\syswow64;C:\Program Files\Broadcom\WHL\;C:\Program Files\Broadcom\WHL\syswow64;C:\Program Files\Broadcom\WHL\SysWow64\;C:\Program Files\Broadcom\WHL\SysWow64\syswow64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Lenovo\Access Connections\;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit-32;D:\website\php-5.2;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Rational\common;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;D:\Program Files (x86)\IBM\Personal Communications\;C:\Program Files (x86)\IBM\Trace Facility\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\website\php-5.4.3" />
+    <property name="env.LOG_FILE" value="C:\Users\IBM_AD~1\AppData\Local\Temp\ihp_custom_batches.log" />
+    <property name="console.encoding" value="MS936" />
+    <property name="env.HOMEDRIVE" value="C:" />
+    <property name="env.LR_ROOT" value="D:\Program Files (x86)\HP\LoadRunner1\" />
+    <property name="sun.boot.library.path" value="D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\bin" />
+    <property name="env.PROCESSOR_REVISION" value="2a07" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="user.variant" value="" />
+    <property name="ant.project.name" value="BTTAutomation" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="java.ext.dirs" value="D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ext" />
+    <property name="os.version" value="6.1 build 7601 Service Pack 1" />
+    <property name="user.home" value="C:\Users\IBM_ADMIN" />
+    <property name="java.vm.vendor" value="IBM Corporation" />
+    <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
+    <property name="env.JAVA_HOME" value="C:\Program Files\IBM\Java60\" />
+    <property name="env.ProgramW6432" value="C:\Program Files" />
+    <property name="junit.output.dir" value="junit" />
+    <property name="user.dir" value="C:\BTT_IDE\8200_1013\BTTAutomation" />
+    <property name="env.FP_NO_HOST_CHECK" value="NO" />
+    <property name="com.ibm.vm.bitmode" value="32" />
+    <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
+    <property name="env.PROCESSOR_ARCHITECTURE" value="x86" />
+    <property name="java.vm.version" value="2.4" />
+    <property name="java.class.path" value="C:\BTT_IDE\8200_1013\BTTAutomation\bin;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.junit_4.8.1.v4_8_1_v20100427-1100\junit.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.hamcrest.core_1.1.0.v20090501071000.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\apache-mime4j-0.6.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\bsh-1.3.0.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\cglib-nodep-2.1_3.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\commons-codec-1.9.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\commons-collections-3.2.1.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\commons-exec-1.1.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\commons-io-2.4.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\commons-jxpath-1.3.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\commons-lang3-3.3.2.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\commons-logging-1.1.3.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\cssparser-0.9.14.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\guava-15.0.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\hamcrest-core-1.3.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\hamcrest-library-1.3.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\htmlunit-2.15.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\htmlunit-core-js-2.15.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\httpclient-4.3.4.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\httpcore-4.3.2.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\httpmime-4.3.4.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\ini4j-0.5.2.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\jcommander-1.29.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\jetty-websocket-8.1.8.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\jna-3.4.0.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\jna-platform-3.4.0.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\json-20080701.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\junit-dep-4.11.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\nekohtml-1.9.21.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\netty-3.5.7.Final.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\operadriver-1.5.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\phantomjsdriver-1.1.0.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\protobuf-java-2.4.1.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\sac-1.3.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\selenium-java-2.43.1-srcs.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\selenium-java-2.43.1.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\selenium-server-standalone-2.39.0.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\serializer-2.7.1.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\testng-6.8.5.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\xalan-2.7.1.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\xercesImpl-2.11.0.jar;C:\BTT_IDE\8200_1013\BTTAutomation\lib\xml-apis-1.4.01.jar;C:\STAF\samples\demo\STAFDemo.jar;C:\STAF\bin\JSTAF.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-launcher.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant.jar;D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant-junit.jar" />
+    <property name="env.HOMEPATH" value="\Users\IBM_ADMIN" />
+    <property name="ant.library.dir" value="D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib" />
+    <property name="os.arch" value="x86" />
+    <property name="env.SESSIONNAME" value="Console" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="env.CommonProgramFiles" value="C:\Program Files (x86)\Common Files" />
+    <property name="ant.core.lib" value="D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145\lib\ant.jar" />
+    <property name="env.ProgramFiles" value="C:\Program Files (x86)" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="ant.file.BTTAutomation" value="C:\BTT_IDE\8200_1013\BTTAutomation\build.xml" />
+    <property name="file.separator" value="\" />
+    <property name="java.runtime.version" value="jvmwi3260sr8-20100401_55940" />
+    <property name="ibm.signalhandling.sigint" value="true" />
+    <property name="sun.boot.class.path" value="D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\endorsed\jaxws-api.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\endorsed\jaxb-api.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\endorsed\geronimo-annotation_1.1_spec-1.0-20100114.202042-3.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\vm.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\annotation.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\beans.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\java.util.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\jndi.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\logging.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\security.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\sql.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmorb.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmorbapi.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmcfw.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\rt.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\charsets.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\resources.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmpkcs.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmcertpathfw.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmjgssfw.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmjssefw.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmsaslfw.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmjcefw.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmjgssprovider.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmjsseprovider2.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmcertpathprovider.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\ibmxmlcrypto.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\management-agent.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\xml.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\jlm.jar;D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\lib\javascript.jar" />
+    <property name="env.ComSpec" value="C:\windows\system32\cmd.exe" />
+    <property name="env.VUGEN_PATH" value="D:\Program Files (x86)\HP\LoadRunner1\" />
+    <property name="ibm.signalhandling.rs" value="false" />
+    <property name="env.TEMP" value="C:\Users\IBM_AD~1\AppData\Local\Temp" />
+    <property name="sun.java2d.fontpath" value="" />
+    <property name="env.ANT_HOME" value="D:\cbod\automation eclipse8105\BTT_IDE\plugins\org.apache.ant_1.7.1.v20100518-1145" />
+    <property name="user.country" value="CN" />
+    <property name="env.LR_PATH" value="D:\Program Files (x86)\HP\LoadRunner1\" />
+    <property name="java.jcl.version" value="20100408_01" />
+    <property name="com.ibm.zero.version" value="1" />
+    <property name="com.ibm.oti.vm.bootstrap.library.path" value="D:\cbod\automation eclipse8105\BTT_IDE\jdk\jre\bin" />
+    <property name="ibm.signalhandling.sigchain" value="true" />
+    <property name="java.vendor" value="IBM Corporation" />
+    <property name="env.PSModulePath" value="C:\windows\system32\WindowsPowerShell\v1.0\Modules\" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="sun.arch.data.model" value="32" />
+  </properties>
+  <testcase classname="btt.allwidgets.Label.ECA" name="ID_exp" time="0.065" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
