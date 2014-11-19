@@ -57,7 +57,6 @@ public class ECA {
   public void ID_exp(){
 	  assertEquals("ok", drv.ID_exp_getText());
   }
-  
   @Test
   public void ID_exp1(){
 	  assertEquals("ok", drv.ID_exp_getText());
