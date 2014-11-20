@@ -119,7 +119,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Label.ECA">
+    <target name="label.ECA">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
