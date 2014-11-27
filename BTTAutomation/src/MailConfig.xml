@@ -15,6 +15,6 @@
   </User>
   <MailService>
     <SMTPHomeName>9.119.32.184</SMTPHomeName>
-    <Subject>BTT 测试邮件</Subject>
+    <Subject>BTT 8200 Automation test result</Subject>
   </MailService>
 </BTTMail>
