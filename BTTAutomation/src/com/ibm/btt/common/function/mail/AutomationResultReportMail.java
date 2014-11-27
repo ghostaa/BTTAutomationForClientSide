@@ -354,7 +354,7 @@ public class AutomationResultReportMail {
 	
 	public static void main(String[] args){
 
-		String mailBody = " <font color=red>BTT 自动化测试结果报告</font> <a href=\"#\">请点击</a>";
+		String mailBody = " <font color=red>BTT8200 automation test result</font> <a href=\"#\">Click Here</a>";
 		new AutomationResultReportMail().sendMailToAllTester(mailBody);
 
 	}
