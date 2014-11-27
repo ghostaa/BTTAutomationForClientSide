@@ -48,8 +48,6 @@
         <pathelement location="lib/phantomjsdriver-1.1.0.jar"/>
         <pathelement location="lib/protobuf-java-2.4.1.jar"/>
         <pathelement location="lib/sac-1.3.jar"/>
-        <pathelement location="lib/selenium-java-2.33.0-srcs.jar"/>
-        <pathelement location="lib/selenium-java-2.33.0.jar"/>
         <pathelement location="lib/selenium-java-2.43.1-srcs.jar"/>
         <pathelement location="lib/selenium-java-2.43.1.jar"/>
         <pathelement location="lib/selenium-server-standalone-2.39.0.jar"/>
@@ -58,6 +56,8 @@
         <pathelement location="lib/xalan-2.7.1.jar"/>
         <pathelement location="lib/xercesImpl-2.11.0.jar"/>
         <pathelement location="lib/xml-apis-1.4.01.jar"/>
+        <pathelement location="lib/mail.jar"/>
+        <pathelement location="lib/dom4j-1.6.1.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
@@ -95,43 +95,11 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="Action_case">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="btt.allwidgets.CheckedMulTiSelect.Action_case" todir="${junit.output.dir}"/>
-            <classpath refid="BTTAutomation.classpath"/>
-        </junit>
-    </target>
-    <target name="Condition">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="btt.allwidgets.CheckedMulTiSelect.Condition" todir="${junit.output.dir}"/>
-            <classpath refid="BTTAutomation.classpath"/>
-        </junit>
-    </target>
-    <target name="CSS">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="btt.allwidgets.CheckedMulTiSelect.CSS" todir="${junit.output.dir}"/>
-            <classpath refid="BTTAutomation.classpath"/>
-        </junit>
-    </target>
     <target name="ECA">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="btt.allwidgets.Label.ECA" todir="${junit.output.dir}"/>
-            <classpath refid="BTTAutomation.classpath"/>
-        </junit>
-    </target>
-    <target name="Event">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="btt.allwidgets.CheckedMulTiSelect.Event" todir="${junit.output.dir}"/>
+            <test name="com.ibm.btt.allwidgets.Label.ECA" todir="${junit.output.dir}"/>
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
@@ -139,20 +107,12 @@
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="btt.allwidgets.CheckedMulTiSelect.Properties" todir="${junit.output.dir}"/>
+            <test name="com.ibm.btt.allwidgets.Label.Properties" todir="${junit.output.dir}"/>
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Submit">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="btt.allwidgets.CheckedMulTiSelect.Submit" todir="${junit.output.dir}"/>
-            <classpath refid="BTTAutomation.classpath"/>
-        </junit>
-    </target>
-    <target name="SuiteRunner">
-        <java classname="btt.testsuite.SuiteRunner" failonerror="true" fork="yes">
+    <target name="testmail">
+        <java classname="com.ibm.btt.testsuite.testmail" failonerror="true" fork="yes">
             <classpath refid="BTTAutomation.classpath"/>
         </java>
     </target>
