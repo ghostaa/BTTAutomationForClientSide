@@ -14,7 +14,7 @@
     <Role />
   </User>
   <MailService>
-    <SMTPHomeName>D23ML028.cn.ibm.com</SMTPHomeName>
+    <SMTPHomeName>9.119.32.184</SMTPHomeName>
     <Subject>BTT 测试邮件</Subject>
   </MailService>
 </BTTMail>
