@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.Tools;
 
-public class Properties {
+public class Properties extends Text_PageObject{
   private static WebDriver driver;
   private static String baseUrl;
   private boolean acceptNextAlert = true;
