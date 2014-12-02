@@ -19,6 +19,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.util.DateType;
 import com.ibm.btt.util.NLS;
+import com.ibm.btt.util.Tools;
 import com.ibm.btt.allwidgets.Index_Page;
 import com.ibm.btt.allwidgets.Main_Page;
 
@@ -55,8 +56,10 @@ public class Properties {
   }
 
   @Test
-  public void label_String(){
+  public void label_String() throws InterruptedException{
 	  assertEquals("Test data", drv.label_String_getText());
+	  Thread.sleep(2000);
+      Tools.snapshot((TakesScreenshot)driver,"test");
   }
  //Need to add datatype class in util 
   @Test
