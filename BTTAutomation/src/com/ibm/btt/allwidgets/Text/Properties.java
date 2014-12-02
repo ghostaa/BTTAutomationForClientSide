@@ -32,7 +32,7 @@ public class Properties {
     drv.Text_widget();
     drv.Text_Properties();
     Thread.sleep(2000);
-    Tools.snapshot((TakesScreenshot)driver, "InternetTestBank\\Text\\Properties.jpg");
+    Tools.snapshot((TakesScreenshot)driver, "SnapShot\\Text\\Properties.jpg");
   }
 
   @Test
