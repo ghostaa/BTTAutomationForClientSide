@@ -59,7 +59,7 @@ public class Properties {
   public void label_String() throws InterruptedException{
 	  assertEquals("Test data", drv.label_String_getText());
 	  Thread.sleep(2000);
-      Tools.snapshot((TakesScreenshot)driver,"test");
+      Tools.snapshot((TakesScreenshot)driver,"SnapShot\\Label\\Properties.jpg");
   }
  //Need to add datatype class in util 
   @Test
