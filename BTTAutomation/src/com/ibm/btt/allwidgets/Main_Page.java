@@ -47,6 +47,52 @@ public class Main_Page extends Index_Page{
 		Label_appearance1.click();
 	}
 //###############################For Label Main##################################
-
+//###############################For Text Main###################################
+	@FindBy(id="Text_main_link02")
+	private WebElement Text_Properties;
+	
+	@FindBy(id="Text_main_link")
+	private WebElement Text_event;
+	
+	@FindBy(id="Text_main_link05")
+	private WebElement Text_condition;
+	
+	@FindBy(id="Text_main_link06")
+	private WebElement Text_action;
+	
+	@FindBy(id="Text_main_link01")
+	private WebElement Text_css;
+	
+	@FindBy(id="Text_main_link03")
+	private WebElement Text_appearance1;
+	
+	@FindBy(id="Text_main_link04")
+	private WebElement Text_appearance2;
+	
+	public void Text_Properties(){
+		Text_Properties.click();
+	}
+	
+	public void Text_event(){
+		Text_event.click();
+	}
+	
+	public void Text_action(){
+		Text_action.click();
+	}
+	
+	public void Text_css(){
+		Text_css.click();
+	}
+	
+	public void Text_appearance1(){
+		Text_appearance1.click();
+	}
+	
+	public void Text_appearance2(){
+		Text_appearance2.click();
+	}
+//###############################For Text Main###################################
+	
 } 
 
