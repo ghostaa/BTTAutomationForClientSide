@@ -103,6 +103,14 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
+    <target name="Text_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+        <formatter type="xml"/>
+        <test name="com.ibm.btt.allwidgets.Text.Properties" todir="${junit.output.dir}"/>
+        <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+    </target>          	
     <target name="Properties">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
