@@ -4,7 +4,10 @@ import java.util.regex.Pattern;
 
 public class DateType {
 	/*
-	 * Author: Ming Ming Lee
+	 * Match Date, Currency, Number and Boolean from runtime
+	 * str: The current runtime element content cached by using getText()
+	 * return regular expression match results
+	 * Support: vndlmmli@cn.ibm.com
 	 */
 	public static boolean Date(String str){
 		boolean b = Pattern.matches("\\d{4}-\\d{2}-\\d{2}", str);
@@ -12,12 +15,29 @@ public class DateType {
 	}
 	
 	public static boolean Currency(String str){
-		boolean b = Pattern.matches("\\$^[0-9]+(.[0-9]{2})?$", str);
+		if (str.indexOf(",") != -1){
+			str = str.replace(",", "");
+		}
+		boolean b = Pattern.matches("\\$\\d*+(.[0-9]{2})?$", str);
 		return b;
 	}
 	
 	public static boolean Number(String str){
-		boolean b = Pattern.matches("[0-9]*", str);
+		if (str.indexOf(",") != -1){
+			str = str.replace(",", "");
+		}
+		
+		boolean b = Pattern.matches("\\d*$", str);
+		return b;
+	}
+	
+	public static boolean Boolean(String str){
+		boolean b = false;
+		if (str.equals("true")){
+			b = Pattern.matches("true", str);
+		}else if(str.equals("false")){
+			b = Pattern.matches("false", str);
+		}
 		return b;
 	}
 }
