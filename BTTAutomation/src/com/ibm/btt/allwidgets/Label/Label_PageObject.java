@@ -46,6 +46,13 @@ public class Label_PageObject extends Main_Page{
 	public String label_Number_getText(){
 		 return label_Number.getText();
 	}
+	
+	@FindBy(id="label_properties_label04")
+	private WebElement label_Boolean;
+
+	public String label_Boolean_getText(){
+		 return label_Boolean.getText();
+	}
 
 	@FindBy(id="label_properties_label07")
 	private WebElement label_XMLGregorianCalendar;
