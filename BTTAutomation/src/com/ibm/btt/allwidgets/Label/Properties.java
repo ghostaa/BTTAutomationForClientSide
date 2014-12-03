@@ -53,13 +53,13 @@ public class Properties {
     drv.BTT8200_tab();
     drv.Label_widget();
     drv.label_properties();
+    Thread.sleep(2000);
+    Tools.snapshot((TakesScreenshot)driver,"SnapShot\\Label\\Properties.jpg");
   }
 
   @Test
   public void label_String() throws InterruptedException{
 	  assertEquals("Test data", drv.label_String_getText());
-	  Thread.sleep(2000);
-      Tools.snapshot((TakesScreenshot)driver,"SnapShot\\Label\\Properties.jpg");
   }
  //Need to add datatype class in util 
   @Test
@@ -68,7 +68,7 @@ public class Properties {
 	  assertEquals(true, b);
   }
 
-/*  @Test
+  @Test
   public void label_Currency(){
 	  boolean b = DateType.Currency(drv.label_Currency_getText());
 	  assertEquals(true, b);
@@ -78,13 +78,13 @@ public class Properties {
   public void label_Number(){
 	  boolean b = DateType.Number(drv.label_Number_getText());
 	  assertEquals(true, b);
-	  }*/
+	  }
 
-  @Test
+/*  @Test
   public void label_Duration(){
 	  assertEquals("63609013222000", drv.label_Duration_getText());
   }
-
+*/
   @Test
   public void label_XMLGregorianCalendar(){
 	  assertEquals("2014-07-18", drv.label_XMLGregorianCalendar_getText());
