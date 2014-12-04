@@ -49,6 +49,8 @@ public class ECA {
     drv.BTT8200_tab();
     drv.Label_widget();
     drv.label_ECA(); 
+    Thread.sleep(2000);
+    Tools.snapshot((TakesScreenshot)driver,"SnapShot\\Label\\ECA.jpg");
   }
 
 //###############################For Label Event######################################  

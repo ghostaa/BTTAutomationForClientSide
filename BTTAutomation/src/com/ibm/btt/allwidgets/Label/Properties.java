@@ -80,11 +80,12 @@ public class Properties {
 	  assertEquals(true, b);
 	  }
 
-/*  @Test
+  @Test
   public void label_Duration(){
-	  assertEquals("63609013222000", drv.label_Duration_getText());
+	  boolean b = DateType.Duration(drv.label_Duration_getText());
+	  assertEquals(true, b);
   }
-*/
+
   @Test
   public void label_XMLGregorianCalendar(){
 	  assertEquals("2014-07-18", drv.label_XMLGregorianCalendar_getText());
