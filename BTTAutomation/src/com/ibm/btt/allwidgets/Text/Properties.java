@@ -7,18 +7,20 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.Tools;
 
-public class Properties extends Text_PageObject{
+public class Properties{
   private static WebDriver driver;
   private static String baseUrl;
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private static Text_PageObject drv;
+  
 
   @BeforeClass
   public static void setUp() throws Exception {
@@ -43,6 +45,36 @@ public class Properties extends Text_PageObject{
   @Test
   public void Text_visibility(){
 	  assertEquals(true, drv.Text_properties_visible());
+  }
+  
+  @Test
+  public void Text_hidden(){
+	  assertEquals(false, drv.Text_properties_hidden());
+  }
+  
+  @Test
+  public void Text_gone(){
+	  assertEquals(false, drv.Text_properties_gone());
+  }
+  
+  @Test
+  public void Text_disableTrue(){
+	  assertEquals("true", drv.Text_properties_disableTrue());
+  }
+  
+  @Test
+  public void Text_disableFalse(){
+	  assertEquals(true, drv.Text_properties_disableFalse());
+  }
+  
+  @Test
+  public void Text_readonlyTrue(){
+	  assertEquals("true", drv.Text_properties_readonlyTrue());
+  }
+  
+  @Test
+  public void Text_readonlyFalse(){
+	  assertEquals(true, drv.Text_properties_readonlyFalse());
   }
 
   @AfterClass
