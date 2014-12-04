@@ -31,6 +31,11 @@ public class DateType {
 		return b;
 	}
 	
+	public static boolean Duration(String str){
+		boolean b = Pattern.matches("\\d*", str);
+		return b;
+	}
+	
 	public static boolean Boolean(String str){
 		boolean b = false;
 		if (str.equals("true")){
