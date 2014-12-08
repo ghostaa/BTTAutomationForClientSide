@@ -21,11 +21,13 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ibm.btt.util.DateType;
 import com.ibm.btt.util.NLS;
+import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
+import com.ibm.btt.allwidgets.Text.Condition;
 
 public class Properties {
   private static WebDriver driver;
-  private static String baseUrl;
+  private static String baseUrl = PropertiesUtil.baseUrl;
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private String result_txt="Passed";
@@ -35,7 +37,6 @@ public class Properties {
   @BeforeClass
   public static void setUp() throws Exception {
 	driver = new FirefoxDriver();
-	baseUrl = "http://localhost:8080/InternetBankTestWeb/" ;//(http://localhost:8080/InternetBankTestWeb/%27);
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	driver.get(baseUrl);
 	drv=PageFactory.initElements(driver, Label_PageObject.class);
@@ -43,8 +44,6 @@ public class Properties {
     drv.BTT8200_tab();
     drv.Label_widget();
     drv.label_properties();
-    Thread.sleep(2000);
-    Tools.snapshot((TakesScreenshot)driver,"SnapShot\\Label\\Properties.jpg");
   }
 
   @Test
@@ -141,6 +140,17 @@ public class Properties {
   public void label_NLS(){
 	  boolean b = (new NLS()).NLS_lang(drv.label_NLS());
 	  assertEquals(true,b);
+  }
+  
+  @Test
+  public void TakeSnapshot(){
+	  try {
+		Thread.sleep(2000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	 Tools.snapshot((TakesScreenshot)driver, PropertiesUtil.allwidgets,Properties.class);
   }
 
   @AfterClass
