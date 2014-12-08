@@ -36,5 +36,28 @@ public class Tools {
 	            System.out.println("screen shot finished");
 	        }
 	  }
+	
+	
+	public static void snapshot(TakesScreenshot drivername, String path,Class c)
+	  {
+	      // this method will take screen shot ,require two parameters ,one is driver name, another is file name
+	      
+	    String currentPath = System.getProperty("user.dir"); //get current work folder
+	    System.out.println(currentPath);
+	    File scrFile = drivername.getScreenshotAs(OutputType.FILE);
+	        // Now you can do whatever you need to do with it, for example copy somewhere
+	        try {
+	            FileUtils.copyFile(scrFile, new File(currentPath+"\\SnapShot\\"+path+"\\"+c.getName()+".jpg"));
+	        } catch (IOException e) {
+	            // TODO Auto-generated catch block
+	            System.out.println("Can't save screenshot");
+	            e.printStackTrace();
+	        } 
+	        finally
+	        {
+	           
+	            System.out.println("screen shot finished");
+	        }
+	  }
 
 }

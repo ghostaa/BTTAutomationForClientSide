@@ -1,31 +1,35 @@
 package com.ibm.btt.allwidgets.Text;
 
-import java.util.regex.Pattern;
-import java.util.concurrent.TimeUnit;
-import org.junit.*;
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
-import com.ibm.btt.allwidgets.Label.Label_PageObject;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
 public class Properties{
   private static WebDriver driver;
-  private static String baseUrl;
+  private static String baseUrl=PropertiesUtil.baseUrl;
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private static Text_PageObject drv;
-  
 
   @BeforeClass
   public static void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://localhost:8080/InternetBankTestWeb/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get(baseUrl);
     drv=PageFactory.initElements(driver, Text_PageObject.class);
@@ -34,7 +38,7 @@ public class Properties{
     drv.Text_widget();
     drv.Text_Properties();
     Thread.sleep(2000);
-    Tools.snapshot((TakesScreenshot)driver, "SnapShot\\Text\\Properties.jpg");
+    Tools.snapshot((TakesScreenshot)driver, PropertiesUtil.allwidgets,Properties.class);
   }
 
   @Test
