@@ -1,39 +1,29 @@
 package com.ibm.btt.allwidgets.Text;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import java.util.regex.Pattern;
 
 import java.util.concurrent.TimeUnit;
-
 import org.junit.*;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
-
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
-import com.ibm.btt.util.PropertiesUtil;
-import com.ibm.btt.util.Tools;
+import com.ibm.btt.allwidgets.Label.Label_PageObject;
+import com.ibm.btt.util.*;
 
-public class Properties{
+public class Text_CSS{
   private static WebDriver driver;
-  private static String baseUrl=PropertiesUtil.baseUrl;
+  private static String baseUrl = PropertiesUtil.baseUrl;
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private static Text_PageObject drv;
- 
+  
+
   @BeforeClass
   public static void setUp() throws Exception {
     driver = new FirefoxDriver();
@@ -43,48 +33,32 @@ public class Properties{
     drv.Establish();
     drv.BTT8200_tab();
     drv.Text_widget();
-    drv.Text_Properties();
+    drv.Text_css();
 
   }
-
+  
   @Test
-  public void Text_id(){
-	  assertEquals("", drv.Text_properties_id_getText());
+  public void css_check1() throws InterruptedException{
+	  String[] temp={"setBorder"};
+	  assertEquals(1,CSS.css_query(drv.Text_css_style1_getAttribute(), temp));
   }
   
   @Test
-  public void Text_visibility(){
-	  assertEquals(true, drv.Text_properties_visible());
+  public void css_check2() throws InterruptedException{
+	  String[] temp={"setBorder", "setFontStyle"};
+	  assertEquals(2,CSS.css_query(drv.Text_css_style2_getAttribute(), temp));
   }
   
   @Test
-  public void Text_hidden(){
-	  assertEquals(false, drv.Text_properties_hidden());
+  public void css_check3() throws InterruptedException{
+	  String[] temp={"setFontStyle", "setBorder", "setFontWeight"};
+	  assertEquals(3,CSS.css_query(drv.Text_css_style3_getAttribute(), temp));
   }
   
   @Test
-  public void Text_gone(){
-	  assertEquals(false, drv.Text_properties_gone());
-  }
-  
-  @Test
-  public void Text_disableTrue(){
-	  assertEquals("true", drv.Text_properties_disableTrue());
-  }
-  
-  @Test
-  public void Text_disableFalse(){
-	  assertEquals(true, drv.Text_properties_disableFalse());
-  }
-  
-  @Test
-  public void Text_readonlyTrue(){
-	  assertEquals("true", drv.Text_properties_readonlyTrue());
-  }
-  
-  @Test
-  public void Text_readonlyFalse(){
-	  assertEquals(true, drv.Text_properties_readonlyFalse());
+  public void css_check4() throws InterruptedException{
+	  String[] temp={"claro"};
+	  assertEquals(1,CSS.css_query(drv.Text_css_style4_getAttribute(), temp));
   }
   
   @Test
@@ -95,9 +69,9 @@ public class Properties{
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
-	 Tools.snapshot((TakesScreenshot)driver, PropertiesUtil.allwidgets,Properties.class);
+	 Tools.snapshot((TakesScreenshot)driver, PropertiesUtil.allwidgets,Text_CSS.class);
   }
-
+  
   @AfterClass
   public static void tearDown() throws Exception {
     driver.quit();
