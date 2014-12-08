@@ -77,6 +77,10 @@ public class Main_Page extends Index_Page{
 		Text_event.click();
 	}
 	
+	public void Text_condition(){
+		Text_condition.click();
+	}
+	
 	public void Text_action(){
 		Text_action.click();
 	}
