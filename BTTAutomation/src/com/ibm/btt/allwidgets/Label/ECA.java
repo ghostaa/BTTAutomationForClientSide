@@ -19,11 +19,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ibm.btt.util.CSS;
+import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
+
+
 
 public class ECA {
   public static WebDriver driver;
-  private static String baseUrl;
+  private static String baseUrl = PropertiesUtil.baseUrl;
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private String result_txt="Passed";
@@ -33,16 +36,14 @@ public class ECA {
   @BeforeClass
   public static void setUp() throws Exception {
 	driver = new FirefoxDriver();
-	baseUrl = "http://localhost:8080/InternetBankTestWeb/";
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	driver.get(baseUrl);
 	drv=PageFactory.initElements(driver, Label_PageObject.class);
+//	drv.setObject(driver);
 	drv.Establish();
     drv.BTT8200_tab();
     drv.Label_widget();
     drv.label_ECA(); 
-    Thread.sleep(2000);
-    Tools.snapshot((TakesScreenshot)driver,"SnapShot\\Label\\ECA.jpg");
   }
 
 //###############################For Label Event######################################  
@@ -50,7 +51,6 @@ public class ECA {
   public void Evt_onclick(){
 	  drv.Evt_onclick();
 	  assertEquals("click ok", drv.Evt_onclick_getText());
-	  By.className("");
   }
 
   @Test
@@ -141,6 +141,17 @@ public class ECA {
   }
 
 //###############################For Label Action#####################################
+  @Test
+  public void TakeSnapshot(){
+	  try {
+		Thread.sleep(2000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	 Tools.snapshot((TakesScreenshot)driver, PropertiesUtil.allwidgets,ECA.class);
+  }
+
   @AfterClass
   public static void tearDown() throws Exception {
     driver.quit();
