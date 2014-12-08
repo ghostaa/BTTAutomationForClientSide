@@ -1,27 +1,21 @@
 package com.ibm.btt.allwidgets.CheckedMulTiSelect;
 
-import java.awt.Robot;
-import java.util.regex.Pattern;
-import java.util.concurrent.TimeUnit;
-import org.junit.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-import org.openqa.selenium.*;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.DriverCommand;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.Select;
-
-import com.gargoylesoftware.htmlunit.javascript.host.Element;
-import com.opera.core.systems.internal.input.KeyEvent;
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
-
-import org.openqa.selenium.remote.server.handler.WebDriverHandler;
-import org.openqa.selenium.remote.server.handler.interactions.MouseUp;
-import java.util.*;
 
 public class Condition {
   private static WebDriver driver;
