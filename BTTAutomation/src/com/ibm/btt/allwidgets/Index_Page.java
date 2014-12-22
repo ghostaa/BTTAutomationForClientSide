@@ -37,6 +37,41 @@ public class Index_Page {
 	public void Text_widget(){
 		Text_widget.click();
 	}
+	
+	@FindBy(id="index_link52")
+	private WebElement image_widget;
+	
+	public void image_widget(){
+		image_widget.click();
+	}
+	
+	@FindBy(id="index_link43")
+	private WebElement Radio_widget;
+	
+	public void Radio_widget(){
+		Radio_widget.click();
+	}
+	
+	@FindBy(id="index_link45")
+	private WebElement CheckBox_widget;
+	
+	public void CheckBox_widget(){
+		CheckBox_widget.click();
+	}
+	
+	@FindBy(id="index_link57")
+	private WebElement Message_widget;
+	
+	public void Message_widget(){
+		Message_widget.click();
+	}
+	
+	@FindBy(id="index_link56")
+	private WebElement Link_widget;
+	
+	public void Link_widget(){
+		Link_widget.click();
+	}
 
 } 
 
