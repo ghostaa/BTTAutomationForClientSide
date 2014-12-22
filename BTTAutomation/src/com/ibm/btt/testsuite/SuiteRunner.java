@@ -21,7 +21,7 @@ public class SuiteRunner {
 
 static Class[] bvt = new Class[]	{
         //btt.allwidgets.CheckedMulTiSelect.Event.class;
-       com.ibm.btt.allwidgets.Label.ECA.class
+      //com.ibm.btt.allwidgets.Label.ECA.class
 };
 public static void main( String args[] ) {
 	//ProxyHTMLTest runAble=new ProxyHTMLTest();
