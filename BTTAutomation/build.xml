@@ -177,7 +177,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="CheckBox_Action (3)">
+    <target name="CheckBox_Action ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -185,7 +185,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="CheckBox_Condition (3)">
+    <target name="CheckBox_Condition ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -201,7 +201,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="CheckBox_Event (3)">
+    <target name="CheckBox_Event ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -209,7 +209,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="CheckBox_Properties (4)">
+    <target name="CheckBox_Properties ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -217,7 +217,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Image_Action (1)">
+    <target name="Image_Action ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -225,7 +225,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Image_Condition (1)">
+    <target name="Image_Condition ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -233,7 +233,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Image_Event (1)">
+    <target name="Image_Event ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -241,7 +241,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Image_Properties (2)">
+    <target name="Image_Properties ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -265,7 +265,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Label_Properties (1)">
+    <target name="Label_Properties ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -273,7 +273,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Link_Action (5)">
+    <target name="Link_Action ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -281,7 +281,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Link_Condition (4)">
+    <target name="Link_Condition ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -289,7 +289,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Link_Event (4)">
+    <target name="Link_Event ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -297,7 +297,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Link_Properties (6)">
+    <target name="Link_Properties ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -313,7 +313,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Message_Action (4)">
+    <target name="Message_Action ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -337,7 +337,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Message_Properties (5)">
+    <target name="Message_Properties ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -353,7 +353,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Radio_Action (2)">
+    <target name="Radio_Action ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -361,7 +361,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Radio_Condition (2)">
+    <target name="Radio_Condition ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -377,7 +377,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Radio_Event (2)">
+    <target name="Radio_Event ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -385,7 +385,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="Radio_Properties (3)">
+    <target name="Radio_Properties ">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
