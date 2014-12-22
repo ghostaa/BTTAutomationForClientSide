@@ -1,7 +1,6 @@
-package com.ibm.btt.allwidgets.Text;
+package com.ibm.btt.allwidgets.Link;
 
 import java.util.regex.Pattern;
-
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 
@@ -14,58 +13,87 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
-import com.ibm.btt.util.*;
+import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.PropertiesUtil;
+import com.ibm.btt.util.Tools;
 
-public class Text_CSS extends Main_Class{
-  /*private static WebDriver driver;
-  private static String baseUrl = PropertiesUtil.baseUrl;*/
+public class Link_Event extends Main_Class{
+
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
-  private static Text_PageObject drv;
+  private static Link_PageObject drv;
   
 
   @BeforeClass
   public static void setUp() throws Exception {
-    /*driver = new FirefoxDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driver.get(baseUrl);*/
+    
 	Main_Class.setUp();
-    drv=PageFactory.initElements(driver, Text_PageObject.class);
+    drv=PageFactory.initElements(driver, Link_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
-    drv.Text_widget();
-    drv.Text_css();
+    drv.Link_widget();
+    drv.Link_event();
+  }
 
+  @Test
+  public void evtOnClick(){
+	  assertEquals(true, drv.evtOnClick());
   }
   
   @Test
-  public void css_check1() throws InterruptedException{
-	  String[] temp={"setBorder"};
-	  assertEquals(1,CSS.css_query(drv.Text_css_style1_getAttribute(), temp));
+  public void evtOnFocus(){
+	  assertEquals(true, drv.evtOnFocus());
   }
   
   @Test
-  public void css_check2() throws InterruptedException{
-	  String[] temp={"setBorder", "setFontStyle"};
-	  assertEquals(2,CSS.css_query(drv.Text_css_style2_getAttribute(), temp));
+  public void evtOnBlur(){
+	  assertEquals(true, drv.evtOnBlur());
   }
   
   @Test
-  public void css_check3() throws InterruptedException{
-	  String[] temp={"setFontStyle", "setBorder", "setFontWeight"};
-	  assertEquals(3,CSS.css_query(drv.Text_css_style3_getAttribute(), temp));
+  public void evtOnKeyDown(){
+	  assertEquals(true, drv.evtOnKeyDown());
   }
   
   @Test
-  public void css_check4() throws InterruptedException{
-	  String[] temp={"claro"};
-	  assertEquals(1,CSS.css_query(drv.Text_css_style4_getAttribute(), temp));
+  public void evtOnKeyPress(){
+	  assertEquals(true, drv.evtOnKeyPress());
   }
   
+  @Test
+  public void evtOnKeyUp(){
+	  assertEquals(true, drv.evtOnKeyUp());
+  }
+  
+  @Test
+  public void evtOnMouseDown(){
+	  assertEquals(true, drv.evtOnMouseDown());
+  }
+  
+  @Test
+  public void evtOnMouseUp(){
+	  assertEquals(true, drv.evtOnMouseUp());
+  }
+  
+  @Test
+  public void evtOnMouseEnter(){
+	  assertEquals(true, drv.evtOnMouseEnter());
+  }
+  
+  @Test
+  public void evtOnMouseLeave(){
+	  assertEquals(true, drv.evtOnMouseLeave());
+  }
+  
+  @Test
+  public void evtOnMouseMove(){
+	  assertEquals(true, drv.evtOnMouseMove());
+  }
+ 
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Text_CSS.class);
-    driver.quit();
+	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Link_Event.class);
+	driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);

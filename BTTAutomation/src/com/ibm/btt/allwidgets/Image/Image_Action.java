@@ -1,7 +1,6 @@
-package com.ibm.btt.allwidgets.Text;
+package com.ibm.btt.allwidgets.Image;
 
 import java.util.regex.Pattern;
-
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 
@@ -14,14 +13,17 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
-import com.ibm.btt.util.*;
+import com.ibm.btt.util.Event;
+import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.PropertiesUtil;
+import com.ibm.btt.util.Tools;
 
-public class Text_CSS extends Main_Class{
-  /*private static WebDriver driver;
+public class Image_Action extends Main_Class{
+ /* private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
-  private static Text_PageObject drv;
+  private static Image_PageObject drv;
   
 
   @BeforeClass
@@ -30,41 +32,62 @@ public class Text_CSS extends Main_Class{
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get(baseUrl);*/
 	Main_Class.setUp();
-    drv=PageFactory.initElements(driver, Text_PageObject.class);
+    drv=PageFactory.initElements(driver, Image_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
-    drv.Text_widget();
-    drv.Text_css();
+    drv.image_widget();
+    drv.Image_action();
+  }
 
+  @Test
+  public void Image_Action_focus(){
+	  assertEquals("image is focus", drv.Image_Action_focus_getValue());
   }
   
   @Test
-  public void css_check1() throws InterruptedException{
-	  String[] temp={"setBorder"};
-	  assertEquals(1,CSS.css_query(drv.Text_css_style1_getAttribute(), temp));
+  public void Image_Action_styleClass(){
+	  assertEquals(1, drv.Image_Action_styleClass());
   }
   
   @Test
-  public void css_check2() throws InterruptedException{
-	  String[] temp={"setBorder", "setFontStyle"};
-	  assertEquals(2,CSS.css_query(drv.Text_css_style2_getAttribute(), temp));
+  public void Image_Action_location(){
+	  assertEquals(Main_Class.baseUrl + "img/Bomb1.jpg", drv.Image_Action_location());
   }
   
   @Test
-  public void css_check3() throws InterruptedException{
-	  String[] temp={"setFontStyle", "setBorder", "setFontWeight"};
-	  assertEquals(3,CSS.css_query(drv.Text_css_style3_getAttribute(), temp));
+  public void Image_Action_visibility(){
+	  assertEquals(false, drv.Image_Action_visibility());
   }
   
   @Test
-  public void css_check4() throws InterruptedException{
-	  String[] temp={"claro"};
-	  assertEquals(1,CSS.css_query(drv.Text_css_style4_getAttribute(), temp));
+  public void Image_Action_disabled(){
+	  assertEquals("image is disabled", drv.Image_Action_disabled());
   }
   
+/*  @Test
+  public void Image_Action_target(){
+	  assertEquals(false, drv.Text_Action_hidden());
+  }*/
+  
+  @Test
+  public void Image_Action_alt(){
+	  assertEquals("test alt", drv.Image_Action_alt());
+	  assertEquals("location changes to  img/days.jpg", drv.Image_Action_alt_getvalue());
+  }
+  
+  @Test
+  public void Image_Action_hint(){
+	  assertEquals("test hint", drv.Image_Action_hint());
+  }
+  
+  @Test
+  public void Image_Action_actionGroup(){
+	  assertEquals(true, drv.Image_Action_actionGroup());
+  }
+ 
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Text_CSS.class);
+	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Image_Action.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

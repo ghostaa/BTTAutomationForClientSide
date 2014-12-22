@@ -1,4 +1,4 @@
-package com.ibm.btt.allwidgets.Text;
+package com.ibm.btt.allwidgets.Image;
 
 import java.util.regex.Pattern;
 
@@ -16,12 +16,12 @@ import org.openqa.selenium.support.ui.Select;
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.*;
 
-public class Text_CSS extends Main_Class{
+public class Image_CSS extends Main_Class{
   /*private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
-  private static Text_PageObject drv;
+  private static Image_PageObject drv;
   
 
   @BeforeClass
@@ -30,41 +30,41 @@ public class Text_CSS extends Main_Class{
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get(baseUrl);*/
 	Main_Class.setUp();
-    drv=PageFactory.initElements(driver, Text_PageObject.class);
+    drv=PageFactory.initElements(driver, Image_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
-    drv.Text_widget();
-    drv.Text_css();
+    drv.image_widget();
+    drv.Image_css();
 
   }
   
   @Test
   public void css_check1() throws InterruptedException{
-	  String[] temp={"setBorder"};
-	  assertEquals(1,CSS.css_query(drv.Text_css_style1_getAttribute(), temp));
+	  String[] temp={"setBackgroundColor"};
+	  assertEquals(1,CSS.css_query(drv.Image_css_style1_getAttribute(), temp));
   }
   
   @Test
   public void css_check2() throws InterruptedException{
-	  String[] temp={"setBorder", "setFontStyle"};
-	  assertEquals(2,CSS.css_query(drv.Text_css_style2_getAttribute(), temp));
+	  String[] temp={"setBorder", "setColor"};
+	  assertEquals(2,CSS.css_query(drv.Image_css_style2_getAttribute(), temp));
   }
   
   @Test
   public void css_check3() throws InterruptedException{
-	  String[] temp={"setFontStyle", "setBorder", "setFontWeight"};
-	  assertEquals(3,CSS.css_query(drv.Text_css_style3_getAttribute(), temp));
+	  String[] temp={"setBackgroundColor", "setBorder", "setColor"};
+	  assertEquals(3,CSS.css_query(drv.Image_css_style3_getAttribute(), temp));
   }
   
   @Test
   public void css_check4() throws InterruptedException{
-	  String[] temp={"claro"};
-	  assertEquals(1,CSS.css_query(drv.Text_css_style4_getAttribute(), temp));
+	  String[] temp={"dijitAccordionContainer-dijitContentPane"};
+	  assertEquals(1,CSS.css_query(drv.Image_css_style4_getAttribute(), temp));
   }
   
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Text_CSS.class);
+	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Image_CSS.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

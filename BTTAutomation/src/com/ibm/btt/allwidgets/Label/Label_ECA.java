@@ -19,14 +19,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ibm.btt.util.CSS;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
 
 
-public class ECA {
-  public static WebDriver driver;
-  private static String baseUrl = PropertiesUtil.baseUrl;
+public class Label_ECA extends Main_Class{
+  /*public static WebDriver driver;
+  private static String baseUrl = Main_Class.baseUrl;*/
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private String result_txt="Passed";
@@ -35,9 +36,10 @@ public class ECA {
 
   @BeforeClass
   public static void setUp() throws Exception {
-	driver = new FirefoxDriver();
+	/*driver = new FirefoxDriver();
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	driver.get(baseUrl);
+	driver.get(baseUrl);*/
+	Main_Class.setUp();
 	drv=PageFactory.initElements(driver, Label_PageObject.class);
 //	drv.setObject(driver);
 	drv.Establish();
@@ -49,38 +51,32 @@ public class ECA {
 //###############################For Label Event######################################  
   @Test
   public void Evt_onclick(){
-	  drv.Evt_onclick();
-	  assertEquals("click ok", drv.Evt_onclick_getText());
+	  assertEquals("click ok", drv.Evt_onclick());
   }
 
   @Test
   public void Evt_onMouseup(){
-	  drv.Evt_onMouseup();
-	  assertEquals("'onMouseup ok'", drv.Evt_onMouseup_getText());
+	  assertEquals("'onMouseup ok'", drv.Evt_onMouseup());
   }
 
   @Test
   public void Evt_onMouseLeave(){
-	  drv.Evt_onMouseLeave();
-	  assertEquals("'onMouseLeave ok'", drv.Evt_onMouseLeave_getText());
+	  assertEquals("'onMouseLeave ok'", drv.Evt_onMouseLeave());
   }
 
   @Test
   public void Evt_onMouseMove(){
-	  drv.Evt_onMouseMove();
-	  assertEquals("onMouseMove ok", drv.Evt_onMouseMove_getText());
+	  assertEquals("onMouseMove ok", drv.Evt_onMouseMove());
   }
 
   @Test
   public void Evt_onMouseEnter(){
-	  drv.Evt_onMouseEnter();
-	  assertEquals("onMouseEnter ok", drv.Evt_onMouseEnter_getText());
+	  assertEquals("onMouseEnter ok", drv.Evt_onMouseEnter());
   }
 
   @Test
   public void Evt_onMousedown(){
-	  drv.Evt_onMousedown();
-	  assertEquals("onMouseDown ok", drv.Evt_onMousedown_getText());
+	  assertEquals("onMouseDown ok", drv.Evt_onMousedown());
   }
 //###############################For Label Event######################################
 //###############################For Label Condition##################################
@@ -110,50 +106,34 @@ public class ECA {
 //###############################For Label Condition##################################
 //###############################For Label Action#####################################
   @Test
-  public void label_action_hidden(){
-	  drv.label_action_hiddenClick();
-	  assertEquals(false, drv.label_action_hidden());
+  public void css_check(){
+	  assertEquals(1,drv.Evt_stylecss());
+  }
+  
+  @Test
+  public void actHidden(){
+	  assertEquals(false, drv.actHidden());
   }
 
   @Test
-  public void label_action_gone(){
-	  drv.label_action_goneClick();
-	  assertEquals(false, drv.label_action_gone());
+  public void actGone(){
+	  assertEquals(false, drv.actGone());
   }
 
   @Test
-  public void label_action_show(){
-	  drv.label_action_showClick();
-	  assertEquals(true, drv.label_action_show());
+  public void actShow(){
+	  assertEquals(true, drv.actShow());
   }
 
   @Test
-  public void label_action_change(){
-	  drv.label_action_changeClick();
-	  assertEquals("text ok", drv.label_action_change());
-  }
-
-  @Test
-  public void css_check() throws InterruptedException{
-	  drv.Label_Evt_Click();
-	  String[] temp={"pointer_down"};
-	  assertEquals(1,CSS.css_query(drv.css_getAttribute(), temp));
+  public void actChange(){
+	  assertEquals("text ok", drv.actChange());
   }
 
 //###############################For Label Action#####################################
-  @Test
-  public void TakeSnapshot(){
-	  try {
-		Thread.sleep(2000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	 Tools.snapshot((TakesScreenshot)driver, PropertiesUtil.allwidgets,ECA.class);
-  }
-
   @AfterClass
   public static void tearDown() throws Exception {
+	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Label_ECA.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

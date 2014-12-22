@@ -1,105 +1,106 @@
 package com.ibm.btt.allwidgets.Text;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-
+import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
-
 import org.junit.*;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
-
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
+import com.ibm.btt.allwidgets.Label.Label_PageObject;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
-public class Properties{
-  private static WebDriver driver;
-  private static String baseUrl=PropertiesUtil.baseUrl;
+public class Text_Event extends Main_Class{
+ /* private static WebDriver driver;
+  private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private static Text_PageObject drv;
- 
+  
+
   @BeforeClass
   public static void setUp() throws Exception {
-    driver = new FirefoxDriver();
+    /*driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driver.get(baseUrl);
+    driver.get(baseUrl);*/
+	Main_Class.setUp();
     drv=PageFactory.initElements(driver, Text_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
     drv.Text_widget();
-    drv.Text_Properties();
-
+    drv.Text_event();
   }
 
   @Test
-  public void Text_id(){
-	  assertEquals("", drv.Text_properties_id_getText());
+  public void Text_event_onclick(){
+	  assertEquals(false, drv.Text_event_onclick());
   }
   
   @Test
-  public void Text_visibility(){
-	  assertEquals(true, drv.Text_properties_visible());
+  public void Text_event_onFocus(){
+	  assertEquals(false, drv.Text_event_onFocus());
   }
   
   @Test
-  public void Text_hidden(){
-	  assertEquals(false, drv.Text_properties_hidden());
+  public void Text_event_onBlur(){
+	  assertEquals(false, drv.Text_event_onBlur());
   }
   
   @Test
-  public void Text_gone(){
-	  assertEquals(false, drv.Text_properties_gone());
+  public void Text_event_keyDown(){
+	  assertEquals(false, drv.Text_event_keyDown());
   }
   
   @Test
-  public void Text_disableTrue(){
-	  assertEquals("true", drv.Text_properties_disableTrue());
+  public void Text_event_onKeyPress(){
+	  assertEquals(false, drv.Text_event_onKeyPress());
   }
   
   @Test
-  public void Text_disableFalse(){
-	  assertEquals(true, drv.Text_properties_disableFalse());
+  public void Text_event_onKeyUp(){
+	  assertEquals(false, drv.Text_event_onKeyUp());
   }
   
   @Test
-  public void Text_readonlyTrue(){
-	  assertEquals("true", drv.Text_properties_readonlyTrue());
+  public void Text_event_onMouseDown(){
+	  assertEquals(false, drv.Text_event_onMouseDown());
   }
   
   @Test
-  public void Text_readonlyFalse(){
-	  assertEquals(true, drv.Text_properties_readonlyFalse());
+  public void Text_event_onMouseUp(){
+	  assertEquals(false, drv.Text_event_onMouseUp());
   }
   
   @Test
-  public void TakeSnapshot(){
-	  try {
-		Thread.sleep(2000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	 Tools.snapshot((TakesScreenshot)driver, PropertiesUtil.allwidgets,Properties.class);
+  public void Text_event_onMouseEnter(){
+	  assertEquals(false, drv.Text_event_onMouseEnter());
+  }
+  
+  @Test
+  public void Text_event_onMouseLeave(){
+	  assertEquals(false, drv.Text_event_onMouseLeave());
+  }
+  
+  @Test
+  public void Text_event_onMouseMove(){
+	  assertEquals(false, drv.Text_event_onMouseMove());
+  }
+  
+  @Test
+  public void Text_event_onChange(){
+	  assertEquals(false, drv.Text_event_onChange());
   }
 
   @AfterClass
   public static void tearDown() throws Exception {
+	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Text_Event.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

@@ -1,4 +1,4 @@
-package com.ibm.btt.allwidgets.Text;
+package com.ibm.btt.allwidgets.Link;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -14,66 +14,80 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.Event;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
-public class Condition{
-  private static WebDriver driver;
-  private static String baseUrl = PropertiesUtil.baseUrl;
+public class Link_Action extends Main_Class{
+
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
-  private static Text_PageObject drv;
+  private static Link_PageObject drv;
   
 
   @BeforeClass
   public static void setUp() throws Exception {
-    driver = new FirefoxDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driver.get(baseUrl);
-    drv=PageFactory.initElements(driver, Text_PageObject.class);
+    
+	Main_Class.setUp();
+    drv=PageFactory.initElements(driver, Link_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
-    drv.Text_widget();
-    drv.Text_condition();
+    drv.Link_widget();
+    drv.Link_action();
   }
 
   @Test
-  public void Text_condition_isFocusable(){
-	  drv.Text_condition_isFocusable_click();
-	  assertEquals(false, drv.Text_condition_isFocusable());
+  public void actFocus(){
+	  assertEquals(true, drv.actFocus());
   }
   
   @Test
-  public void Text_condition_isMadatory(){
-	  drv.Text_condition_isMandatory_click();
-	  assertEquals("true", drv.Text_condition_isMandatory_getValue());
-	  drv.Text_condition_changeMandatory();
-	  drv.Text_condition_isMandatory_click();
-	  assertEquals("false", drv.Text_condition_isMandatory_getValue());
+  public void actStyleClass(){
+	  assertEquals(1, drv.actStyleClass());
   }
   
   @Test
-  public void Text_condition_disableFalse(){
-	  assertEquals(true, drv.Text_condition_isEnabled());
-	  drv.Text_condition_disableFalse_click();
-	  assertEquals(false, drv.Text_condition_disable_button());
+  public void actText(){
+	  assertEquals("test", drv.actText());
   }
   
   @Test
-  public void TakeSnapshot(){
-	  try {
-		Thread.sleep(2000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	 Tools.snapshot((TakesScreenshot)driver, PropertiesUtil.allwidgets,Condition.class);
+  public void actVerify(){
+	  assertEquals("OK", drv.actVerify());
   }
   
-
+  @Test
+  public void actVisible(){
+	  assertEquals(true, drv.actVisible());
+  }
+  
+  @Test
+  public void actDisabled(){
+	  assertEquals("true", drv.actDisabled());
+  }
+  
+  @Test
+  public void actBlank() throws Exception{
+	  assertEquals("about:blank", drv.actBlank());
+	  driver.close();
+	  Link_Action.setUp();
+  }
+  
+  @Test
+  public void actHint(){
+	  assertEquals("hint is showing", drv.actHint());
+  }
+  
+  @Test
+  public void actTextHint(){
+	  assertEquals("test", drv.actText2());
+	  assertEquals("test successfully", drv.actHint2());
+  }
+ 
   @AfterClass
   public static void tearDown() throws Exception {
-    driver.quit();
+	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Link_Action.class);
+	driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);

@@ -20,14 +20,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ibm.btt.util.DateType;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.util.NLS;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-import com.ibm.btt.allwidgets.Text.Condition;
+import com.ibm.btt.allwidgets.Text.Text_Condition;
 
-public class Properties {
-  private static WebDriver driver;
-  private static String baseUrl = PropertiesUtil.baseUrl;
+public class Label_Properties extends Main_Class{
+  /*private static WebDriver driver;
+  private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private String result_txt="Passed";
@@ -36,9 +37,10 @@ public class Properties {
 
   @BeforeClass
   public static void setUp() throws Exception {
-	driver = new FirefoxDriver();
+	/*driver = new FirefoxDriver();
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	driver.get(baseUrl);
+	driver.get(baseUrl);*/
+	Main_Class.setUp();
 	drv=PageFactory.initElements(driver, Label_PageObject.class);
 	drv.Establish();
     drv.BTT8200_tab();
@@ -47,114 +49,109 @@ public class Properties {
   }
 
   @Test
-  public void label_String() throws InterruptedException{
-	  assertEquals("Test data", drv.label_String_getText());
+  public void proString(){
+	  assertEquals("Test data", drv.proString());
   }
- //Need to add datatype class in util 
+
   @Test
-  public void label_Date(){
-	  boolean b = DateType.Date(drv.label_Date_getText());
+  public void proDate(){
+	  boolean b = DateType.Date(drv.proDate());
 	  assertEquals(true, b);
   }
 
   @Test
-  public void label_Currency(){
-	  boolean b = DateType.Currency(drv.label_Currency_getText());
+  public void proCurrency(){
+	  boolean b = DateType.Currency(drv.proCurrency());
 	  assertEquals(true, b);
   }
 
   @Test
-  public void label_Number(){
-	  boolean b = DateType.Number(drv.label_Number_getText());
+  public void proNumber(){
+	  boolean b = DateType.Number(drv.proNumber());
 	  assertEquals(true, b);
 	  }
 
   @Test
-  public void label_Duration(){
-	  boolean b = DateType.Duration(drv.label_Duration_getText());
+  public void proDuration(){
+	  boolean b = DateType.Duration(drv.proDuration());
 	  assertEquals(true, b);
-  }
-
-  @Test
-  public void label_XMLGregorianCalendar(){
-	  assertEquals("2014-07-18", drv.label_XMLGregorianCalendar_getText());
-  }
-
-  @Test
-  public void label_Byte(){
-	  assertEquals("98", drv.label_Byte_getText());
-  }
-
-  @Test
-  public void label_Short(){
-	  assertEquals("-32,223", drv.label_Short_getText());
-  }
-
-  @Test
-  public void label_Integer(){
-	  assertEquals("66", drv.label_Integer_getText());
-  }
-
-  @Test
-  public void label_Long(){
-	  assertEquals("315,161,000,238,006", drv.label_Long_getText());
-  }
-
-  @Test
-  public void label_Float(){
-	  assertEquals("3.12", drv.label_Float_getText());
-  }
-
-  @Test
-  public void label_Double(){
-	  assertEquals("8.220", drv.label_Double_getText());
-  }
-
-  @Test
-  public void label_BigInteger(){
-	  assertEquals("123", drv.label_BigInteger_getText());
-  }
-
-  @Test
-  public void label_visible(){
-	  assertEquals(true, drv.label_visible_isDisplay());
-  }
-
-  @Test
-  public void label_hidden(){
-	  assertEquals(false, drv.label_hidden_isDisplay());
-  }
-
-  @Test
-  public void label_gone(){
-	  assertEquals("display: none; visibility: inherit;", drv.label_gone_GetAttribute());
-  }
-
-  @Test
-  public void label_filedReference(){
-	  drv.label_filedReference_click();
-	  assertEquals(true, drv.label_filedReference_radio());
-  }
-
-  @Test
-  public void label_NLS(){
-	  boolean b = (new NLS()).NLS_lang(drv.label_NLS());
-	  assertEquals(true,b);
   }
   
   @Test
-  public void TakeSnapshot(){
-	  try {
-		Thread.sleep(2000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	 Tools.snapshot((TakesScreenshot)driver, PropertiesUtil.allwidgets,Properties.class);
+  public void proBoolean(){
+	  assertEquals(true, drv.proBoolean());
   }
 
+  @Test
+  public void proXMLGregorianCalendar(){
+	  assertEquals("2014-07-18", drv.proXMLGregorianCalendar());
+  }
+
+  @Test
+  public void proByte(){
+	  assertEquals("98", drv.proByte());
+  }
+
+  @Test
+  public void proShort(){
+	  assertEquals("-32,223", drv.proShort());
+  }
+
+  @Test
+  public void proInteger(){
+	  assertEquals("66", drv.proInteger());
+  }
+
+  @Test
+  public void proLong(){
+	  assertEquals("315,161,000,238,006", drv.proLong());
+  }
+
+  @Test
+  public void proFloat(){
+	  assertEquals("3.12", drv.proFloat());
+  }
+
+  @Test
+  public void proDouble(){
+	  assertEquals("8.220", drv.proDouble());
+  }
+
+  @Test
+  public void proBigInteger(){
+	  assertEquals("123", drv.proBigInteger());
+  }
+
+  @Test
+  public void proVisible(){
+	  assertEquals(true, drv.proVisible());
+  }
+
+  @Test
+  public void proHidden(){
+	  assertEquals(false, drv.proHidden());
+  }
+
+  @Test
+  public void proGone(){
+	  assertEquals("display: none; visibility: inherit;", drv.proGone());
+  }
+
+  @Test
+  public void proFiledReference(){
+	  drv.proFiledReference();
+	  assertEquals(true, drv.proFiledReferenceRadio());
+  }
+
+  @Test
+  public void proNLS(){
+	  boolean b = (new NLS()).NLS_lang(drv.proNLS());
+	  assertEquals(true,b);
+  }
+  
   @AfterClass
   public static void tearDown() throws Exception {
+	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Label_Properties.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

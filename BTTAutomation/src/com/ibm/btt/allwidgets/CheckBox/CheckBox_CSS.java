@@ -1,4 +1,4 @@
-package com.ibm.btt.allwidgets.Text;
+package com.ibm.btt.allwidgets.CheckBox;
 
 import java.util.regex.Pattern;
 
@@ -14,14 +14,15 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
+import com.ibm.btt.allwidgets.Message.Message_Action;
 import com.ibm.btt.util.*;
 
-public class Text_CSS extends Main_Class{
+public class CheckBox_CSS extends Main_Class{
   /*private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
-  private static Text_PageObject drv;
+  private static CheckBox_PageObject drv;
   
 
   @BeforeClass
@@ -30,41 +31,37 @@ public class Text_CSS extends Main_Class{
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get(baseUrl);*/
 	Main_Class.setUp();
-    drv=PageFactory.initElements(driver, Text_PageObject.class);
+    drv=PageFactory.initElements(driver, CheckBox_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
-    drv.Text_widget();
-    drv.Text_css();
+    drv.CheckBox_widget();
+    drv.CheckBox_css();
 
   }
   
   @Test
   public void css_check1() throws InterruptedException{
-	  String[] temp={"setBorder"};
-	  assertEquals(1,CSS.css_query(drv.Text_css_style1_getAttribute(), temp));
+	  assertEquals(1,drv.CheckBox_css_style1_getAttribute());
   }
   
   @Test
   public void css_check2() throws InterruptedException{
-	  String[] temp={"setBorder", "setFontStyle"};
-	  assertEquals(2,CSS.css_query(drv.Text_css_style2_getAttribute(), temp));
+	  assertEquals(2,drv.CheckBox_css_style2_getAttribute());
   }
   
   @Test
   public void css_check3() throws InterruptedException{
-	  String[] temp={"setFontStyle", "setBorder", "setFontWeight"};
-	  assertEquals(3,CSS.css_query(drv.Text_css_style3_getAttribute(), temp));
+	  assertEquals(3,drv.CheckBox_css_style3_getAttribute());
   }
   
   @Test
   public void css_check4() throws InterruptedException{
-	  String[] temp={"claro"};
-	  assertEquals(1,CSS.css_query(drv.Text_css_style4_getAttribute(), temp));
+	  assertEquals(1,drv.CheckBox_css_style4_getAttribute());
   }
   
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Text_CSS.class);
+	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,CheckBox_CSS.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

@@ -1,7 +1,6 @@
 package com.ibm.btt.allwidgets.Text;
 
 import java.util.regex.Pattern;
-
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 
@@ -14,10 +13,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
-import com.ibm.btt.util.*;
+import com.ibm.btt.util.Event;
+import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.PropertiesUtil;
+import com.ibm.btt.util.Tools;
 
-public class Text_CSS extends Main_Class{
-  /*private static WebDriver driver;
+public class Text_Action extends Main_Class{
+ /* private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
@@ -34,37 +36,57 @@ public class Text_CSS extends Main_Class{
     drv.Establish();
     drv.BTT8200_tab();
     drv.Text_widget();
-    drv.Text_css();
+    drv.Text_action();
+  }
 
+  @Test
+  public void Text_Action_focus(){
+	  assertEquals(true, drv.Text_Action_focus());
   }
   
   @Test
-  public void css_check1() throws InterruptedException{
-	  String[] temp={"setBorder"};
-	  assertEquals(1,CSS.css_query(drv.Text_css_style1_getAttribute(), temp));
+  public void Text_Action_showErrorMessage(){
+	  assertEquals("Hello ?", drv.Text_Action_showErrorMessage());
   }
   
   @Test
-  public void css_check2() throws InterruptedException{
-	  String[] temp={"setBorder", "setFontStyle"};
-	  assertEquals(2,CSS.css_query(drv.Text_css_style2_getAttribute(), temp));
+  public void Text_Action_styleClass(){
+	  assertEquals(1, drv.Text_Action_styleClass());
   }
   
   @Test
-  public void css_check3() throws InterruptedException{
-	  String[] temp={"setFontStyle", "setBorder", "setFontWeight"};
-	  assertEquals(3,CSS.css_query(drv.Text_css_style3_getAttribute(), temp));
+  public void Text_Action_value(){
+	  assertEquals("yes", drv.Text_Action_value());
   }
   
   @Test
-  public void css_check4() throws InterruptedException{
-	  String[] temp={"claro"};
-	  assertEquals(1,CSS.css_query(drv.Text_css_style4_getAttribute(), temp));
+  public void Text_Action_isMandatory(){
+	  assertEquals("This value is required.", drv.Text_Action_isMandatory());
   }
   
+  @Test
+  public void Text_Action_hidden(){
+	  assertEquals(false, drv.Text_Action_hidden());
+  }
+  
+  @Test
+  public void Text_Action_disabledTrue(){
+	  assertEquals("true", drv.Text_Action_disabledTrue());
+  }
+  
+  @Test
+  public void Text_Action_readOnlyTrue(){
+	  assertEquals("true", drv.Text_Action_readOnlyTrue());
+  }
+  
+  @Test
+  public void Text_Action_hint(){
+	  assertEquals("Widgets Test Case", drv.Text_Action_hint());
+  }
+
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Text_CSS.class);
+	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Text_Action.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
