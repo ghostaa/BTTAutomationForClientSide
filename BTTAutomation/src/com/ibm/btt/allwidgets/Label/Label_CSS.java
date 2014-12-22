@@ -43,14 +43,17 @@ public class Label_CSS extends Main_Class{
 	  assertEquals(1,drv.cssStyle1());
   }
   
+  @Test
   public void cssStyle2(){
 	  assertEquals(2,drv.cssStyle2());
   }
   
+  @Test
   public void cssStyle3(){
 	  assertEquals(3,drv.cssStyle3());
   }
   
+  @Test
   public void cssStyle4(){
 	  assertEquals(1,drv.cssStyle4());
   }
