@@ -48,7 +48,7 @@ public class Label_ECA extends Main_Class{
     drv.label_ECA(); 
   }
 
-//###############################For Label Event######################################  
+//###############################For Label Event###################################### 
   @Test
   public void Evt_onclick(){
 	  assertEquals("click ok", drv.Evt_onclick());
