@@ -37,7 +37,6 @@ public class Tools {
 	        }
 	  }
 	
-	
 	public static void snapshot(TakesScreenshot drivername, String path,Class c)
 	  {
 	      // this method will take screen shot ,require two parameters ,one is driver name, another is file name
