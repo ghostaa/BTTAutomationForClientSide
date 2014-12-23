@@ -177,7 +177,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
     </target>
-    <target name="CheckBox_Action ">
+    <target name="CheckBox_Action">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
