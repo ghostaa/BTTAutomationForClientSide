@@ -24,6 +24,13 @@ public class Index_Page {
 		BTT8200_tab.click();
 	}
 	
+	@FindBy(id="index_link48")
+	private WebElement Button_widget;
+		
+	public void Button_widget(){
+		Button_widget.click();
+	}
+	
 	@FindBy(id="index_link44")
 	private WebElement Label_widget;
 		
@@ -72,6 +79,42 @@ public class Index_Page {
 	public void Link_widget(){
 		Link_widget.click();
 	}
+	
+	@FindBy(id="index_link46")
+	private WebElement SelectList_widget;
+	
+	public void SelectList_widget(){
+		SelectList_widget.click();
+	}
+	
+	@FindBy(id="index_link59")
+	private WebElement MultiSelect_widget;
+	
+	public void MultiSelect_widget(){
+		MultiSelect_widget.click();
+	}
+	
+	@FindBy(id="index_link79")
+	private WebElement HorizontalSlider_widget;
+	
+	public void HorizontalSlider_widget(){
+		HorizontalSlider_widget.click();
+	}
+	
+	@FindBy(id="index_link80")
+	private WebElement VerticalSlider_widget;
+	
+	public void VerticalSlider_widget(){
+		VerticalSlider_widget.click();
+	}
+	
+	@FindBy(id="index_link60")
+	private WebElement CheckedMultiSelect_widget;
+	
+	public void CheckedMultiSelect_widget(){
+		CheckedMultiSelect_widget.click();
+	}
+
 
 } 
 
