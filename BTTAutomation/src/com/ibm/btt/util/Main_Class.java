@@ -6,12 +6,15 @@ import static com.ibm.btt.util.Main_Class.driver;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Window;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -21,6 +24,7 @@ public class Main_Class {
 	public static WebDriver driver;
 	public static String allwidgets="allwidgets";
 	public static String baseUrl="http://localhost:8080/InternetBankTestWeb/";
+//	public static String baseUrl="http://9.186.117.118:8080/AllWidgetsProject";
 	private static Robot eventKey;
 	
 	Actions event = new Actions(driver);
@@ -152,4 +156,21 @@ public class Main_Class {
 		
 	}
 	
+	/*
+	 * 
+	 */
+/*	public static String[] elementList(String id){
+		List<WebElement> elements = (ArrayList<WebElement>) driver.findElements(By.id(id));
+		String[] str = new String[elements.size()];
+		for(WebElement element: elements){
+			element.getText();	
+		}
+	}*/
+		public static void elementList1(String xpathExpression){
+			List<WebElement> elements = driver.findElements(By.id(xpathExpression));
+			for(WebElement element: elements){
+				System.out.println("element:"+element);
+			}
+		
+	}
 }
