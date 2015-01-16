@@ -354,8 +354,220 @@ public class Label_PageObject extends Main_Page{
 	}
 //###############################For Label CSS########################################
 //###############################For Label Appearance#################################
+	@FindBy(id="label_appearance_label01")
+	private WebElement appearance1;
+
+	public String appearance1(){//1.Width is AutoSize,Height is AutoSize
+		return appearance1.getAttribute("style");
+	}
 	
+	@FindBy(id="label_appearance_label01_copy")
+	private WebElement appearance2;
+
+	public String appearance2(){//2.Width is AutoSize,Height is Fixed 30px
+		return appearance2.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy")
+	private WebElement appearance3;
+
+	public String appearance3(){//3.Width is AutoSize,Height is Relative 50%
+		return appearance3.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy")
+	private WebElement appearance4;
+
+	public String appearance4(){//4.Width is AutoSize,Height is Fill
+		return appearance4.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy")
+	private WebElement appearance5;
+
+	public String appearance5(){//5.Width is Fixed 100px,Height is AutoSize
+		return appearance5.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy")
+	private WebElement appearance6;
+
+	public String appearance6(){//6.Width is Fixed 100px,Height is Fixed 30px
+		return appearance6.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy01")
+	private WebElement appearance7;
+
+	public String appearance7(){//7.Width is Fixed 100px,Height is Relative 50%
+		return appearance7.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02")
+	private WebElement appearance8;
+
+	public String appearance8(){//8.Width is Fixed 100px,Height is Fill
+		return appearance8.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy")
+	private WebElement appearance9;
+
+	public String appearance9(){//9.Width is Relative 50%,Height is AutoSize
+		return appearance9.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy01")
+	private WebElement appearance10;
+
+	public String appearance10(){//10.Width is Relative 50%,Height is Fixed 30px
+		return appearance10.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy02")
+	private WebElement appearance11;
+
+	public String appearance11(){//11.Width is Relative 50%,Height is Relative 50%
+		return appearance11.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy03")
+	private WebElement appearance12;
+
+	public String appearance12(){//12.Width is Relative 50%,Height is Fill
+		return appearance12.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy04")
+	private WebElement appearance13;
+
+	public String appearance13(){//13.Width is Fill,Height is AutoSize
+		return appearance13.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy04_copy")
+	private WebElement appearance14;
+
+	public String appearance14(){//14.Width is Fill,Height is Fixed 30px
+		return appearance14.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy04_copy01")
+	private WebElement appearance15;
+
+	public String appearance15(){//15.Width is Fill,Height is Relatvie 50%
+		return appearance15.getAttribute("style");
+	}
+	
+	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy04_copy02")
+	private WebElement appearance16;
+
+	public String appearance16(){//16.Width is Fill,Height is Fill
+		return appearance16.getAttribute("style");
+	}
 //###############################For Label Appearance#################################
+//###############################For Label Appearance1################################
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[1]/td[2]")
+	private WebElement appearance1_1;
+	
+	public void appearance1_1(){//1.horizontal is left,vertical is top
+		String str1 = appearance1_1.getAttribute("valign");
+		String str2 = appearance1_1.getAttribute("align");
+		System.out.println(str1);
+		System.out.println(str2);
+	
+	}
+	
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[2]/td[2]")
+	private WebElement appearance1_2;
+	
+	public String appearance1_2(){//2.horizontal is left,vertical is center
+		String str1 = appearance1_2.getAttribute("valign");
+		String str2 = appearance1_2.getAttribute("align");
+		return str1 + "+" + str2;
+	}
+	
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[3]/td[2]")
+	private WebElement appearance1_3;
+	
+	public String appearance1_3(){//3.horizontal is left,vertical is bottom
+		String str1 = appearance1_3.getAttribute("valign");
+		String str2 = appearance1_3.getAttribute("align");
+		return str1 + "+" + str2;
+	}
+	
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[4]/td[2]")
+	private WebElement appearance1_4;
+	
+	public String appearance1_4(){//4.horizontal is center,vertical is top
+		String str1 = appearance1_4.getAttribute("valign");
+		String str2 = appearance1_4.getAttribute("align");
+		return str1 + "+" + str2;
+	}
+	
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[5]/td[2]")
+	private WebElement appearance1_5;
+	
+	public String appearance1_5(){//5.horizontal is center,vertical is center
+		String str1 = appearance1_5.getAttribute("valign");
+		String str2 = appearance1_5.getAttribute("align");
+		return str1 + "+" + str2;
+	}
+	
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[6]/td[2]")
+	private WebElement appearance1_6;
+	
+	public String appearance1_6(){//6.horizontal is center,vertical is bottom
+		String str1 = appearance1_6.getAttribute("valign");
+		String str2 = appearance1_6.getAttribute("align");
+		return str1 + "+" + str2;
+	}
+	
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[7]/td[2]")
+	private WebElement appearance1_7;
+	
+	public String appearance1_7(){//7.horizontal is right,vertical is top
+		String str1 = appearance1_7.getAttribute("valign");
+		String str2 = appearance1_7.getAttribute("align");
+		return str1 + "+" + str2;
+	}
+	
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[8]/td[2]")
+	private WebElement appearance1_8;
+	
+	public String appearance1_8(){//8.horizontal is right,vertical is center
+		String str1 = appearance1_8.getAttribute("valign");
+		String str2 = appearance1_8.getAttribute("align");
+		return str1 + "+" + str2;
+	}
+	
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[9]/td[2]")
+	private WebElement appearance1_9;
+	
+	public String appearance1_9(){//9.horizontal is right,vertical is bottom
+		String str1 = appearance1_9.getAttribute("valign");
+		String str2 = appearance1_9.getAttribute("align");
+		return str1 + "+" + str2;
+	}
+	
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[10]/td[2]")
+	private WebElement appearance1_10;
+	
+	public String appearance1_10(){//10.horizontal indent is 50px
+		String str1 = appearance1_10.getAttribute("valign");
+		String str2 = appearance1_10.getAttribute("align");
+		return str1 + "+" + str2;
+	}
+	
+	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[11]/td[2]")
+	private WebElement appearance1_11;
+	
+	public String appearance1_11(){//11.horizontal is left,vertical is center
+		String str1 = appearance1_11.getAttribute("valign");
+		String str2 = appearance1_11.getAttribute("align");
+		return str1 + "+" + str2;
+	}
+//###############################For Label Appearance1################################
 
 
 
