@@ -462,7 +462,248 @@ public class Image_PageObject extends Main_Page{
 	}
 //###############################Image Action######################################
 //###############################Image ActionTab###################################
+	@FindBy(id="Image_actionTab_image")
+	private WebElement actionTab_newFlow;
 	
+	@FindBy(id="Image_main_link04")
+	private WebElement actionTab_mainPage;
+	
+	public String actTabNewFlow(){//Launch New Flow
+		actionTab_newFlow.click();
+		return actionTab_mainPage.getText();
+	}
+	
+	@FindBy(id="Image_actionTab_image01")
+	private WebElement actionTab_changeFlow;
+	
+	@FindBy(id="index_tabbedPane_tablist_index_ContentPane02")
+	private WebElement actionTab_index;
+	
+	public String actTabChangeFlow(){//Change Flow Event
+		actionTab_changeFlow.click();
+		return actionTab_index.getText();
+	}
+	
+	@FindBy(id="Image_actionTab_image01")
+	private WebElement actionTab_Operation;
+	
+	@FindBy(id="index_tabbedPane_tablist_index_ContentPane02")
+	private WebElement actionTab_index1;
+	
+	public String actTabOperation(){//Launch Operation
+		actionTab_Operation.click();
+		return actionTab_index1.getText();
+	}
 //###############################Image ActionTab###################################
+//###########################Image Appearance1#####################################
+	@FindBy(id="Image_appearance1_image")
+	private WebElement Appearance1_1;
+	
+	public String Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
+		return Appearance1_1.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image01")
+	private WebElement Appearance1_2;
+	
+	public String Appearance1_2(){//2.Width is AutoSize,Height is Fixed 50px
+		return Appearance1_2.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image05")
+	private WebElement Appearance1_3;
+	
+	public String Appearance1_3(){//3.Width is AutoSize,Height is Relative 50 percent
+		return Appearance1_3.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image08")
+	private WebElement Appearance1_4;
+	
+	public String Appearance1_4(){//4.Width is AutoSize,Height is Fill
+		return Appearance1_4.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image02")
+	private WebElement Appearance1_5;
+	
+	public String Appearance1_5(){//5.Width is Fixed50px,Height is AutoSize
+		return Appearance1_5.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image03")
+	private WebElement Appearance1_6;
+	
+	public String Appearance1_6(){//6.Width is Fixed 50px,Height is Fixed 50px
+		return Appearance1_6.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image11")
+	private WebElement Appearance1_7;
+	
+	public String Appearance1_7(){//7.Width is Fixed 50px,Height is Relative 50 percent
+		return Appearance1_7.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image11_copy")
+	private WebElement Appearance1_8;
+	
+	public String Appearance1_8(){//8.Width is Fixed 50px,Height is Fill
+		return Appearance1_8.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image04")
+	private WebElement Appearance1_9;
+	
+	public String Appearance1_9(){//9.Width is Relative 50 percent,Height is AutoSize
+		return Appearance1_9.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image04_copy")
+	private WebElement Appearance1_10;
+	
+	public String Appearance1_10(){//10.Width is Relative 50 percent,Height is Fixed 50 px
+		return Appearance1_10.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image06")
+	private WebElement Appearance1_11;
+	
+	public String Appearance1_11(){//11.Width is Relative 50 percent,Height is Relative 50 percent
+		return Appearance1_11.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image06_copy")
+	private WebElement Appearance1_12;
+	
+	public String Appearance1_12(){//12.Width is Relative 50 percent,Height is Fill
+		return Appearance1_12.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image07")
+	private WebElement Appearance1_13;
+	
+	public String Appearance1_13(){//13.Width is Fill,Height is AutoSize
+		return Appearance1_13.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image07_copy")
+	private WebElement Appearance1_14;
+	
+	public String Appearance1_14(){//14.Width is Fill,Height is Fixed 50 px
+		return Appearance1_14.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image07_copy01")
+	private WebElement Appearance1_15;
+	
+	public String Appearance1_15(){//15.Width is Fill,Height is Relative 50%
+		return Appearance1_15.getAttribute("style");
+	}
+	
+	@FindBy(id="Image_appearance1_image09")
+	private WebElement Appearance1_16;
+	
+	public String Appearance1_16(){//16.Width is Fill,Height is Fill
+		return Appearance1_16.getAttribute("style");
+	}
+//###############################Image Appearance1###############################
+//###############################Image Appearance2###############################
+	@FindBy(xpath=".//*[@id='Image_appearance2_group']/div/div/div/div")
+	private WebElement Appearance2_1;
+	
+	public String Appearance2_1(){//1.horizontal is left,vertical is top
+		String v = Appearance2_1.getAttribute("style");
+		String h = Appearance2_1.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Image_appearance2_group01']/div/div/div/div")
+	private WebElement Appearance2_2;
+	
+	public String Appearance2_2(){//2.horizontal is left,vertical is center
+		String v = Appearance2_2.getAttribute("style");
+		String h = Appearance2_2.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Image_appearance2_group02']/div/div/div/div")
+	private WebElement Appearance2_3;
+	
+	public String Appearance2_3(){//3.horizontal is left,vertical is bottom
+		String v = Appearance2_3.getAttribute("style");
+		String h = Appearance2_3.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Image_appearance2_group03']/div/div/div/div")
+	private WebElement Appearance2_4;
+	
+	public String Appearance2_4(){//4.horizontal is center,vertical is top
+		String v = Appearance2_4.getAttribute("style");
+		String h = Appearance2_4.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Image_appearance2_group04']/div/div/div/div")
+	private WebElement Appearance2_5;
+	
+	public String Appearance2_5(){//5.horizontal is center,vertical is center
+		String v = Appearance2_5.getAttribute("style");
+		String h = Appearance2_5.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Image_appearance2_group05']/div/div/div/div")
+	private WebElement Appearance2_6;
+	
+	public String Appearance2_6(){//6.horizontal is center,vertical is bottom
+		String v = Appearance2_6.getAttribute("style");
+		String h = Appearance2_6.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Image_appearance2_group06']/div/div/div/div")
+	private WebElement Appearance2_7;
+	
+	public String Appearance2_7(){//7.horizontal is right,vertical is top
+		String v = Appearance2_7.getAttribute("style");
+		String h = Appearance2_7.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Image_appearance2_group07']/div/div/div/div")
+	private WebElement Appearance2_8;
+	
+	public String Appearance2_8(){//8.horizontal is right,vertical is center
+		String v = Appearance2_8.getAttribute("style");
+		String h = Appearance2_8.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Image_appearance2_group08']/div/div/div/div")
+	private WebElement Appearance2_9;
+	
+	public String Appearance2_9(){//9.horizontal is right,vertical is bottom
+		String v = Appearance2_9.getAttribute("style");
+		String h = Appearance2_9.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Image_appearance2_group09']/div/div/div/div")
+	private WebElement Appearance2_10;
+	
+	public String Appearance2_10(){//10.horizontal indent is 50px
+		return Appearance2_10.getAttribute("style");
+		
+	}
+	
+	@FindBy(xpath=".//*[@id='Image_appearance2_group10']/div/div/div/div")
+	private WebElement Appearance2_11;
+	
+	public String Appearance2_11(){//11.horizontal indent is 10percent
+		return Appearance2_11.getAttribute("style");
+	}
+//###############################Image Appearance2###############################
 
 }
