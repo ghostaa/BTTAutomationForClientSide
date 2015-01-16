@@ -698,17 +698,6 @@ public class HorizontalSlider_PageObject extends Main_Page{
 			return CSS.css_query(action_focus.getAttribute("class"), temp);
 		}
 		
-	/*	@FindBy(id="VerticalSlider_action_label05")
-		private WebElement action_click5;
-		
-		@FindBy(id="VerticalSlider_action_label06")
-		private WebElement action_label5;
-		
-		public String actCompare(){//Click here to isFocusable()
-			action_click3.click();
-			return action_label3.getText();
-		}*/
-		
 		@FindBy(xpath=".//*[@id='HorizontalSlider_action_horizontalSlider05']/tbody/tr[2]/td[5]/div")
 		private WebElement action_reset;
 		
@@ -723,17 +712,6 @@ public class HorizontalSlider_PageObject extends Main_Page{
 			action_label6.click();
 			return action_value.getAttribute("aria-valuenow");
 		}
-		
-		/*	@FindBy(id="VerticalSlider_action_label05")
-		private WebElement action_click7;
-		
-		@FindBy(id="VerticalSlider_action_label06")
-		private WebElement action_label7;
-		
-		public String actCompare(){//Click here to undo VerticalSlider
-			action_click3.click();
-			return action_label3.getText();
-		}*/
 //###############################HorizontalSlider Action#####################################
 //###############################HorizontalSlider Appearance1################################
 	@FindBy(id="HorizontalSlider_appearance1_horizontalSlider")
