@@ -449,4 +449,9 @@
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
     </target>
+    <target depends="Text_Properties,Text_Event,Text_Condition,Text_Action,Text_CSS" name="Text"/>
+    <target depends="Radio_Action,Radio_Condition,Radio_CSS,Radio_Event,Radio_Properties" name="Radio"/>
+    <target depends="Label_ECA,Label_CSS,Label_Properties" name="Label"/>    
+    <target depends="Link_Action, Link_Condition, Link_Event, Link_Properties" name="Link"/>         	
+              	
 </project>
