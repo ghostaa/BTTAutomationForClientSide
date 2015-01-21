@@ -49,105 +49,85 @@ public class Label_Appearance extends Main_Class{
   }
 
   @Test
-  public void proString(){
-	  assertEquals("Test data", drv.proString());
-  }
-
-  @Test
-  public void proDate(){
-	  boolean b = DateType.Date(drv.proDate());
-	  assertEquals(true, b);
-  }
-
-  @Test
-  public void proCurrency(){
-	  boolean b = DateType.Currency(drv.proCurrency());
-	  assertEquals(true, b);
-  }
-
-  @Test
-  public void proNumber(){
-	  boolean b = DateType.Number(drv.proNumber());
-	  assertEquals(true, b);
-	  }
-
-  @Test
-  public void proDuration(){
-	  boolean b = DateType.Duration(drv.proDuration());
-	  assertEquals(true, b);
+  public void appearance1(){
+	  assertEquals("visibility: inherit;", drv.appearance1());
   }
   
   @Test
-  public void proBoolean(){
-	  assertEquals(true, drv.proBoolean());
+  public void appearance2(){
+	  assertEquals("visibility: inherit; height: 30px;", drv.appearance2());
+  }
+  
+  @Test
+  public void appearance3(){
+	  assertEquals("visibility: inherit; height: 50%;", drv.appearance3());
+  }
+  
+  @Test
+  public void appearance4(){
+	  assertEquals("visibility: inherit; height: 100%;", drv.appearance4());
+  }
+  
+  @Test
+  public void appearance5(){
+	  assertEquals("visibility: inherit; width: 100px;", drv.appearance5());
+  }
+  
+  @Test
+  public void appearance6(){
+	  assertEquals("visibility: inherit; height: 30px; width: 100px;", drv.appearance6());
+  }
+  
+  @Test
+  public void appearance7(){
+	  assertEquals("visibility: inherit; height: 50%; width: 100px;", drv.appearance7());
+  }
+  
+  @Test
+  public void appearance8(){
+	  assertEquals("visibility: inherit; height: 100%; width: 100px;", drv.appearance8());
+  }
+  
+  @Test
+  public void appearance9(){
+	  assertEquals("visibility: inherit; width: 50%;", drv.appearance9());
+  }
+  
+  @Test
+  public void appearance10(){
+	  assertEquals("visibility: inherit; height: 30px; width: 50%;", drv.appearance10());
+  }
+  
+  @Test
+  public void appearance11(){
+	  assertEquals("visibility: inherit; height: 50%; width: 50%;", drv.appearance11());
+  }
+  
+  @Test
+  public void appearance12(){
+	  assertEquals("visibility: inherit; height: 100%; width: 50%;", drv.appearance12());
+  }
+  
+  @Test
+  public void appearance13(){
+	  assertEquals("visibility: inherit; width: 100%;", drv.appearance13());
+  }
+  
+  @Test
+  public void appearance14(){
+	  assertEquals("visibility: inherit; height: 30px; width: 100%;", drv.appearance14());
+  }
+  
+  @Test
+  public void appearance15(){
+	  assertEquals("visibility: inherit; height: 50%; width: 100%;", drv.appearance15());
+  }
+  
+  @Test
+  public void appearance16(){
+	  assertEquals("visibility: inherit; height: 100%; width: 100%;", drv.appearance16());
   }
 
-  @Test
-  public void proXMLGregorianCalendar(){
-	  assertEquals("2014-07-18", drv.proXMLGregorianCalendar());
-  }
-
-  @Test
-  public void proByte(){
-	  assertEquals("98", drv.proByte());
-  }
-
-  @Test
-  public void proShort(){
-	  assertEquals("-32,223", drv.proShort());
-  }
-
-  @Test
-  public void proInteger(){
-	  assertEquals("66", drv.proInteger());
-  }
-
-  @Test
-  public void proLong(){
-	  assertEquals("315,161,000,238,006", drv.proLong());
-  }
-
-  @Test
-  public void proFloat(){
-	  assertEquals("3.12", drv.proFloat());
-  }
-
-  @Test
-  public void proDouble(){
-	  assertEquals("8.220", drv.proDouble());
-  }
-
-  @Test
-  public void proBigInteger(){
-	  assertEquals("123", drv.proBigInteger());
-  }
-
-  @Test
-  public void proVisible(){
-	  assertEquals(true, drv.proVisible());
-  }
-
-  @Test
-  public void proHidden(){
-	  assertEquals(false, drv.proHidden());
-  }
-
-  @Test
-  public void proGone(){
-	  assertEquals("display: none; visibility: inherit;", drv.proGone());
-  }
-
-  @Test
-  public void proFiledReference(){
-	  drv.proFiledReference();
-	  assertEquals(true, drv.proFiledReferenceRadio());
-  }
-
-  @Test
-  public void proNLS(){
-	  boolean b = (new NLS()).NLS_lang(drv.proNLS());
-	  assertEquals(true,b);
-  }
   
   @AfterClass
   public static void tearDown() throws Exception {

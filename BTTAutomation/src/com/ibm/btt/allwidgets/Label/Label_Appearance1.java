@@ -45,15 +45,63 @@ public class Label_Appearance1 extends Main_Class{
 	drv.Establish();
     drv.BTT8200_tab();
     drv.Label_widget();
-    drv.label_appearance();
+    drv.label_appearance1();
   }
 
   @Test
-  public void appearance1_1(){
-//	  assertEquals("top+left", drv.appearance1_1());
-	  drv.appearance1_1();
+  public void Appearance1_1(){
+	  assertEquals("left&top", drv.Appearance1_1());
   }
-
+  
+  @Test
+  public void Appearance1_2(){
+	  assertEquals("left&middle", drv.Appearance1_2());
+  }
+  
+  @Test
+  public void Appearance1_3(){
+	  assertEquals("left&bottom", drv.Appearance1_3());
+  }
+  
+  @Test
+  public void Appearance1_4(){
+	  assertEquals("center&top", drv.Appearance1_4());
+  }
+  
+  @Test
+  public void Appearance1_5(){
+	  assertEquals("center&middle", drv.Appearance1_5());
+  }
+  
+  @Test
+  public void Appearance1_6(){
+	  assertEquals("center&bottom", drv.Appearance1_6());
+  }
+  
+  @Test
+  public void Appearance1_7(){
+	  assertEquals("right&top", drv.Appearance1_7());
+  }
+  
+  @Test
+  public void Appearance1_8(){
+	  assertEquals("right&middle", drv.Appearance1_8());
+  }
+  
+  @Test
+  public void Appearance1_9(){
+	  assertEquals("right&bottom", drv.Appearance1_9());
+  }
+  
+  @Test
+  public void Appearance1_10(){
+	  assertEquals("width: 162px; height: 149px; padding-left: 50px; border: 1px solid rgb(0, 0, 0);", drv.Appearance1_10());
+  }
+  
+  @Test
+  public void Appearance1_11(){
+	  assertEquals("width: 162px; height: 149px; padding-left: 10%; border: 1px solid rgb(0, 0, 0);", drv.Appearance1_11());
+  }
   
   @AfterClass
   public static void tearDown() throws Exception {

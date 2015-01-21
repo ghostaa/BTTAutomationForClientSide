@@ -468,104 +468,99 @@ public class Label_PageObject extends Main_Page{
 //###############################For Label Appearance#################################
 //###############################For Label Appearance1################################
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[1]/td[2]")
-	private WebElement appearance1_1;
+	private WebElement Appearance1_1;
 	
-	public void appearance1_1(){//1.horizontal is left,vertical is top
-		String str1 = appearance1_1.getAttribute("valign");
-		String str2 = appearance1_1.getAttribute("align");
-		System.out.println(str1);
-		System.out.println(str2);
-	
+	public String Appearance1_1(){//1.horizontal is left,vertical is top
+		String v = Appearance1_1.getAttribute("valign");
+		String h = Appearance1_1.getAttribute("align");
+		return h+"&"+v;
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[2]/td[2]")
-	private WebElement appearance1_2;
+	private WebElement Appearance1_2;
 	
-	public String appearance1_2(){//2.horizontal is left,vertical is center
-		String str1 = appearance1_2.getAttribute("valign");
-		String str2 = appearance1_2.getAttribute("align");
-		return str1 + "+" + str2;
+	public String Appearance1_2(){//2.horizontal is left,vertical is center
+		String v = Appearance1_2.getAttribute("valign");
+		String h = Appearance1_2.getAttribute("align");
+		return h+"&"+v;
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[3]/td[2]")
-	private WebElement appearance1_3;
+	private WebElement Appearance1_3;
 	
-	public String appearance1_3(){//3.horizontal is left,vertical is bottom
-		String str1 = appearance1_3.getAttribute("valign");
-		String str2 = appearance1_3.getAttribute("align");
-		return str1 + "+" + str2;
+	public String Appearance1_3(){//3.horizontal is left,vertical is bottom
+		String v = Appearance1_3.getAttribute("valign");
+		String h = Appearance1_3.getAttribute("align");
+		return h+"&"+v;
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[4]/td[2]")
-	private WebElement appearance1_4;
+	private WebElement Appearance1_4;
 	
-	public String appearance1_4(){//4.horizontal is center,vertical is top
-		String str1 = appearance1_4.getAttribute("valign");
-		String str2 = appearance1_4.getAttribute("align");
-		return str1 + "+" + str2;
+	public String Appearance1_4(){//4.horizontal is center,vertical is top
+		String v = Appearance1_4.getAttribute("valign");
+		String h = Appearance1_4.getAttribute("align");
+		return h+"&"+v;
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[5]/td[2]")
-	private WebElement appearance1_5;
+	private WebElement Appearance1_5;
 	
-	public String appearance1_5(){//5.horizontal is center,vertical is center
-		String str1 = appearance1_5.getAttribute("valign");
-		String str2 = appearance1_5.getAttribute("align");
-		return str1 + "+" + str2;
+	public String Appearance1_5(){//5.horizontal is center,vertical is center
+		String v = Appearance1_5.getAttribute("valign");
+		String h = Appearance1_5.getAttribute("align");
+		return h+"&"+v;
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[6]/td[2]")
-	private WebElement appearance1_6;
+	private WebElement Appearance1_6;
 	
-	public String appearance1_6(){//6.horizontal is center,vertical is bottom
-		String str1 = appearance1_6.getAttribute("valign");
-		String str2 = appearance1_6.getAttribute("align");
-		return str1 + "+" + str2;
+	public String Appearance1_6(){//6.horizontal is center,vertical is bottom
+		String v = Appearance1_6.getAttribute("valign");
+		String h = Appearance1_6.getAttribute("align");
+		return h+"&"+v;
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[7]/td[2]")
-	private WebElement appearance1_7;
+	private WebElement Appearance1_7;
 	
-	public String appearance1_7(){//7.horizontal is right,vertical is top
-		String str1 = appearance1_7.getAttribute("valign");
-		String str2 = appearance1_7.getAttribute("align");
-		return str1 + "+" + str2;
+	public String Appearance1_7(){//7.horizontal is right,vertical is top
+		String v = Appearance1_7.getAttribute("valign");
+		String h = Appearance1_7.getAttribute("align");
+		return h+"&"+v;
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[8]/td[2]")
-	private WebElement appearance1_8;
+	private WebElement Appearance1_8;
 	
-	public String appearance1_8(){//8.horizontal is right,vertical is center
-		String str1 = appearance1_8.getAttribute("valign");
-		String str2 = appearance1_8.getAttribute("align");
-		return str1 + "+" + str2;
+	public String Appearance1_8(){//8.horizontal is right,vertical is center
+		String v = Appearance1_8.getAttribute("valign");
+		String h = Appearance1_8.getAttribute("align");
+		return h+"&"+v;
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[9]/td[2]")
-	private WebElement appearance1_9;
+	private WebElement Appearance1_9;
 	
-	public String appearance1_9(){//9.horizontal is right,vertical is bottom
-		String str1 = appearance1_9.getAttribute("valign");
-		String str2 = appearance1_9.getAttribute("align");
-		return str1 + "+" + str2;
+	public String Appearance1_9(){//9.horizontal is right,vertical is bottom
+		String v = Appearance1_9.getAttribute("valign");
+		String h = Appearance1_9.getAttribute("align");
+		return h+"&"+v;
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[10]/td[2]")
-	private WebElement appearance1_10;
+	private WebElement Appearance1_10;
 	
-	public String appearance1_10(){//10.horizontal indent is 50px
-		String str1 = appearance1_10.getAttribute("valign");
-		String str2 = appearance1_10.getAttribute("align");
-		return str1 + "+" + str2;
+	public String Appearance1_10(){//10.horizontal indent is 50px
+		return Appearance1_10.getAttribute("style");
+		
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[11]/td[2]")
-	private WebElement appearance1_11;
+	private WebElement Appearance1_11;
 	
-	public String appearance1_11(){//11.horizontal is left,vertical is center
-		String str1 = appearance1_11.getAttribute("valign");
-		String str2 = appearance1_11.getAttribute("align");
-		return str1 + "+" + str2;
+	public String Appearance1_11(){//11.horizontal indent is 10percent
+		return Appearance1_11.getAttribute("style");
 	}
 //###############################For Label Appearance1################################
 
