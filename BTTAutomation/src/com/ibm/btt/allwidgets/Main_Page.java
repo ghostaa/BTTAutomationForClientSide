@@ -671,5 +671,8 @@ public class Main_Page extends Index_Page{
 	}
 	
 //###############################For CheckedMultiSelect Main#####################
+//###############################For RichText Main###############################
+	
+//###############################For RichText Main###############################
 } 
 

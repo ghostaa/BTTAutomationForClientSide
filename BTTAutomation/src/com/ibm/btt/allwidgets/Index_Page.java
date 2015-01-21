@@ -114,6 +114,13 @@ public class Index_Page {
 	public void CheckedMultiSelect_widget(){
 		CheckedMultiSelect_widget.click();
 	}
+	
+	@FindBy(id="index_link50")
+	private WebElement RichText_widget;
+	
+	public void RichText_widget(){
+		RichText_widget.click();
+	}
 
 
 } 
