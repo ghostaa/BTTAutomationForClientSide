@@ -38,53 +38,27 @@ public class Image_ActionTab extends Main_Class{
     drv.image_widget();
     drv.Image_actionTab();
   }
-
+  
   @Test
-  public void Image_Action_focus(){
-	  assertEquals("image is focus", drv.Image_Action_focus_getValue());
+  public void actTabNewFlow(){
+	  assertEquals("Image_actionTab", drv.actTabNewFlow());
   }
   
   @Test
-  public void Image_Action_styleClass(){
-	  assertEquals(1, drv.Image_Action_styleClass());
+  public void actTabChangeFlow(){
+	  drv.Image_actionTab();
+	  assertEquals("Banco Popular-FVT", drv.actTabChangeFlow());
   }
   
   @Test
-  public void Image_Action_location(){
-	  assertEquals(Main_Class.baseUrl + "img/Bomb1.jpg", drv.Image_Action_location());
-  }
-  
-  @Test
-  public void Image_Action_visibility(){
-	  assertEquals(false, drv.Image_Action_visibility());
-  }
-  
-  @Test
-  public void Image_Action_disabled(){
-	  assertEquals("image is disabled", drv.Image_Action_disabled());
-  }
-  
-/*  @Test
-  public void Image_Action_target(){
-	  assertEquals(false, drv.Text_Action_hidden());
-  }*/
-  
-  @Test
-  public void Image_Action_alt(){
-	  assertEquals("test alt", drv.Image_Action_alt());
-	  assertEquals("location changes to  img/days.jpg", drv.Image_Action_alt_getvalue());
-  }
-  
-  @Test
-  public void Image_Action_hint(){
-	  assertEquals("test hint", drv.Image_Action_hint());
-  }
-  
-  @Test
-  public void Image_Action_actionGroup(){
-	  assertEquals(true, drv.Image_Action_actionGroup());
+  public void actTabOperation() throws Exception{
+	  drv.BTT8200_tab();
+	  drv.image_widget();
+	  drv.Image_actionTab();
+	  assertEquals("Banco Popular-FVT", drv.actTabOperation());
   }
 
+  
   @AfterClass
   public static void tearDown() throws Exception {
 	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Image_ActionTab.class);
