@@ -51,8 +51,9 @@ public class CheckBox_submit extends Main_Class{
   }
   
   @Test
-  public void CheckBox_submit_clickButton(){
+  public void CheckBox_submit_clickButton() throws InterruptedException{
 	  drv.CheckBox_submit_clickButton();
+	  Thread.sleep(3000);
   }
   
   @Test
