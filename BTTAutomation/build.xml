@@ -545,14 +545,6 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="MultiSelect_Submit">
-        <mkdir dir="${junit.output.dir}"/>
-	        <junit fork="yes" printsummary="withOutAndErr">
-	            <formatter type="xml"/>
-	            <test name="com.ibm.btt.allwidgets.MultiSelect.MultiSelect_Submit" todir="${junit.output.dir}"/>
-	            <classpath refid="BTTAutomation.classpath"/>
-	        </junit>
-    </target>
   	<!--HorizontalSlider-->
   	<target name="HorizontalSlider_Properties">
         <mkdir dir="${junit.output.dir}"/>
@@ -754,7 +746,7 @@
 	<target depends="Message_Properties, Message_Action, Message_CSS" name="Message"/> 
 	<target depends="Link_Properties, Link_Action, Link_Condition, Link_Event, Link_CSS" name="Link"/> 
 	<target depends="SelectList_Properties, SelectList_Action, SelectList_Condition, SelectList_Event, SelectList_CSS" name="SelectList"/> 
-	<target depends="MultiSelect_Properties, MultiSelect_ECA, MultiSelect_CSS, MultiSelect_appearance1, MultiSelect_appearance2, MultiSelect_Submit" name="MultiSelect"/> 
+	<target depends="MultiSelect_Properties, MultiSelect_ECA, MultiSelect_CSS, MultiSelect_appearance1, MultiSelect_appearance2" name="MultiSelect"/> 
 	<target depends="HorizontalSlider_Properties, HorizontalSlider_event, HorizontalSlider_condition, HorizontalSlider_action, HorizontalSlider_CSS, HorizontalSlider_appearance1, HorizontalSlider_appearance2" name="HorizontalSlider"/> 
 	<target depends="VerticalSlider_Properties, VerticalSlider_event, VerticalSlider_condition, VerticalSlider_action, VerticalSlider_CSS, VerticalSlider_appearance1, VerticalSlider_appearance2" name="VerticalSlider"/> 
 	<target depends="CheckedMultiSelect_Properties, CheckedMultiSelect_event, CheckedMultiSelect_condition, CheckedMultiSelect_action, CheckedMultiSelect_CSS, CheckedMultiSelect_appearance1, CheckedMultiSelect_appearance2, CheckedMultiSelect_appearance3" name="CheckedMultiSelect"/>           	
