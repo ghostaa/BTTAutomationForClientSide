@@ -672,8 +672,13 @@ public class CheckBox_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
 	private WebElement CheckBox_submit_Tooltip;
 	
-	public String CheckBox_submit_getTooltip(){
+	public String CheckBox_submit_getTooltip() throws InterruptedException{
 		CheckBox_submit_Integer.click();
+		Thread.sleep(2000);
+		return CheckBox_submit_Tooltip.getText();
+	}
+	
+	public Boolean CheckBox_submit_TooltipVerify(){
 		CheckBox_submit_Number.click();
 		CheckBox_submit_Byte.click();
 		CheckBox_submit_Float.click();
@@ -687,10 +692,6 @@ public class CheckBox_PageObject extends Main_Page{
 		CheckBox_submit_Duration.click();
 		CheckBox_submit_Short.click();
 		CheckBox_submit_Double.click();
-		return CheckBox_submit_Tooltip.getText();
-	}
-	
-	public Boolean CheckBox_submit_TooltipVerify(){
 		CheckBox_submit_String.click();
 		return CheckBox_submit_Tooltip.isDisplayed();
 	}
@@ -775,8 +776,8 @@ public class CheckBox_PageObject extends Main_Page{
 	@FindBy(id="CheckBox_Result_label07")
 	private WebElement CheckBox_Result_Boolean_label;
 	
-	public String CheckBox_Result_Boolean(){
-		return CheckBox_Result_Boolean.getAttribute("checked");
+	public Boolean CheckBox_Result_Boolean(){
+		return CheckBox_Result_Boolean.isSelected();
 	}
 	
 	public String CheckBox_Result_Boolean_label(){
