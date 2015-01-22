@@ -41,7 +41,7 @@ public class CheckBox_submit extends Main_Class{
   }
 
   @Test
-  public void CheckBox_submit_getTooltip(){
+  public void CheckBox_submit_getTooltip() throws InterruptedException{
 	  assertEquals("Please check the String checkBox", drv.CheckBox_submit_getTooltip());
   }
   
@@ -87,7 +87,7 @@ public class CheckBox_submit extends Main_Class{
   
   @Test
   public void CheckBox_Result_Boolean(){
-	  assertEquals("true",drv.CheckBox_Result_Boolean());
+	  assertEquals(true,drv.CheckBox_Result_Boolean());
 	  assertEquals("true",drv.CheckBox_Result_Boolean_label());
   }
   
