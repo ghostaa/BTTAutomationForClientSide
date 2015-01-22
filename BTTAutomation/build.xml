@@ -165,7 +165,7 @@
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
-	            <test name="com.ibm.btt.allwidgets.Label.Label_appearance" todir="${junit.output.dir}"/>
+	            <test name="com.ibm.btt.allwidgets.Label.Label_Appearance" todir="${junit.output.dir}"/>
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
@@ -173,7 +173,7 @@
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
-	            <test name="com.ibm.btt.allwidgets.Label.Label_appearance1" todir="${junit.output.dir}"/>
+	            <test name="com.ibm.btt.allwidgets.Label.Label_Appearance1" todir="${junit.output.dir}"/>
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
