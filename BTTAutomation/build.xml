@@ -731,7 +731,12 @@
 	            <test name="com.ibm.btt.allwidgets.CheckedMultiSelect.CheckedMultiSelect_appearance3" todir="${junit.output.dir}"/>
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
-    </target>         	
+    </target>
+    <target name="testmail">
+        <java classname="com.ibm.btt.testsuite.testmail" failonerror="true" fork="yes">
+        <classpath refid="BTTAutomation.classpath"/>
+        </java>
+    </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
