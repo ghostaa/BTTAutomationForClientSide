@@ -517,7 +517,7 @@
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
-	            <test name="com.ibm.btt.allwidgets.MultiSelect.MultiSelect_Event" todir="${junit.output.dir}"/>
+	            <test name="com.ibm.btt.allwidgets.MultiSelect.MultiSelect_ECA" todir="${junit.output.dir}"/>
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
