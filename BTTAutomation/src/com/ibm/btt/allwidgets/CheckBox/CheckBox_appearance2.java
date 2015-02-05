@@ -13,15 +13,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
-import com.ibm.btt.allwidgets.Message.Message_Action;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
-public class CheckBox_Condition extends Main_Class{
- /* private static WebDriver driver;
-  private static String baseUrl = PropertiesUtil.baseUrl;*/
+public class CheckBox_appearance2 extends Main_Class{
+
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private static CheckBox_PageObject drv;
@@ -29,78 +27,74 @@ public class CheckBox_Condition extends Main_Class{
 
   @BeforeClass
   public static void setUp() throws Exception {
-    /*driver = new FirefoxDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driver.get(baseUrl);*/
+    
 	Main_Class.setUp();
     drv=PageFactory.initElements(driver, CheckBox_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
     drv.CheckBox_widget();
-    drv.CheckBox_Condition();
-  }
-  
-  @Test
-  public void CheckBox_Condition_Expression_isChecked(){
-	  assertEquals(true,drv.CheckBox_Condition_Expression_isChecked());
+    drv.CheckBox_appearance2();
   }
 
   @Test
-  public void CheckBox_Condtion_checkBox_isFocusable  (){
-	  assertEquals(2, drv.CheckBox_Condtion_checkBox_isFocusable());
+  public void Appearance2_1(){
+	  assertEquals("left&vertical-align: top;", drv.Appearance2_1());
   }
   
   @Test
-  public void CheckBox_Condtion_CheckBox_isChecked(){
-	  assertEquals("I changed.", drv.CheckBox_Condtion_CheckBox_isChecked());
+  public void Appearance2_2(){
+	  assertEquals("left&vertical-align: middle;", drv.Appearance2_2());
   }
   
   @Test
-  public void CheckBox_Condition_CheckBox_readOnly(){
-	  assertEquals("true", drv.CheckBox_Condition_CheckBox_readOnly());
-	  assertEquals("visibility: hidden;", drv.CheckBox_Condition_CheckBox_visibility());
+  public void Appearance2_3(){
+	  assertEquals("left&vertical-align: bottom;", drv.Appearance2_3());
   }
   
   @Test
-  public void CheckBox_Condtion_CheckBox_disable(){
-	  assertEquals("true", drv.CheckBox_Condtion_CheckBox_disabled());
-	  assertEquals("visibility: hidden;", drv.CheckBox_Condtion_CheckBox_disable());
+  public void Appearance2_4(){
+	  assertEquals("center&vertical-align: top;", drv.Appearance2_4());
   }
   
   @Test
-  public void CheckBox_Expression_isFocusable(){
-	  assertEquals("true", drv.CheckBox_Expression_isFocusable());
+  public void Appearance2_5(){
+	  assertEquals("center&vertical-align: middle;", drv.Appearance2_5());
   }
   
   @Test
-  public void CheckBox_Condtion_Expression_id(){
-	  assertEquals(true, drv.CheckBox_Condtion_Expression_id());
+  public void Appearance2_6(){
+	  assertEquals("center&vertical-align: bottom;", drv.Appearance2_6());
   }
   
   @Test
-  public void CheckBox_Condtion_Expression_Text(){
-	  assertEquals("Hi,I'm hint",drv.CheckBox_Condtion_Expression_Text());
+  public void Appearance2_7(){
+	  assertEquals("right&vertical-align: top;", drv.Appearance2_7());
   }
   
   @Test
-  public void CheckBox_Condition_Expression_visibility(){
-	  assertEquals("Hello",drv.CheckBox_Condition_Expression_visibility());
+  public void Appearance2_8(){
+	  assertEquals("right&vertical-align: middle;", drv.Appearance2_8());
   }
   
   @Test
-  public void CheckBox_Condition_Expression_disabled(){
-	  assertEquals("visibility: inherit; display: none;",drv.CheckBox_Condition_Expression_disabled());
+  public void Appearance2_9(){
+	  assertEquals("right&vertical-align: bottom;", drv.Appearance2_9());
   }
   
   @Test
-  public void CheckBox_Expression_readOnly(){
-	  assertEquals(true,drv.CheckBox_Expression_readOnly());
+  public void Appearance2_10(){
+	  assertEquals("padding-left: 50px; vertical-align: middle;", drv.Appearance2_10());
   }
-
+  
+  @Test
+  public void Appearance2_11(){
+	  assertEquals("padding-left: 10%; vertical-align: middle;", drv.Appearance2_11());
+  }
+ 
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,CheckBox_Condition.class);
-    driver.quit();
+	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,CheckBox_appearance2.class);
+	driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);

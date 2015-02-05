@@ -134,7 +134,6 @@ public class CheckBox_PageObject extends Main_Page{
 	
 	public int CheckBox_properties_tabIndex1Focus(){
 		String[] temp = {"dijitCheckBoxFocused", "dijitFocused"};
-		System.out.println(CheckBox_properties_tabIndex1Focus.getAttribute("class"));
 		return CSS.css_query(CheckBox_properties_tabIndex1Focus.getAttribute("class"), temp);
 	}
 	
@@ -620,6 +619,149 @@ public class CheckBox_PageObject extends Main_Page{
 	}
 
 //###############################CheckBox Action######################################
+//###############################CheckBox Appearance1#################################
+	@FindBy(xpath=".//*[@id='CheckBox_appearance1_form']/table/tbody/tr[1]/td[2]/label")
+	private WebElement Appearance1_1;
+	
+	public String Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
+		return Appearance1_1.getAttribute("style");
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance1_form']/table/tbody/tr[2]/td[2]/label")
+	private WebElement Appearance1_2;
+	
+	public String Appearance1_2(){//2.Width is AutoSize,Height is Fixed 50px
+		return Appearance1_2.getAttribute("style");
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance1_form']/table/tbody/tr[3]/td[2]/label")
+	private WebElement Appearance1_3;
+	
+	public String Appearance1_3(){//3.Width is Fixed50px,Height is AutoSize
+		return Appearance1_3.getAttribute("style");
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance1_form']/table/tbody/tr[4]/td[2]/label")
+	private WebElement Appearance1_4;
+	
+	public String Appearance1_4(){//4.Width is Fixed 50px,Height is Fixed 50px
+		return Appearance1_4.getAttribute("style");
+	}
+
+
+	@FindBy(xpath=".//*[@id='CheckBox_appearance1_form']/table/tbody/tr[5]/td[2]/label")
+	private WebElement Appearance1_5;
+	
+	public int Appearance1_5(){//5.Width textwrap is true
+		String[] temp = {"dijitLabelWrap"};
+		return CSS.css_query(Appearance1_5.getAttribute("class"), temp);
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance1_form']/table/tbody/tr[6]/td[2]/label")
+	private WebElement Appearance1_6;
+	
+	public int Appearance1_6(){//6.Width textwrap is false
+		String[] temp = {""};
+		return CSS.css_query(Appearance1_6.getAttribute("class"), temp);
+	}
+//###############################CheckBox Appearance1###############################
+//###############################CheckBox Appearance2###############################
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group']/div/div/div/div")
+	private WebElement Appearance2_1;
+	
+	public String Appearance2_1(){//1.horizontal is left,vertical is top
+		String v = Appearance2_1.getAttribute("style");
+		String h = Appearance2_1.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group01']/div/div/div/div")
+	private WebElement Appearance2_2;
+	
+	public String Appearance2_2(){//2.horizontal is left,vertical is center
+		String v = Appearance2_2.getAttribute("style");
+		String h = Appearance2_2.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group02']/div/div/div/div")
+	private WebElement Appearance2_3;
+	
+	public String Appearance2_3(){//3.horizontal is left,vertical is bottom
+		String v = Appearance2_3.getAttribute("style");
+		String h = Appearance2_3.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group03']/div/div/div/div")
+	private WebElement Appearance2_4;
+	
+	public String Appearance2_4(){//4.horizontal is center,vertical is top
+		String v = Appearance2_4.getAttribute("style");
+		String h = Appearance2_4.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group04']/div/div/div/div")
+	private WebElement Appearance2_5;
+	
+	public String Appearance2_5(){//5.horizontal is center,vertical is center
+		String v = Appearance2_5.getAttribute("style");
+		String h = Appearance2_5.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group05']/div/div/div/div")
+	private WebElement Appearance2_6;
+	
+	public String Appearance2_6(){//6.horizontal is center,vertical is bottom
+		String v = Appearance2_6.getAttribute("style");
+		String h = Appearance2_6.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group06']/div/div/div/div")
+	private WebElement Appearance2_7;
+	
+	public String Appearance2_7(){//7.horizontal is right,vertical is top
+		String v = Appearance2_7.getAttribute("style");
+		String h = Appearance2_7.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group07']/div/div/div/div")
+	private WebElement Appearance2_8;
+	
+	public String Appearance2_8(){//8.horizontal is right,vertical is center
+		String v = Appearance2_8.getAttribute("style");
+		String h = Appearance2_8.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group08']/div/div/div/div")
+	private WebElement Appearance2_9;
+	
+	public String Appearance2_9(){//9.horizontal is right,vertical is bottom
+		String v = Appearance2_9.getAttribute("style");
+		String h = Appearance2_9.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group09']/div/div/div/div")
+	private WebElement Appearance2_10;
+	
+	public String Appearance2_10(){//10.horizontal indent is 50px
+		return Appearance2_10.getAttribute("style");
+		
+	}
+	
+	@FindBy(xpath=".//*[@id='CheckBox_appearance2_group10']/div/div/div/div")
+	private WebElement Appearance2_11;
+	
+	public String Appearance2_11(){//11.horizontal indent is 10percent
+		return Appearance2_11.getAttribute("style");
+	}
+//###############################CheckBox Appearance2#################################
 //###############################CheckBox Submit######################################
 	@FindBy(id="CheckBox_submit_checkBox_spanish")
 	private WebElement CheckBox_submit_Integer;
@@ -683,7 +825,6 @@ public class CheckBox_PageObject extends Main_Page{
 		CheckBox_submit_Byte.click();
 		CheckBox_submit_Float.click();
 		CheckBox_submit_BigDecimal.click();
-		CheckBox_submit_Boolean.click();
 		CheckBox_submit_Currency.click();
 		CheckBox_submit_XMLGregorianCalendar.click();
 		CheckBox_submit_Long.click();
@@ -693,6 +834,9 @@ public class CheckBox_PageObject extends Main_Page{
 		CheckBox_submit_Short.click();
 		CheckBox_submit_Double.click();
 		CheckBox_submit_String.click();
+		if(CheckBox_submit_Boolean.isSelected() == false){
+			CheckBox_submit_Boolean.click();
+		}
 		return CheckBox_submit_Tooltip.isDisplayed();
 	}
 	
