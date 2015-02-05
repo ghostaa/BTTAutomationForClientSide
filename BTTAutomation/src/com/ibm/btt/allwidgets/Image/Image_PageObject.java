@@ -1,18 +1,11 @@
 package com.ibm.btt.allwidgets.Image;
 
-import java.awt.event.KeyEvent;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.ibm.btt.allwidgets.Main_Page;
 import com.ibm.btt.util.CSS;
-import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
-import com.ibm.btt.allwidgets.*;
 
 public class Image_PageObject extends Main_Page{
 	
