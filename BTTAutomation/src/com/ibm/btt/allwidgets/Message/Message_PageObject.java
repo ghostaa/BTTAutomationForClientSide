@@ -385,5 +385,140 @@ public class Message_PageObject extends Main_Page{
 		return CSS.css_query(action_displayWARN.getAttribute("class"), temp);
 	}
 //###############################Message Action######################################
+//###############################Message Appearance#################################
+	@FindBy(xpath=".//*[@id='Message_appearance_message']/div[1]/span")
+	private WebElement Appearance1_1;
+	
+	public String Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
+		return Appearance1_1.getAttribute("style");
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance_message01']/div[1]/span")
+	private WebElement Appearance1_2;
+	
+	public String Appearance1_2(){//2.Width is AutoSize,Height is Fixed 30px
+		return Appearance1_2.getAttribute("style");
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance_message04']/div[1]/span")
+	private WebElement Appearance1_3;
+	
+	public String Appearance1_3(){//3.Width is Fixed 100px,Height is AutoSize
+		return Appearance1_3.getAttribute("style");
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance_message05']/div[1]/span")
+	private WebElement Appearance1_4;
+	
+	public String Appearance1_4(){//4.Width is Fixed 100px,Height is Fixed 30px
+		return Appearance1_4.getAttribute("style");
+	}
+
+
+	@FindBy(xpath=".//*[@id='Message_appearance_message15']/div[1]/span")
+	private WebElement Appearance1_5;
+	
+	public int Appearance1_5(){//5.Width textwrap is true
+		String[] temp = {"dijitLabelWrap"};
+		return CSS.css_query(Appearance1_5.getAttribute("class"), temp);
+	}
+//###############################Message Appearance###############################
+//###############################Message Appearance1###############################
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[1]/td[2]")
+	private WebElement Appearance2_1;
+	
+	public String Appearance2_1(){//1.horizontal is left,vertical is top
+		String v = Appearance2_1.getAttribute("valign");
+		String h = Appearance2_1.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[2]/td[2]")
+	private WebElement Appearance2_2;
+	
+	public String Appearance2_2(){//2.horizontal is left,vertical is center
+		String v = Appearance2_2.getAttribute("valign");
+		String h = Appearance2_2.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[3]/td[2]")
+	private WebElement Appearance2_3;
+	
+	public String Appearance2_3(){//3.horizontal is left,vertical is bottom
+		String v = Appearance2_3.getAttribute("valign");
+		String h = Appearance2_3.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[4]/td[2]")
+	private WebElement Appearance2_4;
+	
+	public String Appearance2_4(){//4.horizontal is center,vertical is top
+		String v = Appearance2_4.getAttribute("valign");
+		String h = Appearance2_4.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[5]/td[2]")
+	private WebElement Appearance2_5;
+	
+	public String Appearance2_5(){//5.horizontal is center,vertical is center
+		String v = Appearance2_5.getAttribute("valign");
+		String h = Appearance2_5.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[6]/td[2]")
+	private WebElement Appearance2_6;
+	
+	public String Appearance2_6(){//6.horizontal is center,vertical is bottom
+		String v = Appearance2_6.getAttribute("valign");
+		String h = Appearance2_6.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[7]/td[2]")
+	private WebElement Appearance2_7;
+	
+	public String Appearance2_7(){//7.horizontal is right,vertical is top
+		String v = Appearance2_7.getAttribute("valign");
+		String h = Appearance2_7.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[8]/td[2]")
+	private WebElement Appearance2_8;
+	
+	public String Appearance2_8(){//8.horizontal is right,vertical is center
+		String v = Appearance2_8.getAttribute("valign");
+		String h = Appearance2_8.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[9]/td[2]")
+	private WebElement Appearance2_9;
+	
+	public String Appearance2_9(){//9.horizontal is right,vertical is bottom
+		String v = Appearance2_9.getAttribute("valign");
+		String h = Appearance2_9.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[10]/td[2]")
+	private WebElement Appearance2_10;
+	
+	public String Appearance2_10(){//10.horizontal indent is 50px
+		return Appearance2_10.getAttribute("style");
+		
+	}
+	
+	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[11]/td[2]")
+	private WebElement Appearance2_11;
+	
+	public String Appearance2_11(){//11.horizontal indent is 10percent
+		return Appearance2_11.getAttribute("style");
+	}
+//###############################Message Appearance1#################################
 
 }
