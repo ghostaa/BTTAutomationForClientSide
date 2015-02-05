@@ -52,7 +52,7 @@ public class SelectList_Properties extends Main_Class {
 	public void proTab() throws InterruptedException{
 		Thread.sleep(2000);
 		Main_Class.widget_tabIndex();
-		assertEquals(true, drv.proTab());
+		assertEquals(2, drv.proTab());
 	}
 	
 	@Test
@@ -125,7 +125,7 @@ public class SelectList_Properties extends Main_Class {
 	
 	@Test
 	public void proShortcut(){
-		assertEquals(true, drv.proShortcut());
+		assertEquals(2, drv.proShortcut());
 	}
 	
 	@Test
@@ -143,10 +143,10 @@ public class SelectList_Properties extends Main_Class {
 		assertEquals("12", drv.proTabIndex());
 	}
 	
-/*	@Test
+	@Test
 	public void proTypeAHeadFalse(){
-		assertEquals(false, drv.proTypeAHeadFalse());
-	}*/
+		assertEquals("", drv.proTypeAHeadFalse());
+	}
 	
 	@Test
 	public void proTypeAHeadTrue(){
