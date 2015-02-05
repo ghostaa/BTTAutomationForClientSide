@@ -338,17 +338,6 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	}
 //###############################HorizontalSlider Event######################################
 //###############################HorizontalSlider Condition##################################
-// Widget function	
-		@FindBy(xpath=".//*[@id='HorizontalSlider_condition_horizontalSlider']/tbody/tr[2]/td[1]/div")
-		private WebElement condition_isFocusable;
-		
-		@FindBy(id="HorizontalSlider_condition_label02")
-		private WebElement condition_label1;
-		
-		public String conIsFocusable(){//isFocusable()
-			condition_isFocusable.click();
-			return condition_label1.getText();
-		}
 // Widget property	
 		@FindBy(xpath=".//*[@id='HorizontalSlider_condition_horizontalSlider02']/tbody/tr[2]/td[1]/div")
 		private WebElement condition_Focused;
