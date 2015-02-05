@@ -774,7 +774,266 @@ public class Radio_PageObject extends Main_Page{
 	}
 //###############################Radio Appearance2#################################
 //###############################Radio Submit######################################
+	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
+	private WebElement sub_tooltipVerify;
 	
+	@FindBy(id="Radio_submit_radio")
+	private WebElement sub_String;
+	
+	@FindBy(id="Radio_submit_radio22")
+	private WebElement sub_RadioString;
+	
+	@FindBy(id="Radio_submit_button")
+	private WebElement sub_Button;
+	
+	public String subTooltipVerify(){
+		sub_String.click();
+		return sub_tooltipVerify.getText();
+	}
+	
+	public Boolean subTooltipDisappear() throws InterruptedException{
+		sub_RadioString.click();
+		Thread.sleep(2000);
+		return sub_tooltipVerify.isDisplayed();
+	}
+	
+	public Boolean subButton(){
+		return sub_Button.isEnabled();
+	}
+	
+	@FindBy(id="Radio_submit_radio04")
+	private WebElement sub_Date;
+	
+	@FindBy(id="Radio_submit_radio01")
+	private WebElement sub_Currency;
+	
+	@FindBy(id="Radio_submit_radio02")
+	private WebElement sub_Number;
+	
+	@FindBy(id="Radio_submit_radio03")
+	private WebElement sub_Boolean;
+	
+	@FindBy(id="Radio_submit_radio07")
+	private WebElement sub_Byte;
+	
+	@FindBy(id="Radio_submit_radio23")
+	private WebElement sub_Short;
+	
+	@FindBy(id="Radio_submit_radio08")
+	private WebElement sub_Integer;
+	
+	@FindBy(id="Radio_submit_radio09")
+	private WebElement sub_Long;
+	
+	@FindBy(id="Radio_submit_radio10")
+	private WebElement sub_Float;
+	
+	@FindBy(id="Radio_submit_radio11")
+	private WebElement sub_Double;
+	
+	@FindBy(id="Radio_submit_radio12")
+	private WebElement sub_BigInteger;
+	
+	@FindBy(id="Radio_submit_radio13")
+	private WebElement sub_BigDecimal;
+	
+	public void submit(){
+		sub_Date.click();
+		sub_Currency.click();
+		sub_Number.click();
+		sub_Boolean.click();
+		sub_Byte.click();
+		sub_Short.click();
+		sub_Integer.click();
+		sub_Long.click();
+		sub_Float.click();
+		sub_Double.click();
+		sub_BigInteger.click();
+		sub_BigDecimal.click();
+		sub_Button.click();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio22")
+	private WebElement subResult_String;
+	
+	@FindBy(id="ShowRadio_result_label")
+	private WebElement subResult_label1;
+	
+	public Boolean subResultString(){
+		return subResult_String.isSelected();
+	}
+	
+	public String subResultText1(){
+		return subResult_label1.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio04")
+	private WebElement subResult_Date;
+	
+	@FindBy(id="ShowRadio_result_label01")
+	private WebElement subResult_label2;
+	
+	public Boolean subResultDate(){
+		return subResult_Date.isSelected();
+	}
+	
+	public String subResultText2(){
+		return subResult_label2.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio01")
+	private WebElement subResult_Currency;
+	
+	@FindBy(id="ShowRadio_result_label02")
+	private WebElement subResult_label3;
+	
+	public Boolean subResultCurrency(){
+		return subResult_Currency.isSelected();
+	}
+	
+	public String subResultText3(){
+		return subResult_label3.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio02")
+	private WebElement subResult_Number;
+	
+	@FindBy(id="ShowRadio_result_label03")
+	private WebElement subResult_label4;
+	
+	public Boolean subResultNumber(){
+		return subResult_Number.isSelected();
+	}
+	
+	public String subResultText4(){
+		return subResult_label4.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio03")
+	private WebElement subResult_Boolean;
+	
+	@FindBy(id="ShowRadio_result_label04")
+	private WebElement subResult_label5;
+	
+	public Boolean subResultBoolean(){
+		return subResult_Boolean.isSelected();
+	}
+	
+	public String subResultText5(){
+		return subResult_label5.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio07")
+	private WebElement subResult_Byte;
+	
+	@FindBy(id="ShowRadio_result_label08")
+	private WebElement subResult_label6;
+	
+	public Boolean subResultByte(){
+		return subResult_Byte.isSelected();
+	}
+	
+	public String subResultText6(){
+		return subResult_label6.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio23")
+	private WebElement subResult_Short;
+	
+	@FindBy(id="ShowRadio_result_label09")
+	private WebElement subResult_label7;
+	
+	public Boolean subResultShort(){
+		return subResult_Short.isSelected();
+	}
+	
+	public String subResultText7(){
+		return subResult_label7.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio08")
+	private WebElement subResult_Integer;
+	
+	@FindBy(id="ShowRadio_result_label10")
+	private WebElement subResult_label8;
+	
+	public Boolean subResultInteger(){
+		return subResult_Integer.isSelected();
+	}
+	
+	public String subResultText8(){
+		return subResult_label8.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio09")
+	private WebElement subResult_Long;
+	
+	@FindBy(id="ShowRadio_result_label11")
+	private WebElement subResult_label9;
+	
+	public Boolean subResultLong(){
+		return subResult_Long.isSelected();
+	}
+	
+	public String subResultText9(){
+		return subResult_label9.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio10")
+	private WebElement subResult_Float;
+	
+	@FindBy(id="ShowRadio_result_label12")
+	private WebElement subResult_label10;
+	
+	public Boolean subResultFloat(){
+		return subResult_Float.isSelected();
+	}
+	
+	public String subResultText10(){
+		return subResult_label10.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio11")
+	private WebElement subResult_Double;
+	
+	@FindBy(id="ShowRadio_result_label13")
+	private WebElement subResult_label11;
+	
+	public Boolean subResultDouble(){
+		return subResult_Double.isSelected();
+	}
+	
+	public String subResultText11(){
+		return subResult_label11.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio12")
+	private WebElement subResult_BigInteger;
+	
+	@FindBy(id="ShowRadio_result_label14")
+	private WebElement subResult_label12;
+	
+	public Boolean subResultBigInteger(){
+		return subResult_BigInteger.isSelected();
+	}
+	
+	public String subResultText12(){
+		return subResult_label12.getText();
+	}
+	
+	@FindBy(id="ShowRadio_result_radio13")
+	private WebElement subResult_BigDecimal;
+	
+	@FindBy(id="ShowRadio_result_label15")
+	private WebElement subResult_label13;
+	
+	public Boolean subResultBigDecimal(){
+		return subResult_BigDecimal.isSelected();
+	}
+	
+	public String subResultText13(){
+		return subResult_label13.getText();
+	}
 //###############################Radio Submit######################################
 
 }

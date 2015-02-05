@@ -19,8 +19,6 @@ import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
 public class Radio_submit extends Main_Class{
- /* private static WebDriver driver;
-  private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private static Radio_PageObject drv;
@@ -28,85 +26,107 @@ public class Radio_submit extends Main_Class{
 
   @BeforeClass
   public static void setUp() throws Exception {
-    /*driver = new FirefoxDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driver.get(baseUrl);*/
+
 	Main_Class.setUp();
     drv=PageFactory.initElements(driver, Radio_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
     drv.Radio_widget();
-    drv.Radio_Action();
+    drv.Radio_submmit();
   }
 
-/*  @Test
-  public void Radio_Condition_radio_isFocusable(){
-	  assertEquals(false, drv.Radio_Condition_radio_isFocusable());
-  }*/
-  
   @Test
-  public void Radio_Action_Radio_styleClass(){
-	  assertEquals(1, drv.Radio_Action_Radio_styleClass());
+  public void subTooltipVerify(){
+	  assertEquals("Please check the Radio_String radio.", drv.subTooltipVerify());
   }
   
   @Test
-  public void Radio_Action_radio_Text(){
-	  assertEquals("radio_onClick", drv.Radio_Action_radio_Text());
+  public void subTooltipDisappear() throws InterruptedException{
+	  assertEquals(false, drv.subTooltipDisappear());
   }
   
   @Test
-  public void Radio_Action_radio_visible(){
-	  assertEquals("visibility: inherit;", drv.Radio_Action_radio_visible());
+  public void subButton(){
+	  assertEquals(true, drv.subButton());
   }
   
   @Test
-  public void Radio_Action_radio_gone(){
-	  assertEquals("visibility: inherit; display: none;", drv.Radio_Action_radio_gone());
+  public void subResultString(){
+	  drv.submit();
+	  assertEquals(true, drv.subResultString());
+	  assertEquals("String_Data2", drv.subResultText1());
   }
   
   @Test
-  public void Radio_Action_radio_hidden(){
-	  assertEquals("visibility: hidden;", drv.Radio_Action_radio_hidden_click());
+  public void subResultDate(){
+	  assertEquals(true, drv.subResultDate());
+	  assertEquals("2014-10-08", drv.subResultText2());
   }
   
   @Test
-  public void Radio_Action_radio_disabled(){
-	  assertEquals(true,drv.Radio_Action_radio_disabled());
+  public void subResultCurrency(){
+	  assertEquals(true, drv.subResultCurrency());
+	  assertEquals("$12.00", drv.subResultText3());
   }
   
   @Test
-  public void Radio_Action_radio_dis(){
-	  assertEquals("true",drv.Radio_Action_radio_dis());
+  public void subResultNumber(){
+	  assertEquals(true, drv.subResultNumber());
+	  assertEquals("1", drv.subResultText4());
   }
   
   @Test
-  public void Radio_Action_radio_readOnly(){
-	  assertEquals("true",drv.Radio_Action_radio_readOnly());
+  public void subResultBoolean(){
+	  assertEquals(true, drv.subResultBoolean());
+	  assertEquals("true", drv.subResultText5());
   }
   
   @Test
-  public void Radio_Action_radio_invokeActionGroup(){
-	  assertEquals(true,drv.Radio_Action_radio_invokeActionGroup());
+  public void subResultByte(){
+	  assertEquals(true, drv.subResultByte());
+	  assertEquals("3", drv.subResultText6());
   }
   
   @Test
-  public void Radio_Action_radio_isChecked(){
-	  assertEquals("true",drv.Radio_Action_radio_isChecked());
+  public void subResultShort(){
+	  assertEquals(true, drv.subResultShort());
+	  assertEquals("5", drv.subResultText7());
   }
   
   @Test
-  public void Radio_Action_radio_unCheck(){
-	  assertEquals(false,drv.Radio_Action_radio_unCheck());
+  public void subResultInteger(){
+	  assertEquals(true, drv.subResultInteger());
+	  assertEquals("7", drv.subResultText8());
   }
   
   @Test
-  public void Radio_Action_radio_hint(){
-	  assertEquals("13.Click  radio_onClick , radio_hint will show  hint",drv.Radio_Action_radio_hint());
+  public void subResultLong(){
+	  assertEquals(true, drv.subResultLong());
+	  assertEquals("12", drv.subResultText9());
   }
   
   @Test
-  public void Radio_Action_radio_styleClass(){
-	  assertEquals(2,drv.Radio_Action_radio_styleClass());
+  public void subResultFloat(){
+	  assertEquals(true, drv.subResultFloat());
+	  assertEquals("1.20", drv.subResultText10());
+  }
+  
+  @Test
+  public void subResultDouble(){
+	  assertEquals(true, drv.subResultDouble());
+	  assertEquals("14.000", drv.subResultText11());
+  }
+  
+  @Test
+  public void subResultBigInteger(){
+	  assertEquals(true, drv.subResultBigInteger());
+	  assertEquals("1,000", drv.subResultText12());
+  }
+  
+  @Test
+  public void subResultBigDecimal(){
+	  assertEquals(true, drv.subResultBigDecimal());
+	  assertEquals("1.200", drv.subResultText13());
   }
 
   @AfterClass
