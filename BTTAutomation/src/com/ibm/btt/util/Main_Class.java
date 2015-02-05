@@ -23,7 +23,8 @@ public class Main_Class {
 	
 	public static WebDriver driver;
 	public static String allwidgets="allwidgets";
-	public static String baseUrl="http://9.112.248.246:8080/InternetBankTestWeb";
+	public static String baseUrl="http://localhost:8080/InternetBankTestWeb/";
+//	public static String baseUrl="http://9.125.67.24:8080/AllWidgetsProject/";
 //	public static String baseUrl="http://9.186.117.118:8080/AllWidgetsProject";
 	private static Robot eventKey;
 	
