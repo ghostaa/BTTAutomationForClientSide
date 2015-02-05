@@ -672,7 +672,205 @@ public class Main_Page extends Index_Page{
 	
 //###############################For CheckedMultiSelect Main#####################
 //###############################For RichText Main###############################
+	@FindBy(id="RichText_main_link08")
+	private WebElement RichText_properties;
 	
+	@FindBy(id="RichText_main_link07")
+	private WebElement RichText_event;
+	
+	@FindBy(id="RichText_main_link05")
+	private WebElement RichText_condition;
+	
+	@FindBy(id="RichText_main_link")
+	private WebElement RichText_submit;
+	
+	@FindBy(id="RichText_main_link06")
+	private WebElement RichText_action;
+	
+	@FindBy(id="RichText_main_link02")
+	private WebElement RichText_appearance1;
+	
+	@FindBy(id="RichText_main_link03")
+	private WebElement RichText_appearance2;
+	
+	@FindBy(id="RichText_main_link04")
+	private WebElement RichText_css;
+	
+	public void RichText_properties(){
+		RichText_properties.click();
+	}
+	
+	public void RichText_event(){
+		RichText_event.click();
+	}
+	
+	public void RichText_condition(){
+		RichText_condition.click();
+	}
+	
+		public void RichText_submit(){
+		RichText_submit.click();
+	}
+	
+	public void RichText_action(){
+		RichText_action.click();
+	}
+	
+	public void RichText_appearance1(){
+		RichText_appearance1.click();
+	}
+	
+	public void RichText_appearance2(){
+		RichText_appearance2.click();
+	}
+	
+	public void RichText_css(){
+		RichText_css.click();
+	}
 //###############################For RichText Main###############################
+//###############################For TextArea Main###############################
+	@FindBy(id="textArea_main_link_copy")
+	private WebElement TextArea_properties;
+	
+	@FindBy(id="textArea_main_link01_copy")
+	private WebElement TextArea_event;
+	
+	@FindBy(id="textArea_main_link02_copy")
+	private WebElement TextArea_condition;
+	
+	@FindBy(id="textArea_main_link04")
+	private WebElement TextArea_submit;
+	
+	@FindBy(id="textArea_main_link03")
+	private WebElement TextArea_action;
+	
+	@FindBy(id="textArea_main_link01")
+	private WebElement TextArea_appearance1;
+	
+	@FindBy(id="textArea_main_link02")
+	private WebElement TextArea_appearance2;
+	
+	@FindBy(id="textArea_main_link")
+	private WebElement TextArea_css;
+	
+	public void TextArea_properties(){
+		TextArea_properties.click();
+	}
+	
+	public void TextArea_event(){
+		TextArea_event.click();
+	}
+	
+	public void TextArea_condition(){
+		TextArea_condition.click();
+	}
+	
+		public void TextArea_submit(){
+		TextArea_submit.click();
+	}
+	
+	public void TextArea_action(){
+		TextArea_action.click();
+	}
+	
+	public void TextArea_appearance1(){
+		TextArea_appearance1.click();
+	}
+	
+	public void TextArea_appearance2(){
+		TextArea_appearance2.click();
+	}
+	
+	public void TextArea_css(){
+		TextArea_css.click();
+	}
+//###############################For TextArea Main###############################
+//###############################For panel Main##################################	
+	@FindBy(id="panel_main_link02")
+	private WebElement panel_properties;
+	
+	@FindBy(id="panel_main_link")
+	private WebElement panel_ECA;
+	
+	@FindBy(id="panel_main_link03")
+	private WebElement panel_CSS;
+	
+	@FindBy(id="panel_main_link01")
+	private WebElement panel_appearance1;
+	
+	@FindBy(id="panel_main_link04")
+	private WebElement panel_appearance2;
+
+	
+	public void panel_properties(){
+		panel_properties.click();
+	}
+	
+	public void panel_ECA(){
+		panel_ECA.click();
+	}
+	
+	public void panel_CSS(){
+		panel_CSS.click();
+	}
+	
+	public void panel_appearance1(){
+		panel_appearance1.click();
+	}
+	
+	public void panel_appearance2(){
+		panel_appearance2.click();
+	}
+//###############################For panel Main##################################
+//###############################For Combo Main##################################
+	@FindBy(id="combo_main_link")
+	private WebElement Combo_properties;
+	
+	@FindBy(id="combo_main_link01")
+	private WebElement Combo_event;
+	
+	@FindBy(id="combo_main_link03")
+	private WebElement Combo_condition;
+	
+	@FindBy(id="combo_main_link04")
+	private WebElement Combo_action;
+	
+	@FindBy(id="combo_main_link05")
+	private WebElement Combo_css;
+	
+	@FindBy(id="combo_main_link07")
+	private WebElement Combo_appearance;
+	
+	@FindBy(id="combo_main_link02")
+	private WebElement Combo_submit;
+	
+	public void Combo_properties(){
+		Combo_properties.click();
+	}
+	
+	public void Combo_event(){
+		Combo_event.click();
+	}
+	
+	public void Combo_condition(){
+		Combo_condition.click();
+	}
+	
+	public void Combo_action(){
+		Combo_action.click();
+	}
+	
+	public void Combo_css(){
+		Combo_css.click();
+	}
+		
+	public void Combo_appearance(){
+		Combo_appearance.click();
+	}
+	
+	public void Combo_submit(){
+		Combo_submit.click();
+	}
+//###############################For Combo Main##################################
 } 
 

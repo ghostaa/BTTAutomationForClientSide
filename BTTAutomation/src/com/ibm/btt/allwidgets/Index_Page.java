@@ -121,6 +121,27 @@ public class Index_Page {
 	public void RichText_widget(){
 		RichText_widget.click();
 	}
+	
+	@FindBy(id="index_link82")
+	private WebElement TextArea_widget;
+	
+	public void TextArea_widget(){
+		TextArea_widget.click();
+	}
+	
+	@FindBy(id="index_link49")
+	private WebElement Panel_widget;
+	
+	public void Panel_widget(){
+		Panel_widget.click();
+	}
+	
+	@FindBy(id="index_link53")
+	private WebElement Combo_widget;
+	
+	public void Combo_widget(){
+		Combo_widget.click();
+	}
 
 
 } 
