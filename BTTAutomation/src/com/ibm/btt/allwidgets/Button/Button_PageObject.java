@@ -440,9 +440,6 @@ public class Button_PageObject extends Main_Page{
 	
 	public String ecaExpHint(){//ExpHint
 		eca_Expclick.click();
-		(new Main_Class()).keyDown(Keys.SHIFT);
-		(new Main_Class()).keyUp(Keys.SHIFT);
-		eca_Exphint.click();
 		return eca_Exphint.getAttribute("title");
 	}
 	
