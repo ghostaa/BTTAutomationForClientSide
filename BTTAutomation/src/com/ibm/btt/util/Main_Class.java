@@ -16,6 +16,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
 
 import com.ibm.btt.util.*;
@@ -23,7 +24,7 @@ public class Main_Class {
 	
 	public static WebDriver driver;
 	public static String allwidgets="allwidgets";
-	public static String baseUrl="http://localhost:8080/InternetBankTestWeb/";
+	public static String baseUrl="http://localhost:8080/AllWidgetsProject/";
 //	public static String baseUrl="http://9.125.67.24:8080/AllWidgetsProject/";
 //	public static String baseUrl="http://9.186.117.118:8080/AllWidgetsProject";
 	private static Robot eventKey;
@@ -31,7 +32,9 @@ public class Main_Class {
 	Actions event = new Actions(driver);
 	
 	public static void setUp() throws Exception {
-		driver = new FirefoxDriver();
+		FirefoxProfile profile = new FirefoxProfile();  
+		profile.setPreference("intl.accept_languages", "en-US");  
+		driver = new FirefoxDriver(profile);  
 		Window window = driver.manage().window();
 		window.maximize();
 		deleteAllCookies();
