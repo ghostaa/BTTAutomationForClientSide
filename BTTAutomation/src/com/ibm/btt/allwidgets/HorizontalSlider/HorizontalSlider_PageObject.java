@@ -124,8 +124,8 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		String[] temp = {"bttMultiSelectFocused", "dijitFocused"};
 		return CSS.css_query(properties_tabIndex2.getAttribute("class"), temp);
 	}
-//###############################MultiSelect Properties##################################
-//###############################MultiSelect CSS#########################################
+//###############################HorizontalSlider Properties##################################
+//###############################HorizontalSlider CSS#########################################
 	@FindBy(xpath=".//*[@id='HorizontalSlider_css_form']/div/div[2]/div[3]/table")
 	private WebElement css_style1;
 	
@@ -506,16 +506,16 @@ public class HorizontalSlider_PageObject extends Main_Page{
 			return condition_label14.getText();
 		}
 		
-	/*	@FindBy(id="HorizontalSlider_condition_horizontalSlider17")
+		@FindBy(id="HorizontalSlider_condition_horizontalSlider17")
 		private WebElement condition_disable;
 		
 		@FindBy(id="HorizontalSlider_condition_label37")
 		private WebElement condition_label15;
 		
 		public String conProDisabled(){//disabled
-			condition_disable.click();
+			condition_label15.click();
 			return condition_label15.getText();
-		}*/
+		}
 		
 		@FindBy(xpath=".//*[@id='HorizontalSlider_condition_horizontalSlider08']/tbody/tr[2]/td[3]/div/div[1]/div/div")
 		private WebElement condition_value;
