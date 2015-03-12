@@ -11,7 +11,8 @@ import org.junit.runners.Suite;
 	HorizontalSlider_CSS.class,
 	HorizontalSlider_appearance1.class,
 	HorizontalSlider_appearance2.class,
-//	HorizontalSlider_Submit.class,
+	HorizontalSlider_Submit.class,
+//	HorizontalSlider_InlineStyle.class
 	
 }) 
 public class HorizontalSliderSuite {

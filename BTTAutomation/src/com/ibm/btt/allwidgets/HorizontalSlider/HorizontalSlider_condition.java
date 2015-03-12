@@ -91,11 +91,6 @@ public class HorizontalSlider_condition extends Main_Class{
   }*/
   
   @Test
-  public void conExpisFocusable(){
-	  assertEquals("HorizontalSlider isFocusable is true", drv.conExpisFocusable());
-  }
-  
-  @Test
   public void conProId(){
 	  assertEquals("id ok", drv.conProId());
   }
@@ -105,10 +100,10 @@ public class HorizontalSlider_condition extends Main_Class{
 	  assertEquals("Focus is true", drv.conProFocus());
   }
   
-/*  @Test
+  @Test
   public void conProDisabled(){
-	  assertEquals("Disabled is false", drv.conProDisabled());
-  }*/
+	  assertEquals("disabled is ok", drv.conProDisabled());
+  }
   
   @Test
   public void conProValue(){
