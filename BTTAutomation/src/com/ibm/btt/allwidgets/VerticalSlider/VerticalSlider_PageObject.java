@@ -508,13 +508,21 @@ public class VerticalSlider_PageObject extends Main_Page{
 		return condition_label20.getText();
 	}
 	
+	@FindBy(xpath=".//*[@id='VerticalSlider_condition_verticalSlider01']/tbody/tr[3]/td[2]/center/div[2]/div/div")
+	private WebElement condition_verticalSlider01;
+	
 	@FindBy(id="VerticalSlider_condition_label83")
 	private WebElement condition_clickHere21;
 	
 	@FindBy(id="VerticalSlider_condition_label52")
 	private WebElement condition_label21;
 	
-	public String conProHovering(){//Hovering
+	public String conProHovering1(){//Hovering
+		condition_verticalSlider01.click();
+		return condition_label21.getText();
+	}
+	
+	public String conProHovering2(){//Hovering
 		condition_clickHere21.click();
 		return condition_label21.getText();
 	}
