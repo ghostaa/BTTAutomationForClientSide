@@ -35,11 +35,7 @@ public class VerticalSlider_condition extends Main_Class{
     drv.VerticalSlider_condition();
   }
 
-  @Test
-  public void conIsFocusable(){
-	  assertEquals("isFocusable is true. Test OK", drv.conIsFocusable());
-  }
-  
+
   @Test
   public void conDbClick(){
 	  assertEquals("Focus is true. Test OK", drv.conDbClick());
@@ -80,20 +76,17 @@ public class VerticalSlider_condition extends Main_Class{
 	  assertEquals("test OK. get(id)=verticalSlider01", drv.conExpId());
   }
   
-  /*@Test
+  @Test
   public void conExpSet(){
 	  assertEquals("onMouseLeave is triggered!", drv.conExpSet());
-  }*/
+  }
   
   @Test
   public void conExpCompare(){
 	  assertEquals("Test OK. Compared works", drv.conExpCompare());
   }
   
-  @Test
-  public void conExpFocus(){
-	  assertEquals("Test OK. isFocusable is true", drv.conExpFocus());
-  }
+ 
   
   @Test
   public void conProId(){

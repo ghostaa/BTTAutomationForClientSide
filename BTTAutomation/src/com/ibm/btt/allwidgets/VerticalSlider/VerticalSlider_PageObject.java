@@ -281,16 +281,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	@FindBy(id="VerticalSlider_condition_verticalSlider")
 	private WebElement condition_VerticalSlider;
 	
-	@FindBy(id="VerticalSlider_condition_label61")
-	private WebElement condition_clickHere1;
 	
-	@FindBy(id="VerticalSlider_condition_label02")
-	private WebElement condition_label1;
-	
-	public String conIsFocusable(){//isFocusable()
-		condition_clickHere1.click();
-		return condition_label1.getText();
-	}
 	
 	@FindBy(id="VerticalSlider_condition_label10")
 	private WebElement condition_label2;
@@ -400,21 +391,6 @@ public class VerticalSlider_PageObject extends Main_Page{
 		return condition_label11.getText();
 	}
 	
-	@FindBy(id="VerticalSlider_condition_label29")
-	private WebElement condition_click;
-	
-	@FindBy(id="VerticalSlider_condition_label74")
-	private WebElement condition_clickHere12;
-	
-	@FindBy(id="VerticalSlider_condition_label28")
-	private WebElement condition_label12;
-	
-	public String conExpFocus(){//focus()--void
-		condition_click.click();
-		condition_Expression.click();
-		condition_clickHere12.click();
-		return condition_label12.getText();
-	}
 	
 // Widget property
 	@FindBy(id="VerticalSlider_condition_verticalSlider02")
