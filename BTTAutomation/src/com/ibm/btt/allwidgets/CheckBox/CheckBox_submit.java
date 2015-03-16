@@ -34,6 +34,7 @@ public class CheckBox_submit extends Main_Class{
     driver.get(baseUrl);*/
 	Main_Class.setUp();
     drv=PageFactory.initElements(driver, CheckBox_PageObject.class);
+//  driver.navigate().to(Main_Class.baseUrl);
     drv.Establish();
     drv.BTT8200_tab();
     drv.CheckBox_widget();
@@ -68,7 +69,7 @@ public class CheckBox_submit extends Main_Class{
 	  assertEquals("2014-08-10", drv.CheckBox_Result_Date_label());
   }
   
-  @Test
+  @Ignore
   public void CheckBox_Result_Duration(){
 	  assertEquals("true", drv.CheckBox_Result_Duration());
 	  assertEquals("63609099622001", drv.CheckBox_Result_Duration_label());
@@ -149,7 +150,8 @@ public class CheckBox_submit extends Main_Class{
   @AfterClass
   public static void tearDown() throws Exception {
 	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,CheckBox_submit.class);
-    driver.quit();
+	driver.quit();
+//	driver.navigate().refresh();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);
