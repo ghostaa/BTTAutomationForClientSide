@@ -136,8 +136,13 @@ public class VerticalSlider_condition extends Main_Class{
   }
   
   @Test
-  public void conProHovering(){
-	  assertEquals("hover is true", drv.conProHovering());
+  public void conProHovering1(){
+	  assertEquals("Hovering is true", drv.conProHovering1());
+  }
+  
+  @Test
+  public void conProHovering2(){
+	  assertEquals("Hovering is false", drv.conProHovering2());
   }
   
   @Test
