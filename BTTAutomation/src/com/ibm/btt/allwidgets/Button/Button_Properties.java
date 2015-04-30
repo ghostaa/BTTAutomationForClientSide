@@ -142,6 +142,7 @@ public class Button_Properties extends Main_Class {
 	@AfterClass
 	public static void tearDown() throws Exception {
 		Tools.snapshot((TakesScreenshot) driver, Main_Class.allwidgets,Button_Properties.class);
+//		driver.navigate().refresh();
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {
