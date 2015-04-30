@@ -10,7 +10,7 @@ import org.junit.runners.Suite;
 	Combo_Action.class,
 	Combo_CSS.class,
 	Combo_appearance.class,
-//	Combo_Submit.class,
+	Combo_Submit.class,
 	
 }) 
 public class ComboSuite {
