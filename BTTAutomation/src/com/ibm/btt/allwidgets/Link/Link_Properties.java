@@ -90,7 +90,7 @@ public class Link_Properties extends Main_Class {
 	
 	@Test
 	public void proShortcut(){
-		assertEquals("http://localhost:8080/InternetBankTestWeb/index.jsp", drv.proShortcut());
+		assertEquals(baseUrl + "index.jsp", drv.proShortcut());
 		drv.Establish();
 		drv.BTT8200_tab();
 		drv.Link_widget();
