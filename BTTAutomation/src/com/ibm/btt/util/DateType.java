@@ -45,4 +45,21 @@ public class DateType {
 		}
 		return b;
 	}
+	
+	public static boolean Integer(String str){
+		if (str.indexOf(",") != -1){
+			str = str.replace(",", "");
+		}
+		
+		boolean b = Pattern.matches("^[+-]?\\d*$", str);
+		return b;
+	}
+	
+	public static boolean BigDecimal(String str){
+		if (str.indexOf(",") != -1){
+			str = str.replace(",", "");
+		}
+		boolean b = Pattern.matches("\\d*+(.[0-9]{3})?$", str);
+		return b;
+	}
 }
