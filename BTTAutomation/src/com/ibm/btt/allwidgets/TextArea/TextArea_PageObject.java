@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
@@ -143,21 +144,21 @@ public class TextArea_PageObject extends Main_Page{
 	}
 //###############################TextArea CSS#########################################
 //###############################TextArea Event#######################################
-	@FindBy(xpath=".//*[@id='RichText_Event_RichText_onClick']/div[2]")
+	@FindBy(id="textArea_event_textArea")
 	private WebElement event_onClick;
 	
-	@FindBy(id="RichText_Event_RichText_focus")
-	private WebElement event_display1; 
+	@FindBy(id="textArea_event_label13")
+	private WebElement event_label1; 
 	
-	public Boolean evtOnClick(){ //onClick
+	public String evtOnClick(){ //onClick
 		event_onClick.click();
-		return event_display1.isDisplayed();
+		return event_label1.getText();
 	}
 	
-	/*@FindBy(id="dijit_form_CheckBox_11")
+	@FindBy(id="textArea_event_textArea01")
 	private WebElement event_onFocus; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label04")
+	@FindBy(id="textArea_event_label14")
 	private WebElement event_label2; 
 	
 	public String evtOnFocus(){ //onFocus
@@ -165,10 +166,10 @@ public class TextArea_PageObject extends Main_Page{
 		return event_label2.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_21")
+	@FindBy(id="textArea_event_textArea02")
 	private WebElement event_onBlur;
 	
-	@FindBy(id="CheckedMultiSelect_event_label11")
+	@FindBy(id="textArea_event_label15")
 	private WebElement event_label3;
 	
 	public String evtOnBlur(){ //onBlur
@@ -177,10 +178,10 @@ public class TextArea_PageObject extends Main_Page{
 		return event_label3.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_31")
+	@FindBy(id="textArea_event_textArea03")
 	private WebElement event_onKeyDown; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label12")
+	@FindBy(id="textArea_event_label16")
 	private WebElement event_label4;
 	
 	public String evtOnKeyDown(){ //onKeyDown
@@ -191,10 +192,10 @@ public class TextArea_PageObject extends Main_Page{
 		return event_label4.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_41")
+	@FindBy(id="textArea_event_textArea04")
 	private WebElement event_onKeyPress; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label13")
+	@FindBy(id="textArea_event_label17")
 	private WebElement event_label5;
 	
 	public String evtOnKeyPress(){ //onKeyPress
@@ -205,10 +206,10 @@ public class TextArea_PageObject extends Main_Page{
 		return event_label5.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_51")
+	@FindBy(id="textArea_event_textArea05")
 	private WebElement event_onKeyUp; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label14")
+	@FindBy(id="textArea_event_label18")
 	private WebElement event_label6;
 	
 	public String evtOnKeyUp(){ //onKeyUp
@@ -219,10 +220,10 @@ public class TextArea_PageObject extends Main_Page{
 		return event_label6.getText();
 	}
 
-	@FindBy(id="dijit_form_CheckBox_61")
+	@FindBy(id="textArea_event_textArea06")
 	private WebElement event_onMouseDown;
 	
-	@FindBy(id="CheckedMultiSelect_event_label15")
+	@FindBy(id="textArea_event_label19")
 	private WebElement event_label7;
 	
 	public String evtOnMouseDown(){ //onMouseDown
@@ -230,10 +231,10 @@ public class TextArea_PageObject extends Main_Page{
 		return event_label7.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_71")
+	@FindBy(id="textArea_event_textArea07")
 	private WebElement event_onMouseUp;
 	
-	@FindBy(id="CheckedMultiSelect_event_label16")
+	@FindBy(id="textArea_event_label20")
 	private WebElement event_label8;
 	
 	public String evtOnMouseUp(){ //onMouseUp
@@ -241,192 +242,210 @@ public class TextArea_PageObject extends Main_Page{
 		return event_label8.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_81")
+	@FindBy(id="textArea_event_textArea08")
 	private WebElement event_onMouseEnter; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label17")
+	@FindBy(id="textArea_event_label21")
 	private WebElement event_label9;
 
 	public String evtOnMouseEnter(){ //onMouseEnter
 		Main_Class main_class = new Main_Class();
-		main_class.widget_moveToElement("dijit_form_CheckBox_81");
+		main_class.widget_moveToElement("textArea_event_textArea08");
 		return event_label9.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_91")
+	@FindBy(id="textArea_event_textArea09")
 	private WebElement event_onMouseLeave;
 	
-	@FindBy(id="CheckedMultiSelect_event_label18")
+	@FindBy(id="textArea_event_label22")
 	private WebElement event_label10;
 
 	public String evtOnMouseLeave(){ //onMouseLeave
 		Main_Class main_class = new Main_Class();
-		main_class.widget_moveToElement("dijit_form_CheckBox_91");
-		main_class.widget_moveToElement("CheckedMultiSelect_event_label18");
+		main_class.widget_moveToElement("textArea_event_textArea09");
+		main_class.widget_moveToElement("textArea_event_label22");
 		return event_label10.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_101")
+	@FindBy(id="textArea_event_textArea10")
 	private WebElement event_onMouseMove;
 	
-	@FindBy(id="CheckedMultiSelect_event_label20")
+	@FindBy(id="textArea_event_label23")
 	private WebElement event_label11;
 	
 	public String evtOnMouseMove(){ //onMouseMove
 		Main_Class main_class = new Main_Class();
-		main_class.widget_moveToElement("dijit_form_CheckBox_101");
+		main_class.widget_moveToElement("textArea_event_textArea10");
 		return event_label11.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_111")
+	@FindBy(id="textArea_event_textArea11")
 	private WebElement event_onChange; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label21")
+	@FindBy(id="textArea_event_label24")
 	private WebElement event_label12; 
 	
 	public String evtOnChange(){ //onChange
-		event_onChange.click();
+		event_onChange.sendKeys("aaa");
+		event_label12.click();
 		return event_label12.getText();
-	}*/
+	}
 
 //###############################TextArea Event######################################
-//###############################TextArea Condition##################################
-	@FindBy(id="RichText_Condition_text")
-	private WebElement condition_text;
-	
-	@FindBy(xpath=".//*[@id='RichText_Condition_RichText_WidgetFunction']/div[2]")
+//###############################TextArea Condition##################################	
+	@FindBy(id="textArea_condition_textArea")
 	private WebElement condition_isFocusable;
+	
+	@FindBy(id="textArea_condition_label18")
+	private WebElement condition_label1;
 	
 	public String conIsFocusable(){//Widget Function-isFocusable
 		condition_isFocusable.click();
-		System.out.println(condition_text.getAttribute("value"));
-		return condition_text.getAttribute("value");
+		return condition_label1.getText();
 	}
 	
-	@FindBy(id="CheckedMultiSelect_condition_checkedMultiSelect01")
-	private WebElement condition_disabled;
+	@FindBy(id="textArea_condition_textArea01")
+	private WebElement condition_isMandatory;
 	
-	@FindBy(id="CheckedMultiSelect_condition_label02")
+	@FindBy(id="textArea_condition_label17")
 	private WebElement condition_label2;
 	
-	public String conDisabled(){//Widget Property-disabled
-		(new Main_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect01");
+	public String conIsMandatory(){//isMandatory
+		condition_isMandatory.click();
 		return condition_label2.getText();
 	}
 	
-	@FindBy(id="CheckedMultiSelect_condition_checkedMultiSelect01_copy")
-	private WebElement condition_readonly;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label03")
+	@FindBy(id="textArea_condition_label19")
 	private WebElement condition_label3;
 	
-	public String conReadonly(){//Widget Property-readOnly
-		(new Main_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect01_copy");
+	public String conDisabled(){//Widget Property-disabled
+		condition_label3.click();
 		return condition_label3.getText();
 	}
 
-	@FindBy(id="dijit_form_CheckBox_31")
-	private WebElement condition_ExpisFocusable;
+	@FindBy(id="textArea_condition_textArea03")
+	private WebElement condition_readOnly;
 	
-	@FindBy(id="CheckedMultiSelect_condition_label04")
+	@FindBy(id="textArea_condition_label20")
 	private WebElement condition_label4;
 	
-	public String conExpisFocusable(){// Expression-Widget Function : isFocusable
-		condition_ExpisFocusable.click();
+	public String conReadOnly(){// readOnly
+		condition_readOnly.click();
 		return condition_label4.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_41")
-	private WebElement condition_ExpId;
+	@FindBy(id="textArea_condition_textArea04")
+	private WebElement condition_Constant;
 	
-	@FindBy(id="CheckedMultiSelect_condition_label05")
+	@FindBy(id="textArea_condition_label22")
 	private WebElement condition_label5;
 	
-	public String conExpId(){//Expression-Widget Property : id 
-		condition_ExpId.click();
+	public String conConstant(){// Constant: 5 > 3 
+		condition_Constant.click();
 		return condition_label5.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_51")
-	private WebElement condition_ExpValue;
+	@FindBy(id="textArea_condition_textArea12")
+	private WebElement condition_ConstantTF;
 	
-	@FindBy(id="CheckedMultiSelect_condition_label06")
+	@FindBy(id="textArea_condition_label24")
 	private WebElement condition_label6;
 	
-	public String conExpValue(){// 	Expression-Widget Property : value
-		condition_ExpValue.click();
+	public String conConstantTF(){// 	Constant: true or false
+		condition_ConstantTF.click();
 		return condition_label6.getText();
 	}
 	
-	@FindBy(id="CheckedMultiSelect_condition_label07")
+	@FindBy(id="textArea_condition_textArea05")
+	private WebElement condition_ExpIsFocusable;
+	
+	@FindBy(id="textArea_condition_label10")
 	private WebElement condition_label7;
 	
-	public String conVisible(){//Widget Expression Condition: visibility=visible
-		(new Main_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect04");
+	public String conExpIsFocusable(){//Widget Function = isFocusable
+		condition_ExpIsFocusable.click();
 		return condition_label7.getText();
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_71")
-	private WebElement condition_ExpDisabled;
+	@FindBy(id="textArea_condition_text02")
+	private WebElement condition_text;
 	
-	@FindBy(id="CheckedMultiSelect_condition_label09")
-	private WebElement condition_label8;
+	public String conExpId(){//Widget Function = id
+		condition_text.click();
+		return condition_text.getAttribute("value");
+	}
+	
+	@FindBy(id="textArea_condition_textArea07")
+	private WebElement condition_ExpValue;
+	
+	@FindBy(id="textArea_condition_text04")
+	private WebElement condition_text1;
+	
+	public String conExpValue(){// 	Expression-Widget Property : value
+		condition_ExpValue.sendKeys("test value");
+		condition_text1.click();
+		return condition_text1.getAttribute("value");
+	}
+	
+	@FindBy(id="textArea_condition_text")
+	private WebElement condition_text2;
+	
+	public String conExpIsMandatory(){// 	Expression-Widget Property : isMandatory 	
+		condition_text2.click();
+		return condition_text2.getAttribute("value");
+	}
+	
+	@FindBy(id="textArea_condition_text05")
+	private WebElement condition_text3;
+	
+	public String conExpVisibility(){// 	Expression-Widget Property : visibility
+		condition_text3.click();
+		return condition_text3.getAttribute("value");
+	}
+	
+	@FindBy(id="textArea_condition_text01")
+	private WebElement condition_text4;
 	
 	public String conExpDisabled(){// 	Expression-Widget Property : disabled
-		condition_ExpDisabled.click();
-		return condition_label8.getText();
+		condition_text4.click();
+		return condition_text4.getAttribute("value");
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_81")
-	private WebElement condition_ExpReadonly;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label10")
-	private WebElement condition_label9;
+	@FindBy(id="textArea_condition_text03")
+	private WebElement condition_text5;
 	
 	public String conExpReadonly(){// 	Expression-Widget Property : readonly
-		condition_ExpReadonly.click();
-		return condition_label9.getText();
-	}
-	
-	@FindBy(id="CheckedMultiSelect_condition_checkedMultiSelect07")
-	private WebElement condition_asyncStatus;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label12")
-	private WebElement condition_label10;
-	
-	public String conAsyncStatus(){//Expression-Widget Property : asyncStatus
-		condition_asyncStatus.click();
-		return condition_label10.getText();
-	}
-	
-	@FindBy(id="CheckedMultiSelect_condition_checkedMultiSelect07")
-	private WebElement condition_asyncErrorMessage;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label13")
-	private WebElement condition_label11;
-	
-	public String conAsyncErrorMessage(){//Expression-Widget Property : asyncErrorMessage
-		condition_asyncErrorMessage.click();
-		return condition_label11.getText();
+		condition_text5.click();
+		return condition_text5.getAttribute("value");
 	}
 //###############################TextArea Condition##################################
 //###############################TextArea Action#####################################
-	@FindBy(id="CheckedMultiSelect_action_checkedMultiSelect")
+	@FindBy(id="textArea_action_textArea")
 	private WebElement action_focus;
 	
-	@FindBy(id="CheckedMultiSelect_action_label03")
+	@FindBy(id="textArea_action_text")
 	private WebElement action_clickMe1;
 	
-	public int actFocus(){//Invoke Widget Function-focus()
+	public String actFocus(){//Invoke Widget Function-focus()
 		action_clickMe1.click();
-		String[] temp = {"bttMultiSelectFocused", "dijitFocused"};
-		return CSS.css_query(action_focus.getAttribute("class"), temp);
+		return action_focus.getAttribute("value");
 	}
 	
-	@FindBy(id="CheckedMultiSelect_action_label05")
+	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
+	private WebElement action_showErrorMessage;
+	
+	@FindBy(id="textArea_action_text01")
+	private WebElement action_click;
+	
+	public String actErrorMessage(){//Invoke Widget Function- 	showErrorMessage
+		action_click.click();
+		return action_showErrorMessage.getText();
+	}
+	
+	@FindBy(id="textArea_action_text03")
 	private WebElement action_clickMe2;
 	
-	@FindBy(id="widget_CheckedMultiSelect_action_checkedMultiSelect01")
+	@FindBy(id="textArea_action_textArea02")
 	private WebElement action_styleClass;
 	
 	public int actStyleClass(){//Set Widget Property-styleClass
@@ -435,87 +454,99 @@ public class TextArea_PageObject extends Main_Page{
 		return CSS.css_query(action_styleClass.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="widget_CheckedMultiSelect_action_checkedMultiSelect03")
-	private WebElement action_visibility;
+	@FindBy(id="textArea_action_textArea03")
+	private WebElement action_value;
 	
-	@FindBy(id="CheckedMultiSelect_action_label07")
+	@FindBy(id="textArea_action_text04")
 	private WebElement action_clickMe3;
 	
-	public Boolean actVisible(){//visible
+	public String actValue(){//value
 		action_clickMe3.click();
-		return action_visibility.isDisplayed();
+		return action_value.getAttribute("value");
 	}
 	
-	@FindBy(id="CheckedMultiSelect_action_label10")
+	@FindBy(id="textArea_action_textArea04")
+	private WebElement action_isMandatory;
+	
+	@FindBy(id="textArea_action_text05")
 	private WebElement action_clickMe4;
 	
-	public String actHidden(){//hidden
+	public int actIsMandatory(){//isMandatory
+		action_isMandatory.click();
 		action_clickMe4.click();
-		return action_visibility.getAttribute("style");
+		String[] temp={"dijitTextAreaError"};
+		return CSS.css_query(action_isMandatory.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="CheckedMultiSelect_action_label13")
+	@FindBy(id="textArea_action_textArea05")
+	private WebElement action_visibility;
+	
+	@FindBy(id="textArea_action_text06")
 	private WebElement action_clickMe5;
 	
-	public String actGone(){//gone
+	public int actVisibility(){//visibility
 		action_clickMe5.click();
-		return action_visibility.getAttribute("style");
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(action_visibility.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="CheckedMultiSelect_action_label08")
+	@FindBy(id="textArea_action_text07")
 	private WebElement action_clickMe6;
 	
-	@FindBy(id="CheckedMultiSelect_action_checkedMultiSelect04")
-	private WebElement action_disableTrue;
+	@FindBy(id="textArea_action_textArea06")
+	private WebElement action_disable;
 	
-	public String actDisableTrue(){//Set Widget Property : disable=true
+	public String actDisable(){//Set Widget Property : disable
 		action_clickMe6.click();
-		return action_disableTrue.getAttribute("disabled");
+		return action_disable.getAttribute("disabled");
 	}
 	
-	@FindBy(id="CheckedMultiSelect_action_label16")
+	@FindBy(id="textArea_action_text08")
 	private WebElement action_clickMe7;
 	
-	@FindBy(id="widget_CheckedMultiSelect_action_checkedMultiSelect05")
-	private WebElement action_readonlyTrue;
+	@FindBy(id="textArea_action_textArea07")
+	private WebElement action_readonly;
 	
-	public int actReadonlyTrue(){//Set Widget Property : ReadOnly=true
+	public String actReadonly(){//Set Widget Property : ReadOnly
 		action_clickMe7.click();
-		String[] temp = {"dojoxCheckedMultiSelectReadOnly", "dijitReadOnly"};
-		return CSS.css_query(action_readonlyTrue.getAttribute("class"), temp);
+		return action_readonly.getAttribute("readonly");
 	}
 	
-	@FindBy(id="CheckedMultiSelect_action_label18")
+	@FindBy(id="textArea_action_text09")
 	private WebElement action_clickMe8;
 	
-	@FindBy(id="widget_CheckedMultiSelect_action_checkedMultiSelect06")
+	@FindBy(id="textArea_action_textArea08")
 	private WebElement action_hint;
 	
-	public String actHint(){//Set Widget Property : Hint="test string"
+	public String actHint(){//Set Widget Property : Hint
 		action_clickMe8.click();
 		return action_hint.getAttribute("title");
 	}
 	
+	@FindBy(id="textArea_action_textArea09")
+	private WebElement action_ActionGroup;
 	
-	@FindBy(id="CheckedMultiSelect_action_label20")
-	private WebElement action_clickMe9;
+	@FindBy(id="textArea_action_label15")
+	private WebElement action_label;
 	
-	@FindBy(id="CheckedMultiSelect_action_checkedMultiSelect07")
-	private WebElement action_disable;
-	
-	@FindBy(id="widget_CheckedMultiSelect_action_checkedMultiSelect07")
-	private WebElement action_hint1;
-	
-	public String actDisable(){//disable=true and hint is "test string"
-		action_clickMe9.click();
-		return action_disable.getAttribute("disabled");
+	public String actActionGroup(){//ActionGroup
+		action_ActionGroup.click();
+		return action_label.getText();
 	}
 	
-	public String actHint1(){
-		action_clickMe9.click();
-		return action_hint1.getAttribute("title");
+	@FindBy(id="textArea_action_textArea10")
+	private WebElement action_keyDown;
+	
+	@FindBy(id="textArea_action_label17")
+	private WebElement action_label1;
+	
+	public String actKeyDown(){//ActionGroup
+		action_keyDown.click();
+		(new Main_Class()).keyDown(Keys.SHIFT);
+		(new Main_Class()).keyUp(Keys.SHIFT);
+		return action_label1.getText();
 	}
-
+	
 //###############################TextArea Action#####################################
 //###############################TextArea Appearance1################################
 	@FindBy(id="textArea_appearance1_textArea")
