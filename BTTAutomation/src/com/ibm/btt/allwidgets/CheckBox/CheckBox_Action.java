@@ -33,6 +33,7 @@ public class CheckBox_Action extends Main_Class{
     driver.get(baseUrl);*/
 	Main_Class.setUp();
     drv=PageFactory.initElements(driver, CheckBox_PageObject.class);
+//    driver.navigate().to(Main_Class.baseUrl);
     drv.Establish();
     drv.BTT8200_tab();
     drv.CheckBox_widget();
@@ -106,7 +107,8 @@ public class CheckBox_Action extends Main_Class{
   @AfterClass
   public static void tearDown() throws Exception {
 	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,CheckBox_Action.class);
-    driver.quit();
+	driver.quit();
+//	driver.navigate().refresh();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);

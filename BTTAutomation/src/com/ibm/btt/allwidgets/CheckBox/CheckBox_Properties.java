@@ -159,6 +159,7 @@ public class CheckBox_Properties extends Main_Class {
 	public static void tearDown() throws Exception {
 		Tools.snapshot((TakesScreenshot) driver, Main_Class.allwidgets,CheckBox_Properties.class);
 		driver.quit();
+//		driver.navigate().refresh();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {
 			fail(verificationErrorString);
