@@ -11,6 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import com.ibm.btt.util.CSS;
+import com.ibm.btt.util.DateType;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
@@ -754,12 +755,15 @@ public class Combo_PageObject extends Main_Page{
 	}
 //###############################Combo Appearance##################################
 //###############################Combo Submit######################################
-	
-	/*@FindBy(xpath=".//*[@id='widget_combo_submit_combo']/div[1]/input")
+//Must execute step 1 ,2 ,3	
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo']/div[1]/input")
 	private WebElement submit_click1;
 	
-	@FindBy(xpath=".//*[@id='combo_submit_combo_popup0']")
-	private WebElement submit_Country0;
+	@FindBy(xpath=".//*[@id='combo_submit_combo']")
+	private WebElement submit_TextBox;
+	
+	@FindBy(xpath=".//*[@id='combo_submit_label03']")
+	private WebElement submit_Stringlabel;
 	
 	@FindBy(xpath=".//*[@id='combo_submit_combo_popup1']")
 	private WebElement submit_Country1;
@@ -767,47 +771,51 @@ public class Combo_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
 	private WebElement submit_StringTooltip;
 	
-	
-	public String subString(){//Please select Country1.
-		submit_click1.click();
-		submit_Country0.click();
+	public String subString(){//1. Please select Country1.
+		submit_TextBox.click();
+		submit_Stringlabel.click();
 		return submit_StringTooltip.getText();
 	}
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList_01']/div[1]/input")
+	public void subStringClick(){//String
+		submit_click1.click();
+		submit_Country1.click();
+	}
+	
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo01']/div[1]/input")
 	private WebElement submit_click2;
 	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList_01_popup2']")
+	@FindBy(xpath=".//*[@id='combo_submit_combo01_popup0']")
 	private WebElement submit_Date;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList01']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo02']/div[1]/input")
 	private WebElement submit_click3;
 	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList01_popup3']")
+	@FindBy(xpath=".//*[@id='combo_submit_combo02_popup0']")
 	private WebElement submit_Currency;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList02']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo03']/div[1]/input")
 	private WebElement submit_click4;
 	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList02_popup0']")
+	@FindBy(xpath=".//*[@id='combo_submit_combo03_popup0']")
 	private WebElement submit_Number;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList03']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo04']/div[1]/input")
 	private WebElement submit_click5;
 	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList03_popup0']")
+	@FindBy(xpath=".//*[@id='combo_submit_combo04_popup0']")
 	private WebElement submit_Boolean;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList04']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo05']/div[1]/input")
 	private WebElement submit_click6;
 	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList04_popup4']")
+	@FindBy(xpath=".//*[@id='combo_submit_combo05_popup0']")
 	private WebElement submit_Duration;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList05']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo06']/div[1]/input")
 	private WebElement submit_click7;
 	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList05_popup4']")
+	@FindBy(xpath=".//*[@id='combo_submit_combo06_popup0']")
 	private WebElement submit_XMLGregorianCalendar;
 	
 	@FindBy(xpath=".//*[@id='widget_combo_submit_combo07']/div[1]/input")
@@ -819,66 +827,89 @@ public class Combo_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
 	private WebElement submit_ByteTooltip;
 	
-	public String subByteTooltip(){//Must select one.
+	public String subByteTooltip(){//2. Must select one.
 		return submit_ByteTooltip.getText();
 	}
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList07']/div[1]/input")
+	public void subByte(){//Byte
+		submit_click8.click();
+		submit_Byte.click();
+	}
+	
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo08']/div[1]/input")
 	private WebElement submit_click9;
 	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
+	@FindBy(xpath=".//*[@id='combo_submit_combo08_popup0']")
 	private WebElement submit_Short;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList08']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo09']/div[1]/input")
 	private WebElement submit_click10;
 	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
+	@FindBy(xpath=".//*[@id='combo_submit_combo09_popup0']")
 	private WebElement submit_Integer;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList09']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo10']/div[1]/input")
 	private WebElement submit_click11;
 	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
+	@FindBy(xpath=".//*[@id='combo_submit_combo10_popup0']")
 	private WebElement submit_Long;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList10']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo11']/div[1]/input")
 	private WebElement submit_click12;
 	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
+	@FindBy(xpath=".//*[@id='combo_submit_combo11_popup0']")
 	private WebElement submit_Float;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList11']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo12']/div[1]/input")
 	private WebElement submit_click13;
 	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
+	@FindBy(xpath=".//*[@id='combo_submit_combo12_popup0']")
 	private WebElement submit_Double;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList12']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo13']/div[1]/input")
 	private WebElement submit_click14;
 	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
+	@FindBy(xpath=".//*[@id='combo_submit_combo13_popup0']")
 	private WebElement submit_BigInteger;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList13']/div[1]/input")
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo14']/div[1]/input")
 	private WebElement submit_click15;
 	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
+	@FindBy(xpath=".//*[@id='combo_submit_combo14_popup0']")
 	private WebElement submit_BigDecimal;
 	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList13']/div[1]/input")
-	private WebElement submit_click17;
+	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
+	private WebElement submit_isMandatoryTooltip;
 	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
-	private WebElement submit_isMandatory;
+	@FindBy(id="combo_submit_combo15")
+	private WebElement submit_isMandatoryT;
 	
+	@FindBy(id="combo_submit_label18")
+	private WebElement subnit_isMandaLabel;
 	
+	public String subIsMandatoryTooltip(){//3. This is required.
+		return submit_isMandatoryTooltip.getText();
+	}
 	
-	@FindBy(id="SelectList_submit_button")
+	public void submit_isMandatory(){
+		submit_isMandatoryT.sendKeys("aaa");
+		subnit_isMandaLabel.click();
+	}
+	
+	@FindBy(xpath=".//*[@id='widget_combo_submit_combo17']/div[1]/input")
+	private WebElement submit_click16;
+	
+	@FindBy(xpath=".//*[@id='combo_submit_combo17_popup0']")
+	private WebElement submit_urlForList;
+
+	@FindBy(id="combo_submit_button")
 	private WebElement submit_button;
 	
+	public String subButton(){
+		return submit_button.getAttribute("aria-disabled");
+	}
+	
 	public void Submit(){
-		submit_click1.click();
-		submit_String.click();
 		submit_click2.click();
 		submit_Date.click();
 		submit_click3.click();
@@ -891,8 +922,6 @@ public class Combo_PageObject extends Main_Page{
 		submit_Duration.click();
 		submit_click7.click();
 		submit_XMLGregorianCalendar.click();
-		submit_click8.click();
-		submit_Byte.click();
 		submit_click9.click();
 		submit_Short.click();
 		submit_click10.click();
@@ -907,36 +936,138 @@ public class Combo_PageObject extends Main_Page{
 		submit_BigInteger.click();
 		submit_click15.click();
 		submit_BigDecimal.click();
+		submit_click16.click();
+		submit_urlForList.click();
 		submit_button.click();
 	}
-
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList_copy']/div[1]/input")
-	private WebElement submit_click16;
 	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList_copy_popup2']")
-	private WebElement submit_Account2;
+//submit result
+	@FindBy(id="showcombo_submit_label")
+	private WebElement result_String;
 	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList_copy_popup3']")
-	private WebElement submit_Account3;
-	
-	@FindBy(id="SelectList_submit_button01")
-	private WebElement submit_FormXValButton;
-	
-	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
-	private WebElement submit_FormXValHint;
-	
-	public String subFormVal(){
-		submit_click16.click();
-		submit_Account3.click();
-		return submit_FormXValHint.getText();
+	public String resString(){
+		return result_String.getText();
 	}
 	
-	public Boolean subFormValHint(){
-		submit_click16.click();
-		submit_Account2.click();
-		return submit_FormXValButton.isEnabled();
+	@FindBy(id="showcombo_submit_label01")
+	private WebElement result_Date;
+	
+	public Boolean resDate(){
+		return DateType.Date(result_Date.getText());
 	}
-	*/
+	
+	@FindBy(id="showcombo_submit_label02")
+	private WebElement result_Currency;
+	
+	public Boolean resCurrency(){
+		return DateType.Currency(result_Currency.getText());
+	}
+	
+	@FindBy(id="showcombo_submit_label03")
+	private WebElement result_Number;
+	
+	public Boolean resNumber(){
+		return DateType.Number(result_Number.getText());
+	}
+	
+	@FindBy(id="showcombo_submit_label04")
+	private WebElement result_Boolean;
+	
+	public String resBoolean(){
+		return result_Boolean.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label05")
+	private WebElement result_Duration;
+	
+	public String resDuration(){
+		return result_Duration.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label06")
+	private WebElement result_XMLGregorianCalendar;
+	
+	public String resXMLGregorianCalendar(){
+		return result_XMLGregorianCalendar.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label07")
+	private WebElement result_Byte;
+	
+	public String resByte(){
+		return result_Byte.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label08")
+	private WebElement result_Short;
+	
+	public String resShort(){
+		return result_Short.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label09")
+	private WebElement result_Integer;
+	
+	public Boolean resInteger(){
+		return DateType.Integer(result_Integer.getText());
+	}
+	
+	@FindBy(id="showcombo_submit_label10")
+	private WebElement result_Long;
+	
+	public String resLong(){
+		return result_Long.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label13")
+	private WebElement result_Float;
+	
+	public String resFloat(){
+		return result_Float.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label15")
+	private WebElement result_Double;
+	
+	public String resDouble(){
+		return result_Double.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label16")
+	private WebElement result_BigInteger;
+	
+	public String resBigInteger(){
+		return result_BigInteger.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label17")
+	private WebElement result_BigDecimal;
+	
+	public Boolean resBigDecimal(){
+		return DateType.BigDecimal(result_BigDecimal.getText());
+	}
+	
+	@FindBy(id="showcombo_submit_label18")
+	private WebElement result_isMandatoryT;
+	
+	public String resisMandatoryT(){
+		return result_isMandatoryT.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label19")
+	private WebElement result_isMandatoryF;
+	
+	public String resisMandatoryF(){
+		return result_isMandatoryF.getText();
+	}
+	
+	@FindBy(id="showcombo_submit_label20")
+	private WebElement result_urlForList;
+	
+	public String resurlForList(){
+		return result_urlForList.getText();
+	}
+	
 //###############################Combo Submit######################################
 
 
