@@ -83,7 +83,7 @@ public class Text_PageObject extends Main_Page{
 		Main_Class.keyRelease(KeyEvent.VK_SHIFT);
 		Main_Class.keyRelease(KeyEvent.VK_ALT);
 		Main_Class.keyRelease(KeyEvent.VK_C);	
-		Boolean b = Main_Class.widget_isFocus("Text_properties_text08", "id", "input:focus");
+		Boolean b = Main_Class.widget_isFocus("Text_properties_text08");
 		return b;
 	}
 
@@ -514,7 +514,7 @@ public class Text_PageObject extends Main_Page{
 	
 	public Boolean Text_Action_focus(){
 		Text_Action_focus.click();
-		return Main_Class.widget_isFocus("Text_action_text", "id", "input:focus");
+		return Main_Class.widget_isFocus("Text_action_text");
 	}
 	
 	@FindBy(id="Text_action_label18")

@@ -58,11 +58,11 @@ public class Text_Properties extends Main_Class {
 	@Test
 	public void Text_tabIndex() {
 		Main_Class.widget_tabIndex();
-		assertEquals(true, Main_Class.widget_isFocus("Text_properties_text09", "id", "input:focus"));
+		assertEquals(true, Main_Class.widget_isFocus("Text_properties_text09"));
 		Main_Class.widget_tabIndex();
-		assertEquals(true, Main_Class.widget_isFocus("Text_properties_text11", "id", "input:focus"));
+		assertEquals(true, Main_Class.widget_isFocus("Text_properties_text11"));
 		Main_Class.widget_tabIndex();
-		assertEquals(true, Main_Class.widget_isFocus("Text_properties_text08", "id", "input:focus"));
+		assertEquals(true, Main_Class.widget_isFocus("Text_properties_text08"));
 	}
 
 	@Test
