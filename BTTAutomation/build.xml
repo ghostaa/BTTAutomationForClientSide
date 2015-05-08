@@ -724,6 +724,17 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
+              	
+              	
+	<target name="AllTests">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.testsuite.AllTests" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+    
     <target name="testmail">
         <java classname="com.ibm.btt.testsuite.testmail" failonerror="true" fork="yes">
         <classpath refid="BTTAutomation.classpath"/>
