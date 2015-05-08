@@ -55,17 +55,17 @@ public class Message_Properties extends Main_Class {
 
 	@Test
 	public void proDisplay() {
-		assertEquals("visibility: inherit;", drv.proDisplay());
+		assertEquals(1, drv.proDisplay());
 	}
 
 	@Test
 	public void proHidden() {
-		assertEquals("visibility: hidden;", drv.proHidden());
+		assertEquals(1, drv.proHidden());
 	}
 
 	@Test
 	public void proGone() {
-		assertEquals("visibility: inherit; display: none;", drv.proGone());
+		assertEquals(1, drv.proGone());
 	}
 
 	@Test

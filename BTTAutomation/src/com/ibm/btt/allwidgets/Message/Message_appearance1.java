@@ -83,12 +83,12 @@ public class Message_appearance1 extends Main_Class{
   
   @Test
   public void Appearance2_10(){
-	  assertEquals("width: 150px; height: 150px; padding-left: 50px; border: 1px solid rgb(0, 0, 0);", drv.Appearance2_10());
+	  assertEquals(1, drv.Appearance2_10());
   }
   
   @Test
   public void Appearance2_11(){
-	  assertEquals("width: 150px; height: 150px; padding-left: 5%; border: 1px solid rgb(0, 0, 0);", drv.Appearance2_11());
+	  assertEquals(1, drv.Appearance2_11());
   }
  
   @AfterClass

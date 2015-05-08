@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
@@ -37,19 +38,22 @@ public class Message_PageObject extends Main_Page{
 	@FindBy(id="Message_properties_label12")
 	private WebElement properties_gone;
 	
-	public String proDisplay(){//display message
+	public int proDisplay(){//display message
 		properties_display.click();
-		return properties_message.getAttribute("style");
+		String[] temp={"visibility: inherit"};
+		return Appearance.appearance_query(properties_message.getAttribute("style"), temp);
 	}
 
-	public String proHidden(){//set message visibility to hidden
+	public int proHidden(){//set message visibility to hidden
 		properties_hidden.click();
-		return properties_message.getAttribute("style");
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(properties_message.getAttribute("style"), temp);
 	}
 	
-	public String proGone(){//set message visibility to gone
+	public int proGone(){//set message visibility to gone
 		properties_gone.click();
-		return properties_message.getAttribute("style");
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(properties_message.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='Message_properties_message18']/div[1]/span[1]")
@@ -132,9 +136,9 @@ public class Message_PageObject extends Main_Page{
 	@FindBy(id="Message_action_message")
 	private WebElement action_display;
 	
-	public String actDisplay(){//Message.display(String)
+	public Boolean actDisplay(){//Message.display(String)
 		action_display_click.click();
-		return action_display.getAttribute("style");
+		return action_display.isDisplayed();
 	}
 	
 	@FindBy(id="Message_action_label02")
@@ -389,29 +393,33 @@ public class Message_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='Message_appearance_message']/div[1]/span")
 	private WebElement Appearance1_1;
 	
-	public String Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
-		return Appearance1_1.getAttribute("style");
+	public int Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
+		String[] temp={""};
+		return Appearance.appearance_query(Appearance1_1.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='Message_appearance_message01']/div[1]/span")
 	private WebElement Appearance1_2;
 	
-	public String Appearance1_2(){//2.Width is AutoSize,Height is Fixed 30px
-		return Appearance1_2.getAttribute("style");
+	public int Appearance1_2(){//2.Width is AutoSize,Height is Fixed 30px
+		String[] temp={"height: 30px"};
+		return Appearance.appearance_query(Appearance1_2.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='Message_appearance_message04']/div[1]/span")
 	private WebElement Appearance1_3;
 	
-	public String Appearance1_3(){//3.Width is Fixed 100px,Height is AutoSize
-		return Appearance1_3.getAttribute("style");
+	public int Appearance1_3(){//3.Width is Fixed 100px,Height is AutoSize
+		String[] temp={"width: 100px"};
+		return Appearance.appearance_query(Appearance1_3.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='Message_appearance_message05']/div[1]/span")
 	private WebElement Appearance1_4;
 	
-	public String Appearance1_4(){//4.Width is Fixed 100px,Height is Fixed 30px
-		return Appearance1_4.getAttribute("style");
+	public int Appearance1_4(){//4.Width is Fixed 100px,Height is Fixed 30px
+		String[] temp={"height: 30px", "width: 100px"};
+		return Appearance.appearance_query(Appearance1_4.getAttribute("style"), temp);
 	}
 
 
@@ -508,16 +516,18 @@ public class Message_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[10]/td[2]")
 	private WebElement Appearance2_10;
 	
-	public String Appearance2_10(){//10.horizontal indent is 50px
-		return Appearance2_10.getAttribute("style");
+	public int Appearance2_10(){//10.horizontal indent is 50px
+		String[] temp={"padding-left: 50px"};
+		return Appearance.appearance_query(Appearance2_10.getAttribute("style"), temp);
 		
 	}
 	
 	@FindBy(xpath=".//*[@id='Message_appearance1_panel']/tbody/tr[11]/td[2]")
 	private WebElement Appearance2_11;
 	
-	public String Appearance2_11(){//11.horizontal indent is 10percent
-		return Appearance2_11.getAttribute("style");
+	public int Appearance2_11(){//11.horizontal indent is 5percent
+		String[] temp={"padding-left: 5%"};
+		return Appearance.appearance_query(Appearance2_11.getAttribute("style"), temp);
 	}
 //###############################Message Appearance1#################################
 

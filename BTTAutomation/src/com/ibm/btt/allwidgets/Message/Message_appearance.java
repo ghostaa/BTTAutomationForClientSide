@@ -38,22 +38,22 @@ public class Message_appearance extends Main_Class{
 
   @Test
   public void Appearance1_1(){
-	  assertEquals("", drv.Appearance1_1());
+	  assertEquals(1, drv.Appearance1_1());
   }
   
   @Test
   public void Appearance1_2(){
-	  assertEquals("height: 30px;", drv.Appearance1_2());
+	  assertEquals(1, drv.Appearance1_2());
   }
   
   @Test
   public void Appearance1_3(){
-	  assertEquals("width: 100px;", drv.Appearance1_3());
+	  assertEquals(1, drv.Appearance1_3());
   }
   
   @Test
   public void Appearance1_4(){
-	  assertEquals("height: 30px; width: 100px;", drv.Appearance1_4());
+	  assertEquals(2, drv.Appearance1_4());
   }
   
   @Test

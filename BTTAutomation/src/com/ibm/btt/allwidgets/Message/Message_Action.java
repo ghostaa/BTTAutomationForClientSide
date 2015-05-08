@@ -38,7 +38,7 @@ public class Message_Action extends Main_Class{
 
   @Test
   public void actDisplay(){
-	  assertEquals("visibility: inherit;", drv.actDisplay());
+	  assertEquals(true, drv.actDisplay());
   }
   
   @Test
