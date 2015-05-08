@@ -38,32 +38,32 @@ public class CheckedMultiSelect_appearance3 extends Main_Class{
 
   @Test
   public void Appearance3_1(){
-	  assertEquals("", drv.Appearance3_1());
+	  assertEquals(1, drv.Appearance3_1());
   }
   
   @Test
   public void Appearance3_2(){
-	  assertEquals("width: 50px;", drv.Appearance3_2());
+	  assertEquals(1, drv.Appearance3_2());
   }
   
   @Test
   public void Appearance3_3(){
-	  assertEquals("height: 50px;", drv.Appearance3_3());
+	  assertEquals(1, drv.Appearance3_3());
   }
   
   @Test
   public void Appearance3_4(){
-	  assertEquals("width: 300px; height: 50px;", drv.Appearance3_4());
+	  assertEquals(2, drv.Appearance3_4());
   }
   
   @Test
   public void Appearance3_5(){
-	  assertEquals("height: 300px;", drv.Appearance3_5());
+	  assertEquals(1, drv.Appearance3_5());
   }
   
   @Test
   public void Appearance3_6(){
-	  assertEquals("width: 100%; height: 50px;", drv.Appearance3_6());
+	  assertEquals(2, drv.Appearance3_6());
   }
  
   @AfterClass

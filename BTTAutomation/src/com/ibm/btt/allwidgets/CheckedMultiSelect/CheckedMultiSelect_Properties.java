@@ -45,12 +45,13 @@ public class CheckedMultiSelect_Properties extends Main_Class {
 		drv.BTT8200_tab();
 		drv.CheckedMultiSelect_widget();
 		drv.CheckedMultiSelect_properties();
+		waitUntilLoadElement(20,"widget_CheckedMultiSelect_properties_checkedMultiSelect_copy_copy_copy08");
 
 	}
 	
 	@Test
 	public void proTab() throws InterruptedException{
-		Thread.sleep(2000);
+		
 		Main_Class.widget_tabIndex();
 		assertEquals(2, drv.proTabIndex1());
 		for(int i=0; i<8; i++){
@@ -79,12 +80,12 @@ public class CheckedMultiSelect_Properties extends Main_Class {
 
 	@Test
 	public void proHidden() {
-		assertEquals("visibility: hidden;", drv.proHidden());
+		assertEquals(1, drv.proHidden());
 	}
 
 	@Test
 	public void proGone() {
-		assertEquals("display: none; visibility: inherit;", drv.proGone());
+		assertEquals(1, drv.proGone());
 	}
 
 	@Test

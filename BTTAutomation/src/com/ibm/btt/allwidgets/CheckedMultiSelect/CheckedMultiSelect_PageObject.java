@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
@@ -45,15 +46,17 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	@FindBy(id="widget_CheckedMultiSelect_properties_checkedMultiSelect_copy_copy")
 	private WebElement properties_hidden;
 	
-	public String proHidden(){// 3. visibility:hidden
-		return properties_hidden.getAttribute("style");
+	public int proHidden(){// 3. visibility:hidden
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(properties_hidden.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="widget_CheckedMultiSelect_properties_checkedMultiSelect_copy_copy_copy")
 	private WebElement properties_gone;
 	
-	public String proGone(){//4. visibility:gone
-		return properties_gone.getAttribute("style");
+	public int proGone(){//4. visibility:gone
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(properties_gone.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="CheckedMultiSelect_properties_checkedMultiSelect_copy_copy_copy01")
@@ -336,7 +339,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement condition_label2;
 	
 	public String conDisabled(){//Widget Property-disabled
-		(new Main_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect01");
+		(new Main_Class()).widget_moveToElementByXpath(".//*[@id='widget_CheckedMultiSelect_condition_checkedMultiSelect01']/div[2]");
 		return condition_label2.getText();
 	}
 	
@@ -347,7 +350,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement condition_label3;
 	
 	public String conReadonly(){//Widget Property-readOnly
-		(new Main_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect01_copy");
+		(new Main_Class()).widget_moveToElementByXpath(".//*[@id='widget_CheckedMultiSelect_condition_checkedMultiSelect01_copy']/div[2]");
 		return condition_label3.getText();
 	}
 
@@ -388,7 +391,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement condition_label7;
 	
 	public String conVisible(){//Widget Expression Condition: visibility=visible
-		(new Main_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect04");
+		(new Main_Class()).widget_moveToElementByXpath(".//*[@id='widget_CheckedMultiSelect_condition_checkedMultiSelect04']/div[2]");
 		return condition_label7.getText();
 	}
 	
@@ -475,17 +478,19 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	@FindBy(id="CheckedMultiSelect_action_label10")
 	private WebElement action_clickMe4;
 	
-	public String actHidden(){//hidden
+	public int actHidden(){//hidden
 		action_clickMe4.click();
-		return action_visibility.getAttribute("style");
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(action_visibility.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="CheckedMultiSelect_action_label13")
 	private WebElement action_clickMe5;
 	
-	public String actGone(){//gone
+	public int actGone(){//gone
 		action_clickMe5.click();
-		return action_visibility.getAttribute("style");
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(action_visibility.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="CheckedMultiSelect_action_label08")
@@ -547,29 +552,33 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='widget_CheckedMultiSelect_appearance1_checkedMultiSelect_copy_copy']/div[2]")
 	private WebElement Appearance1_1;
 	
-	public String Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
-		return Appearance1_1.getAttribute("style");
+	public int Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
+		String[] temp={""};
+		return Appearance.appearance_query(Appearance1_1.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='widget_CheckedMultiSelect_appearance1_checkedMultiSelect_copy_copy_copy']/div[2]")
 	private WebElement Appearance1_2;
 	
-	public String Appearance1_2(){//2.Width is Fixed 200px,Height is AutoSize
-		return Appearance1_2.getAttribute("style");
+	public int Appearance1_2(){//2.Width is Fixed 200px,Height is AutoSize
+		String[] temp={"width: 200px"};
+		return Appearance.appearance_query(Appearance1_2.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='widget_CheckedMultiSelect_appearance1_checkedMultiSelect_copy_copy_copy01']/div[2]")
 	private WebElement Appearance1_3;
 	
-	public String Appearance1_3(){//3.Width is Relative 30%,Height is AutoSize
-		return Appearance1_3.getAttribute("style");
+	public int Appearance1_3(){//3.Width is Relative 30%,Height is AutoSize
+		String[] temp={"width: 30%"};
+		return Appearance.appearance_query(Appearance1_3.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='widget_CheckedMultiSelect_appearance1_checkedMultiSelect_copy_copy_copy02']/div[2]")
 	private WebElement Appearance1_4;
 	
-	public String Appearance1_4(){//4.Width is Fill,Height is AutoSize
-		return Appearance1_4.getAttribute("style");
+	public int Appearance1_4(){//4.Width is Fill,Height is AutoSize
+		String[] temp={"width: 100%"};
+		return Appearance.appearance_query(Appearance1_4.getAttribute("style"), temp);
 	}
 //###############################MultiSelect Appearance1###############################
 //###############################MultiSelect Appearance2###############################
@@ -577,7 +586,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement Appearance2_1;
 	
 	public String Appearance2_1(){//1.horizontal is left,vertical is top
-		String v = Appearance2_1.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_1.getAttribute("style"), "top");
 		String h = Appearance2_1.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -586,7 +595,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement Appearance2_2;
 	
 	public String Appearance2_2(){//2.horizontal is left,vertical is center
-		String v = Appearance2_2.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_2.getAttribute("style"), "middle");
 		String h = Appearance2_2.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -595,7 +604,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement Appearance2_3;
 	
 	public String Appearance2_3(){//3.horizontal is left,vertical is bottom
-		String v = Appearance2_3.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_3.getAttribute("style"), "bottom");
 		String h = Appearance2_3.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -604,7 +613,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement Appearance2_4;
 	
 	public String Appearance2_4(){//4.horizontal is center,vertical is top
-		String v = Appearance2_4.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_4.getAttribute("style"), "top");
 		String h = Appearance2_4.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -613,7 +622,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement Appearance2_5;
 	
 	public String Appearance2_5(){//5.horizontal is center,vertical is center
-		String v = Appearance2_5.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_5.getAttribute("style"), "middle");
 		String h = Appearance2_5.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -622,7 +631,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement Appearance2_6;
 	
 	public String Appearance2_6(){//6.horizontal is center,vertical is bottom
-		String v = Appearance2_6.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_6.getAttribute("style"), "bottom");
 		String h = Appearance2_6.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -631,7 +640,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement Appearance2_7;
 	
 	public String Appearance2_7(){//7.horizontal is right,vertical is top
-		String v = Appearance2_7.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_7.getAttribute("style"), "top");
 		String h = Appearance2_7.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -640,7 +649,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement Appearance2_8;
 	
 	public String Appearance2_8(){//8.horizontal is right,vertical is center
-		String v = Appearance2_8.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_8.getAttribute("style"), "middle");
 		String h = Appearance2_8.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -649,7 +658,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement Appearance2_9;
 	
 	public String Appearance2_9(){//9.horizontal is right,vertical is bottom
-		String v = Appearance2_9.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_9.getAttribute("style"), "bottom");
 		String h = Appearance2_9.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -657,59 +666,67 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='CheckedMultiSelect_appearance2_group09']/div/div/div/div")
 	private WebElement Appearance2_10;
 	
-	public String Appearance2_10(){//10.horizontal indent is 50px
-		return Appearance2_10.getAttribute("style");
+	public int Appearance2_10(){//10.horizontal indent is 50px
+		String[] temp={"padding-left: 50px"};
+		return Appearance.appearance_query(Appearance2_10.getAttribute("style"), temp);
 		
 	}
 	
 	@FindBy(xpath=".//*[@id='CheckedMultiSelect_appearance2_group10']/div/div/div/div")
 	private WebElement Appearance2_11;
 	
-	public String Appearance2_11(){//11.horizontal indent is 10percent
-		return Appearance2_11.getAttribute("style");
+	public int Appearance2_11(){//11.horizontal indent is 10percent
+		String[] temp={"padding-left: 10%"};
+		return Appearance.appearance_query(Appearance2_11.getAttribute("style"), temp);
 	}
 //###############################CheckedMultiSelect Appearance2###############################
 //###############################CheckedMultiSelect Appearance3###############################
 	@FindBy(xpath=".//*[@id='widget_CheckedMultiSelect_appearance3_checkedMultiSelect_copy_copy']/div[2]")
 	private WebElement Appearance3_1;
 	
-	public String Appearance3_1(){//a. Height,Width are autosize
-		return Appearance3_1.getAttribute("style");
+	public int Appearance3_1(){//a. Height,Width are autosize
+		String[] temp={""};
+		return Appearance.appearance_query(Appearance3_1.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='widget_CheckedMultiSelect_appearance3_checkedMultiSelect_copy_copy_copy']/div[2]")
 	private WebElement Appearance3_2;
 	
-	public String Appearance3_2(){//b. Height is autosize, Width is fixed 50px
-		return Appearance3_2.getAttribute("style");
+	public int Appearance3_2(){//b. Height is autosize, Width is fixed 50px
+		String[] temp={"width: 50px"};
+		return Appearance.appearance_query(Appearance3_2.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='widget_CheckedMultiSelect_appearance3_checkedMultiSelect_copy_copy_copy03']/div[2]")
 	private WebElement Appearance3_3;
 	
-	public String Appearance3_3(){//c. Height is 50px, Width is fixed autosize
-		return Appearance3_3.getAttribute("style");
+	public int Appearance3_3(){//c. Height is 50px, Width is fixed autosize
+		String[] temp={"height: 50px"};
+		return Appearance.appearance_query(Appearance3_3.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='widget_CheckedMultiSelect_appearance3_checkedMultiSelect_copy_copy_copy02_copy01_copy']/div[2]")
 	private WebElement Appearance3_4;
 	
-	public String Appearance3_4(){//d. Fixed size:Height is 50px,Width is 300px
-		return Appearance3_4.getAttribute("style");
+	public int Appearance3_4(){//d. Fixed size:Height is 50px,Width is 300px
+		String[] temp={"width: 300px", "height: 50px"};
+		return Appearance.appearance_query(Appearance3_4.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='widget_CheckedMultiSelect_appearance3_checkedMultiSelect_copy_copy_copy01']/div[2]")
 	private WebElement Appearance3_5;
 	
-	public String Appearance3_5(){//a. Height=300px > elements length
-		return Appearance3_5.getAttribute("style");
+	public int Appearance3_5(){//a. Height=300px > elements length
+		String[] temp={"height: 300px"};
+		return Appearance.appearance_query(Appearance3_5.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='widget_CheckedMultiSelect_appearance3_checkedMultiSelect_copy_copy_copy02']/div[2]")
 	private WebElement Appearance3_6;
 	
-	public String Appearance3_6(){//b. Height < elements length
-		return Appearance3_6.getAttribute("style");
+	public int Appearance3_6(){//b. Height < elements length
+		String[] temp={"width: 100%", "height: 50px"};
+		return Appearance.appearance_query(Appearance3_6.getAttribute("style"), temp);
 	}
 //###############################CheckedMultiSelect Appearance3###############################
 //###############################CheckedMultiSelect Submit####################################
