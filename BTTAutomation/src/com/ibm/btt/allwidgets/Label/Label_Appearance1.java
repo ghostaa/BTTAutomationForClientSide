@@ -95,12 +95,12 @@ public class Label_Appearance1 extends Main_Class{
   
   @Test
   public void Appearance1_10(){
-	  assertEquals("width: 162px; height: 149px; padding-left: 50px; border: 1px solid rgb(0, 0, 0);", drv.Appearance1_10());
+	  assertEquals(1, drv.Appearance1_10());
   }
   
   @Test
   public void Appearance1_11(){
-	  assertEquals("width: 162px; height: 149px; padding-left: 10%; border: 1px solid rgb(0, 0, 0);", drv.Appearance1_11());
+	  assertEquals(1, drv.Appearance1_11());
   }
   
   @AfterClass

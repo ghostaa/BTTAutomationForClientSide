@@ -50,82 +50,82 @@ public class Label_Appearance extends Main_Class{
 
   @Test
   public void appearance1(){
-	  assertEquals("visibility: inherit;", drv.appearance1());
+	  assertEquals(1, drv.appearance1());
   }
   
   @Test
   public void appearance2(){
-	  assertEquals("visibility: inherit; height: 30px;", drv.appearance2());
+	  assertEquals(1, drv.appearance2());
   }
   
   @Test
   public void appearance3(){
-	  assertEquals("visibility: inherit; height: 50%;", drv.appearance3());
+	  assertEquals(1, drv.appearance3());
   }
   
   @Test
   public void appearance4(){
-	  assertEquals("visibility: inherit; height: 100%;", drv.appearance4());
+	  assertEquals(1, drv.appearance4());
   }
   
   @Test
   public void appearance5(){
-	  assertEquals("visibility: inherit; width: 100px;", drv.appearance5());
+	  assertEquals(1, drv.appearance5());
   }
   
   @Test
   public void appearance6(){
-	  assertEquals("visibility: inherit; height: 30px; width: 100px;", drv.appearance6());
+	  assertEquals(2, drv.appearance6());
   }
   
   @Test
   public void appearance7(){
-	  assertEquals("visibility: inherit; height: 50%; width: 100px;", drv.appearance7());
+	  assertEquals(2, drv.appearance7());
   }
   
   @Test
   public void appearance8(){
-	  assertEquals("visibility: inherit; height: 100%; width: 100px;", drv.appearance8());
+	  assertEquals(2, drv.appearance8());
   }
   
   @Test
   public void appearance9(){
-	  assertEquals("visibility: inherit; width: 50%;", drv.appearance9());
+	  assertEquals(1, drv.appearance9());
   }
   
   @Test
   public void appearance10(){
-	  assertEquals("visibility: inherit; height: 30px; width: 50%;", drv.appearance10());
+	  assertEquals(2, drv.appearance10());
   }
   
   @Test
   public void appearance11(){
-	  assertEquals("visibility: inherit; height: 50%; width: 50%;", drv.appearance11());
+	  assertEquals(2, drv.appearance11());
   }
   
   @Test
   public void appearance12(){
-	  assertEquals("visibility: inherit; height: 100%; width: 50%;", drv.appearance12());
+	  assertEquals(2, drv.appearance12());
   }
   
   @Test
   public void appearance13(){
-	  assertEquals("visibility: inherit; width: 100%;", drv.appearance13());
+	  assertEquals(1, drv.appearance13());
   }
   
   @Test
   public void appearance14(){
-	  assertEquals("visibility: inherit; height: 30px; width: 100%;", drv.appearance14());
+	  assertEquals(2, drv.appearance14());
   }
   
   @Test
   public void appearance15(){
-	  assertEquals("visibility: inherit; height: 50%; width: 100%;", drv.appearance15());
+	  assertEquals(2, drv.appearance15());
   }
   
   @Test
   public void appearance16(){
-	  assertEquals("visibility: inherit; height: 100%; width: 100%;", drv.appearance16());
+	  assertEquals(2, drv.appearance16());
   }
 
   

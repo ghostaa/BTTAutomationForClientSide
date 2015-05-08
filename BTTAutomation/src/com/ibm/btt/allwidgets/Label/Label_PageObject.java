@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 
+import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
@@ -125,15 +126,17 @@ public class Label_PageObject extends Main_Page{
 	@FindBy(id="label_properties_label19")
 	private WebElement properties_hidden;
 
-	public Boolean proHidden(){//verify label hidden
-		 return properties_hidden.isDisplayed();
+	public int proHidden(){//verify label hidden
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(properties_hidden.getAttribute("style"), temp);
 	}
 
 	@FindBy(id="label_properties_label21")
 	private WebElement properties_gone;
 
-	public String proGone(){//verify label gone
-		 return properties_gone.getAttribute("style");
+	public int proGone(){//verify label gone
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(properties_gone.getAttribute("style"), temp);
 	}
 
 	@FindBy(id="label_properties_label26")
@@ -357,113 +360,129 @@ public class Label_PageObject extends Main_Page{
 	@FindBy(id="label_appearance_label01")
 	private WebElement appearance1;
 
-	public String appearance1(){//1.Width is AutoSize,Height is AutoSize
-		return appearance1.getAttribute("style");
+	public int appearance1(){//1.Width is AutoSize,Height is AutoSize
+		String[] temp={"visibility: inherit"};
+		return Appearance.appearance_query(appearance1.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy")
 	private WebElement appearance2;
 
-	public String appearance2(){//2.Width is AutoSize,Height is Fixed 30px
-		return appearance2.getAttribute("style");
+	public int appearance2(){//2.Width is AutoSize,Height is Fixed 30px
+		String[] temp={"height: 30px"};
+		return Appearance.appearance_query(appearance2.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy")
 	private WebElement appearance3;
 
-	public String appearance3(){//3.Width is AutoSize,Height is Relative 50%
-		return appearance3.getAttribute("style");
+	public int appearance3(){//3.Width is AutoSize,Height is Relative 50%
+		String[] temp={"height: 50%"};
+		return Appearance.appearance_query(appearance3.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy")
 	private WebElement appearance4;
 
-	public String appearance4(){//4.Width is AutoSize,Height is Fill
-		return appearance4.getAttribute("style");
+	public int appearance4(){//4.Width is AutoSize,Height is Fill
+		String[] temp={"height: 100%"};
+		return Appearance.appearance_query(appearance4.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy")
 	private WebElement appearance5;
 
-	public String appearance5(){//5.Width is Fixed 100px,Height is AutoSize
-		return appearance5.getAttribute("style");
+	public int appearance5(){//5.Width is Fixed 100px,Height is AutoSize
+		String[] temp={"width: 100px"};
+		return Appearance.appearance_query(appearance5.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy")
 	private WebElement appearance6;
 
-	public String appearance6(){//6.Width is Fixed 100px,Height is Fixed 30px
-		return appearance6.getAttribute("style");
+	public int appearance6(){//6.Width is Fixed 100px,Height is Fixed 30px
+		String[] temp={"height: 30px", "width: 100px"};
+		return Appearance.appearance_query(appearance6.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy01")
 	private WebElement appearance7;
 
-	public String appearance7(){//7.Width is Fixed 100px,Height is Relative 50%
-		return appearance7.getAttribute("style");
+	public int appearance7(){//7.Width is Fixed 100px,Height is Relative 50%
+		String[] temp={"height: 50%", "width: 100px"};
+		return Appearance.appearance_query(appearance7.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02")
 	private WebElement appearance8;
 
-	public String appearance8(){//8.Width is Fixed 100px,Height is Fill
-		return appearance8.getAttribute("style");
+	public int appearance8(){//8.Width is Fixed 100px,Height is Fill
+		String[] temp={"height: 100%", "width: 100px"};
+		return Appearance.appearance_query(appearance8.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy")
 	private WebElement appearance9;
 
-	public String appearance9(){//9.Width is Relative 50%,Height is AutoSize
-		return appearance9.getAttribute("style");
+	public int appearance9(){//9.Width is Relative 50%,Height is AutoSize
+		String[] temp={"width: 50%"};
+		return Appearance.appearance_query(appearance9.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy01")
 	private WebElement appearance10;
 
-	public String appearance10(){//10.Width is Relative 50%,Height is Fixed 30px
-		return appearance10.getAttribute("style");
+	public int appearance10(){//10.Width is Relative 50%,Height is Fixed 30px
+		String[] temp={"height: 30px", "width: 50%"};
+		return Appearance.appearance_query(appearance10.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy02")
 	private WebElement appearance11;
 
-	public String appearance11(){//11.Width is Relative 50%,Height is Relative 50%
-		return appearance11.getAttribute("style");
+	public int appearance11(){//11.Width is Relative 50%,Height is Relative 50%
+		String[] temp={"height: 50%", "width: 50%"};
+		return Appearance.appearance_query(appearance11.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy03")
 	private WebElement appearance12;
 
-	public String appearance12(){//12.Width is Relative 50%,Height is Fill
-		return appearance12.getAttribute("style");
+	public int appearance12(){//12.Width is Relative 50%,Height is Fill
+		String[] temp={"height: 100%", "width: 50%"};
+		return Appearance.appearance_query(appearance12.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy04")
 	private WebElement appearance13;
 
-	public String appearance13(){//13.Width is Fill,Height is AutoSize
-		return appearance13.getAttribute("style");
+	public int appearance13(){//13.Width is Fill,Height is AutoSize
+		String[] temp={"width: 100%"};
+		return Appearance.appearance_query(appearance13.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy04_copy")
 	private WebElement appearance14;
 
-	public String appearance14(){//14.Width is Fill,Height is Fixed 30px
-		return appearance14.getAttribute("style");
+	public int appearance14(){//14.Width is Fill,Height is Fixed 30px
+		String[] temp={"height: 30px", "width: 100%"};
+		return Appearance.appearance_query(appearance14.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy04_copy01")
 	private WebElement appearance15;
 
-	public String appearance15(){//15.Width is Fill,Height is Relatvie 50%
-		return appearance15.getAttribute("style");
+	public int appearance15(){//15.Width is Fill,Height is Relatvie 50%
+		String[] temp={"height: 50%", "width: 100%"};
+		return Appearance.appearance_query(appearance15.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="label_appearance_label01_copy_copy_copy_copy_copy02_copy04_copy02")
 	private WebElement appearance16;
 
-	public String appearance16(){//16.Width is Fill,Height is Fill
-		return appearance16.getAttribute("style");
+	public int appearance16(){//16.Width is Fill,Height is Fill
+		String[] temp={"height: 100%", "width: 100%"};
+		return Appearance.appearance_query(appearance16.getAttribute("style"), temp);
 	}
 //###############################For Label Appearance#################################
 //###############################For Label Appearance1################################
@@ -551,16 +570,18 @@ public class Label_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[10]/td[2]")
 	private WebElement Appearance1_10;
 	
-	public String Appearance1_10(){//10.horizontal indent is 50px
-		return Appearance1_10.getAttribute("style");
+	public int Appearance1_10(){//10.horizontal indent is 50px
+		String[] temp={"padding-left: 50px"};
+		return Appearance.appearance_query(Appearance1_10.getAttribute("style"), temp);
 		
 	}
 	
 	@FindBy(xpath=".//*[@id='label_appearance1_panel']/tbody/tr[11]/td[2]")
 	private WebElement Appearance1_11;
 	
-	public String Appearance1_11(){//11.horizontal indent is 10percent
-		return Appearance1_11.getAttribute("style");
+	public int Appearance1_11(){//11.horizontal indent is 10percent
+		String[] temp={"padding-left: 10%"};
+		return Appearance.appearance_query(Appearance1_11.getAttribute("style"), temp);
 	}
 //###############################For Label Appearance1################################
 

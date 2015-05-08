@@ -129,12 +129,12 @@ public class Label_Properties extends Main_Class{
 
   @Test
   public void proHidden(){
-	  assertEquals(false, drv.proHidden());
+	  assertEquals(1, drv.proHidden());
   }
 
   @Test
   public void proGone(){
-	  assertEquals("display: none; visibility: inherit;", drv.proGone());
+	  assertEquals(1, drv.proGone());
   }
 
   @Test
