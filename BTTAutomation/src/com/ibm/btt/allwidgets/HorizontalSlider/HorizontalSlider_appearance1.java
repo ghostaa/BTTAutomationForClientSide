@@ -38,22 +38,22 @@ public class HorizontalSlider_appearance1 extends Main_Class{
 
   @Test
   public void Appearance1_1(){
-	  assertEquals("", drv.Appearance1_1());
+	  assertEquals(1, drv.Appearance1_1());
   }
   
   @Test
   public void Appearance1_2(){
-	  assertEquals("width: 400px;", drv.Appearance1_2());
+	  assertEquals(1, drv.Appearance1_2());
   }
   
   @Test
   public void Appearance1_3(){
-	  assertEquals("width: 100%;", drv.Appearance1_3());
+	  assertEquals(1, drv.Appearance1_3());
   }
   
   @Test
   public void Appearance1_4(){
-	  assertEquals("width: 80%;", drv.Appearance1_4());
+	  assertEquals(1, drv.Appearance1_4());
   }
   
   @AfterClass
