@@ -50,22 +50,25 @@ public class CheckBox_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='CheckBox_properties_form']/table/tbody/tr[3]/td[2]/label")
 	private WebElement CheckBox_properties_visibility;
 	
-	public String CheckBox_properties_visibility(){
-		return CheckBox_properties_visibility.getAttribute("style");
+	public int CheckBox_properties_visibility(){
+		String[] temp={"visibility: inherit"};
+		return Appearance.appearance_query(CheckBox_properties_visibility.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='CheckBox_properties_group']/div/div/div/div/label")
 	private WebElement CheckBox_properties_hidden;
 	
-	public String CheckBox_properties_hidden(){
-		return CheckBox_properties_hidden.getAttribute("style");
+	public int CheckBox_properties_hidden(){
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(CheckBox_properties_hidden.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='CheckBox_properties_group01']/div/div/div/div/label")
 	private WebElement CheckBox_properties_gone;
 	
-	public String CheckBox_properties_gone(){
-		return CheckBox_properties_gone.getAttribute("style");
+	public int CheckBox_properties_gone(){
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(CheckBox_properties_gone.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="CheckBox_properties_checkBox_disabled")
@@ -648,9 +651,9 @@ public class CheckBox_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='CheckBox_appearance1_form']/table/tbody/tr[4]/td[2]/label")
 	private WebElement Appearance1_4;
 	
-	public String Appearance1_4(){//4.Width is Fixed 50px,Height is Fixed 50px
+	public int Appearance1_4(){//4.Width is Fixed 50px,Height is Fixed 50px
 		String[] temp = {"width: 50px", "height: 50px"};
-		return Appearance1_4.getAttribute("style");
+		return Appearance.appearance_query(Appearance1_4.getAttribute("style"), temp);
 	}
 
 

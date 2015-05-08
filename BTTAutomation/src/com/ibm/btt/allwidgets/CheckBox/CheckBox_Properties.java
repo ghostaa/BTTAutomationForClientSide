@@ -89,17 +89,17 @@ public class CheckBox_Properties extends Main_Class {
 
 	@Test
 	public void CheckBox_properties_visibility() {
-		assertEquals("visibility: inherit;", drv.CheckBox_properties_visibility());
+		assertEquals(1, drv.CheckBox_properties_visibility());
 	}
 
 	@Test
 	public void CheckBox_properties_hidden() {
-		assertEquals("visibility: hidden;", drv.CheckBox_properties_hidden());
+		assertEquals(1, drv.CheckBox_properties_hidden());
 	}
 
 	@Test
 	public void CheckBox_properties_gone() {
-		assertEquals("display: none; visibility: inherit;", drv.CheckBox_properties_gone());
+		assertEquals(1, drv.CheckBox_properties_gone());
 	}
 
 	@Test
