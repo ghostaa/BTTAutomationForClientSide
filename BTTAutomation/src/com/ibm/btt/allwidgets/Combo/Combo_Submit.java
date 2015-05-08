@@ -93,7 +93,7 @@ public class Combo_Submit extends Main_Class{
   
   @Test
   public void resDuration(){
-	  assertEquals("63543252022000", drv.resDuration());
+	  assertEquals(true, drv.resDuration());
   }
   
   @Test

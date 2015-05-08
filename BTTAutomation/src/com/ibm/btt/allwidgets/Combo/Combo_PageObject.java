@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.DateType;
 import com.ibm.btt.util.Event;
@@ -36,15 +37,17 @@ public class Combo_PageObject extends Main_Page{
 	@FindBy(id="widget_combo_properties_combo02")
 	private WebElement properties_hidden;
 
-	public String proHidden(){//3. SelectList's visibility = hidden
-		return properties_hidden.getAttribute("style");
+	public int proHidden(){//3. SelectList's visibility = hidden
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(properties_hidden.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="widget_combo_properties_combo03")
 	private WebElement properties_gone;
 
-	public String proGone(){//4. SelectList's visibility = gone
-		return properties_gone.getAttribute("style");
+	public int proGone(){//4. SelectList's visibility = gone
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(properties_gone.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="combo_properties_combo05")
@@ -634,7 +637,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement Appearance_1;
 	
 	public String Appearance_1(){//1.horizontal is left,vertical is top
-		String v = Appearance_1.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_1.getAttribute("style"), "top");
 		String h = Appearance_1.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -643,7 +646,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement Appearance_2;
 	
 	public String Appearance_2(){//2.horizontal is left,vertical is center
-		String v = Appearance_2.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_2.getAttribute("style"), "middle");
 		String h = Appearance_2.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -652,7 +655,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement Appearance_3;
 	
 	public String Appearance_3(){//3.horizontal is left,vertical is bottom
-		String v = Appearance_3.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_3.getAttribute("style"), "bottom");
 		String h = Appearance_3.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -661,7 +664,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement Appearance_4;
 	
 	public String Appearance_4(){//4.horizontal is center,vertical is top
-		String v = Appearance_4.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_4.getAttribute("style"), "top");
 		String h = Appearance_4.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -670,7 +673,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement Appearance_5;
 	
 	public String Appearance_5(){//5.horizontal is center,vertical is center
-		String v = Appearance_5.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_5.getAttribute("style"), "middle");
 		String h = Appearance_5.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -679,7 +682,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement Appearance_6;
 	
 	public String Appearance_6(){//6.horizontal is center,vertical is bottom
-		String v = Appearance_6.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_6.getAttribute("style"), "bottom");
 		String h = Appearance_6.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -688,7 +691,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement Appearance_7;
 	
 	public String Appearance_7(){//7.horizontal is right,vertical is top
-		String v = Appearance_7.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_7.getAttribute("style"), "top");
 		String h = Appearance_7.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -697,7 +700,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement Appearance_8;
 	
 	public String Appearance_8(){//8.horizontal is right,vertical is center
-		String v = Appearance_8.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_8.getAttribute("style"), "middle");
 		String h = Appearance_8.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -706,7 +709,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement Appearance_9;
 	
 	public String Appearance_9(){//9.horizontal is right,vertical is bottom
-		String v = Appearance_9.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_9.getAttribute("style"), "bottom");
 		String h = Appearance_9.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -714,44 +717,50 @@ public class Combo_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='combo_appearance_group09']/div/div/div/div")
 	private WebElement Appearance_10;
 	
-	public String Appearance_10(){//10.horizontal indent is 50px
-		return Appearance_10.getAttribute("style");
+	public int Appearance_10(){//10.horizontal indent is 50px
+		String[] temp={"padding-left: 50px"};
+		return Appearance.appearance_query(Appearance_10.getAttribute("style"), temp);
 		
 	}
 	
 	@FindBy(xpath=".//*[@id='combo_appearance_group10']/div/div/div/div")
 	private WebElement Appearance_11;
 	
-	public String Appearance_11(){//11.horizontal indent is 10percent
-		return Appearance_11.getAttribute("style");
+	public int Appearance_11(){//11.horizontal indent is 10percent
+		String[] temp={"padding-left: 10%"};
+		return Appearance.appearance_query(Appearance_11.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="widget_combo_appearance_combo11")
 	private WebElement Appearance_12;
 	
-	public String Appearance_12(){//12.Width is AutoSize,Height is AutoSize
-		return Appearance_12.getAttribute("style");
+	public int Appearance_12(){//12.Width is AutoSize,Height is AutoSize
+		String[] temp={"visibility: inherit"};
+		return Appearance.appearance_query(Appearance_12.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="widget_combo_appearance_combo12")
 	private WebElement Appearance_13;
 	
-	public String Appearance_13(){//13.Width is fixed100,Height is AutoSize
-		return Appearance_13.getAttribute("style");
+	public int Appearance_13(){//13.Width is fixed100,Height is AutoSize
+		String[] temp={"width: 100px"};
+		return Appearance.appearance_query(Appearance_13.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="widget_combo_appearance_combo13")
 	private WebElement Appearance_14;
 	
-	public String Appearance_14(){//14.Width is Relative50%,Height is AutoSize
-		return Appearance_14.getAttribute("style");
+	public int Appearance_14(){//14.Width is Relative50%,Height is AutoSize
+		String[] temp={"width: 50%"};
+		return Appearance.appearance_query(Appearance_14.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="widget_combo_appearance_combo14")
 	private WebElement Appearance_15;
 	
-	public String Appearance_15(){//15.Width is Fill,Height is AutoSize
-		return Appearance_15.getAttribute("style");
+	public int Appearance_15(){//15.Width is Fill,Height is AutoSize
+		String[] temp={"width: 100%"};
+		return Appearance.appearance_query(Appearance_15.getAttribute("style"), temp);
 	}
 //###############################Combo Appearance##################################
 //###############################Combo Submit######################################
@@ -980,8 +989,8 @@ public class Combo_PageObject extends Main_Page{
 	@FindBy(id="showcombo_submit_label05")
 	private WebElement result_Duration;
 	
-	public String resDuration(){
-		return result_Duration.getText();
+	public Boolean resDuration(){
+		return DateType.Duration(result_Duration.getText());
 	}
 	
 	@FindBy(id="showcombo_submit_label06")

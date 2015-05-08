@@ -38,77 +38,77 @@ public class Combo_appearance extends Main_Class{
 
   @Test
   public void Appearance_1(){
-	  assertEquals("left&vertical-align: top;", drv.Appearance_1());
+	  assertEquals("left&top", drv.Appearance_1());
   }
   
   @Test
   public void Appearance_2(){
-	  assertEquals("left&vertical-align: middle;", drv.Appearance_2());
+	  assertEquals("left&middle", drv.Appearance_2());
   }
   
   @Test
   public void Appearance_3(){
-	  assertEquals("left&vertical-align: bottom;", drv.Appearance_3());
+	  assertEquals("left&bottom", drv.Appearance_3());
   }
   
   @Test
   public void Appearance_4(){
-	  assertEquals("center&vertical-align: top;", drv.Appearance_4());
+	  assertEquals("center&top", drv.Appearance_4());
   }
   
   @Test
   public void Appearance_5(){
-	  assertEquals("center&vertical-align: middle;", drv.Appearance_5());
+	  assertEquals("center&middle", drv.Appearance_5());
   }
   
   @Test
   public void Appearance_6(){
-	  assertEquals("center&vertical-align: bottom;", drv.Appearance_6());
+	  assertEquals("center&bottom", drv.Appearance_6());
   }
   
   @Test
   public void Appearance_7(){
-	  assertEquals("right&vertical-align: top;", drv.Appearance_7());
+	  assertEquals("right&top", drv.Appearance_7());
   }
   
   @Test
   public void Appearance_8(){
-	  assertEquals("right&vertical-align: middle;", drv.Appearance_8());
+	  assertEquals("right&middle", drv.Appearance_8());
   }
   
   @Test
   public void Appearance_9(){
-	  assertEquals("right&vertical-align: bottom;", drv.Appearance_9());
+	  assertEquals("right&bottom", drv.Appearance_9());
   }
   
   @Test
   public void Appearance_10(){
-	  assertEquals("padding-left: 50px; vertical-align: middle;", drv.Appearance_10());
+	  assertEquals(1, drv.Appearance_10());
   }
   
   @Test
   public void Appearance_11(){
-	  assertEquals("width: 244px; padding-left: 10%; vertical-align: middle;", drv.Appearance_11());
+	  assertEquals(1, drv.Appearance_11());
   }
   
   @Test
   public void Appearance_12(){
-	  assertEquals("visibility: inherit;", drv.Appearance_12());
+	  assertEquals(1, drv.Appearance_12());
   }
   
   @Test
   public void Appearance_13(){
-	  assertEquals("visibility: inherit; width: 100px;", drv.Appearance_13());
+	  assertEquals(1, drv.Appearance_13());
   }
   
   @Test
   public void Appearance_14(){
-	  assertEquals("visibility: inherit; width: 50%;", drv.Appearance_14());
+	  assertEquals(1, drv.Appearance_14());
   }
   
   @Test
   public void Appearance_15(){
-	  assertEquals("visibility: inherit; width: 100%;", drv.Appearance_15());
+	  assertEquals(1, drv.Appearance_15());
   }
   
   @AfterClass

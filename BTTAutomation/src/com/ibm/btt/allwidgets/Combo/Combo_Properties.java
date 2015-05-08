@@ -45,12 +45,13 @@ public class Combo_Properties extends Main_Class {
 		drv.BTT8200_tab();
 		drv.Combo_widget();
 		drv.Combo_properties();
+		Main_Class.waitUntilLoadElement(20, "widget_combo_properties_combo01");
 
 	}
 	
 	@Test
 	public void proTab() throws InterruptedException{
-		Thread.sleep(2000);
+		
 		Main_Class.widget_tabIndex();
 		assertEquals(2, drv.properties_tabIndex1());
 		Main_Class.widget_tabIndex();
@@ -75,12 +76,12 @@ public class Combo_Properties extends Main_Class {
 
 	@Test
 	public void proHidden() {
-		assertEquals("visibility: hidden;", drv.proHidden());
+		assertEquals(1, drv.proHidden());
 	}
 	
 	@Test
 	public void proGone(){
-		assertEquals("display: none; visibility: inherit;", drv.proGone());
+		assertEquals(1, drv.proGone());
 	}
 	
 	@Test
