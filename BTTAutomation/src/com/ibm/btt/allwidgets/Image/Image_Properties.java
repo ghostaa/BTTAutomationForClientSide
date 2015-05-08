@@ -38,6 +38,7 @@ public class Image_Properties extends Main_Class {
 		drv.BTT8200_tab();
 		drv.image_widget();
 		drv.Image_properties();
+		waitUntilLoadElement(20,"Image_properties_Image_id");
 
 	}
 	
