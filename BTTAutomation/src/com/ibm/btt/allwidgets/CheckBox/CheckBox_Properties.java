@@ -24,6 +24,8 @@ import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.util.PropertiesUtil;
@@ -52,12 +54,12 @@ public class CheckBox_Properties extends Main_Class {
 		drv.BTT8200_tab();
 		drv.CheckBox_widget();
 		drv.CheckBox_properties();
-
+		waitUntilLoadElement(20,"CheckBox_properties_checkBox_id");
 	}
 	
 	@Test
 	public void CheckBox_TabIndex() throws InterruptedException{
-		Thread.sleep(2000);
+		
 		Main_Class.widget_tabIndex();
 		assertEquals(2, drv.CheckBox_properties_tabIndex1Focus());
 		Main_Class.widget_tabIndex();

@@ -18,6 +18,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ibm.btt.util.*;
 public class Main_Class {
@@ -177,4 +179,16 @@ public class Main_Class {
 			}
 		
 	}
+		
+		public static void waitUntilLoadElement(long second,final String elementID){
+			(new WebDriverWait(driver, second)).until(new ExpectedCondition<WebElement>(){
+
+				public WebElement apply(WebDriver dr) {
+
+					return dr.findElement(By.id(elementID));
+
+				}
+
+			});
+		}
 }
