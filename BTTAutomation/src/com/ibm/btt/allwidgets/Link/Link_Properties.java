@@ -45,6 +45,7 @@ public class Link_Properties extends Main_Class {
 		drv.BTT8200_tab();
 		drv.Link_widget();
 		drv.Link_properties();
+		waitUntilLoadElement(20,"Link_properties_100");
 
 	}
 	@Test
@@ -70,12 +71,12 @@ public class Link_Properties extends Main_Class {
 
 	@Test
 	public void proHidden() {
-		assertEquals("visibility: hidden;", drv.proHidden());
+		assertEquals(1, drv.proHidden());
 	}
 
 	@Test
 	public void proGone() {
-		assertEquals("display: none; visibility: inherit;", drv.proGone());
+		assertEquals(1, drv.proGone());
 	}
 
 	@Test
@@ -99,16 +100,20 @@ public class Link_Properties extends Main_Class {
 	
 	@Test
 	public void pro_parent() throws Exception{
-		assertEquals("http://www.sohu.com/", drv.pro_parent());
-		driver.close();
-		Link_Properties.setUp();
+		assertEquals(baseUrl + "index.jsp", drv.pro_parent());
+		drv.Establish();
+		drv.BTT8200_tab();
+		drv.Link_widget();
+		drv.Link_properties();
 	}	
 	
 	@Test
 	public void pro_self() throws Exception{
-		assertEquals("http://www.sohu.com/", drv.pro_self());
-		driver.close();
-		Link_Properties.setUp();
+		assertEquals(baseUrl + "index.jsp", drv.pro_self());
+		drv.Establish();
+		drv.BTT8200_tab();
+		drv.Link_widget();
+		drv.Link_properties();
 	}
 
 	@Test
@@ -120,9 +125,11 @@ public class Link_Properties extends Main_Class {
 	
 	@Test
 	public void pro_top() throws Exception{
-		assertEquals("http://www.sohu.com/", drv.pro_top());
-		driver.close();
-		Link_Properties.setUp();
+		assertEquals(baseUrl + "index.jsp", drv.pro_top());
+		drv.Establish();
+		drv.BTT8200_tab();
+		drv.Link_widget();
+		drv.Link_properties();
 	}
 	
 	@Test
