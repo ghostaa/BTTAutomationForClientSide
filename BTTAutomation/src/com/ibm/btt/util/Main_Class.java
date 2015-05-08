@@ -1,12 +1,8 @@
 package com.ibm.btt.util;
 
-import static com.ibm.btt.util.Main_Class.baseUrl;
-import static com.ibm.btt.util.Main_Class.driver;
-
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -18,10 +14,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 import com.ibm.btt.util.*;
+
 public class Main_Class {
 	
 	public static WebDriver driver;
@@ -34,9 +33,13 @@ public class Main_Class {
 	Actions event = new Actions(driver);
 	
 	public static void setUp() throws Exception {
+
+//		System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+//		driver = new FirefoxDriver();
 		FirefoxProfile profile = new FirefoxProfile();  
 		profile.setPreference("intl.accept_languages", "en-US");  
-		driver = new FirefoxDriver(profile);  
+		driver = new FirefoxDriver(profile);
+
 		Window window = driver.manage().window();
 		window.maximize();
 		deleteAllCookies();
@@ -78,17 +81,16 @@ public class Main_Class {
 		event.moveToElement(driver.findElement(By.id(id))).perform();
 	}
 	
+	public void widget_moveToElementByXpath(String xpath){
+		event.moveToElement(driver.findElement(By.xpath(xpath))).perform();
+	}
+	
 	/*
-	 * Verify widget isFocus by attribute
-	 * attrValue can be acquired from runtime html
-	 * e.g. id="Radio_properties_radio24"
-	 * attrValue = "Radio_properties_radio24"
-	 * attr = "id"
-	 * css_select: input:focus, img:focus and so on
+	 *
 	 */
-	public static Boolean widget_isFocus(String attrValue, String attr, String css_selector){
-		String attrValue1 = driver.findElement(By.cssSelector(css_selector)).getAttribute(attr);
-		if(attrValue.equals(attrValue1)){
+	public static Boolean widget_isFocus(String id){
+		WebElement currentElement = driver.switchTo().activeElement();
+		if(id.equals(currentElement.getAttribute("id"))){
 			return true;
 		}else
 			return false;
@@ -172,12 +174,12 @@ public class Main_Class {
 			element.getText();	
 		}
 	}*/
-		public static void elementList1(String xpathExpression){
-			List<WebElement> elements = driver.findElements(By.id(xpathExpression));
-			for(WebElement element: elements){
-				System.out.println("element:"+element);
-			}
-		
+	public static void elementList1(String xpathExpression){
+		List<WebElement> elements = driver.findElements(By.id(xpathExpression));
+		for(WebElement element: elements){
+			System.out.println("element:"+element);
+		}
+	
 	}
 		
 		public static void waitUntilLoadElement(long second,final String elementID){
@@ -191,4 +193,6 @@ public class Main_Class {
 
 			});
 		}
+		
+		
 }
