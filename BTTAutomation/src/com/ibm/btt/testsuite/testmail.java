@@ -9,7 +9,7 @@ public class testmail {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String mailBody = " <font color=red>BTT Automation test result</font> <a href=http://9.112.248.246:9090/job/BTT_auto/ws/junit/index.html>Click here for more detailed</a>";
+		String mailBody = " <font color=red>BTT Automation test result</font> <a href=http://9.115.33.83:8085/job/BTT_Automation/ws/junit/index.html>Click here for more detailed</a>";
 		new AutomationResultReportMail().sendMailToAllTester(mailBody);
 
 	}
