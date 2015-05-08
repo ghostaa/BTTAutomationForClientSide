@@ -52,12 +52,13 @@ public class Button_Properties extends Main_Class {
 		drv.BTT8200_tab();
 		drv.Button_widget();
 		drv.button_properties();
+		waitUntilLoadElement(20,"button_properties_Button1");
 
 	}
 	
 	@Test
 	public void Text_tabIndex() throws InterruptedException {
-		Thread.sleep(2000);
+		
 		Main_Class.widget_tabIndex();
 		assertEquals(2, drv.proTabFocus());
 	}
