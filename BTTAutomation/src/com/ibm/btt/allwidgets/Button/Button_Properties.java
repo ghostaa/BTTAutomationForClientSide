@@ -99,12 +99,12 @@ public class Button_Properties extends Main_Class {
 	
 	@Test
 	public void proHidden() {
-		assertEquals("margin: 0px; visibility: hidden;", drv.proHidden());
+		assertEquals(1, drv.proHidden());
 	}
 	
 	@Test
 	public void proGone() {
-		assertEquals("margin: 0px; display: none; visibility: inherit;", drv.proGone());
+		assertEquals(1, drv.proGone());
 	}
 	
 	@Test

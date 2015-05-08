@@ -116,12 +116,12 @@ public class Button_ECA extends Main_Class{
   
   @Test
   public void ecaHidden(){
-	  assertEquals("visibility: hidden; margin: 0px;", drv.ecaHidden());
+	  assertEquals(1, drv.ecaHidden());
   }
   
   @Test
   public void ecaGone(){
-	  assertEquals("visibility: inherit; margin: 0px; display: none;", drv.ecaGone());
+	  assertEquals(1, drv.ecaGone());
   }
   
   @Test

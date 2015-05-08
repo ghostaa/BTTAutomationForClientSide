@@ -70,15 +70,17 @@ public class Button_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='button_properties_panel']/tbody/tr[5]/td[2]/span")
 	private WebElement properties_hidden;
 	
-	public String proHidden(){//Button is hidden
-		return properties_hidden.getAttribute("style");
+	public int proHidden(){//Button is hidden
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(properties_hidden.getAttribute("style"), temp);
 	}
 	
 	@FindBy(xpath=".//*[@id='button_properties_panel']/tbody/tr[6]/td[2]/span")
 	private WebElement properties_gone;
 	
-	public String proGone(){//Button is gone
-		return properties_gone.getAttribute("style");
+	public int proGone(){//Button is gone
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(properties_gone.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="button_properties_button07")
@@ -342,9 +344,10 @@ public class Button_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='button_ECA_panel01']/div[2]/div[2]/span")
 	private WebElement eca_hidden;
 	
-	public String ecaHidden(){//hidden
+	public int ecaHidden(){//hidden
 		eca_hiddenClick.click();
-		return eca_hidden.getAttribute("style");
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(eca_hidden.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="button_ECA_gone")
@@ -353,9 +356,10 @@ public class Button_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='button_ECA_panel01']/div[3]/div[1]/span")
 	private WebElement eca_gone;
 	
-	public String ecaGone(){//gone
+	public int ecaGone(){//gone
 		eca_goneClick.click();
-		return eca_gone.getAttribute("style");
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(eca_gone.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="button_ECA_disabled_true")
