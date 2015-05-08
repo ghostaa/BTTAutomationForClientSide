@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <BTTMail>
   <User>
-  	<SendFrom>zhaomm@cn.ibm.com</SendFrom>
+  	<SendFrom>dpyan@cn.ibm.com</SendFrom>
     <UserGroup>
       <AllTester>
-        <user>zhaomm@cn.ibm.com, vndliyj@cn.ibm.com, vndlmmli@cn.ibm.com,</user>
+      	<user>dpyan@cn.ibm.com</user>
+       <!-- <user>zhaomm@cn.ibm.com, vndliyj@cn.ibm.com, vndlmmli@cn.ibm.com,</user> -->
       </AllTester>
       <AllDeveloper />
       <BTTAll />
