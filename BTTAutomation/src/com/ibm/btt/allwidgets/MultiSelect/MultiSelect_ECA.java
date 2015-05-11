@@ -91,6 +91,11 @@ public class MultiSelect_ECA extends Main_Class{
 	  assertEquals("onMouseMove is triggered!", drv.evtOnMouseMove());
   }
   
+  @Test
+  public void evtOnChange(){
+	  assertEquals("onChange is triggered!", drv.evtOnChange());
+  }
+  
 //Action
   @Test
   public void actFocus(){
@@ -125,12 +130,12 @@ public class MultiSelect_ECA extends Main_Class{
   
   @Test
   public void actHidden(){
-	  assertEquals("visibility: hidden; width: 153px;", drv.actHidden());
+	  assertEquals(1, drv.actHidden());
   }
   
   @Test
   public void actGone(){
-	  assertEquals("visibility: inherit; width: 153px; display: none;", drv.actGone());
+	  assertEquals(1, drv.actGone());
   }
   
   @Test
@@ -165,7 +170,7 @@ public class MultiSelect_ECA extends Main_Class{
   
   @Test
   public void actGroupGone(){
-	  assertEquals("visibility: inherit; width: 153px; display: none;", drv.actGroupGone());
+	  assertEquals(1, drv.actGroupGone());
   }
   
 //Condition
