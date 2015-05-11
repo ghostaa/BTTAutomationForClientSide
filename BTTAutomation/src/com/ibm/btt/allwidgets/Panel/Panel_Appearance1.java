@@ -50,82 +50,82 @@ public class Panel_Appearance1 extends Main_Class{
 
   @Test
   public void Appearance1_1(){
-	  assertEquals("", drv.Appearance1_1());
+	  assertEquals(1, drv.Appearance1_1());
   }
   
   @Test
   public void Appearance1_2(){
-	  assertEquals("height: 150px;", drv.Appearance1_2());
+	  assertEquals(1, drv.Appearance1_2());
   }
   
   @Test
   public void Appearance1_3(){
-	  assertEquals("height: 50%;", drv.Appearance1_3());
+	  assertEquals(1, drv.Appearance1_3());
   }
   
   @Test
   public void Appearance1_4(){
-	  assertEquals("height: 100%;", drv.Appearance1_4());
+	  assertEquals(1, drv.Appearance1_4());
   }
   
   @Test
   public void Appearance1_5(){
-	  assertEquals("width: 150px;", drv.Appearance1_5());
+	  assertEquals(1, drv.Appearance1_5());
   }
   
   @Test
   public void Appearance1_6(){
-	  assertEquals("width: 150px; height: 150px;", drv.Appearance1_6());
+	  assertEquals(2, drv.Appearance1_6());
   }
   
   @Test
   public void Appearance1_7(){
-	  assertEquals("width: 150px; height: 50%;", drv.Appearance1_7());
+	  assertEquals(2, drv.Appearance1_7());
   }
   
   @Test
   public void Appearance1_8(){
-	  assertEquals("width: 150px; height: 100%;", drv.Appearance1_8());
+	  assertEquals(2, drv.Appearance1_8());
   }
   
   @Test
   public void Appearance1_9(){
-	  assertEquals("width: 50%;", drv.Appearance1_9());
+	  assertEquals(1, drv.Appearance1_9());
   }
   
   @Test
   public void Appearance1_10(){
-	  assertEquals("width: 50%; height: 150px;", drv.Appearance1_10());
+	  assertEquals(2, drv.Appearance1_10());
   }
   
   @Test
   public void Appearance1_11(){
-	  assertEquals("width: 50%; height: 50%;", drv.Appearance1_11());
+	  assertEquals(2, drv.Appearance1_11());
   }
   
   @Test
   public void Appearance1_12(){
-	  assertEquals("width: 50%; height: 100%;", drv.Appearance1_12());
+	  assertEquals(2, drv.Appearance1_12());
   }
   
   @Test
   public void Appearance1_13(){
-	  assertEquals("width: 100%;", drv.Appearance1_13());
+	  assertEquals(1, drv.Appearance1_13());
   }
   
   @Test
   public void Appearance1_14(){
-	  assertEquals("width: 100%; height: 150px;", drv.Appearance1_14());
+	  assertEquals(2, drv.Appearance1_14());
   }
   
   @Test
   public void Appearance1_15(){
-	  assertEquals("width: 100%; height: 50%;", drv.Appearance1_15());
+	  assertEquals(2, drv.Appearance1_15());
   }
   
   @Test
   public void Appearance1_16(){
-	  assertEquals("width: 100%; height: 100%;", drv.Appearance1_16());
+	  assertEquals(2, drv.Appearance1_16());
   }
 
   

@@ -50,57 +50,57 @@ public class Panel_Appearance2 extends Main_Class{
 
   @Test
   public void Appearance2_1(){
-	  assertEquals("left&width: 200px; height: 200px; border: 2px solid rgb(0, 0, 255); vertical-align: top;", drv.Appearance2_1());
+	  assertEquals("left&top", drv.Appearance2_1());
   }
   
   @Test
   public void Appearance2_2(){
-	  assertEquals("left&width: 200px; height: 200px; border: 2px solid rgb(0, 0, 255); vertical-align: middle;", drv.Appearance2_2());
+	  assertEquals("left&middle", drv.Appearance2_2());
   }
   
   @Test
   public void Appearance2_3(){
-	  assertEquals("left&width: 200px; height: 200px; border: 2px solid rgb(0, 0, 255); vertical-align: bottom;", drv.Appearance2_3());
+	  assertEquals("left&bottom", drv.Appearance2_3());
   }
   
   @Test
   public void Appearance2_4(){
-	  assertEquals("center&width: 200px; height: 200px; border: 2px solid rgb(0, 0, 255); vertical-align: top;", drv.Appearance2_4());
+	  assertEquals("center&top", drv.Appearance2_4());
   }
   
   @Test
   public void Appearance2_5(){
-	  assertEquals("center&width: 200px; height: 200px; border: 2px solid rgb(0, 0, 255); vertical-align: middle;", drv.Appearance2_5());
+	  assertEquals("center&middle", drv.Appearance2_5());
   }
   
   @Test
   public void Appearance2_6(){
-	  assertEquals("center&width: 200px; height: 200px; border: 2px solid rgb(0, 0, 255); vertical-align: bottom;", drv.Appearance2_6());
+	  assertEquals("center&bottom", drv.Appearance2_6());
   }
   
   @Test
   public void Appearance2_7(){
-	  assertEquals("right&width: 200px; height: 200px; border: 2px solid rgb(0, 0, 255); vertical-align: top;", drv.Appearance2_7());
+	  assertEquals("right&top", drv.Appearance2_7());
   }
   
   @Test
   public void Appearance2_8(){
-	  assertEquals("right&width: 200px; height: 200px; border: 2px solid rgb(0, 0, 255); vertical-align: middle;", drv.Appearance2_8());
+	  assertEquals("right&middle", drv.Appearance2_8());
   }
   
   @Test
   public void Appearance2_9(){
-	  assertEquals("right&width: 200px; height: 200px; border: 2px solid rgb(0, 0, 255); vertical-align: bottom;", drv.Appearance2_9());
+	  assertEquals("right&bottom", drv.Appearance2_9());
   }
   
   @Test
   public void Appearance2_10(){
-	  assertEquals("width: 200px; height: 200px; padding-left: 50px; border: 2px solid rgb(0, 0, 255); vertical-align: middle;", drv.Appearance2_10());
+	  assertEquals(1, drv.Appearance2_10());
   }
   
   @Test
   public void Appearance2_11(){
-	  assertEquals("width: 200px; height: 200px; padding-left: 10%; border: 2px solid rgb(0, 0, 255); vertical-align: middle;", drv.Appearance2_11());
+	  assertEquals(1, drv.Appearance2_11());
   }
   
   @AfterClass
