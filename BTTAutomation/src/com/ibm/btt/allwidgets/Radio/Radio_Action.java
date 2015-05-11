@@ -56,17 +56,17 @@ public class Radio_Action extends Main_Class{
   
   @Test
   public void Radio_Action_radio_visible(){
-	  assertEquals("visibility: inherit;", drv.Radio_Action_radio_visible());
+	  assertEquals(true, drv.Radio_Action_radio_visible());
   }
   
   @Test
   public void Radio_Action_radio_gone(){
-	  assertEquals("visibility: inherit; display: none;", drv.Radio_Action_radio_gone());
+	  assertEquals(1, drv.Radio_Action_radio_gone());
   }
   
   @Test
   public void Radio_Action_radio_hidden(){
-	  assertEquals("visibility: hidden;", drv.Radio_Action_radio_hidden_click());
+	  assertEquals(1, drv.Radio_Action_radio_hidden_click());
   }
   
   @Test

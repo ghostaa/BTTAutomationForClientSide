@@ -38,22 +38,22 @@ public class Radio_appearance1 extends Main_Class{
 
   @Test
   public void Appearance1_1(){
-	  assertEquals("visibility: inherit;", drv.Appearance1_1());
+	  assertEquals(0, drv.Appearance1_1());
   }
   
   @Test
   public void Appearance1_2(){
-	  assertEquals("visibility: inherit; height: 50px;", drv.Appearance1_2());
+	  assertEquals(1, drv.Appearance1_2());
   }
   
   @Test
   public void Appearance1_3(){
-	  assertEquals("visibility: inherit; width: 83px;", drv.Appearance1_3());
+	  assertEquals(1, drv.Appearance1_3());
   }
   
   @Test
   public void Appearance1_4(){
-	  assertEquals("visibility: inherit; width: 83px; height: 50px;", drv.Appearance1_4());
+	  assertEquals(2, drv.Appearance1_4());
   }
   
   @Test

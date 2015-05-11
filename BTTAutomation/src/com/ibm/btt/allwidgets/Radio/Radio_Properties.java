@@ -87,12 +87,12 @@ public class Radio_Properties extends Main_Class {
 
 	@Test
 	public void Radio_properties_hidden() {
-		assertEquals("visibility: hidden;", drv.Radio_properties_hidden());
+		assertEquals(1, drv.Radio_properties_hidden());
 	}
 
 	@Test
 	public void Radio_properties_gone() {
-		assertEquals("display: none; visibility: inherit;", drv.Radio_properties_gone());
+		assertEquals(1, drv.Radio_properties_gone());
 	}
 
 	@Test
