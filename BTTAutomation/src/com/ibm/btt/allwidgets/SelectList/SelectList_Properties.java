@@ -45,12 +45,12 @@ public class SelectList_Properties extends Main_Class {
 		drv.BTT8200_tab();
 		drv.SelectList_widget();
 		drv.SelectList_properties();
+		Main_Class.waitUntilLoadElement(20, "widget_SelectList_properties_selectList_03");
 
 	}
 	
 	@Test
 	public void proTab() throws InterruptedException{
-		Thread.sleep(2000);
 		Main_Class.widget_tabIndex();
 		assertEquals(2, drv.proTab());
 	}
