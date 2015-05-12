@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
@@ -506,9 +507,10 @@ public class SelectList_PageObject extends Main_Page{
 	@FindBy(id="widget_SelectList_action_selectList_onMouseMove")
 	private WebElement action_hidden;
 	
-	public String actHidden(){//Set Widget Property : visibility = hidden
+	public int actHidden(){//Set Widget Property : visibility = hidden
 		actionClick6.click();
-		return action_hidden.getAttribute("style");
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(action_hidden.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="SelectList_action_button_copy09")
@@ -517,9 +519,10 @@ public class SelectList_PageObject extends Main_Page{
 	@FindBy(id="widget_SelectList_action_selectList_onChnge")
 	private WebElement action_gone;
 	
-	public String actGone(){//Set Widget Property : visibility = gone
+	public int actGone(){//Set Widget Property : visibility = gone
 		actionClick7.click();
-		return action_gone.getAttribute("style");
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(action_gone.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="SelectList_action_button_copy05")
@@ -594,7 +597,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement Appearance_1;
 	
 	public String Appearance_1(){//1.horizontal is left,vertical is top
-		String v = Appearance_1.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_1.getAttribute("style"), "top");
 		String h = Appearance_1.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -603,7 +606,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement Appearance_2;
 	
 	public String Appearance_2(){//2.horizontal is left,vertical is center
-		String v = Appearance_2.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_2.getAttribute("style"), "middle");
 		String h = Appearance_2.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -612,7 +615,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement Appearance_3;
 	
 	public String Appearance_3(){//3.horizontal is left,vertical is bottom
-		String v = Appearance_3.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_3.getAttribute("style"), "bottom");
 		String h = Appearance_3.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -621,7 +624,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement Appearance_4;
 	
 	public String Appearance_4(){//4.horizontal is center,vertical is top
-		String v = Appearance_4.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_4.getAttribute("style"), "top");
 		String h = Appearance_4.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -630,7 +633,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement Appearance_5;
 	
 	public String Appearance_5(){//5.horizontal is center,vertical is center
-		String v = Appearance_5.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_5.getAttribute("style"), "middle");
 		String h = Appearance_5.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -639,7 +642,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement Appearance_6;
 	
 	public String Appearance_6(){//6.horizontal is center,vertical is bottom
-		String v = Appearance_6.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_6.getAttribute("style"), "bottom");
 		String h = Appearance_6.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -648,7 +651,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement Appearance_7;
 	
 	public String Appearance_7(){//7.horizontal is right,vertical is top
-		String v = Appearance_7.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_7.getAttribute("style"), "top");
 		String h = Appearance_7.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -657,7 +660,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement Appearance_8;
 	
 	public String Appearance_8(){//8.horizontal is right,vertical is center
-		String v = Appearance_8.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_8.getAttribute("style"), "middle");
 		String h = Appearance_8.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -666,7 +669,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement Appearance_9;
 	
 	public String Appearance_9(){//9.horizontal is right,vertical is bottom
-		String v = Appearance_9.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance_9.getAttribute("style"), "bottom");
 		String h = Appearance_9.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -674,44 +677,50 @@ public class SelectList_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='selectlist_appearance_group09']/div/div/div/div")
 	private WebElement Appearance_10;
 	
-	public String Appearance_10(){//10.horizontal indent is 50px
-		return Appearance_10.getAttribute("style");
+	public int Appearance_10(){//10.horizontal indent is 50px
+		String[] temp={"padding-left: 50px"};
+		return Appearance.appearance_query(Appearance_10.getAttribute("style"), temp);
 		
 	}
 	
 	@FindBy(xpath=".//*[@id='selectlist_appearance_group10']/div/div/div/div")
 	private WebElement Appearance_11;
 	
-	public String Appearance_11(){//11.horizontal indent is 10percent
-		return Appearance_11.getAttribute("style");
+	public int Appearance_11(){//11.horizontal indent is 10percent
+		String[] temp={"padding-left: 10%"};
+		return Appearance.appearance_query(Appearance_11.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="widget_selectlist_appearance_selectList11")
 	private WebElement Appearance_12;
 	
-	public String Appearance_12(){//12.Width is AutoSize,Height is AutoSize
-		return Appearance_12.getAttribute("style");
+	public int Appearance_12(){//12.Width is AutoSize,Height is AutoSize
+		String[] temp={""};
+		return Appearance.appearance_query(Appearance_12.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="widget_selectlist_appearance_selectList12")
 	private WebElement Appearance_13;
 	
-	public String Appearance_13(){//13.Width is fixed100,Height is AutoSize
-		return Appearance_13.getAttribute("style");
+	public int Appearance_13(){//13.Width is fixed100,Height is AutoSize
+		String[] temp={"width: 100px"};
+		return Appearance.appearance_query(Appearance_13.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="widget_selectlist_appearance_selectList13")
 	private WebElement Appearance_14;
 	
-	public String Appearance_14(){//14.Width is Relative50%,Height is AutoSize
-		return Appearance_14.getAttribute("style");
+	public int Appearance_14(){//14.Width is Relative50%,Height is AutoSize
+		String[] temp={"width: 50%"};
+		return Appearance.appearance_query(Appearance_14.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="widget_selectlist_appearance_selectList14")
 	private WebElement Appearance_15;
 	
-	public String Appearance_15(){//15.Width is Fill,Height is AutoSize
-		return Appearance_15.getAttribute("style");
+	public int Appearance_15(){//15.Width is Fill,Height is AutoSize
+		String[] temp={"width: 100%"};
+		return Appearance.appearance_query(Appearance_15.getAttribute("style"), temp);
 	}
 //###############################SelectList Appearance##################################
 //###############################SelectList Submit######################################

@@ -63,12 +63,12 @@ public class SelectList_Action extends Main_Class{
   
   @Test
   public void actHidden(){
-	  assertEquals("visibility: hidden;", drv.actHidden());
+	  assertEquals(1, drv.actHidden());
   }
   
   @Test
   public void actGone(){
-	  assertEquals("visibility: inherit; display: none;", drv.actGone());
+	  assertEquals(1, drv.actGone());
   }
   
   @Test
