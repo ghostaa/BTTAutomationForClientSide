@@ -45,12 +45,12 @@ public class MultiSelect_Properties extends Main_Class {
 		drv.BTT8200_tab();
 		drv.MultiSelect_widget();
 		drv.MultiSelect_properties();
+		Main_Class.waitUntilLoadElement(20, "MultiSelect_properties_multiSelect");
 
 	}
 	
 	@Test
 	public void proTab() throws InterruptedException{
-		Thread.sleep(2000);
 		Main_Class.widget_tabIndex();
 		assertEquals(2, drv.proTabIndex1());
 		Main_Class.widget_tabIndex();
