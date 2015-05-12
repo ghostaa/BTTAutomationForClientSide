@@ -52,6 +52,7 @@ public class Text_Properties extends Main_Class {
 		drv.BTT8200_tab();
 		drv.Text_widget();
 		drv.Text_Properties();
+		Main_Class.waitUntilLoadElement(20, "Text_properties_text09");
 
 	}
 	
