@@ -72,13 +72,12 @@
         <delete dir="bin"/>
     </target>
     <target depends="clean" name="cleanall"/>
-    <target depends="build-subprojects,build-project" name="build"/>
+    <target depends="cleanall,build-subprojects,build-project" name="build"/>
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
-            <src path="src"/>
-            <classpath refid="BTTAutomation.classpath"/>
+        <javac encoding="GBK" debug="true" debuglevel="${debuglevel}" srcdir="src" includes="**/*.java" destdir="bin" >
+        	<classpath refid="BTTAutomation.classpath"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
@@ -890,10 +889,11 @@
               	
     <target name="testmail">
         <java classname="com.ibm.btt.testsuite.testmail" failonerror="true" fork="yes">
-        <classpath refid="BTTAutomation.classpath"/>
+        	<classpath refid="BTTAutomation.classpath"/>
         </java>
     </target>
     <target name="junitreport">
+    	
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
                 <include name="TEST-*.xml"/>
