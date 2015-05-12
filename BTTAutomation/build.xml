@@ -734,7 +734,160 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-    
+              	
+  	<target name="ButtonSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.Button.ButtonSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+	<target name="CheckBoxSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.CheckBox.CheckBoxSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>          	
+  	<target name="CheckedMultiSelectSuite">
+  	  	        <mkdir dir="${junit.output.dir}"/>
+  	  		        <junit fork="yes" printsummary="withOutAndErr">
+  	  		            <formatter type="xml"/>
+  	  		            <test name="com.ibm.btt.allwidgets.CheckedMultiSelect.CheckedMultiSelectSuite" todir="${junit.output.dir}"/>
+  	  		            <classpath refid="BTTAutomation.classpath"/>
+  	  		        </junit>
+  	</target>
+	<target name="ComboSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.Combo.ComboSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+  	<target name="HorizontalSliderSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.HorizontalSlider.HorizontalSliderSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+	<target name="ImageSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.Image.ImageSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>          	
+  	<target name="LabelSuite">
+  	  	        <mkdir dir="${junit.output.dir}"/>
+  	  		        <junit fork="yes" printsummary="withOutAndErr">
+  	  		            <formatter type="xml"/>
+  	  		            <test name="com.ibm.btt.allwidgets.Label.LabelSuite" todir="${junit.output.dir}"/>
+  	  		            <classpath refid="BTTAutomation.classpath"/>
+  	  		        </junit>
+  	</target>
+	<target name="LinkSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.Link.LinkSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+  	<target name="MessageSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.Message.MessageSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+	<target name="MultiSelectSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.MultiSelect.MultiSelectSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>          	
+  	<target name="PanelSuite">
+  	  	        <mkdir dir="${junit.output.dir}"/>
+  	  		        <junit fork="yes" printsummary="withOutAndErr">
+  	  		            <formatter type="xml"/>
+  	  		            <test name="com.ibm.btt.allwidgets.Panel.PanelSuite" todir="${junit.output.dir}"/>
+  	  		            <classpath refid="BTTAutomation.classpath"/>
+  	  		        </junit>
+  	</target>
+	<target name="RadioSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.Radio.RadioSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+  	<target name="RepetitivePanelSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.RepetitivePanel.RepetitivePanelSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+	<target name="RichTextSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.RichText.RichTextSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>          	
+  	<target name="SelectListSuite">
+  	  	        <mkdir dir="${junit.output.dir}"/>
+  	  		        <junit fork="yes" printsummary="withOutAndErr">
+  	  		            <formatter type="xml"/>
+  	  		            <test name="com.ibm.btt.allwidgets.SelectList.SelectListSuite" todir="${junit.output.dir}"/>
+  	  		            <classpath refid="BTTAutomation.classpath"/>
+  	  		        </junit>
+  	</target>
+	<target name="TextSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.Text.TextSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target> 
+	<target name="TextAreaSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.TextArea.TextAreaSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>          	
+  	<target name="TreeSuite">
+  	  	        <mkdir dir="${junit.output.dir}"/>
+  	  		        <junit fork="yes" printsummary="withOutAndErr">
+  	  		            <formatter type="xml"/>
+  	  		            <test name="com.ibm.btt.allwidgets.Tree.TreeSuite" todir="${junit.output.dir}"/>
+  	  		            <classpath refid="BTTAutomation.classpath"/>
+  	  		        </junit>
+  	</target>
+	<target name="VerticalSliderSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <test name="com.ibm.btt.allwidgets.VerticalSlider.VerticalSliderSuite" todir="${junit.output.dir}"/>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target> 
+              	
     <target name="testmail">
         <java classname="com.ibm.btt.testsuite.testmail" failonerror="true" fork="yes">
         <classpath refid="BTTAutomation.classpath"/>
