@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
@@ -101,151 +102,149 @@ public class RichText_PageObject extends Main_Page{
 	}
 //###############################RichText CSS#########################################
 //###############################RichText Event#######################################
-	@FindBy(xpath=".//*[@id='RichText_Event_RichText_onClick']/div[2]")
+	@FindBy(xpath=".//*[@id='RichText_Event_group']/div/table/tbody/tr[2]/td[2]/div/div[2]/iframe")
 	private WebElement event_onClick;
 	
 	@FindBy(id="RichText_Event_RichText_focus")
 	private WebElement event_display1; 
 	
-	public Boolean evtOnClick(){ //onClick
+	public int evtOnClick(){ //onClick
 		event_onClick.click();
-		return event_display1.isDisplayed();
+		String[] temp ={"visibility: hidden"};
+		return Appearance.appearance_query(event_display1.getAttribute("style"), temp);
 	}
 	
-	/*@FindBy(id="dijit_form_CheckBox_11")
+	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_10']/span[1]")
 	private WebElement event_onFocus; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label04")
-	private WebElement event_label2; 
+	@FindBy(id="RichText_Event_RichText_visibility")
+	private WebElement event_display2; 
 	
-	public String evtOnFocus(){ //onFocus
+	public int evtOnFocus(){ //onFocus
 		event_onFocus.click();
-		return event_label2.getText();
+		String[] temp ={"visibility: hidden"};
+		return Appearance.appearance_query(event_display2.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_21")
+	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_18']/span[1]")
 	private WebElement event_onBlur;
 	
-	@FindBy(id="CheckedMultiSelect_event_label11")
+	@FindBy(id="RichText_Event_String_Data_copy_copy")
 	private WebElement event_label3;
 	
-	public String evtOnBlur(){ //onBlur
+	@FindBy(id="RichText_Event_RichText_visibility_01")
+	private WebElement event_display3;
+	
+	public int evtOnBlur(){ //onBlur
 		event_onBlur.click();
 		event_label3.click();
-		return event_label3.getText();
+		String[] temp ={"visibility: hidden"};
+		return Appearance.appearance_query(event_display3.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_31")
+	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_26']/span[1]")
 	private WebElement event_onKeyDown; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label12")
-	private WebElement event_label4;
+	@FindBy(id="RichText_Event_RichText_visibility_02")
+	private WebElement event_display4;
 	
-	public String evtOnKeyDown(){ //onKeyDown
+	public int evtOnKeyDown(){ //onKeyDown
 		event_onKeyDown.click();
 		Main_Class main_class = new Main_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
-		return event_label4.getText();
+		String[] temp ={"visibility: hidden"};
+		return Appearance.appearance_query(event_display4.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_41")
+	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_34']/span[1]")
 	private WebElement event_onKeyPress; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label13")
-	private WebElement event_label5;
+	@FindBy(id="RichText_Event_RichText_visibility_03")
+	private WebElement event_display5;
 	
-	public String evtOnKeyPress(){ //onKeyPress
+	public int evtOnKeyPress(){ //onKeyPress
 		event_onKeyPress.click();
 		Main_Class main_class = new Main_Class();
 		main_class.keyPress(KeyEvent.VK_0);
 		main_class.keyRelease(KeyEvent.VK_0);
-		return event_label5.getText();
+		String[] temp ={"visibility: hidden"};
+		return Appearance.appearance_query(event_display5.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_51")
+	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_42']/span[1]")
 	private WebElement event_onKeyUp; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label14")
-	private WebElement event_label6;
+	@FindBy(id="RichText_Event_RichText_visibility_04")
+	private WebElement event_display6;
 	
-	public String evtOnKeyUp(){ //onKeyUp
+	public int evtOnKeyUp(){ //onKeyUp
 		event_onKeyUp.click();
 		Main_Class main_class = new Main_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
-		return event_label6.getText();
+		String[] temp ={"visibility: hidden"};
+		return Appearance.appearance_query(event_display6.getAttribute("style"), temp);
 	}
 
-	@FindBy(id="dijit_form_CheckBox_61")
-	private WebElement event_onMouseDown;
-	
-	@FindBy(id="CheckedMultiSelect_event_label15")
-	private WebElement event_label7;
-	
-	public String evtOnMouseDown(){ //onMouseDown
-		event_onMouseDown.click();;
-		return event_label7.getText();
-	}
-	
-	@FindBy(id="dijit_form_CheckBox_71")
-	private WebElement event_onMouseUp;
-	
-	@FindBy(id="CheckedMultiSelect_event_label16")
-	private WebElement event_label8;
-	
-	public String evtOnMouseUp(){ //onMouseUp
-		event_onMouseUp.click();
-		return event_label8.getText();
-	}
-	
-	@FindBy(id="dijit_form_CheckBox_81")
+	@FindBy(id="RichText_Event_RichText_onMouseEnter")
 	private WebElement event_onMouseEnter; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label17")
-	private WebElement event_label9;
+	@FindBy(id="RichText_Event_RichText_visibility_05")
+	private WebElement event_display7;
 
-	public String evtOnMouseEnter(){ //onMouseEnter
+	public int evtOnMouseEnter(){ //onMouseEnter
 		Main_Class main_class = new Main_Class();
-		main_class.widget_moveToElement("dijit_form_CheckBox_81");
-		return event_label9.getText();
+		main_class.widget_moveToElement("RichText_Event_RichText_onMouseEnter");
+		String[] temp ={"visibility: hidden"};
+		return Appearance.appearance_query(event_display7.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_91")
+	@FindBy(id="RichText_Event_RichText_onMouseLeave")
 	private WebElement event_onMouseLeave;
 	
-	@FindBy(id="CheckedMultiSelect_event_label18")
-	private WebElement event_label10;
+	@FindBy(id="RichText_Event_RichText_visibility_06")
+	private WebElement event_display8;
 
-	public String evtOnMouseLeave(){ //onMouseLeave
+	public int evtOnMouseLeave(){ //onMouseLeave
 		Main_Class main_class = new Main_Class();
-		main_class.widget_moveToElement("dijit_form_CheckBox_91");
-		main_class.widget_moveToElement("CheckedMultiSelect_event_label18");
-		return event_label10.getText();
+		main_class.widget_moveToElement("RichText_Event_RichText_onMouseLeave");
+		main_class.widget_moveToElement("RichText_Event_RichText_visibility_06");
+		String[] temp ={"visibility: hidden"};
+		return Appearance.appearance_query(event_display8.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_101")
+	@FindBy(id="RichText_Event_RichText_onMouseMove")
 	private WebElement event_onMouseMove;
 	
-	@FindBy(id="CheckedMultiSelect_event_label20")
-	private WebElement event_label11;
+	@FindBy(id="RichText_Event_RichText_visibility_07")
+	private WebElement event_display9;
 	
-	public String evtOnMouseMove(){ //onMouseMove
+	public int evtOnMouseMove(){ //onMouseMove
 		Main_Class main_class = new Main_Class();
-		main_class.widget_moveToElement("dijit_form_CheckBox_101");
-		return event_label11.getText();
+		main_class.widget_moveToElement("RichText_Event_RichText_onMouseMove");
+		main_class.widget_moveToElement("RichText_Event_RichText_onChange");
+		String[] temp ={"visibility: hidden"};
+		return Appearance.appearance_query(event_display9.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_111")
+	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_74']/span[1]")
 	private WebElement event_onChange; 
 	
-	@FindBy(id="CheckedMultiSelect_event_label21")
-	private WebElement event_label12; 
+	@FindBy(id="RichText_Event_onChange")
+	private WebElement event_label10; 
 	
-	public String evtOnChange(){ //onChange
+	@FindBy(id="RichText_Event_RichText_visibility_08")
+	private WebElement event_display10; 
+	
+	public int evtOnChange(){ //onChange
 		event_onChange.click();
-		return event_label12.getText();
-	}*/
+		Main_Class.keyPress(KeyEvent.VK_0);
+		Main_Class.keyRelease(KeyEvent.VK_0);
+		event_label10.click();
+		String[] temp ={"visibility: hidden"};
+		return Appearance.appearance_query(event_display10.getAttribute("style"), temp);
+	}
 
 //###############################RichText Event######################################
 //###############################RichText Condition##################################
@@ -554,7 +553,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement Appearance2_1;
 	
 	public String Appearance2_1(){//1.horizontal is left,vertical is top
-		String v = Appearance2_1.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_1.getAttribute("style"), "top");
 		String h = Appearance2_1.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -563,7 +562,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement Appearance2_2;
 	
 	public String Appearance2_2(){//2.horizontal is left,vertical is center
-		String v = Appearance2_2.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_2.getAttribute("style"), "middle");
 		String h = Appearance2_2.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -572,7 +571,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement Appearance2_3;
 	
 	public String Appearance2_3(){//3.horizontal is left,vertical is bottom
-		String v = Appearance2_3.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_3.getAttribute("style"), "bottom");
 		String h = Appearance2_3.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -581,7 +580,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement Appearance2_4;
 	
 	public String Appearance2_4(){//4.horizontal is center,vertical is top
-		String v = Appearance2_4.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_4.getAttribute("style"), "top");
 		String h = Appearance2_4.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -590,7 +589,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement Appearance2_5;
 	
 	public String Appearance2_5(){//5.horizontal is center,vertical is center
-		String v = Appearance2_5.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_5.getAttribute("style"), "middle");
 		String h = Appearance2_5.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -599,7 +598,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement Appearance2_6;
 	
 	public String Appearance2_6(){//6.horizontal is center,vertical is bottom
-		String v = Appearance2_6.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_6.getAttribute("style"), "bottom");
 		String h = Appearance2_6.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -608,7 +607,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement Appearance2_7;
 	
 	public String Appearance2_7(){//7.horizontal is right,vertical is top
-		String v = Appearance2_7.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_7.getAttribute("style"), "top");
 		String h = Appearance2_7.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -617,7 +616,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement Appearance2_8;
 	
 	public String Appearance2_8(){//8.horizontal is right,vertical is center
-		String v = Appearance2_8.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_8.getAttribute("style"), "middle");
 		String h = Appearance2_8.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -626,7 +625,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement Appearance2_9;
 	
 	public String Appearance2_9(){//9.horizontal is right,vertical is bottom
-		String v = Appearance2_9.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_9.getAttribute("style"), "bottom");
 		String h = Appearance2_9.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -634,16 +633,18 @@ public class RichText_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='RichText_appearance2_group09']/div/div/div/div")
 	private WebElement Appearance2_10;
 	
-	public String Appearance2_10(){//10.horizontal indent is 50px
-		return Appearance2_10.getAttribute("style");
+	public int Appearance2_10(){//10.horizontal indent is 50px
+		String[] temp={"padding-left: 50px"};
+		return Appearance.appearance_query(Appearance2_10.getAttribute("style"), temp);
 		
 	}
 	
 	@FindBy(xpath=".//*[@id='RichText_appearance2_group10']/div/div/div/div")
 	private WebElement Appearance2_11;
 	
-	public String Appearance2_11(){//11.horizontal indent is 10percent
-		return Appearance2_11.getAttribute("style");
+	public int Appearance2_11(){//11.horizontal indent is 10percent
+		String[] temp={"padding-left: 10%"};
+		return Appearance.appearance_query(Appearance2_11.getAttribute("style"), temp);
 	}
 //###############################RichText Appearance2###############################
 //###############################RichText Submit####################################
