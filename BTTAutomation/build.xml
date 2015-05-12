@@ -726,22 +726,32 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-              	
-              	
 	<target name="AllTests">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
-	            <test name="com.ibm.btt.testsuite.AllTests" todir="${junit.output.dir}"/>
+	        	<batchtest todir="${junit.output.dir}">
+	        	        		<fileset dir="src">
+	        	        			<include name="**/*.java"/>
+	        	        			<exclude name="**/*Suite.java"/>
+	        	        			<exclude name="**/*PageObject.java"/>
+	        	        		</fileset>
+	        	 </batchtest>
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-              	
+     	
   	<target name="ButtonSuite">
   	        <mkdir dir="${junit.output.dir}"/>
   		        <junit fork="yes" printsummary="withOutAndErr">
   		            <formatter type="xml"/>
-  		            <test name="com.ibm.btt.allwidgets.Button.ButtonSuite" todir="${junit.output.dir}"/>
+  		        	<batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Button/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Button/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Button/*PageObject.java"/>
+  		        		       </fileset>
+  		        	</batchtest>
   		            <classpath refid="BTTAutomation.classpath"/>
   		        </junit>
   	</target>
@@ -904,6 +914,7 @@
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
     </target>
+    <!--
     <target depends="Button_Properties, Button_ECA, Button_CSS, Button_appearance1, Button_appearance2" name="Button"/>
     <target depends="Label_Properties, Label_ECA, Label_CSS, Label_Appearance, Label_Appearance1" name="Label"/>
   	<target depends="Text_Properties, Text_Event, Text_Condition, Text_Action, Text_CSS, Text_appearance1, Text_appearance2" name="Text"/>     
@@ -916,5 +927,6 @@
 	<target depends="MultiSelect_Properties, MultiSelect_ECA, MultiSelect_CSS, MultiSelect_appearance1, MultiSelect_appearance2" name="MultiSelect"/> 
 	<target depends="HorizontalSlider_Properties, HorizontalSlider_event, HorizontalSlider_condition, HorizontalSlider_action, HorizontalSlider_CSS, HorizontalSlider_appearance1, HorizontalSlider_appearance2" name="HorizontalSlider"/> 
 	<target depends="VerticalSlider_Properties, VerticalSlider_event, VerticalSlider_condition, VerticalSlider_action, VerticalSlider_CSS, VerticalSlider_appearance1, VerticalSlider_appearance2" name="VerticalSlider"/> 
-	<target depends="CheckedMultiSelect_Properties, CheckedMultiSelect_event, CheckedMultiSelect_condition, CheckedMultiSelect_action, CheckedMultiSelect_CSS, CheckedMultiSelect_appearance1, CheckedMultiSelect_appearance2, CheckedMultiSelect_appearance3" name="CheckedMultiSelect"/>           	
+	<target depends="CheckedMultiSelect_Properties, CheckedMultiSelect_event, CheckedMultiSelect_condition, CheckedMultiSelect_action, CheckedMultiSelect_CSS, CheckedMultiSelect_appearance1, CheckedMultiSelect_appearance2, CheckedMultiSelect_appearance3" name="CheckedMultiSelect"/>
+	-->           	
 </project>
