@@ -52,12 +52,12 @@ public class Radio_Properties extends Main_Class {
 		drv.BTT8200_tab();
 		drv.Radio_widget();
 		drv.Radio_properties();
+		Main_Class.waitUntilLoadElement(20, "Radio_properties_radio_Id_copy");
 
 	}
 	
 	@Test
 	public void Radio_TabIndex() throws InterruptedException{
-		Thread.sleep(2000);
 		Main_Class.widget_tabIndex();
 		assertEquals(2, drv.Radio_properties_tabIndex1Focus());
 		Main_Class.widget_tabIndex();
