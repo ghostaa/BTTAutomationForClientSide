@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="."  name="widgetsuite">
+
+  	<target name="ButtonSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		        	<batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Button/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Button/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Button/*PageObject.java"/>
+  		        		       </fileset>
+  		        	</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+   
+	<target name="CheckBoxSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/CheckBox/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/CheckBox/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/CheckBox/*PageObject.java"/>
+  		        		       </fileset>
+  		        	</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>          	
+  	<target name="CheckedMultiSelectSuite">
+  	  	        <mkdir dir="${junit.output.dir}"/>
+  	  		        <junit fork="yes" printsummary="withOutAndErr">
+  	  		            <formatter type="xml"/>
+  	  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/CheckedMultiSelect/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/CheckedMultiSelect/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/CheckedMultiSelect/*PageObject.java"/>
+  		        		       </fileset>
+  		        		</batchtest>
+  	  		            <classpath refid="BTTAutomation.classpath"/>
+  	  		        </junit>
+  	</target>
+	<target name="ComboSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Combo/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Combo/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Combo/*PageObject.java"/>
+  		        		       </fileset>
+  		        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+  	<target name="HorizontalSliderSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/HorizontalSlider/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/HorizontalSlider/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/HorizontalSlider/*PageObject.java"/>
+  		        		       </fileset>
+  		        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+	<target name="ImageSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Image/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Image/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Image/*PageObject.java"/>
+  		        		       </fileset>
+  		        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>          	
+  	<target name="LabelSuite">
+  	  	        <mkdir dir="${junit.output.dir}"/>
+  	  		        <junit fork="yes" printsummary="withOutAndErr">
+  	  		            <formatter type="xml"/>
+  	  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Label/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Label/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Label/*PageObject.java"/>
+  		        		       </fileset>
+  		        		</batchtest>
+  	  		            <classpath refid="BTTAutomation.classpath"/>
+  	  		        </junit>
+  	</target>
+	<target name="LinkSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Link/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Link/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Link/*PageObject.java"/>
+  		        		       </fileset>
+	        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+  	<target name="MessageSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Message/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Message/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Message/*PageObject.java"/>
+  		        		       </fileset>
+	        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+	<target name="MultiSelectSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/MultiSelect/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/MultiSelect/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/MultiSelect/*PageObject.java"/>
+  		        		       </fileset>
+	        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>          	
+  	<target name="PanelSuite">
+  	  	        <mkdir dir="${junit.output.dir}"/>
+  	  		        <junit fork="yes" printsummary="withOutAndErr">
+  	  		            <formatter type="xml"/>
+  	  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Panel/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Panel/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Panel/*PageObject.java"/>
+  		        		       </fileset>
+  		        		</batchtest>
+  	  		            <classpath refid="BTTAutomation.classpath"/>
+  	  		        </junit>
+  	</target>
+	<target name="RadioSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Radio/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Radio/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Radio/*PageObject.java"/>
+  		        		       </fileset>
+	        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+  	<target name="RepetitivePanelSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/RepetitivePanel/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/RepetitivePanel/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/RepetitivePanel/*PageObject.java"/>
+  		        		       </fileset>
+	        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>
+	<target name="RichTextSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/RichText/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/RichText/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/RichText/*PageObject.java"/>
+  		        		       </fileset>
+	        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>          	
+  	<target name="SelectListSuite">
+  	  	        <mkdir dir="${junit.output.dir}"/>
+  	  		        <junit fork="yes" printsummary="withOutAndErr">
+  	  		            <formatter type="xml"/>
+  	  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/SelectList/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/SelectList/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/SelectList/*PageObject.java"/>
+  		        		       </fileset>
+  		        		</batchtest>
+  	  		            <classpath refid="BTTAutomation.classpath"/>
+  	  		        </junit>
+  	</target>
+	<target name="TextSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Text/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Text/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Text/*PageObject.java"/>
+  		        		       </fileset>
+  		        	</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target> 
+	<target name="TextAreaSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/TextArea/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/TextArea/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/TextArea/*PageObject.java"/>
+  		        		       </fileset>
+	        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target>          	
+  	<target name="TreeSuite">
+  	  	        <mkdir dir="${junit.output.dir}"/>
+  	  		        <junit fork="yes" printsummary="withOutAndErr">
+  	  		            <formatter type="xml"/>
+  	  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/Tree/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Tree/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/Tree/*PageObject.java"/>
+  		        		       </fileset>
+  		        		</batchtest>
+  	  		            <classpath refid="BTTAutomation.classpath"/>
+  	  		        </junit>
+  	</target>
+	<target name="VerticalSliderSuite">
+  	        <mkdir dir="${junit.output.dir}"/>
+  		        <junit fork="yes" printsummary="withOutAndErr">
+  		            <formatter type="xml"/>
+  		            <batchtest todir="${junit.output.dir}">
+  		        		       <fileset dir="src">
+  		        		        	    <include name="com/ibm/btt/allwidgets/VerticalSlider/*.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/VerticalSlider/*Suite.java"/>
+  		        		        	    <exclude name="com/ibm/btt/allwidgets/VerticalSlider/*PageObject.java"/>
+  		        		       </fileset>
+	        		</batchtest>
+  		            <classpath refid="BTTAutomation.classpath"/>
+  		        </junit>
+  	</target> 
+    
+        	
+</project>

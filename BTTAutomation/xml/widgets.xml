@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." name="widgets">
+	<!--Button--> 
+  	<target name="Button_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.Button.Button_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="Button_ECA">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Button.Button_ECA" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Button_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.Button.Button_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="Button_appearance1">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Button.Button_appearance1" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Button_appearance2">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Button.Button_appearance2" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<!--Label-->
+  	<target name="Label_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.Label.Label_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="Label_ECA">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Label.Label_ECA" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Label_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.Label.Label_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="Label_Appearance">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Label.Label_Appearance" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Label_Appearance1">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Label.Label_Appearance1" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<!--Text-->
+  	<target name="Text_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.Text.Text_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="Text_Event">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Text.Text_Event" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Text_Condition">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Text.Text_Condition" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Text_Action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Text.Text_Action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Text_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.Text.Text_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="Text_appearance1">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Text.Text_appearance1" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Text_appearance2">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Text.Text_appearance2" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<!--Radio-->
+  	<target name="Radio_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.Radio.Radio_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="Radio_Event">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Radio.Radio_Event" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Radio_Condition">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Radio.Radio_Condition" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Radio_Action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Radio.Radio_Action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Radio_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.Radio.Radio_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="Radio_appearance1">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Radio.Radio_appearance1" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Radio_appearance2">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Radio.Radio_appearance2" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<!--Image-->
+  	<target name="Image_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.Image.Image_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="Image_Event">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Image.Image_Event" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Image_Condition">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Image.Image_Condition" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Image_Action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Image.Image_Action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Image_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.Image.Image_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="Image_appearance1">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Image.Image_appearance1" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Image_appearance2">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Image.Image_appearance2" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+    <!--CheckBox-->
+  	<target name="CheckBox_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.CheckBox.CheckBox_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="CheckBox_Event">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.CheckBox.CheckBox_Event" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="CheckBox_Condition">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.CheckBox.CheckBox_Condition" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="CheckBox_Action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.CheckBox.CheckBox_Action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="CheckBox_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.CheckBox.CheckBox_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="CheckBox_submit">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.CheckBox.CheckBox_submit" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<!--Message-->
+	<target name="Message_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.Message.Message_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+	<target name="Message_Action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Message.Message_Action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Message_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.Message.Message_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+  	<!--Link-->
+  	<target name="Link_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.Link.Link_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="Link_Event">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Link.Link_Event" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Link_Condition">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Link.Link_Condition" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Link_Action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Link.Link_Action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Link_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.Link.Link_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+  	<!--SelectList-->
+  	<target name="SelectList_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.SelectList.SelectList_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="SelectList_Event">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.SelectList.SelectList_Event" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="SelectList_Condition">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.SelectList.SelectList_Condition" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="SelectList_Action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.SelectList.SelectList_Action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="SelectList_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.SelectList.SelectList_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+  	<!--MultiSelect-->
+  	<target name="MultiSelect_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.MultiSelect.MultiSelect_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="MultiSelect_ECA">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.MultiSelect.MultiSelect_ECA" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="MultiSelect_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.MultiSelect.MultiSelect_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="MultiSelect_appearance1">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.MultiSelect.MultiSelect_appearance1" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="MultiSelect_appearance2">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.MultiSelect.MultiSelect_appearance2" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<!--HorizontalSlider-->
+  	<target name="HorizontalSlider_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.HorizontalSlider.HorizontalSlider_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="HorizontalSlider_event">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.HorizontalSlider.HorizontalSlider_event" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="HorizontalSlider_condition">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.HorizontalSlider.HorizontalSlider_condition" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="HorizontalSlider_action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.HorizontalSlider.HorizontalSlider_action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="HorizontalSlider_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.HorizontalSlider.HorizontalSlider_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="HorizontalSlider_appearance1">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.HorizontalSlider.HorizontalSlider_appearance1" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="HorizontalSlider_appearance2">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.HorizontalSlider.HorizontalSlider_appearance2" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<!--VerticalSlider-->
+  	<target name="VerticalSlider_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.VerticalSlider.VerticalSlider_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="VerticalSlider_event">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.VerticalSlider.VerticalSlider_event" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="VerticalSlider_condition">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.VerticalSlider.VerticalSlider_condition" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="VerticalSlider_action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.VerticalSlider.VerticalSlider_action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="VerticalSlider_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.VerticalSlider.VerticalSlider_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="VerticalSlider_appearance1">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.VerticalSlider.VerticalSlider_appearance1" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="VerticalSlider_appearance2">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.VerticalSlider.VerticalSlider_appearance2" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<!--CheckedMultiSelect-->
+	<target name="CheckedMultiSelect_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.CheckedMultiSelect.CheckedMultiSelect_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="CheckedMultiSelect_event">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.CheckedMultiSelect.CheckedMultiSelect_event" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="CheckedMultiSelect_condition">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.CheckedMultiSelect.CheckedMultiSelect_condition" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="CheckedMultiSelect_action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.CheckedMultiSelect.CheckedMultiSelect_action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="CheckedMultiSelect_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.CheckedMultiSelect.CheckedMultiSelect_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="CheckedMultiSelect_appearance1">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.CheckedMultiSelect.CheckedMultiSelect_appearance1" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="CheckedMultiSelect_appearance2">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.CheckedMultiSelect.CheckedMultiSelect_appearance2" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="CheckedMultiSelect_appearance3">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.CheckedMultiSelect.CheckedMultiSelect_appearance3" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+    
+     <!--
+    <target depends="Button_Properties, Button_ECA, Button_CSS, Button_appearance1, Button_appearance2" name="Button"/>
+    <target depends="Label_Properties, Label_ECA, Label_CSS, Label_Appearance, Label_Appearance1" name="Label"/>
+  	<target depends="Text_Properties, Text_Event, Text_Condition, Text_Action, Text_CSS, Text_appearance1, Text_appearance2" name="Text"/>     
+    <target depends="Radio_Properties, Radio_Event, Radio_Condition, Radio_Action, Radio_CSS, Radio_appearance1, Radio_appearance2" name="Radio"/> 
+	<target depends="Image_Properties, Image_Event, Image_Condition, Image_Action, Image_CSS, Image_appearance1, Image_appearance2" name="Image"/> 
+	<target depends="CheckBox_Properties, CheckBox_Event, CheckBox_Condition, CheckBox_Action, CheckBox_CSS, CheckBox_submit" name="CheckBox"/> 
+	<target depends="Message_Properties, Message_Action, Message_CSS" name="Message"/> 
+	<target depends="Link_Properties, Link_Action, Link_Condition, Link_Event, Link_CSS" name="Link"/> 
+	<target depends="SelectList_Properties, SelectList_Action, SelectList_Condition, SelectList_Event, SelectList_CSS" name="SelectList"/> 
+	<target depends="MultiSelect_Properties, MultiSelect_ECA, MultiSelect_CSS, MultiSelect_appearance1, MultiSelect_appearance2" name="MultiSelect"/> 
+	<target depends="HorizontalSlider_Properties, HorizontalSlider_event, HorizontalSlider_condition, HorizontalSlider_action, HorizontalSlider_CSS, HorizontalSlider_appearance1, HorizontalSlider_appearance2" name="HorizontalSlider"/> 
+	<target depends="VerticalSlider_Properties, VerticalSlider_event, VerticalSlider_condition, VerticalSlider_action, VerticalSlider_CSS, VerticalSlider_appearance1, VerticalSlider_appearance2" name="VerticalSlider"/> 
+	<target depends="CheckedMultiSelect_Properties, CheckedMultiSelect_event, CheckedMultiSelect_condition, CheckedMultiSelect_action, CheckedMultiSelect_CSS, CheckedMultiSelect_appearance1, CheckedMultiSelect_appearance2, CheckedMultiSelect_appearance3" name="CheckedMultiSelect"/>
+	-->           	
+    
+    </project>
