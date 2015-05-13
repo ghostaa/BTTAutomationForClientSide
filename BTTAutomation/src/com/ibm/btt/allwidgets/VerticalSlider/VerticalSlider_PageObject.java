@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
@@ -636,29 +637,33 @@ public class VerticalSlider_PageObject extends Main_Page{
 	@FindBy(id="VerticalSlider_appearance1_verticalSlider01")
 	private WebElement Appearance1_1;
 	
-	public String Appearance1_1(){//1.Width is AutoSize
-		return Appearance1_1.getAttribute("style");
+	public int Appearance1_1(){//1.Width is AutoSize
+		String[] temp={""};
+		return Appearance.appearance_query(Appearance1_1.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="VerticalSlider_appearance1_verticalSlider01_copy")
 	private WebElement Appearance1_2;
 	
-	public String Appearance1_2(){//2.Height is Fixed 100px
-		return Appearance1_2.getAttribute("style");
+	public int Appearance1_2(){//2.Height is Fixed 100px
+		String[] temp={"height: 100px"};
+		return Appearance.appearance_query(Appearance1_2.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="VerticalSlider_appearance1_verticalSlider01_copy01")
 	private WebElement Appearance1_3;
 	
-	public String Appearance1_3(){//3.3.Height is Fill
-		return Appearance1_3.getAttribute("style");
+	public int Appearance1_3(){//3.3.Height is Fill
+		String[] temp={"height: 100%"};
+		return Appearance.appearance_query(Appearance1_3.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="VerticalSlider_appearance1_verticalSlider01_copy02")
 	private WebElement Appearance1_4;
 	
-	public String Appearance1_4(){//4.Height is Relative 80%
-		return Appearance1_4.getAttribute("style");
+	public int Appearance1_4(){//4.Height is Relative 80%
+		String[] temp={"height: 80%"};
+		return Appearance.appearance_query(Appearance1_4.getAttribute("style"), temp);
 	}
 //###############################VerticalSlider Appearance1###############################
 //###############################VerticalSlider Appearance2###############################
@@ -666,7 +671,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement Appearance2_1;
 	
 	public String Appearance2_1(){//1.horizontal is left,vertical is top
-		String v = Appearance2_1.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_1.getAttribute("style"), "top");
 		String h = Appearance2_1.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -675,7 +680,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement Appearance2_2;
 	
 	public String Appearance2_2(){//2.horizontal is left,vertical is center
-		String v = Appearance2_2.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_2.getAttribute("style"), "middle");
 		String h = Appearance2_2.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -684,7 +689,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement Appearance2_3;
 	
 	public String Appearance2_3(){//3.horizontal is left,vertical is bottom
-		String v = Appearance2_3.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_3.getAttribute("style"), "bottom");
 		String h = Appearance2_3.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -693,7 +698,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement Appearance2_4;
 	
 	public String Appearance2_4(){//4.horizontal is center,vertical is top
-		String v = Appearance2_4.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_4.getAttribute("style"), "top");
 		String h = Appearance2_4.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -702,7 +707,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement Appearance2_5;
 	
 	public String Appearance2_5(){//5.horizontal is center,vertical is center
-		String v = Appearance2_5.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_5.getAttribute("style"), "middle");
 		String h = Appearance2_5.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -711,7 +716,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement Appearance2_6;
 	
 	public String Appearance2_6(){//6.horizontal is center,vertical is bottom
-		String v = Appearance2_6.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_6.getAttribute("style"), "bottom");
 		String h = Appearance2_6.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -720,7 +725,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement Appearance2_7;
 	
 	public String Appearance2_7(){//7.horizontal is right,vertical is top
-		String v = Appearance2_7.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_7.getAttribute("style"), "top");
 		String h = Appearance2_7.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -729,7 +734,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement Appearance2_8;
 	
 	public String Appearance2_8(){//8.horizontal is right,vertical is center
-		String v = Appearance2_8.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_8.getAttribute("style"), "middle");
 		String h = Appearance2_8.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -738,7 +743,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement Appearance2_9;
 	
 	public String Appearance2_9(){//9.horizontal is right,vertical is bottom
-		String v = Appearance2_9.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_9.getAttribute("style"), "bottom");
 		String h = Appearance2_9.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -746,16 +751,18 @@ public class VerticalSlider_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='VerticalSlider_appearance2_group09']/div/div/div/div")
 	private WebElement Appearance2_10;
 	
-	public String Appearance2_10(){//10.horizontal indent is 50px
-		return Appearance2_10.getAttribute("style");
+	public int Appearance2_10(){//10.horizontal indent is 50px
+		String[] temp={"padding-left: 50px"};
+		return Appearance.appearance_query(Appearance2_10.getAttribute("style"), temp);
 		
 	}
 	
 	@FindBy(xpath=".//*[@id='VerticalSlider_appearance2_group10']/div/div/div/div")
 	private WebElement Appearance2_11;
 	
-	public String Appearance2_11(){//11.horizontal indent is 10percent
-		return Appearance2_11.getAttribute("style");
+	public int Appearance2_11(){//11.horizontal indent is 10percent
+		String[] temp={"padding-left: 10%"};
+		return Appearance.appearance_query(Appearance2_11.getAttribute("style"), temp);
 	}
 //###############################VerticalSlider Appearance2###############################
 
