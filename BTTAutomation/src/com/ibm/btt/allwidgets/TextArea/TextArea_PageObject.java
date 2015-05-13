@@ -36,15 +36,17 @@ public class TextArea_PageObject extends Main_Page{
 	@FindBy(id="textArea_properties_textArea02")
 	private WebElement properties_hidden;
 	
-	public String proHidden(){// 3. visibility:hidden
-		return properties_hidden.getAttribute("style");
+	public int proHidden(){// 3. visibility:hidden
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(properties_hidden.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_properties_textArea03")
 	private WebElement properties_gone;
 	
-	public String proGone(){//4. visibility:gone
-		return properties_gone.getAttribute("style");
+	public int proGone(){//4. visibility:gone
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(properties_gone.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_properties_textArea05")
@@ -552,115 +554,131 @@ public class TextArea_PageObject extends Main_Page{
 	@FindBy(id="textArea_appearance1_textArea")
 	private WebElement Appearance1_1;
 	
-	public String Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
-		return Appearance1_1.getAttribute("style");
+	public int Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
+		String[] temp={""};
+		return Appearance.appearance_query(Appearance1_1.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy")
 	private WebElement Appearance1_2;
 	
-	public String Appearance1_2(){//2.Width is AutoSize,Height is Fixed 50px
-		return Appearance1_2.getAttribute("style");
+	public int Appearance1_2(){//2.Width is AutoSize,Height is Fixed 50px
+		String[] temp={"height: 50px"};
+		return Appearance.appearance_query(Appearance1_2.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy01")
 	private WebElement Appearance1_3;
 	
-	public String Appearance1_3(){//3.Width is AutoSize,Height is Relative 50%
-		return Appearance1_3.getAttribute("style");
+	public int Appearance1_3(){//3.Width is AutoSize,Height is Relative 50%
+		String[] temp={"height: 50%"};
+		return Appearance.appearance_query(Appearance1_3.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy02")
 	private WebElement Appearance1_4;
 	
-	public String Appearance1_4(){//4.Width is AutoSize,Height is Fill
-		return Appearance1_4.getAttribute("style");
+	public int Appearance1_4(){//4.Width is AutoSize,Height is Fill
+		String[] temp={"height: 100%"};
+		return Appearance.appearance_query(Appearance1_4.getAttribute("style"), temp);
 	}
 
 
 	@FindBy(id="textArea_appearance1_textArea_copy03")
 	private WebElement Appearance1_5;
 	
-	public String Appearance1_5(){//5.Width is Fixed 150px,Height is AutoSize
-		return Appearance1_5.getAttribute("style");
+	public int Appearance1_5(){//5.Width is Fixed 150px,Height is AutoSize
+		String[] temp={"width: 150px"};
+		return Appearance.appearance_query(Appearance1_5.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy")
 	private WebElement Appearance1_6;
 	
-	public String Appearance1_6(){//6.Width is Fixed 150px,Height is Fixed 50px
-		return Appearance1_6.getAttribute("style");
+	public int Appearance1_6(){//6.Width is Fixed 150px,Height is Fixed 50px
+		String[] temp={"height: 50px", "width: 150px"};
+		return Appearance.appearance_query(Appearance1_6.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy01")
 	private WebElement Appearance1_7;
 	
-	public String Appearance1_7(){//7.Width is Fixed 150px,Height is Relative 50%
-		return Appearance1_7.getAttribute("style");
+	public int Appearance1_7(){//7.Width is Fixed 150px,Height is Relative 50%
+		String[] temp={"height: 50%", "width: 150px"};
+		return Appearance.appearance_query(Appearance1_7.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy02")
 	private WebElement Appearance1_8;
 	
-	public String Appearance1_8(){//8.Width is Fixed 150px,Height is Fill
-		return Appearance1_8.getAttribute("style");
+	public int Appearance1_8(){//8.Width is Fixed 150px,Height is Fill
+		String[] temp={"height: 100%", "width: 150px"};
+		return Appearance.appearance_query(Appearance1_8.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy03")
 	private WebElement Appearance1_9;
 	
-	public String Appearance1_9(){//9.Width is Relative 50%,Height is AutoSize
-		return Appearance1_9.getAttribute("style");
+	public int Appearance1_9(){//9.Width is Relative 50%,Height is AutoSize
+		String[] temp={"width: 50%"};
+		return Appearance.appearance_query(Appearance1_9.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy03_copy")
 	private WebElement Appearance1_10;
 	
-	public String Appearance1_10(){//10.Width is Relative 50%,Height is Fixed 50px
-		return Appearance1_10.getAttribute("style");
+	public int Appearance1_10(){//10.Width is Relative 50%,Height is Fixed 50px
+		String[] temp={"height: 50px", "width: 50%"};
+		return Appearance.appearance_query(Appearance1_10.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy03_copy01")
 	private WebElement Appearance1_11;
 	
-	public String Appearance1_11(){//11.Width is Relative 50%,Height is Relative 50%
-		return Appearance1_11.getAttribute("style");
+	public int Appearance1_11(){//11.Width is Relative 50%,Height is Relative 50%
+		String[] temp={"height: 50%", "width: 50%"};
+		return Appearance.appearance_query(Appearance1_11.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy03_copy02")
 	private WebElement Appearance1_12;
 	
-	public String Appearance1_12(){//12.Width is Relative 50%,Height is Fill
-		return Appearance1_12.getAttribute("style");
+	public int Appearance1_12(){//12.Width is Relative 50%,Height is Fill
+		String[] temp={"height: 100%", "width: 50%"};
+		return Appearance.appearance_query(Appearance1_12.getAttribute("style"), temp);
 	}
 
 
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy03_copy03")
 	private WebElement Appearance1_13;
 	
-	public String Appearance1_13(){//13.Width is Fill,Height is AutoSize
-		return Appearance1_13.getAttribute("style");
+	public int Appearance1_13(){//13.Width is Fill,Height is AutoSize
+		String[] temp={"width: 100%"};
+		return Appearance.appearance_query(Appearance1_13.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy03_copy03_copy")
 	private WebElement Appearance1_14;
 	
-	public String Appearance1_14(){//14.Width is Fill,Height is Fixed 50px
-		return Appearance1_14.getAttribute("style");
+	public int Appearance1_14(){//14.Width is Fill,Height is Fixed 50px
+		String[] temp={"height: 50px", "width: 100%"};
+		return Appearance.appearance_query(Appearance1_14.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy03_copy03_copy01")
 	private WebElement Appearance1_15;
 	
-	public String Appearance1_15(){//15.Width is Fill,Height is Relatvie 50%
-		return Appearance1_15.getAttribute("style");
+	public int Appearance1_15(){//15.Width is Fill,Height is Relatvie 50%
+		String[] temp={"height: 50%", "width: 100%"};
+		return Appearance.appearance_query(Appearance1_15.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy03_copy03_copy03_copy02")
 	private WebElement Appearance1_16;
 	
-	public String Appearance1_16(){//16.Width is Fill,Height is Fill
-		return Appearance1_16.getAttribute("style");
+	public int Appearance1_16(){//16.Width is Fill,Height is Fill
+		String[] temp={"height: 100%", "width: 100%"};
+		return Appearance.appearance_query(Appearance1_16.getAttribute("style"), temp);
 	}
 //###############################TextArea Appearance1###############################
 //###############################TextArea Appearance2###############################
@@ -668,7 +686,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement Appearance2_1;
 	
 	public String Appearance2_1(){//1.horizontal is left,vertical is top
-		String v = Appearance2_1.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_1.getAttribute("style"), "top");
 		String h = Appearance2_1.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -677,7 +695,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement Appearance2_2;
 	
 	public String Appearance2_2(){//2.horizontal is left,vertical is center
-		String v = Appearance2_2.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_2.getAttribute("style"), "middle");
 		String h = Appearance2_2.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -686,7 +704,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement Appearance2_3;
 	
 	public String Appearance2_3(){//3.horizontal is left,vertical is bottom
-		String v = Appearance2_3.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_3.getAttribute("style"), "bottom");
 		String h = Appearance2_3.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -695,7 +713,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement Appearance2_4;
 	
 	public String Appearance2_4(){//4.horizontal is center,vertical is top
-		String v = Appearance2_4.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_4.getAttribute("style"), "top");
 		String h = Appearance2_4.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -704,7 +722,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement Appearance2_5;
 	
 	public String Appearance2_5(){//5.horizontal is center,vertical is center
-		String v = Appearance2_5.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_5.getAttribute("style"), "middle");
 		String h = Appearance2_5.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -713,7 +731,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement Appearance2_6;
 	
 	public String Appearance2_6(){//6.horizontal is center,vertical is bottom
-		String v = Appearance2_6.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_6.getAttribute("style"), "bottom");
 		String h = Appearance2_6.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -722,7 +740,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement Appearance2_7;
 	
 	public String Appearance2_7(){//7.horizontal is right,vertical is top
-		String v = Appearance2_7.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_7.getAttribute("style"), "top");
 		String h = Appearance2_7.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -731,7 +749,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement Appearance2_8;
 	
 	public String Appearance2_8(){//8.horizontal is right,vertical is center
-		String v = Appearance2_8.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_8.getAttribute("style"), "middle");
 		String h = Appearance2_8.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -740,7 +758,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement Appearance2_9;
 	
 	public String Appearance2_9(){//9.horizontal is right,vertical is bottom
-		String v = Appearance2_9.getAttribute("style");
+		String v = Appearance.appearance_place(Appearance2_9.getAttribute("style"), "bottom");
 		String h = Appearance2_9.getAttribute("align");
 		return h+"&"+v;
 	}
@@ -748,16 +766,18 @@ public class TextArea_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='textArea_appearance2_group09']/div/div/div/div")
 	private WebElement Appearance2_10;
 	
-	public String Appearance2_10(){//10.horizontal indent is 50px
-		return Appearance2_10.getAttribute("style");
+	public int Appearance2_10(){//10.horizontal indent is 50px
+		String[] temp={"padding-left: 50px"};
+		return Appearance.appearance_query(Appearance2_10.getAttribute("style"), temp);
 		
 	}
 	
 	@FindBy(xpath=".//*[@id='textArea_appearance2_group10']/div/div/div/div")
 	private WebElement Appearance2_11;
 	
-	public String Appearance2_11(){//11.horizontal indent is 10percent
-		return Appearance2_11.getAttribute("style");
+	public int Appearance2_11(){//11.horizontal indent is 10percent
+		String[] temp={"padding-left: 10%"};
+		return Appearance.appearance_query(Appearance2_11.getAttribute("style"), temp);
 	}
 //###############################TextArea Appearance2###############################
 //###############################TextArea Submit####################################
