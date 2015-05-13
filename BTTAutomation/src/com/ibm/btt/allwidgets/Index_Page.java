@@ -142,6 +142,20 @@ public class Index_Page {
 	public void Combo_widget(){
 		Combo_widget.click();
 	}
+	
+	@FindBy(id="index_link68")
+	private WebElement Tree_widget;
+	
+	public void Tree_widget(){
+		Tree_widget.click();
+	}
+	
+	@FindBy(id="index_link54")
+	private WebElement RepetitivePanel_widget;
+	
+	public void RepetitivePanel_widget(){
+		RepetitivePanel_widget.click();
+	}
 
 
 } 

@@ -872,5 +872,106 @@ public class Main_Page extends Index_Page{
 		Combo_submit.click();
 	}
 //###############################For Combo Main##################################
+//###############################For Tree Main###################################
+		@FindBy(id="tree_main_link07")
+		private WebElement Tree_properties;
+		
+		@FindBy(id="tree_main_link04")
+		private WebElement Tree_event;
+		
+		@FindBy(id="tree_main_link05")
+		private WebElement Tree_condition;
+		
+		@FindBy(id="tree_main_link03")
+		private WebElement Tree_action;
+		
+		@FindBy(id="tree_main_link")
+		private WebElement Tree_css;
+		
+		@FindBy(id="tree_main_link01")
+		private WebElement Tree_appearance1;
+		
+		@FindBy(id="tree_main_link02")
+		private WebElement Tree_appearance2;
+		
+		@FindBy(id="tree_main_link06")
+		private WebElement Tree_submit;
+		
+		public void Tree_properties(){
+			Tree_properties.click();
+		}
+		
+		public void Tree_event(){
+			Tree_event.click();
+		}
+		
+		public void Tree_condition(){
+			Tree_condition.click();
+		}
+		
+		public void Tree_action(){
+			Tree_action.click();
+		}
+		
+		public void Tree_css(){
+			Tree_css.click();
+		}
+			
+		public void Tree_appearance1(){
+			Tree_appearance1.click();
+		}
+		
+		public void Tree_appearance2(){
+			Tree_appearance2.click();
+		}
+		
+		public void Tree_submit(){
+			Tree_submit.click();
+		}
+//###############################For Tree Main###################################
+//###############################For RepetitivePanel Main##################################	
+	@FindBy(id="RepetitivePanel_main_link")
+	private WebElement RepetitivePanel_properties;
+	
+	@FindBy(id="RepetitivePanel_main_link01")
+	private WebElement RepetitivePanel_ECA;
+	
+	@FindBy(id="RepetitivePanel_main_link02")
+	private WebElement RepetitivePanel_CSS;
+	
+	@FindBy(id="RepetitivePanel_main_link03")
+	private WebElement RepetitivePanel_appearance1;
+	
+	@FindBy(id="RepetitivePanel_main_link03")
+	private WebElement RepetitivePanel_appearance2;
+	
+	@FindBy(id="RepetitivePanel_main_link04")
+	private WebElement RepetitivePanel_submit;
+	
+	
+	public void RepetitivePanel_properties(){
+		RepetitivePanel_properties.click();
+	}
+	
+	public void RepetitivePanel_ECA(){
+		RepetitivePanel_ECA.click();
+	}
+	
+	public void RepetitivePanel_CSS(){
+		RepetitivePanel_CSS.click();
+	}
+	
+	public void RepetitivePanel_appearance1(){
+		RepetitivePanel_appearance1.click();
+	}
+	
+	public void RepetitivePanel_appearance2(){
+		RepetitivePanel_appearance2.click();
+	}
+	
+	public void RepetitivePanel_submit(){
+		RepetitivePanel_submit.click();
+	}
+//###############################For RepetitivePanel Main##################################
 } 
 
