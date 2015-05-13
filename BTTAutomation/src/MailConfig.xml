@@ -4,7 +4,7 @@
   	<SendFrom>dpyan@cn.ibm.com</SendFrom>
     <UserGroup>
       <AllTester>
-      	<user>dpyan@cn.ibm.com</user>
+      	<user>dpyan@cn.ibm.com, vndlmmli@cn.ibm.com</user>
        <!-- <user>zhaomm@cn.ibm.com, vndliyj@cn.ibm.com, vndlmmli@cn.ibm.com,</user> -->
       </AllTester>
       <AllDeveloper />
