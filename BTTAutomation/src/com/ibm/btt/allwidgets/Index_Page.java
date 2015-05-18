@@ -156,6 +156,13 @@ public class Index_Page {
 	public void RepetitivePanel_widget(){
 		RepetitivePanel_widget.click();
 	}
+	
+	@FindBy(id="index_link74")
+	private WebElement FileUpload_widget;
+	
+	public void FileUpload_widget(){
+		FileUpload_widget.click();
+	}
 
 
 } 

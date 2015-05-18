@@ -928,7 +928,7 @@ public class Main_Page extends Index_Page{
 		public void Tree_submit(){
 			Tree_submit.click();
 		}
-//###############################For Tree Main###################################
+//###############################For Tree Main############################################
 //###############################For RepetitivePanel Main##################################	
 	@FindBy(id="RepetitivePanel_main_link")
 	private WebElement RepetitivePanel_properties;
@@ -973,5 +973,63 @@ public class Main_Page extends Index_Page{
 		RepetitivePanel_submit.click();
 	}
 //###############################For RepetitivePanel Main##################################
+//###############################For FileUpload Main#######################################
+	@FindBy(id="FileUpload_main_link03")
+	private WebElement FileUpload_properties;
+	
+	@FindBy(id="FileUpload_main_link04")
+	private WebElement FileUpload_event;
+	
+	@FindBy(id="FileUpload_main_link05")
+	private WebElement FileUpload_condition;
+	
+	@FindBy(id="FileUpload_main_link06")
+	private WebElement FileUpload_action;
+	
+	@FindBy(id="FileUpload_main_link02")
+	private WebElement FileUpload_css;
+	
+	@FindBy(id="FileUpload_main_link")
+	private WebElement FileUpload_appearance1;
+	
+	@FindBy(id="FileUpload_main_link01")
+	private WebElement FileUpload_appearance2;
+	
+	@FindBy(id="FileUpload_main_link07")
+	private WebElement FileUpload_submit;
+	
+	public void FileUpload_properties(){
+		FileUpload_properties.click();
+	}
+	
+	public void FileUpload_event(){
+		FileUpload_event.click();
+	}
+	
+	public void FileUpload_condition(){
+		FileUpload_condition.click();
+	}
+	
+	public void FileUpload_action(){
+		FileUpload_action.click();
+	}
+	
+	public void FileUpload_css(){
+		FileUpload_css.click();
+	}
+		
+	public void FileUpload_appearance1(){
+		FileUpload_appearance1.click();
+	}
+	
+	public void FileUpload_appearance2(){
+		FileUpload_appearance2.click();
+	}
+	
+	public void FileUpload_submit(){
+		FileUpload_submit.click();
+	}
+//###############################For FileUpload Main############################################
+	
 } 
 
