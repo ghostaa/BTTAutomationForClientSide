@@ -163,6 +163,13 @@ public class Index_Page {
 	public void FileUpload_widget(){
 		FileUpload_widget.click();
 	}
+	
+	@FindBy(id="index_link69")
+	private WebElement XUIInclude_widget;
+	
+	public void XUIInclude_widget(){
+		XUIInclude_widget.click();
+	}
 
 
 } 

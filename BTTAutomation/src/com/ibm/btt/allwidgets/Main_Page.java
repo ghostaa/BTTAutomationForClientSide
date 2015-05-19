@@ -1030,6 +1030,23 @@ public class Main_Page extends Index_Page{
 		FileUpload_submit.click();
 	}
 //###############################For FileUpload Main############################################
+//###############################For XUIInclude Main############################################
+	@FindBy(id="xuiInclude_main_link")
+	private WebElement XUIInclude_properties;
+	
+	
+	@FindBy(id="xuiInclude_main_link01")
+	private WebElement XUIInclude_appearance;
+	
+	
+	public void XUIInclude_properties(){
+		XUIInclude_properties.click();
+	}
+	
+	public void XUIInclude_appearance(){
+		XUIInclude_appearance.click();
+	}
+//###############################For XUIInclude Main############################################
 	
 } 
 
