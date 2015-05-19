@@ -78,12 +78,12 @@ public class Text_Properties extends Main_Class {
 
 	@Test
 	public void Text_hidden() {
-		assertEquals(false, drv.Text_properties_hidden());
+		assertEquals(1, drv.Text_properties_hidden());
 	}
 
 	@Test
 	public void Text_gone() {
-		assertEquals(false, drv.Text_properties_gone());
+		assertEquals(1, drv.Text_properties_gone());
 	}
 
 	@Test

@@ -32,18 +32,20 @@ public class Text_PageObject extends Main_Page{
 		return Text_properties_visible.isDisplayed();
 	}
 	
-	@FindBy(id="Text_properties_text02")
+	@FindBy(id="widget_Text_properties_text02")
 	private WebElement Text_properties_hidden;
 	
-	public Boolean Text_properties_hidden(){
-		return Text_properties_hidden.isDisplayed();
+	public int Text_properties_hidden(){
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(Text_properties_hidden.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="Text_properties_text03")
+	@FindBy(id="widget_Text_properties_text03")
 	private WebElement Text_properties_gone;
 	
-	public Boolean Text_properties_gone(){
-		return Text_properties_gone.isDisplayed();
+	public int Text_properties_gone(){
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(Text_properties_gone.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="Text_properties_text04")
