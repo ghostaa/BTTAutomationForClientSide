@@ -243,231 +243,90 @@ public class FileUpload_PageObject extends Main_Page{
 
 //###############################FileUpload Event#######################################
 //###############################FileUpload Condition###################################
-	@FindBy(xpath=".//*[@id='dijit__TreeNode_1']/div[1]")
-	private WebElement condition_TreeNode;
 	
-	@FindBy(xpath=".//*[@id='dijit__TreeNode_2']/div[1]/span[1]")
-	private WebElement condition_nodeExtend;
+	@FindBy(id="Fileupload_condition_label")
+	private WebElement condition_label1;
 	
-	@FindBy(xpath=".//*[@id='dijit__TreeNode_5']/div[1]/span[3]/span[1]")
-	private WebElement condition_node2_1;
-	
-	@FindBy(xpath=".//*[@id='dijit__TreeNode_6_label']")
-	private WebElement condition_node3_1;
-	
-	@FindBy(xpath=".//*[@id='Tree_condition_message']/div[1]/span[1]")
-	private WebElement condtion_message;
-	
-	@FindBy(id="Tree_condition_button06")
-	private WebElement condition_button1;
-	
-	public String conIsFocusable(){//1.verify focus
-		condition_TreeNode.click();
-		condition_button1.click();
-		return condtion_message.getText();
+	public String conDisableT(){//1.Widget Property =disabled=true
+		condition_label1.click();
+		return condition_label1.getText();
 	}
 	
-	@FindBy(id="Tree_condition_button01")
-	private WebElement condition_button2;
+	@FindBy(id="Fileupload_condition_label05")
+	private WebElement condition_label2;
 	
-	public String conSelectedLable(){//2. verify SelectedLabel
-		condition_nodeExtend.click();
-		condition_node2_1.click();
-		condition_button2.click();
-		return condtion_message.getText();
+	public String conExpId(){//2.Expression: Widget Property = id
+		condition_label2.click();
+		return condition_label2.getText();
 	}
 	
-	@FindBy(xpath=".//*[@id='dijit__TreeNode_3']/div[1]/span[1]")
-	private WebElement condition_node2;
+	@FindBy(id="Fileupload_condition_label06")
+	private WebElement condition_label3;
 	
-	@FindBy(xpath=".//*[@id='dijit__TreeNode_7_label']")
-	private WebElement condition_subnode;
-	
-	@FindBy(id="Tree_condition_button02")
-	private WebElement condition_button3;
-	
-	public String conNLS(){//3. verify selected label NLS
-		condition_node2.click();
-		condition_subnode.click();
-		condition_button3.click();
-		return condtion_message.getText();
+	public String conHidden(){//3.Expression: Widget Property = visibility =hidden
+		condition_label3.click();
+		return condition_label3.getText();
 	}
 	
-	@FindBy(id="Tree_condition_button03")
-	private WebElement condition_button4;
+	@FindBy(id="Fileupload_condition_label07")
+	private WebElement condition_label4;
 	
-	public String conSelectedValue(){//4. verify SelectedValue
-//		condition_nodeExtend.click();
-		condition_node3_1.click();
-		condition_button4.click();
-		return condtion_message.getText();
+	public String conDisableF(){//4.Expression: Widget Property = disabled=false
+		condition_label4.click();
+		return condition_label4.getText();
 	}
-	
-	@FindBy(id="Tree_condition_button")
-	private WebElement condition_button5;
-	
-	public String conFocus(){//5. verify focus
-		condition_button5.click();
-		return condtion_message.getText();
-	}
-		
-	@FindBy(id="Tree_condition_verify tree id")
-	private WebElement condition_button6;
-	
-	public String conTreeId(){//6.verify Tree ID
-		condition_button6.click();
-		return condtion_message.getText();
-	}
-	
-	@FindBy(id="Tree_condition_button04")
-	private WebElement condition_button7;
-	
-	public String conVisibility(){//7.verify visibility
-		condition_button7.click();
-		return condtion_message.getText();
-	}
-	
-	@FindBy(id="Tree_condition_button05")
-	private WebElement condition_button8;
-	
-	public String conValue(){//8. Verify value
-		condition_button8.click();
-		return condtion_message.getText();
-	}
-
-	@FindBy(id="Tree_condition_get tree id")
-	private WebElement condition_button9;
-	
-	public String conGetID(){//9.Get Tree id
-		condition_button9.click();
-		return condtion_message.getText();
-	}
-
 //###############################FileUpload Condition###################################
 //###############################FileUpload Action######################################
-	@FindBy(xpath=".//*[@id='Tree_action_message']/div[1]/span[1]")
-	private WebElement actionMessage; //message
-	
-	@FindBy(xpath=".//*[@id='dijit__TreeNode_16']/div[1]")
+	@FindBy(id="Fileupload_action_label05")
 	private WebElement actionClick1; //action Click here 1
 	
-	@FindBy(id="Tree_action_button")
-	private WebElement actionButton1; 
+	@FindBy(id="Fileupload_action_fileUpload")
+	private WebElement actSetClass;
 	
-	public String actGetSelectLabel(){// 	Invoke Widget Function : getSelectedLabel()
+	public int actSetClass(){// Set Widget Property = styleClass
 		actionClick1.click();
-		actionButton1.click();
-		return actionMessage.getText();
+		String[] temp={"setColor"};
+		return CSS.css_query(actSetClass.getAttribute("class"), temp);
 	}
 	
-	@FindBy(xpath=".//*[@id='dijit__TreeNode_20_label']")
+	@FindBy(id="Fileupload_action_label18")
 	private WebElement actionClick2;//action Click 2
 	
-	@FindBy(id="Tree_action_button_copy")
-	private WebElement actionButton2;
+	@FindBy(id="Fileupload_action_fileUpload01")
+	private WebElement actSetVisibility;
 	
-	public String actGetLabelNLS(){//Invoke Widget Function : getSelectedLabelNLS()
+	public int actSetVisibility(){// 	Set Widget Property = visibility
 		actionClick2.click();
-		actionButton2.click();
-		return actionMessage.getText();
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(actSetVisibility.getAttribute("style"), temp);
 	}
 	
-	@FindBy(xpath=".//*[@id='dijit__TreeNode_22']/div[1]")
+	@FindBy(id="Fileupload_action_label21")
 	private WebElement actionClick3;//action Click here 3
 	
-	@FindBy(id="Tree_action_button01")
-	private WebElement actionButton3;
+	@FindBy(id="com_ibm_btt_dijit_FileUploader_2")
+	private WebElement actSetDisable;
 	
-	public String actGetSelectedVal(){//Invoke Widget Function : getSelectedValue()
+	public int actSetDisable(){//Set Widget Property = disabled
 		actionClick3.click();
-		actionButton3.click();
-		return actionMessage.getText();
+		String[] temp={"dojoxUploaderDisabled"};
+		return CSS.css_query(actSetDisable.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="Tree_action_button01_copy")
-	private WebElement actionButton4; //action Click here 4
+	@FindBy(id="Fileupload_action_label22")
+	private WebElement actionClick4; //action Click here 4
 	
-	@FindBy(id="Tree_action_tree")
-	private WebElement action_styleClass;
+	@FindBy(id="Fileupload_action_fileUpload03")
+	private WebElement actHint;
 	
-	public int actStyleClass(){//Set Widget Property : styleClass
-		actionButton4.click();
-		String[] temp = {"treeStyle"};
-		return CSS.css_query(action_styleClass.getAttribute("class"), temp);
-	}
-	
-	@FindBy(id="Tree_action_button01_copy_copy")
-	private WebElement actionButton5;//action Click here 5
-	
-	public String actValue(){//Set Widget Property : value
-		actionButton5.click();
-		return actionMessage.getText();
-	}
-	
-	@FindBy(id="Tree_action_button01_copy_copy_copy")
-	private WebElement actionButton6;
-	
-	@FindBy(id="Tree_action_tree06")
-	private WebElement action_hint;
-	
-	public String actHint(){//Set Widget Property : hint
-		actionButton6.click();
-		return action_hint.getAttribute("title");
-	}
-	
-	
-	@FindBy(id="Tree_action_tree04")
-	private WebElement actionVisibility;
-	
-	@FindBy(id="Tree_action_hidden")
-	private WebElement action_hidden;
-	
-	public int actHidden(){//Set Widget Property : visibility = hidden
-		action_hidden.click();
-		String[] temp={"visibility: hidden"};
-		return Appearance.appearance_query(actionVisibility.getAttribute("style"), temp);
-	}
-	
-	@FindBy(id="Tree_action_gone")
-	private WebElement action_gone;
-	
-	public int actGone(){//Set Widget Property : visibility = gone
-		action_gone.click();
-		String[] temp={"display: none"};
-		return Appearance.appearance_query(actionVisibility.getAttribute("style"), temp);
-	}
-	
-	@FindBy(id="Tree_action_visible")
-	private WebElement action_visible;
-	
-	public Boolean actVisible(){//Set Widget Property : visibility = visible
-		action_visible.click();
-		return actionVisibility.isDisplayed();
-	}
-	
-	@FindBy(xpath=".//*[@id='dijit__TreeNode_37']/div[1]")
-	private WebElement actionClickNode;
-	
-	@FindBy(id="Tree_action_tree04_copy")
-	private WebElement actionGroup;
-	
-	@FindBy(id="Tree_action_button01_copy_copy_copy_copy")
-	private WebElement actionButton;
-	
-	public int actGroup(){//Action Group
-		actionClickNode.click();
-		actionButton.click();
-		String[] temp={"treeStyle"};
-		return CSS.css_query(actionGroup.getAttribute("class"), temp);
-	}
-	
-	public String actGroupMessage(){
-		return actionMessage.getText();
+	public String actHint(){//Set Widget Property = hint
+		actionClick4.click();
+		return actHint.getAttribute("title");
 	}
 	
 //###############################FileUpload Action######################################
 //###############################FileUpload Appearance1#################################
-		@FindBy(id="tree_appearance1_tree")
+		@FindBy(id="FileUpload_appearance1_fileUpload")
 		private WebElement Appearance1_1;
 		
 		public int Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
@@ -475,129 +334,16 @@ public class FileUpload_PageObject extends Main_Page{
 			return Appearance.appearance_query(Appearance1_1.getAttribute("style"), temp);
 		}
 		
-		@FindBy(id="tree_appearance1_tree01")
+		@FindBy(id="FileUpload_appearance1_fileUpload01")
 		private WebElement Appearance1_2;
 		
 		public int Appearance1_2(){//2.Width is AutoSize,Height is Fixed 150px
-			String[] temp = {"height: 150px"};
+			String[] temp = {"width: 500px"};
 			return Appearance.appearance_query(Appearance1_2.getAttribute("style"), temp);
 		}
-		
-		@FindBy(id="tree_appearance1_tree02")
-		private WebElement Appearance1_3;
-		
-		public int Appearance1_3(){//3.Width is AutoSize,Height is Relative 100%
-			String[] temp = {"height: 100%"};
-			return Appearance.appearance_query(Appearance1_3.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree03")
-		private WebElement Appearance1_4;
-		
-		public int Appearance1_4(){//4.Width is AutoSize,Height is Fill
-			String[] temp = {"height: 100%"};
-			return Appearance.appearance_query(Appearance1_4.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree04")
-		private WebElement Appearance1_5;
-		
-		public int Appearance1_5(){//5.Width is Fixed 150px,Height is AutoSize
-			String[] temp = {"width: 150px"};
-			return Appearance.appearance_query(Appearance1_5.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree05")
-		private WebElement Appearance1_6;
-		
-		public int Appearance1_6(){//6.Width is Fixed 150px,Height is Fixed 150px
-			String[] temp = {"width: 150px", "height: 150px"};
-			return Appearance.appearance_query(Appearance1_6.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree06")
-		private WebElement Appearance1_7;
-		
-		public int Appearance1_7(){//7.Width is Fixed 150px,Height is Relative 100%
-			String[] temp = {"width: 150px", "height: 100%"};
-			return Appearance.appearance_query(Appearance1_7.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree07")
-		private WebElement Appearance1_8;
-		
-		public int Appearance1_8(){//8.Width is Fixed 150px,Height is Fill
-			String[] temp = {"width: 150px", "height: 100%"};
-			return Appearance.appearance_query(Appearance1_8.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree08")
-		private WebElement Appearance1_9;
-		
-		public int Appearance1_9(){//9.Width is Relative 50%,Height is AutoSize
-			String[] temp = {"width: 50%"};
-			return Appearance.appearance_query(Appearance1_9.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree09")
-		private WebElement Appearance1_10;
-		
-		public int Appearance1_10(){//10.Width is Relative 50%,Height is Fixed 150px
-			String[] temp = {"width: 50%", "height: 150px"};
-			return Appearance.appearance_query(Appearance1_10.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree10")
-		private WebElement Appearance1_11;
-		
-		public int Appearance1_11(){//11.Width is Relative 50%,Height is Relative 100%
-			String[] temp = {"width: 50%", "height: 100%"};
-			return Appearance.appearance_query(Appearance1_11.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree11")
-		private WebElement Appearance1_12;
-		
-		public int Appearance1_12(){//12.Width is Relative 50%,Height is Fill
-			String[] temp = {"width: 50%", "height: 100%"};
-			return Appearance.appearance_query(Appearance1_12.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree12")
-		private WebElement Appearance1_13;
-		
-		public int Appearance1_13(){//13.Width is Fill,Height is AutoSize 
-			String[] temp = {"width: 100%"};
-			return Appearance.appearance_query(Appearance1_13.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree13")
-		private WebElement Appearance1_14;
-		
-		public int Appearance1_14(){//14.Width is Fill,Height is Fixed 150px
-			String[] temp = {"width: 100%", "height: 150px"};
-			return Appearance.appearance_query(Appearance1_14.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree14")
-		private WebElement Appearance1_15;
-		
-		public int Appearance1_15(){//15.Width is Fill,Height is Relatvie 50%
-			String[] temp = {"width: 100%", "height: 50%"};
-			return Appearance.appearance_query(Appearance1_15.getAttribute("style"), temp);
-		}
-		
-		@FindBy(id="tree_appearance1_tree15")
-		private WebElement Appearance1_16;
-		
-		public int Appearance1_16(){//16.Width is Fill,Height is Fill
-			String[] temp = {"width: 100%", "height: 100%"};
-			return Appearance.appearance_query(Appearance1_16.getAttribute("style"), temp);
-		}
-
 //###############################FileUpload Appearance1###################################
 //###############################FileUpload Appearance2###################################
-		@FindBy(xpath=".//*[@id='tree_appearance2_group']/div/div/div/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[1]/div[3]")
 		private WebElement Appearance2_1;
 		
 		public String Appearance2_1(){//1.horizontal is left,vertical is top
@@ -606,7 +352,7 @@ public class FileUpload_PageObject extends Main_Page{
 			return h+"&"+v;
 		}
 		
-		@FindBy(xpath=".//*[@id='tree_appearance2_group01']/div/div/div/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[3]/div[3]")
 		private WebElement Appearance2_2;
 		
 		public String Appearance2_2(){//2.horizontal is left,vertical is center
@@ -615,7 +361,7 @@ public class FileUpload_PageObject extends Main_Page{
 			return h+"&"+v;
 		}
 		
-		@FindBy(xpath=".//*[@id='tree_appearance2_group02']/div/div/div/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[5]/div[3]")
 		private WebElement Appearance2_3;
 		
 		public String Appearance2_3(){//3.horizontal is left,vertical is bottom
@@ -624,7 +370,7 @@ public class FileUpload_PageObject extends Main_Page{
 			return h+"&"+v;
 		}
 		
-		@FindBy(xpath=".//*[@id='tree_appearance2_group03']/div/div/div/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[7]/div[3]")
 		private WebElement Appearance2_4;
 		
 		public String Appearance2_4(){//4.horizontal is center,vertical is top
@@ -633,7 +379,7 @@ public class FileUpload_PageObject extends Main_Page{
 			return h+"&"+v;
 		}
 		
-		@FindBy(xpath=".//*[@id='tree_appearance2_group04']/div/div/div[1]/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[9]/div[3]")
 		private WebElement Appearance2_5;
 		
 		public String Appearance2_5(){//5.horizontal is center,vertical is center
@@ -642,7 +388,7 @@ public class FileUpload_PageObject extends Main_Page{
 			return h+"&"+v;
 		}
 		
-		@FindBy(xpath=".//*[@id='tree_appearance2_group05']/div/div/div/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[11]/div[3]")
 		private WebElement Appearance2_6;
 		
 		public String Appearance2_6(){//6.horizontal is center,vertical is bottom
@@ -651,7 +397,7 @@ public class FileUpload_PageObject extends Main_Page{
 			return h+"&"+v;
 		}
 		
-		@FindBy(xpath=".//*[@id='tree_appearance2_group06']/div/div/div/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[13]/div[3]")
 		private WebElement Appearance2_7;
 		
 		public String Appearance2_7(){//7.horizontal is right,vertical is top
@@ -660,7 +406,7 @@ public class FileUpload_PageObject extends Main_Page{
 			return h+"&"+v;
 		}
 		
-		@FindBy(xpath=".//*[@id='tree_appearance2_group07']/div/div/div[1]/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[15]/div[3]")
 		private WebElement Appearance2_8;
 		
 		public String Appearance2_8(){//8.horizontal is right,vertical is center
@@ -669,7 +415,7 @@ public class FileUpload_PageObject extends Main_Page{
 			return h+"&"+v;
 		}
 		
-		@FindBy(xpath=".//*[@id='tree_appearance2_group08']/div/div/div/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[17]/div[3]")
 		private WebElement Appearance2_9;
 		
 		public String Appearance2_9(){//9.horizontal is right,vertical is bottom
@@ -678,7 +424,7 @@ public class FileUpload_PageObject extends Main_Page{
 			return h+"&"+v;
 		}
 		
-		@FindBy(xpath=".//*[@id='tree_appearance2_group09']/div/div/div/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[19]/div[3]")
 		private WebElement Appearance2_10;
 		
 		public int Appearance2_10(){//10.horizontal indent is 50px
@@ -687,7 +433,7 @@ public class FileUpload_PageObject extends Main_Page{
 			
 		}
 		
-		@FindBy(xpath=".//*[@id='tree_appearance2_group10']/div/div/div/div")
+		@FindBy(xpath=".//*[@id='FileUpload_appearance2_panel']/div[21]/div[3]")
 		private WebElement Appearance2_11;
 		
 		public int Appearance2_11(){//11.horizontal indent is 10percent
