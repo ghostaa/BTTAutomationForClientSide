@@ -15,7 +15,6 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import mx4j.log.Log4JLogger;
 
 public class AutomationResultReportMail {
 	private MimeMessage mimeMsg; // MIMEÓÊ¼ş¶ÔÏó
