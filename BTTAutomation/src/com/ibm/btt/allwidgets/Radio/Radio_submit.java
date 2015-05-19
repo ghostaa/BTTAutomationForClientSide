@@ -33,6 +33,7 @@ public class Radio_submit extends Main_Class{
     drv.BTT8200_tab();
     drv.Radio_widget();
     drv.Radio_submmit();
+    Main_Class.waitUntilLoadElement(20, "Radio_submit_radio13_copy");
   }
 
   @Test
@@ -53,6 +54,7 @@ public class Radio_submit extends Main_Class{
   @Test
   public void subResultString(){
 	  drv.submit();
+	  Main_Class.waitUntilLoadElement(20, "ShowRadio_result_radio13_copy");
 	  assertEquals(true, drv.subResultString());
 	  assertEquals("String_Data2", drv.subResultText1());
   }
