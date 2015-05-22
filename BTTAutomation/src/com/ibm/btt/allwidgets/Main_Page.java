@@ -1046,7 +1046,57 @@ public class Main_Page extends Index_Page{
 	public void XUIInclude_appearance(){
 		XUIInclude_appearance.click();
 	}
-//###############################For XUIInclude Main############################################
+//###############################For XUIInclude Main##################################
+//###############################For Table Main#######################################
+	@FindBy(id="Table_Index_link")
+	private WebElement Table_properties;
+	
+	@FindBy(id="Table_Index_link01")
+	private WebElement Table_event;
+	
+	@FindBy(id="Table_Index_link02")
+	private WebElement Table_condition;
+	
+	@FindBy(id="Table_Index_link03")
+	private WebElement Table_action;
+	
+	@FindBy(id="Table_Index_link06")
+	private WebElement Table_style;
+	
+	@FindBy(id="Table_Index_link04")
+	private WebElement Table_appearance;
+	
+	@FindBy(id="Table_Index_link05")
+	private WebElement Table_colStandard;
+	
+	public void Table_properties(){
+		Table_properties.click();
+	}
+	
+	public void Table_event(){
+		Table_event.click();
+	}
+	
+	public void Table_condition(){
+		Table_condition.click();
+	}
+	
+	public void Table_action(){
+		Table_action.click();
+	}
+	
+	public void Table_style(){
+		Table_style.click();
+	}
+		
+	public void Table_appearance(){
+		Table_appearance.click();
+	}
+	
+	public void Table_colStandard(){
+		Table_colStandard.click();
+	}
+//###############################For Table Main#####################################
 	
 } 
 

@@ -170,6 +170,13 @@ public class Index_Page {
 	public void XUIInclude_widget(){
 		XUIInclude_widget.click();
 	}
+	
+	@FindBy(id="index_link75")
+	private WebElement Table_widget;
+	
+	public void Table_widget(){
+		Table_widget.click();
+	}
 
 
 } 
