@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class PMR02698000852_PageObject {
+	
+//###############################Data selection page ##################################
 	@FindBy(linkText="Establish Session")
 	private WebElement Establish;
 	
@@ -127,6 +129,27 @@ public class PMR02698000852_PageObject {
 	 * 10 data types
 	 * End
 	 */
+	
+	//SubmitButton
+	@FindBy(id="Text_submit_button_label")
+	private WebElement SubmitButton;
+		
+	public WebElement getSubmitButton() {
+		return SubmitButton;
+	}
+	
+	
+	
+	
+//###############################Result Page##################################	
+	//return
+	@FindBy(id="Text_submit_Result_link")
+	private WebElement ReturnLink;
+		
+	public WebElement getReturnLink() {
+		return ReturnLink;
+	}	
+	
 	
 	
 }

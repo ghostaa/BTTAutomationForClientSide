@@ -103,7 +103,65 @@ public class NumberConversionInVietnamese {
 		assertEquals("101.800",drv.getTenTypes_Text_BigDecimal().getAttribute("value"));
 	}
 	
+	@Test
+	public void SubmitData(){
+		drv.getSubmitButton().click();
+		InternetBankTestWebMain_Class.waitUntilLoadElement(20, "Text_submit_Result_link",driver);
+
+	}
+	/*
+	@Test
+	public void TenTypes_result_String(){
+		drv.getAutoFill_button_101().click();
+		assertEquals("101.8",drv.getTenTypes_Text_String().getAttribute("value"));
+	}
+	@Test
+	public void TenTypes_result_Currency(){
+		drv.getAutoFill_button_101().click();
+		assertEquals("US$ 101.80",drv.getTenTypes_Text_Currency().getAttribute("value"));
+	}
+	@Test
+	public void TenTypes_result_Number(){
+		drv.getAutoFill_button_101().click();
+		assertEquals("101.8",drv.getTenTypes_Text_Number().getAttribute("value"));
+	}
+	@Test
+	public void TenTypes_result_Short(){
+		drv.getAutoFill_button_101().click();
+		assertEquals("102",drv.getTenTypes_Text_Short().getAttribute("value"));
+	}
+	@Test
+	public void TenTypes_result_Integer(){
+		drv.getAutoFill_button_101().click();
+		assertEquals("102",drv.getTenTypes_Text_Integer().getAttribute("value"));
+	}
+	@Test
+	public void TenTypes_result_Long(){
+		drv.getAutoFill_button_101().click();
+		assertEquals("102",drv.getTenTypes_Text_Long().getAttribute("value"));
+	}
+	@Test
+	public void TenTypes_result_Float(){
+		drv.getAutoFill_button_101().click();
+		assertEquals("101.80",drv.getTenTypes_Text_Float().getAttribute("value"));
+	}
+	@Test
+	public void TenTypes_result_Double(){
+		drv.getAutoFill_button_101().click();
+		assertEquals("101.800",drv.getTenTypes_Text_Double().getAttribute("value"));
+	}
+	@Test
+	public void TenTypes_result_BigInteger(){
+		drv.getAutoFill_button_101().click();
+		assertEquals("102",drv.getTenTypes_Text_BigInteger().getAttribute("value"));
+	}
+	@Test
+	public void TenTypes_result_BigDecimal(){
+		drv.getAutoFill_button_101().click();
+		assertEquals("101.800",drv.getTenTypes_Text_BigDecimal().getAttribute("value"));
+	}
 	
+	*/
 	
 	
 	public static void deleteAllCookies(){
