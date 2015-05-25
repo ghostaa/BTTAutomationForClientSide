@@ -70,37 +70,37 @@ public class NumberConversionInVietnamese {
 	@Test
 	public void TenTypes_Short(){
 		drv.getAutoFill_button_101().click();
-		assertEquals("US$ 101.80",drv.getTenTypes_Text_Short().getAttribute("value"));
+		assertEquals("102",drv.getTenTypes_Text_Short().getAttribute("value"));
 	}
 	@Test
 	public void TenTypes_Integer(){
 		drv.getAutoFill_button_101().click();
-		assertEquals("101.8",drv.getTenTypes_Text_Integer().getAttribute("value"));
+		assertEquals("102",drv.getTenTypes_Text_Integer().getAttribute("value"));
 	}
 	@Test
 	public void TenTypes_Long(){
 		drv.getAutoFill_button_101().click();
-		assertEquals("US$ 101.80",drv.getTenTypes_Text_Long().getAttribute("value"));
+		assertEquals("102",drv.getTenTypes_Text_Long().getAttribute("value"));
 	}
 	@Test
 	public void TenTypes_Float(){
 		drv.getAutoFill_button_101().click();
-		assertEquals("101.8",drv.getTenTypes_Text_Float().getAttribute("value"));
+		assertEquals("101.80",drv.getTenTypes_Text_Float().getAttribute("value"));
 	}
 	@Test
 	public void TenTypes_Double(){
 		drv.getAutoFill_button_101().click();
-		assertEquals("US$ 101.80",drv.getTenTypes_Text_Double().getAttribute("value"));
+		assertEquals("101.800",drv.getTenTypes_Text_Double().getAttribute("value"));
 	}
 	@Test
 	public void TenTypes_BigInteger(){
 		drv.getAutoFill_button_101().click();
-		assertEquals("101.8",drv.getTenTypes_Text_BigInteger().getAttribute("value"));
+		assertEquals("102",drv.getTenTypes_Text_BigInteger().getAttribute("value"));
 	}
 	@Test
 	public void TenTypes_BigDecimal(){
 		drv.getAutoFill_button_101().click();
-		assertEquals("US$ 101.80",drv.getTenTypes_Text_BigDecimal().getAttribute("value"));
+		assertEquals("101.800",drv.getTenTypes_Text_BigDecimal().getAttribute("value"));
 	}
 	
 	
