@@ -3,46 +3,25 @@ package com.ibm.btt.internetbanktestweb.fvt.pmr.p02698000852;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Window;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
-import com.ibm.btt.allwidgets.Button.Button_ECA;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.InternetBankTestWebMain_Class;
-import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.util.Tools;
 
 //PMR 02698.000.852
-public class NumberConversionInVietnamese {
+public class NumberConversionInVietnamese extends PMR02698000852_MainClass{
 	private static PMR02698000852_PageObject drv;
 	private static StringBuffer verificationErrors = new StringBuffer();
-	public static WebDriver driver;
-	Actions event = new Actions(driver);
 
 	@BeforeClass
 	public static void setUp() throws Exception {
-//		System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-//		driver = new FirefoxDriver();
-		FirefoxProfile profile = new FirefoxProfile();  
-		profile.setPreference("intl.accept_languages", "vi");  
-//		profile.setPreference("dom.disable_open_during_load", true);  
-		driver = new FirefoxDriver(profile);
 
-		Window window = driver.manage().window();
-		window.maximize();
-		deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get(InternetBankTestWebMain_Class.baseUrl);
-		
+		PMR02698000852_MainClass.setUp();
 		drv=PageFactory.initElements(driver, PMR02698000852_PageObject.class);
 //	    driver.navigate().to(Main_Class.baseUrl);
 	    drv.Establish();
@@ -106,7 +85,7 @@ public class NumberConversionInVietnamese {
 	@Test
 	public void SubmitData(){
 		drv.getSubmitButton().click();
-		InternetBankTestWebMain_Class.waitUntilLoadElement(20, "Text_submit_Result_link",driver);
+		AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "Text_submit_Result_link");
 
 	}
 	/*
@@ -163,10 +142,6 @@ public class NumberConversionInVietnamese {
 	
 	*/
 	
-	
-	public static void deleteAllCookies(){
-		driver.manage().deleteAllCookies();
-	}
 	
 	 @AfterClass
 	  public static void tearDown() throws Exception {
