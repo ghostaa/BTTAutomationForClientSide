@@ -13,7 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class SelectList_PageObject extends Main_Page{
@@ -120,12 +120,12 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 	
 	public int proShortcut(){//14. SelectList's shortcut is 'v'
-		Main_Class.keyPress(KeyEvent.VK_SHIFT);
-		Main_Class.keyPress(KeyEvent.VK_ALT);
-		Main_Class.keyPress(KeyEvent.VK_V);
-		Main_Class.keyRelease(KeyEvent.VK_SHIFT);
-		Main_Class.keyRelease(KeyEvent.VK_ALT);
-		Main_Class.keyRelease(KeyEvent.VK_V);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_V);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_V);
 		String[] temp={"dijitComboBoxFocused", "dijitFocused"};
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}
@@ -231,7 +231,7 @@ public class SelectList_PageObject extends Main_Page{
 	
 	public String evtOnKeyDown(){ //onKeyDown
 		event_onKeyDown.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_message.getText();
@@ -242,8 +242,8 @@ public class SelectList_PageObject extends Main_Page{
 	
 	public String evtOnKeypress(){ //onKeypress
 		event_onKeypress.click();
-		Main_Class.keyPress(KeyEvent.VK_1);
-		Main_Class.keyRelease(KeyEvent.VK_1);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_1);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_1);
 		return event_message.getText();
 	}
 	
@@ -252,7 +252,7 @@ public class SelectList_PageObject extends Main_Page{
 	
 	public String evtOnKeyUp(){ //onKeyUp
 		event_onKeyUp.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_message.getText();
@@ -278,7 +278,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement event_onMouseEnter; 
 
 	public String evtOnMouseEnter(){ //onMouseEnter
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("SelectList_event_selectList_onMouseEnter");
 		return event_message.getText();
 	}
@@ -287,7 +287,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement event_onMouseLeave; 
 
 	public String evtOnMouseLeave(){ //onMouseLeave
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("widget_SelectList_event_selectList_onMouseLeave");
 		main_class.widget_moveToElement("SelectList_event_label18");
 		return event_message.getText();
@@ -297,7 +297,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement event_onMouseMove; 
 	
 	public String evtOnMouseMove(){ //onMouseMove
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("widget_SelectList_event_selectList_onMouseMove");
 		return event_message.getText();
 	}

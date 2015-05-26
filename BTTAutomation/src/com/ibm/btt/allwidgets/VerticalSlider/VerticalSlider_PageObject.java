@@ -13,7 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class VerticalSlider_PageObject extends Main_Page{
@@ -150,7 +150,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement event_label2; 
 	
 	public String evtOnDbClick(){ //onDoubleClick
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.doubleClick("VerticalSlider_event_verticalSlider");
 		return event_label2.getText();
 	}
@@ -163,7 +163,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	
 	public String evtOnKeyDown(){ //onKeyDown
 		event_VerticalSliderV.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_label3.getText();
@@ -174,8 +174,8 @@ public class VerticalSlider_PageObject extends Main_Page{
 	
 	public String evtOnKeyPress(){ //onKeyPress
 		event_VerticalSliderV.click();
-		Main_Class.keyPress(KeyEvent.VK_0);
-		Main_Class.keyRelease(KeyEvent.VK_0);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_0);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_0);
 		return event_label4.getText();
 	}
 	
@@ -184,7 +184,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	
 	public String evtOnKeyUP(){ //onKeyUp
 		event_VerticalSliderV.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_label5.getText();
@@ -202,7 +202,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement event_label9;
 
 	public String evtOnMouseEnter(){ //onMouseEnter
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("VerticalSlider_event_verticalSlider");
 		return event_label9.getText();
 	}
@@ -211,7 +211,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement event_label10;
 
 	public String evtOnMouseLeave(){ //onMouseLeave
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("VerticalSlider_event_verticalSlider");
 		main_class.widget_moveToElement("VerticalSlider_event_label16");
 		return event_label10.getText();
@@ -221,7 +221,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement event_label11;
 	
 	public String evtOnMouseMove(){ //onMouseMove
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("VerticalSlider_event_verticalSlider");
 		return event_label11.getText();
 	}
@@ -230,7 +230,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement event_label12;
 	
 	public String evtOnMouseOut(){ //onMouseOut
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("VerticalSlider_event_verticalSlider");
 		return event_label12.getText();
 	}
@@ -239,7 +239,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement event_label13;
 	
 	public String evtOnMouseOver(){ //onMouseOver
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("VerticalSlider_event_verticalSlider");
 		return event_label13.getText();
 	}
@@ -288,7 +288,7 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement condition_label2;
 	
 	public String conDbClick(){//Doublie click the current widget 
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.doubleClick("VerticalSlider_condition_verticalSlider");
 		return condition_label2.getText();
 	}

@@ -13,7 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class Tree_PageObject extends Main_Page{
@@ -140,7 +140,7 @@ public class Tree_PageObject extends Main_Page{
 	
 	public String evtOnKeyDown(){ //onKeyDown
 		event_onKeyDown.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_label4.getText();
@@ -154,8 +154,8 @@ public class Tree_PageObject extends Main_Page{
 	
 	public String evtOnKeypress(){ //onKeypress
 		event_onKeypress.click();
-		Main_Class.keyPress(KeyEvent.VK_1);
-		Main_Class.keyRelease(KeyEvent.VK_1);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_1);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_1);
 		return event_label5.getText();
 	}
 	
@@ -167,7 +167,7 @@ public class Tree_PageObject extends Main_Page{
 	
 	public String evtOnKeyUp(){ //onKeyUp
 		event_onKeyUp.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_label6.getText();
@@ -202,7 +202,7 @@ public class Tree_PageObject extends Main_Page{
 	private WebElement event_label9;
 
 	public String evtOnMouseEnter(){ //onMouseEnter
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Tree_event_tree08");
 		return event_label9.getText();
 	}
@@ -214,7 +214,7 @@ public class Tree_PageObject extends Main_Page{
 	private WebElement event_label10;
 
 	public String evtOnMouseLeave(){ //onMouseLeave
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Tree_event_tree09");
 		main_class.widget_moveToElement("Tree_event_label09");
 		return event_label10.getText();
@@ -227,7 +227,7 @@ public class Tree_PageObject extends Main_Page{
 	private WebElement event_label11;
 	
 	public String evtOnMouseMove(){ //onMouseMove
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Tree_event_tree10");
 		return event_label11.getText();
 	}

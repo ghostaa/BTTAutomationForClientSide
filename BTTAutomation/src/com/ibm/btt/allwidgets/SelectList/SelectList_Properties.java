@@ -25,12 +25,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 import com.ibm.btt.util.Event;
 
-public class SelectList_Properties extends Main_Class {
+public class SelectList_Properties extends AllWidgetsProjectMain_Class {
 
 	private boolean acceptNextAlert = true;
 	private static StringBuffer verificationErrors = new StringBuffer();
@@ -39,19 +39,19 @@ public class SelectList_Properties extends Main_Class {
 	@BeforeClass
 	public static void setUp() throws Exception {
 		
-		Main_Class.setUp();
+		AllWidgetsProjectMain_Class.setUp();
 		drv = PageFactory.initElements(driver, SelectList_PageObject.class);
 		drv.Establish();
 		drv.BTT8200_tab();
 		drv.SelectList_widget();
 		drv.SelectList_properties();
-		Main_Class.waitUntilLoadElement(20, "widget_SelectList_properties_selectList_03");
+		AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "widget_SelectList_properties_selectList_03");
 
 	}
 	
 	@Test
 	public void proTab() throws InterruptedException{
-		Main_Class.widget_tabIndex();
+		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(2, drv.proTab());
 	}
 	
@@ -160,7 +160,7 @@ public class SelectList_Properties extends Main_Class {
 
 	@AfterClass
 	public static void tearDown() throws Exception {
-		Tools.snapshot((TakesScreenshot) driver, Main_Class.allwidgets,SelectList_Properties.class);
+		Tools.snapshot((TakesScreenshot) driver, AllWidgetsProjectMain_Class.allwidgets,SelectList_Properties.class);
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {

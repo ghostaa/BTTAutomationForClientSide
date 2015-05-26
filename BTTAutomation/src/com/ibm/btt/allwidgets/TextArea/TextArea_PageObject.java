@@ -13,7 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class TextArea_PageObject extends Main_Page{
@@ -81,12 +81,12 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 	
 	public int proShortcut(){//9. shortcut:z
-		Main_Class.keyPress(KeyEvent.VK_SHIFT);
-		Main_Class.keyPress(KeyEvent.VK_ALT);
-		Main_Class.keyPress(KeyEvent.VK_Z);
-		Main_Class.keyRelease(KeyEvent.VK_SHIFT);
-		Main_Class.keyRelease(KeyEvent.VK_ALT);
-		Main_Class.keyRelease(KeyEvent.VK_Z);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_Z);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_Z);
 		String[] temp = {"dijitTextAreaFocused", "dijitFocused"};
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}
@@ -188,7 +188,7 @@ public class TextArea_PageObject extends Main_Page{
 	
 	public String evtOnKeyDown(){ //onKeyDown
 		event_onKeyDown.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_label4.getText();
@@ -202,7 +202,7 @@ public class TextArea_PageObject extends Main_Page{
 	
 	public String evtOnKeyPress(){ //onKeyPress
 		event_onKeyPress.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyPress(KeyEvent.VK_0);
 		main_class.keyRelease(KeyEvent.VK_0);
 		return event_label5.getText();
@@ -216,7 +216,7 @@ public class TextArea_PageObject extends Main_Page{
 	
 	public String evtOnKeyUp(){ //onKeyUp
 		event_onKeyUp.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_label6.getText();
@@ -251,7 +251,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement event_label9;
 
 	public String evtOnMouseEnter(){ //onMouseEnter
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("textArea_event_textArea08");
 		return event_label9.getText();
 	}
@@ -263,7 +263,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement event_label10;
 
 	public String evtOnMouseLeave(){ //onMouseLeave
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("textArea_event_textArea09");
 		main_class.widget_moveToElement("textArea_event_label22");
 		return event_label10.getText();
@@ -276,7 +276,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement event_label11;
 	
 	public String evtOnMouseMove(){ //onMouseMove
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("textArea_event_textArea10");
 		return event_label11.getText();
 	}
@@ -544,8 +544,8 @@ public class TextArea_PageObject extends Main_Page{
 	
 	public String actKeyDown(){//ActionGroup
 		action_keyDown.click();
-		(new Main_Class()).keyDown(Keys.SHIFT);
-		(new Main_Class()).keyUp(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyDown(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyUp(Keys.SHIFT);
 		return action_label1.getText();
 	}
 	
