@@ -25,12 +25,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 import com.ibm.btt.util.Event;
 
-public class Text_Properties extends Main_Class {
+public class Text_Properties extends AllWidgetsProjectMain_Class {
 	/*
 	 * private static WebDriver driver; private static String
 	 * baseUrl=PropertiesUtil.baseUrl;
@@ -46,24 +46,24 @@ public class Text_Properties extends Main_Class {
 		 * driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		 * driver.get(baseUrl);
 		 */
-		Main_Class.setUp();
+		AllWidgetsProjectMain_Class.setUp();
 		drv = PageFactory.initElements(driver, Text_PageObject.class);
 		drv.Establish();
 		drv.BTT8200_tab();
 		drv.Text_widget();
 		drv.Text_Properties();
-		Main_Class.waitUntilLoadElement(20, "Text_properties_text09");
+		AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "Text_properties_text09");
 
 	}
 	
 	@Test
 	public void Text_tabIndex() {
-		Main_Class.widget_tabIndex();
-		assertEquals(true, Main_Class.widget_isFocus("Text_properties_text09"));
-		Main_Class.widget_tabIndex();
-		assertEquals(true, Main_Class.widget_isFocus("Text_properties_text11"));
-		Main_Class.widget_tabIndex();
-		assertEquals(true, Main_Class.widget_isFocus("Text_properties_text08"));
+		AllWidgetsProjectMain_Class.widget_tabIndex();
+		assertEquals(true, AllWidgetsProjectMain_Class.widget_isFocus("Text_properties_text09"));
+		AllWidgetsProjectMain_Class.widget_tabIndex();
+		assertEquals(true, AllWidgetsProjectMain_Class.widget_isFocus("Text_properties_text11"));
+		AllWidgetsProjectMain_Class.widget_tabIndex();
+		assertEquals(true, AllWidgetsProjectMain_Class.widget_isFocus("Text_properties_text08"));
 	}
 
 	@Test
@@ -152,7 +152,7 @@ public class Text_Properties extends Main_Class {
 
 	@AfterClass
 	public static void tearDown() throws Exception {
-		Tools.snapshot((TakesScreenshot) driver, Main_Class.allwidgets,Text_Properties.class);
+		Tools.snapshot((TakesScreenshot) driver, AllWidgetsProjectMain_Class.allwidgets,Text_Properties.class);
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {

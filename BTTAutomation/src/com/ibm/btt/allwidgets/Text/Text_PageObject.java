@@ -12,7 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class Text_PageObject extends Main_Page{
@@ -80,13 +80,13 @@ public class Text_PageObject extends Main_Page{
 	private WebElement Text_properties_shortcut;
 	
 	public Boolean Text_properties_shortcut(){
-		Main_Class.keyPress(KeyEvent.VK_SHIFT);
-		Main_Class.keyPress(KeyEvent.VK_ALT);
-		Main_Class.keyPress(KeyEvent.VK_C);
-		Main_Class.keyRelease(KeyEvent.VK_SHIFT);
-		Main_Class.keyRelease(KeyEvent.VK_ALT);
-		Main_Class.keyRelease(KeyEvent.VK_C);	
-		Boolean b = Main_Class.widget_isFocus("Text_properties_text08");
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_C);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_C);	
+		Boolean b = AllWidgetsProjectMain_Class.widget_isFocus("Text_properties_text08");
 		return b;
 	}
 
@@ -221,7 +221,7 @@ public class Text_PageObject extends Main_Page{
 	
 	public Boolean Text_event_keyDown(){
 		Text_event_keyDown.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		return Text_event_keyDown_label.isDisplayed();
 	}
@@ -234,8 +234,8 @@ public class Text_PageObject extends Main_Page{
 	
 	public Boolean Text_event_onKeyPress(){
 		Text_event_onKeyPress.click();
-		Main_Class.keyPress(KeyEvent.VK_C);
-		Main_Class.keyRelease(KeyEvent.VK_C);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_C);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_C);
 		return Text_event_onKeyPress_label.isDisplayed();
 	}
 	
@@ -247,7 +247,7 @@ public class Text_PageObject extends Main_Page{
 	
 	public Boolean Text_event_onKeyUp(){
 		Text_event_onKeyUp.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return Text_event_onKeyUp_label.isDisplayed();
@@ -282,7 +282,7 @@ public class Text_PageObject extends Main_Page{
 	private WebElement Text_event_onMouseEnter_label;
 	
 	public Boolean Text_event_onMouseEnter(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Text_event_text08");
 		return Text_event_onMouseEnter_label.isDisplayed();
 	}
@@ -294,7 +294,7 @@ public class Text_PageObject extends Main_Page{
 	private WebElement Text_event_onMouseLeave_label;
 	
 	public Boolean Text_event_onMouseLeave(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Text_event_text09");
 		main_class.widget_moveToElement("Text_event_text08");
 		return Text_event_onMouseLeave_label.isDisplayed();
@@ -307,7 +307,7 @@ public class Text_PageObject extends Main_Page{
 	private WebElement Text_event_onMouseMove_label;
 	
 	public Boolean Text_event_onMouseMove(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Text_event_text10");
 		return Text_event_onMouseMove_label.isDisplayed();
 	}
@@ -383,7 +383,7 @@ public class Text_PageObject extends Main_Page{
 	}
 	
 	public String Text_condition_getTooltip(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Text_condition_text03");
 		main_class.widget_moveToElement("Text_condition_text04");
 		return Text_condition_readonlyTrue_tooltip.getText();
@@ -430,7 +430,7 @@ public class Text_PageObject extends Main_Page{
 	private WebElement Text_Expression_label;
 	
 	public String Text_Expression_isMandatory_tooltip(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Text_condition_text06");
 		Text_Expression_isMandatory.click();
 		main_class.widget_moveToElement("Text_condition_label07");
@@ -517,7 +517,7 @@ public class Text_PageObject extends Main_Page{
 	
 	public Boolean Text_Action_focus(){
 		Text_Action_focus.click();
-		return Main_Class.widget_isFocus("Text_action_text");
+		return AllWidgetsProjectMain_Class.widget_isFocus("Text_action_text");
 	}
 	
 	@FindBy(id="Text_action_label18")
