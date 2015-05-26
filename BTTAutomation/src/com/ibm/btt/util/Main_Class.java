@@ -19,34 +19,27 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+import com.ibm.btt.common.broswercontroller.Broswer;
+import com.ibm.btt.common.drivercontroller.DriverController;
 import com.ibm.btt.util.*;
 
 public class Main_Class {
 	
 	public static WebDriver driver;
-	public static String allwidgets="allwidgets";
-	public static String baseUrl="http://localhost:8080/AllWidgetsProject/";
-//	public static String baseUrl="http://9.125.67.24:8080/AllWidgetsProject/";
-//	public static String baseUrl="http://9.186.117.118:8080/AllWidgetsProject";
+	public static Broswer broswer;
+	public static DriverController driverController;
 	private static Robot eventKey;
-	
+	public static FirefoxProfile profile = new FirefoxProfile();
 	Actions event = new Actions(driver);
 	
-	public static void setUp() throws Exception {
-
-//		System.setProperty("webdriver.firefox.bin", "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
-//		driver = new FirefoxDriver();
-		FirefoxProfile profile = new FirefoxProfile();  
+	public static void defaultSetup(){
+		//if your firefox is not installed in default path,please non-annotation.
+		//System.setProperty("webdriver.firefox.bin", "d:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+		//System.setProperty("webdriver.firefox.bin", "d:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+//		driverController = driverController.switchDriverController(Broswer.FF);
 		profile.setPreference("intl.accept_languages", "en-US");  
-		driver = new FirefoxDriver(profile);
-
-		Window window = driver.manage().window();
-		window.maximize();
-		deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get(baseUrl);
+//		profile.setPreference("dom.disable_open_during_load", true);  
 	}
-	
 	/*
 	 * Delete all cookies
 	 * Support: vndlmmli@cn.ibm.com
@@ -55,6 +48,7 @@ public class Main_Class {
 		driver.manage().deleteAllCookies();
 	}
 	
+
 	/*
 	 * Get current page url
 	 */
@@ -181,18 +175,16 @@ public class Main_Class {
 		}
 	
 	}
-		
-		public static void waitUntilLoadElement(long second,final String elementID){
-			(new WebDriverWait(driver, second)).until(new ExpectedCondition<WebElement>(){
+	public static void waitUntilLoadElement(long second,final String elementID){
+		(new WebDriverWait(driver, second)).until(new ExpectedCondition<WebElement>(){
 
-				public WebElement apply(WebDriver dr) {
+			public WebElement apply(WebDriver dr) {
 
-					return dr.findElement(By.id(elementID));
+				return dr.findElement(By.id(elementID));
 
-				}
+			}
 
-			});
-		}
-		
-		
+		});
+	}
+
 }
