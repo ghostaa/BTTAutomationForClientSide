@@ -12,7 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class Button_PageObject extends Main_Page{
@@ -101,12 +101,12 @@ public class Button_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 	
 	public int proShortcut(){//button shortcut is a
-		Main_Class.keyPress(KeyEvent.VK_SHIFT);
-		Main_Class.keyPress(KeyEvent.VK_ALT);
-		Main_Class.keyPress(KeyEvent.VK_A);
-		Main_Class.keyRelease(KeyEvent.VK_SHIFT);
-		Main_Class.keyRelease(KeyEvent.VK_ALT);
-		Main_Class.keyRelease(KeyEvent.VK_A);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_A);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_A);
 		String[] temp = {"dijitButtonFocused", "dijitFocused"};
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}
@@ -216,7 +216,7 @@ public class Button_PageObject extends Main_Page{
 	
 	public String ecaKeyDown(){//onKeyDown
 		eca_keyDown.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return eca_label4.getText();
@@ -230,8 +230,8 @@ public class Button_PageObject extends Main_Page{
 	
 	public String ecaOnKeyPress(){//onKeyPress
 		eca_onKeyPress.click();
-		Main_Class.keyPress(KeyEvent.VK_C);
-		Main_Class.keyRelease(KeyEvent.VK_C);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_C);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_C);
 		return eca_label5.getText();
 	}
 	
@@ -243,7 +243,7 @@ public class Button_PageObject extends Main_Page{
 	
 	public String ecaOnKeyUp(){//onKeyUp
 		eca_onKeyUp.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return eca_label6.getText();
@@ -275,7 +275,7 @@ public class Button_PageObject extends Main_Page{
 	private WebElement eca_label9;
 	
 	public String ecaOnMouseEnter(){//onMouseEnter
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("button_ECA_onMouseEnter");
 		return eca_label9.getText();
 	}
@@ -284,7 +284,7 @@ public class Button_PageObject extends Main_Page{
 	private WebElement eca_label10;
 	
 	public String ecaOnMouseLeave(){//onMouseLeave
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("button_ECA_onMouseLeave");
 		main_class.widget_moveToElement("button_ECA_onMouseLeave1");
 		return eca_label10.getText();
@@ -294,7 +294,7 @@ public class Button_PageObject extends Main_Page{
 	private WebElement eca_label11;
 	
 	public String ecaonMouseMove(){//onMouseMove
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("button_ECA_onMouseMove");
 		return eca_label11.getText();
 	}
@@ -457,8 +457,8 @@ public class Button_PageObject extends Main_Page{
 	public String ecaExponKeyup(){//onkeyup
 		eca_Exptext.click();
 		eca_onKeyup.click();
-		(new Main_Class()).keyDown(Keys.SHIFT);
-		(new Main_Class()).keyUp(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyDown(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyUp(Keys.SHIFT);
 		return eca_onKeyup.getAttribute("aria-disabled");
 	}
 //###############################Button ECA#########################################
