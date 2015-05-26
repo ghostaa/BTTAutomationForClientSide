@@ -25,12 +25,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 import com.ibm.btt.util.Event;
 
-public class HorizontalSlider_Properties extends Main_Class {
+public class HorizontalSlider_Properties extends AllWidgetsProjectMain_Class {
 
 	private boolean acceptNextAlert = true;
 	private static StringBuffer verificationErrors = new StringBuffer();
@@ -39,24 +39,24 @@ public class HorizontalSlider_Properties extends Main_Class {
 	@BeforeClass
 	public static void setUp() throws Exception {
 		
-		Main_Class.setUp();
+		AllWidgetsProjectMain_Class.setUp();
 		drv = PageFactory.initElements(driver, HorizontalSlider_PageObject.class);
 		drv.Establish();
 		drv.BTT8200_tab();
 		drv.HorizontalSlider_widget();
 		drv.HorizontalSlider_properties();
-		Main_Class.waitUntilLoadElement(20, "MultiSelect_properties_multiSelect");
+		AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "MultiSelect_properties_multiSelect");
 
 	}
 	
 	@Test
 	public void proTab() throws InterruptedException{
 	
-		Main_Class.widget_tabIndex();
+		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(2, drv.proTabIndex1());
-		Main_Class.widget_tabIndex();
+		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(2, drv.proTabIndex2Focus());
-		Main_Class.widget_tabIndex();
+		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(2, drv.proTabIndex3());
 	}
 	
@@ -122,7 +122,7 @@ public class HorizontalSlider_Properties extends Main_Class {
 	
 	@AfterClass
 	public static void tearDown() throws Exception {
-		Tools.snapshot((TakesScreenshot) driver, Main_Class.allwidgets,HorizontalSlider_Properties.class);
+		Tools.snapshot((TakesScreenshot) driver, AllWidgetsProjectMain_Class.allwidgets,HorizontalSlider_Properties.class);
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.Index_Page;
 import com.ibm.btt.allwidgets.Main_Page;
 
@@ -183,7 +183,7 @@ public class Label_PageObject extends Main_Page{
 	private WebElement Evt_onMouseLeave;
 
 	public String Evt_onMouseLeave(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("label_ECA_onMouseLeave");
 		main_class.widget_moveToElement("label_ECA_onMouseMove");
 		return Evt_onMouseLeave.getText();
@@ -193,7 +193,7 @@ public class Label_PageObject extends Main_Page{
 	private WebElement Evt_onMouseMove;
 
 	public String Evt_onMouseMove(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("label_ECA_onMouseMove");
 		return Evt_onMouseMove.getText();
 	}
@@ -202,7 +202,7 @@ public class Label_PageObject extends Main_Page{
 	private WebElement Evt_onMouseEnter;
 
 	public String Evt_onMouseEnter(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("label_ECA_onMouseEnter");
 		return Evt_onMouseEnter.getText();
 	}

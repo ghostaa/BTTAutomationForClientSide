@@ -13,7 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class HorizontalSlider_PageObject extends Main_Page{
@@ -80,12 +80,12 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 	
 	public int proShortcut(){//9. shortcut is 'c'(shift+alt+c)
-		Main_Class.keyPress(KeyEvent.VK_SHIFT);
-		Main_Class.keyPress(KeyEvent.VK_ALT);
-		Main_Class.keyPress(KeyEvent.VK_C);
-		Main_Class.keyRelease(KeyEvent.VK_SHIFT);
-		Main_Class.keyRelease(KeyEvent.VK_ALT);
-		Main_Class.keyRelease(KeyEvent.VK_C);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_C);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_C);
 		String[] temp = {"bttMultiSelectFocused", "dijitFocused"};
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}
@@ -178,7 +178,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	private WebElement event_label2; 
 	
 	public String evtOnDbClick(){ //onDoubleClick
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.doubleClick("HorizontalSlider_event_horizontalSlider01");
 		return event_label2.getText();
 	}
@@ -191,7 +191,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	
 	public String evtOnKeyDown(){ //onKeyDown
 		event_onKeyDown.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_label3.getText();
@@ -204,8 +204,8 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	
 	public String evtOnKeyPress(){ //onKeyPress
 		event_onKeyPress.click();
-		Main_Class.keyPress(KeyEvent.VK_0);
-		Main_Class.keyRelease(KeyEvent.VK_0);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_0);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_0);
 		return event_label4.getText();
 	}
 	
@@ -217,7 +217,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	
 	public String evtOnKeyUP(){ //onKeyUp
 		event_onKeyUp.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_label5.getText();
@@ -238,7 +238,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	private WebElement event_label7;
 
 	public String evtOnMouseEnter(){ //onMouseEnter
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("HorizontalSlider_event_horizontalSlider06");
 		return event_label7.getText();
 	}
@@ -247,7 +247,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	private WebElement event_label8;
 
 	public String evtOnMouseLeave1(){ //onMouseLeave
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("HorizontalSlider_event_horizontalSlider07");
 		main_class.widget_moveToElement("HorizontalSlider_event_label17");
 		return event_label8.getText();
@@ -257,7 +257,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	private WebElement event_label9;
 
 	public String evtOnMouseLeave2(){ //onMouseLeave
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("HorizontalSlider_event_horizontalSlider08");
 		main_class.widget_moveToElement("HorizontalSlider_event_label18");
 		return event_label9.getText();
@@ -267,7 +267,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	private WebElement event_label10;
 	
 	public String evtOnMouseMove(){ //onMouseMove
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("HorizontalSlider_event_horizontalSlider09");
 		return event_label10.getText();
 	}
@@ -288,7 +288,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	private WebElement event_label12;
 	
 	public String evtOnMouseOver(){ //onMouseOver
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("HorizontalSlider_event_horizontalSlider11");
 		return event_label12.getText();
 	}

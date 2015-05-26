@@ -20,13 +20,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ibm.btt.util.DateType;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.NLS;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 import com.ibm.btt.allwidgets.Text.Text_Condition;
 
-public class Label_Properties extends Main_Class{
+public class Label_Properties extends AllWidgetsProjectMain_Class{
   /*private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
@@ -40,7 +40,7 @@ public class Label_Properties extends Main_Class{
 	/*driver = new FirefoxDriver();
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	driver.get(baseUrl);*/
-	Main_Class.setUp();
+	AllWidgetsProjectMain_Class.setUp();
 	drv=PageFactory.initElements(driver, Label_PageObject.class);
 	drv.Establish();
     drv.BTT8200_tab();
@@ -151,7 +151,7 @@ public class Label_Properties extends Main_Class{
   
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Label_Properties.class);
+	Tools.snapshot((TakesScreenshot)driver, AllWidgetsProjectMain_Class.allwidgets,Label_Properties.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

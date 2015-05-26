@@ -13,10 +13,10 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.Tools;
 
-public class Image_Action extends Main_Class{
+public class Image_Action extends AllWidgetsProjectMain_Class{
  /* private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
@@ -29,7 +29,7 @@ public class Image_Action extends Main_Class{
     /*driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get(baseUrl);*/
-	Main_Class.setUp();
+	AllWidgetsProjectMain_Class.setUp();
     drv=PageFactory.initElements(driver, Image_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
@@ -49,7 +49,7 @@ public class Image_Action extends Main_Class{
   
   @Test
   public void Image_Action_location(){
-	  assertEquals(Main_Class.baseUrl + "img/Bomb1.jpg", drv.Image_Action_location());
+	  assertEquals(AllWidgetsProjectMain_Class.baseUrl + "img/Bomb1.jpg", drv.Image_Action_location());
   }
   
   @Test
@@ -85,7 +85,7 @@ public class Image_Action extends Main_Class{
  
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Image_Action.class);
+	Tools.snapshot((TakesScreenshot)driver, AllWidgetsProjectMain_Class.allwidgets,Image_Action.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

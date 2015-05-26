@@ -17,7 +17,7 @@ import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.allwidgets.Text.Text_Properties;
 import com.ibm.btt.util.*;
 
-public class Label_CSS extends Main_Class{
+public class Label_CSS extends AllWidgetsProjectMain_Class{
   /*private static WebDriver driver;
   private static String baseUrl = Main_Class.baseUrl;*/
   private boolean acceptNextAlert = true;
@@ -30,7 +30,7 @@ public class Label_CSS extends Main_Class{
     /*driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get(baseUrl);*/
-	Main_Class.setUp();
+	AllWidgetsProjectMain_Class.setUp();
     drv=PageFactory.initElements(driver, Label_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
@@ -60,7 +60,7 @@ public class Label_CSS extends Main_Class{
   
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Label_CSS.class);
+	Tools.snapshot((TakesScreenshot)driver, AllWidgetsProjectMain_Class.allwidgets,Label_CSS.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

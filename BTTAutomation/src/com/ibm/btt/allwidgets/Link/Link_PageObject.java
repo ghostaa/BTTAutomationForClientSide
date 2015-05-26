@@ -12,7 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class Link_PageObject extends Main_Page{
@@ -77,13 +77,13 @@ public class Link_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 
 	public String proShortcut(){//8. Shift+Alt+w. Start new pages.
-		Main_Class.keyPress(KeyEvent.VK_SHIFT);
-		Main_Class.keyPress(KeyEvent.VK_ALT);
-		Main_Class.keyPress(KeyEvent.VK_W);
-		Main_Class.keyRelease(KeyEvent.VK_SHIFT);
-		Main_Class.keyRelease(KeyEvent.VK_ALT);
-		Main_Class.keyRelease(KeyEvent.VK_W);
-		return Main_Class.getCurrentURL();
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_W);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_W);
+		return AllWidgetsProjectMain_Class.getCurrentURL();
 	}
 	
 	@FindBy(id="Link_properties_link05")
@@ -92,7 +92,7 @@ public class Link_PageObject extends Main_Page{
 	public String pro_parent() throws InterruptedException{//9. sohu will be shown on the current page.
 		properties_parent.click();
 		Thread.sleep(2000);
-		return Main_Class.getCurrentURL();
+		return AllWidgetsProjectMain_Class.getCurrentURL();
 	}
 	
 	@FindBy(id="Link_properties_link05_copy")
@@ -101,7 +101,7 @@ public class Link_PageObject extends Main_Page{
 	public String pro_self() throws InterruptedException{//10. sohu will be shown on the current page.
 		properties_self.click();
 		Thread.sleep(2000);
-		return Main_Class.getCurrentURL();
+		return AllWidgetsProjectMain_Class.getCurrentURL();
 	}
 	
 	@FindBy(id="Link_properties_link05_copy01")
@@ -110,7 +110,7 @@ public class Link_PageObject extends Main_Page{
 	public String pro_blank() throws InterruptedException{//11. Click test page, and new blank page 
 		properties_blank.click();
 		Thread.sleep(2000);
-		return Main_Class.switchWindow();
+		return AllWidgetsProjectMain_Class.switchWindow();
 	}
 	
 	@FindBy(id="Link_properties_link06")
@@ -130,7 +130,7 @@ public class Link_PageObject extends Main_Page{
 	public String pro_top() throws InterruptedException{//13. sohu will be shown on the current page.
 		properties_top.click();
 		Thread.sleep(2000);
-		return Main_Class.getCurrentURL();
+		return AllWidgetsProjectMain_Class.getCurrentURL();
 	}
 	
 	@FindBy(id="Link_properties_link07")
@@ -148,7 +148,7 @@ public class Link_PageObject extends Main_Page{
 	}
 	
 	public Boolean pro_isfocused(){//Verify link isfocused
-		return Main_Class.widget_isFocus("Link_properties_link08");
+		return AllWidgetsProjectMain_Class.widget_isFocus("Link_properties_link08");
 	}
 	
 //###############################Link Properties##################################
@@ -228,7 +228,7 @@ public class Link_PageObject extends Main_Page{
 	
 	public Boolean evtOnKeyDown(){ //onKeyDown
 		event_onKeyDown.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_onKeyDownLabel.isDisplayed();
@@ -242,8 +242,8 @@ public class Link_PageObject extends Main_Page{
 	
 	public Boolean evtOnKeyPress(){ //onKeyPress
 		event_onKeyPress.click();;
-		Main_Class.keyPress(KeyEvent.VK_3);
-		Main_Class.keyRelease(KeyEvent.VK_3);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_3);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_3);
 		return event_onKeyPressLabel.isDisplayed();
 	}
 	
@@ -255,7 +255,7 @@ public class Link_PageObject extends Main_Page{
 	
 	public Boolean evtOnKeyUp(){ //onKeyUp
 		event_onKeyUp.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_onKeyUpLabel.isDisplayed();
@@ -290,7 +290,7 @@ public class Link_PageObject extends Main_Page{
 	private WebElement event_onMouseEnterLabel;
 	
 	public Boolean evtOnMouseEnter(){ //onMouseEnter
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Link_event_link08");
 		return event_onMouseEnterLabel.isDisplayed();
 	}
@@ -302,7 +302,7 @@ public class Link_PageObject extends Main_Page{
 	private WebElement event_onMouseLeaveLabel;
 	
 	public Boolean evtOnMouseLeave(){ //onMouseLeave
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Link_event_link09");
 		main_class.widget_moveToElement("Link_event_link08");
 		return event_onMouseLeaveLabel.isDisplayed();
@@ -315,7 +315,7 @@ public class Link_PageObject extends Main_Page{
 	private WebElement event_onMouseMoveLabel;
 	
 	public Boolean evtOnMouseMove(){ //onMouseMove
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Link_event_link10");
 		return event_onMouseMoveLabel.isDisplayed();
 	}
@@ -432,7 +432,7 @@ public class Link_PageObject extends Main_Page{
 	private WebElement condition_exptarget;
 	
 	public String conExpTarget(){//Link with condition--expression--widget property(target) 
-		return Main_Class.switchWindow();
+		return AllWidgetsProjectMain_Class.switchWindow();
 	}
 	
 	public Boolean conExpLabel(){
@@ -447,7 +447,7 @@ public class Link_PageObject extends Main_Page{
 	
 	public Boolean actFocus(){//Focus will be on "Link"
 		actionClick1.click();
-		return Main_Class.widget_isFocus("Link_action_link");
+		return AllWidgetsProjectMain_Class.widget_isFocus("Link_action_link");
 	}
 	
 	@FindBy(id="Link_action_label03")
@@ -518,7 +518,7 @@ public class Link_PageObject extends Main_Page{
 	public String actBlank(){//Link target is _blank
 		actionClick7.click();
 		action_LinkClick.click();
-		return Main_Class.switchWindow();
+		return AllWidgetsProjectMain_Class.switchWindow();
 	}
 	
 	@FindBy(id="Link_action_label14")

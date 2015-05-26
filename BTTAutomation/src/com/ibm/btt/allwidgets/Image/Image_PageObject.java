@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.allwidgets.Main_Page;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 
 public class Image_PageObject extends Main_Page{
 	
@@ -88,7 +88,7 @@ public class Image_PageObject extends Main_Page{
 		return Image_properties_tapIndex.getAttribute("tabindex");
 	}
 	public Boolean Image_properties_isfocus(){
-		return Main_Class.widget_isFocus("Image_properties_image05");
+		return AllWidgetsProjectMain_Class.widget_isFocus("Image_properties_image05");
 	}
 //###############################Image Properties##################################
 //###############################Image CSS#########################################
@@ -184,7 +184,7 @@ public class Image_PageObject extends Main_Page{
 	private WebElement Image_event_onMouseEnter_label;
 	
 	public String Image_event_onMouseEnter(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Image_event_image05");
 		return Image_event_onMouseEnter_label.getText();
 	}
@@ -196,7 +196,7 @@ public class Image_PageObject extends Main_Page{
 	private WebElement Image_event_onMouseLeave_label;
 	
 	public String Image_event_onMouseLeave(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Image_event_image06");
 		main_class.widget_moveToElement("Image_event_label20");
 		return Image_event_onMouseLeave_label.getText();
@@ -209,7 +209,7 @@ public class Image_PageObject extends Main_Page{
 	private WebElement Image_event_onMouseMove_label;
 	
 	public String Image_event_onMouseMove(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Image_event_image07");
 		return Image_event_onMouseMove_label.getText();
 	}
@@ -234,7 +234,7 @@ public class Image_PageObject extends Main_Page{
 	private WebElement Image_condition_disabledTrue_label;
 	
 	public String Image_condition_disabledTrue(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Image_condition_image02");
 		return Image_condition_disabledTrue_label.getAttribute("value");
 	}
@@ -246,7 +246,7 @@ public class Image_PageObject extends Main_Page{
 	private WebElement Image_condition_disabledFalse_label;
 	
 	public String Image_condition_disabledFalse(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Image_condition_image01");
 		return Image_condition_disabledFalse_label.getText();
 	}

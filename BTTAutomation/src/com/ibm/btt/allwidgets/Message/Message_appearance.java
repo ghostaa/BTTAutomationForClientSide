@@ -14,11 +14,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
-public class Message_appearance extends Main_Class{
+public class Message_appearance extends AllWidgetsProjectMain_Class{
 
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
@@ -28,7 +28,7 @@ public class Message_appearance extends Main_Class{
   @BeforeClass
   public static void setUp() throws Exception {
     
-	Main_Class.setUp();
+	AllWidgetsProjectMain_Class.setUp();
     drv=PageFactory.initElements(driver, Message_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
@@ -63,7 +63,7 @@ public class Message_appearance extends Main_Class{
   
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Message_appearance.class);
+	Tools.snapshot((TakesScreenshot)driver, AllWidgetsProjectMain_Class.allwidgets,Message_appearance.class);
 	driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

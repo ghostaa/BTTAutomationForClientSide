@@ -13,10 +13,10 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.Tools;
 
-public class Image_Properties extends Main_Class {
+public class Image_Properties extends AllWidgetsProjectMain_Class {
 	/*
 	 * private static WebDriver driver; private static String
 	 * baseUrl=PropertiesUtil.baseUrl;
@@ -32,7 +32,7 @@ public class Image_Properties extends Main_Class {
 		 * driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		 * driver.get(baseUrl);
 		 */
-		Main_Class.setUp();
+		AllWidgetsProjectMain_Class.setUp();
 		drv = PageFactory.initElements(driver, Image_PageObject.class);
 		drv.Establish();
 		drv.BTT8200_tab();
@@ -44,7 +44,7 @@ public class Image_Properties extends Main_Class {
 	
 	@Test
 	public void Image_tabIndex() {
-		Main_Class.widget_tabIndex();
+		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(true, drv.Image_properties_isfocus());
 	}
 
@@ -55,12 +55,12 @@ public class Image_Properties extends Main_Class {
 
 	@Test
 	public void Image_properties_dataNamefromImage_Data() {
-		assertEquals(Main_Class.baseUrl + "img/Bomb1.jpg", drv.Image_properties_dataNamefromImage_Data());
+		assertEquals(AllWidgetsProjectMain_Class.baseUrl + "img/Bomb1.jpg", drv.Image_properties_dataNamefromImage_Data());
 	}
 
 	@Test
 	public void Image_properties_Location() {
-		assertEquals(Main_Class.baseUrl + "img/Bomb1.jpg", drv.Image_properties_Location());
+		assertEquals(AllWidgetsProjectMain_Class.baseUrl + "img/Bomb1.jpg", drv.Image_properties_Location());
 	}
 
 	@Test
@@ -105,7 +105,7 @@ public class Image_Properties extends Main_Class {
 
 	@AfterClass
 	public static void tearDown() throws Exception {
-		Tools.snapshot((TakesScreenshot) driver, Main_Class.allwidgets,Image_Properties.class);
+		Tools.snapshot((TakesScreenshot) driver, AllWidgetsProjectMain_Class.allwidgets,Image_Properties.class);
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {
