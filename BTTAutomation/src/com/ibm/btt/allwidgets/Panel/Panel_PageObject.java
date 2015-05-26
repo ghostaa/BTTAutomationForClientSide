@@ -11,7 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.Index_Page;
 import com.ibm.btt.allwidgets.Main_Page;
 
@@ -36,8 +36,8 @@ public class Panel_PageObject extends Main_Page{
 
 	public String Evt_onKeyDown(){//1.Key down in the text, the label will change
 		Evt_onKeyDown.click();
-		(new Main_Class()).keyDown(Keys.SHIFT);
-		(new Main_Class()).keyUp(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyDown(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyUp(Keys.SHIFT);
 		return Evt_label1.getText();
 	}
 
@@ -49,8 +49,8 @@ public class Panel_PageObject extends Main_Page{
 
 	public String Evt_onKeyPress(){//2.Key press in the text, the label will change
 		Evt_onKeyPress.click();
-		Main_Class.keyPress(KeyEvent.VK_0);
-		Main_Class.keyRelease(KeyEvent.VK_0);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_0);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_0);
 		return Evt_label2.getText();
 	}
 
@@ -62,8 +62,8 @@ public class Panel_PageObject extends Main_Page{
 
 	public String Evt_onKeyUp(){//3.Key up in the text, the label will change
 		Evt_onKeyUp.click();
-		(new Main_Class()).keyDown(Keys.SHIFT);
-		(new Main_Class()).keyUp(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyDown(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyUp(Keys.SHIFT);
 		return Evt_label3.getText();
 	}
 
@@ -90,8 +90,8 @@ public class Panel_PageObject extends Main_Page{
 
 	public void Evt_onKeyDown1(){//4.Key down in the text, the button ,radio and label will change as the description
 		Evt_onKeyDown1.click();
-		(new Main_Class()).keyDown(Keys.SHIFT);
-		(new Main_Class()).keyUp(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyDown(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyUp(Keys.SHIFT);
 	}
 	
 	public int Evt_StyleCSS(){

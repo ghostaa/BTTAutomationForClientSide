@@ -14,11 +14,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
-public class Radio_submit extends Main_Class{
+public class Radio_submit extends AllWidgetsProjectMain_Class{
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private static Radio_PageObject drv;
@@ -27,13 +27,13 @@ public class Radio_submit extends Main_Class{
   @BeforeClass
   public static void setUp() throws Exception {
 
-	Main_Class.setUp();
+	AllWidgetsProjectMain_Class.setUp();
     drv=PageFactory.initElements(driver, Radio_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
     drv.Radio_widget();
     drv.Radio_submmit();
-    Main_Class.waitUntilLoadElement(20, "Radio_submit_radio13_copy");
+    AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "Radio_submit_radio13_copy");
   }
 
   @Test
@@ -54,7 +54,7 @@ public class Radio_submit extends Main_Class{
   @Test
   public void subResultString(){
 	  drv.submit();
-	  Main_Class.waitUntilLoadElement(20, "ShowRadio_result_radio13_copy");
+	  AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "ShowRadio_result_radio13_copy");
 	  assertEquals(true, drv.subResultString());
 	  assertEquals("String_Data2", drv.subResultText1());
   }
@@ -133,7 +133,7 @@ public class Radio_submit extends Main_Class{
 
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Radio_submit.class);
+	Tools.snapshot((TakesScreenshot)driver, AllWidgetsProjectMain_Class.allwidgets,Radio_submit.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

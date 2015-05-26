@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.*;
 
-public class Radio_CSS extends Main_Class{
+public class Radio_CSS extends AllWidgetsProjectMain_Class{
   /*private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
@@ -29,7 +29,7 @@ public class Radio_CSS extends Main_Class{
     /*driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get(baseUrl);*/
-	Main_Class.setUp();
+	AllWidgetsProjectMain_Class.setUp();
     drv=PageFactory.initElements(driver, Radio_PageObject.class);
     drv.Establish();
     drv.BTT8200_tab();
@@ -64,7 +64,7 @@ public class Radio_CSS extends Main_Class{
   
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,Radio_CSS.class);
+	Tools.snapshot((TakesScreenshot)driver, AllWidgetsProjectMain_Class.allwidgets,Radio_CSS.class);
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

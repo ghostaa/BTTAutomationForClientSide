@@ -13,7 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class RichText_PageObject extends Main_Page{
@@ -150,7 +150,7 @@ public class RichText_PageObject extends Main_Page{
 	
 	public int evtOnKeyDown(){ //onKeyDown
 		event_onKeyDown.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		String[] temp ={"visibility: hidden"};
@@ -165,7 +165,7 @@ public class RichText_PageObject extends Main_Page{
 	
 	public int evtOnKeyPress(){ //onKeyPress
 		event_onKeyPress.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyPress(KeyEvent.VK_0);
 		main_class.keyRelease(KeyEvent.VK_0);
 		String[] temp ={"visibility: hidden"};
@@ -180,7 +180,7 @@ public class RichText_PageObject extends Main_Page{
 	
 	public int evtOnKeyUp(){ //onKeyUp
 		event_onKeyUp.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		String[] temp ={"visibility: hidden"};
@@ -194,7 +194,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement event_display7;
 
 	public int evtOnMouseEnter(){ //onMouseEnter
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("RichText_Event_RichText_onMouseEnter");
 		String[] temp ={"visibility: hidden"};
 		return Appearance.appearance_query(event_display7.getAttribute("style"), temp);
@@ -207,7 +207,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement event_display8;
 
 	public int evtOnMouseLeave(){ //onMouseLeave
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("RichText_Event_RichText_onMouseLeave");
 		main_class.widget_moveToElement("RichText_Event_RichText_visibility_06");
 		String[] temp ={"visibility: hidden"};
@@ -221,7 +221,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement event_display9;
 	
 	public int evtOnMouseMove(){ //onMouseMove
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("RichText_Event_RichText_onMouseMove");
 		main_class.widget_moveToElement("RichText_Event_RichText_onChange");
 		String[] temp ={"visibility: hidden"};
@@ -239,8 +239,8 @@ public class RichText_PageObject extends Main_Page{
 	
 	public int evtOnChange(){ //onChange
 		event_onChange.click();
-		Main_Class.keyPress(KeyEvent.VK_0);
-		Main_Class.keyRelease(KeyEvent.VK_0);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_0);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_0);
 		event_label10.click();
 		String[] temp ={"visibility: hidden"};
 		return Appearance.appearance_query(event_display10.getAttribute("style"), temp);
@@ -267,7 +267,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement condition_label2;
 	
 	public String conDisabled(){//Widget Property-disabled
-		(new Main_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect01");
+		(new AllWidgetsProjectMain_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect01");
 		return condition_label2.getText();
 	}
 	
@@ -278,7 +278,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement condition_label3;
 	
 	public String conReadonly(){//Widget Property-readOnly
-		(new Main_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect01_copy");
+		(new AllWidgetsProjectMain_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect01_copy");
 		return condition_label3.getText();
 	}
 
@@ -319,7 +319,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement condition_label7;
 	
 	public String conVisible(){//Widget Expression Condition: visibility=visible
-		(new Main_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect04");
+		(new AllWidgetsProjectMain_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect04");
 		return condition_label7.getText();
 	}
 	
