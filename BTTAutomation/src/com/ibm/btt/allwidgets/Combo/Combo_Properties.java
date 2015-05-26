@@ -25,12 +25,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 import com.ibm.btt.util.Event;
 
-public class Combo_Properties extends Main_Class {
+public class Combo_Properties extends AllWidgetsProjectMain_Class {
 
 	private boolean acceptNextAlert = true;
 	private static StringBuffer verificationErrors = new StringBuffer();
@@ -39,28 +39,28 @@ public class Combo_Properties extends Main_Class {
 	@BeforeClass
 	public static void setUp() throws Exception {
 		
-		Main_Class.setUp();
+		AllWidgetsProjectMain_Class.setUp();
 		drv = PageFactory.initElements(driver, Combo_PageObject.class);
 		drv.Establish();
 		drv.BTT8200_tab();
 		drv.Combo_widget();
 		drv.Combo_properties();
-		Main_Class.waitUntilLoadElement(20, "widget_combo_properties_combo01");
+		AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "widget_combo_properties_combo01");
 
 	}
 	
 	@Test
 	public void proTab() throws InterruptedException{
 		
-		Main_Class.widget_tabIndex();
+		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(2, drv.properties_tabIndex1());
-		Main_Class.widget_tabIndex();
+		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(2, drv.properties_tabIndex4());
-		Main_Class.widget_tabIndex();
+		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(2, drv.properties_tabIndex5());
-		Main_Class.widget_tabIndex();
+		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(2, drv.properties_tabIndex6());
-		Main_Class.widget_tabIndex();
+		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(2, drv.properties_tabIndex7());
 	}
 	
@@ -131,7 +131,7 @@ public class Combo_Properties extends Main_Class {
 
 	@AfterClass
 	public static void tearDown() throws Exception {
-		Tools.snapshot((TakesScreenshot) driver, Main_Class.allwidgets,Combo_Properties.class);
+		Tools.snapshot((TakesScreenshot) driver, AllWidgetsProjectMain_Class.allwidgets,Combo_Properties.class);
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {

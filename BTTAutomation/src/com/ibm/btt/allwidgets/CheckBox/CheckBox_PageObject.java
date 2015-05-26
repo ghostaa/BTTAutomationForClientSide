@@ -13,7 +13,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.DateType;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class CheckBox_PageObject extends Main_Page{
@@ -103,12 +103,12 @@ public class CheckBox_PageObject extends Main_Page{
 	private WebElement CheckBox_properties_shortcut;
 	
 	public String CheckBox_properties_shortcut(){
-		Main_Class.keyPress(KeyEvent.VK_SHIFT);
-		Main_Class.keyPress(KeyEvent.VK_ALT);
-		Main_Class.keyPress(KeyEvent.VK_C);
-		Main_Class.keyRelease(KeyEvent.VK_SHIFT);
-		Main_Class.keyRelease(KeyEvent.VK_ALT);
-		Main_Class.keyRelease(KeyEvent.VK_C);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_C);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_C);
         return CheckBox_properties_shortcut.getAttribute("aria-checked");
 	}
 
@@ -231,7 +231,7 @@ public class CheckBox_PageObject extends Main_Page{
 	
 	public String CheckBox_Event_checkBox_event_onKeyDown(){
 		CheckBox_Event_checkBox_event_onKeyDown.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return CheckBox_Event_checkBox_event_onKeyDown_label.getText();
@@ -245,8 +245,8 @@ public class CheckBox_PageObject extends Main_Page{
 	
 	public String CheckBox_Event_checkBox_event_onKeyPress(){
 		CheckBox_Event_checkBox_event_onKeyPress.click();
-		Main_Class.keyPress(KeyEvent.VK_6);
-		Main_Class.keyRelease(KeyEvent.VK_6);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_6);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_6);
 		return CheckBox_Event_checkBox_event_onKeyPress_label.getText();
 	}
 	
@@ -258,7 +258,7 @@ public class CheckBox_PageObject extends Main_Page{
 	
 	public String CheckBox_Event_checkBox_event_onKeyUp(){
 		CheckBox_Event_checkBox_event_onKeyUp.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return CheckBox_Event_checkBox_event_onKeyUp_label.getText();
@@ -293,7 +293,7 @@ public class CheckBox_PageObject extends Main_Page{
 	private WebElement CheckBox_Event_checkBox_event_onMouseEnter_label;
 	
 	public String CheckBox_Event_checkBox_event_onMouseEnter(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("CheckBox_Event_checkBox_event_onMouseEnter");
 		return CheckBox_Event_checkBox_event_onMouseEnter_label.getText();
 	}
@@ -305,7 +305,7 @@ public class CheckBox_PageObject extends Main_Page{
 	private WebElement CheckBox_Event_checkBox_event_onMouseLeave_label;
 	
 	public String CheckBox_Event_checkBox_event_onMouseLeave(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("CheckBox_Event_checkBox_event_onMouseLeave");
 		main_class.widget_moveToElement("CheckBox_Event_checkBox_event_onMouseEnter");
 		return CheckBox_Event_checkBox_event_onMouseLeave_label.getText();
@@ -318,7 +318,7 @@ public class CheckBox_PageObject extends Main_Page{
 	private WebElement CheckBox_Event_checkBox_event_onMouseMove_label;
 	
 	public String CheckBox_Event_checkBox_event_onMouseMove(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("CheckBox_Event_checkBox_event_onMouseMove");
 		return CheckBox_Event_checkBox_event_onMouseMove_label.getText();
 	}
@@ -356,7 +356,7 @@ public class CheckBox_PageObject extends Main_Page{
 	private WebElement CheckBox_Condtion_CheckBox_isChecked;
 	
 	public String CheckBox_Condtion_CheckBox_isChecked(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.doubleClick("CheckBox_Condtion_CheckBox_onKeyDown");
 		return CheckBox_Condtion_CheckBox_isChecked.getText();
 	}

@@ -14,7 +14,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.DateType;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class Combo_PageObject extends Main_Page{
@@ -90,12 +90,12 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 	
 	public int proShortcut(){//9. SelectList's shortcut is 'w'
-		Main_Class.keyPress(KeyEvent.VK_SHIFT);
-		Main_Class.keyPress(KeyEvent.VK_ALT);
-		Main_Class.keyPress(KeyEvent.VK_W);
-		Main_Class.keyRelease(KeyEvent.VK_SHIFT);
-		Main_Class.keyRelease(KeyEvent.VK_ALT);
-		Main_Class.keyRelease(KeyEvent.VK_W);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_W);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_W);
 		String[] temp={"dijitComboBoxFocused", "dijitFocused"};
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}
@@ -241,7 +241,7 @@ public class Combo_PageObject extends Main_Page{
 	
 	public Boolean evtOnKeyDown(){ //onKeyDown
 		event_onKeyDown.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_Button.isEnabled();
@@ -255,8 +255,8 @@ public class Combo_PageObject extends Main_Page{
 	
 	public Boolean evtOnKeypress(){ //onKeypress
 		event_onKeypress.click();
-		Main_Class.keyPress(KeyEvent.VK_1);
-		Main_Class.keyRelease(KeyEvent.VK_1);
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_1);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_1);
 		return event_Button01.isEnabled();
 	}
 	
@@ -268,7 +268,7 @@ public class Combo_PageObject extends Main_Page{
 	
 	public Boolean evtOnKeyUp(){ //onKeyUp
 		event_onKeyUp.click();
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_Button02.isEnabled();
@@ -303,7 +303,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement event_checkBox02;
 
 	public Boolean evtOnMouseEnter(){ //onMouseEnter
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("widget_combo_event_combo08");
 		return event_checkBox02.isSelected();
 	}
@@ -315,7 +315,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement event_Radio01;
 
 	public Boolean evtOnMouseLeave(){ //onMouseLeave
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("widget_combo_event_combo09");
 		main_class.widget_moveToElement("combo_event_radio01");
 		return event_Radio01.isSelected();
@@ -328,7 +328,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement event_Radio02;
 	
 	public Boolean evtOnMouseMove(){ //onMouseMove
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("widget_combo_event_combo10");
 		return event_Radio02.isSelected();
 	}
@@ -383,8 +383,8 @@ public class Combo_PageObject extends Main_Page{
 	
 	public String conDisable(){//3. Widget Property = disabled
 		condition_disable.click();
-		(new Main_Class()).keyDown(Keys.SHIFT);
-		(new Main_Class()).keyUp(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyDown(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyUp(Keys.SHIFT);
 		return condition_nlsShow.getText();
 	}
 	
@@ -399,7 +399,7 @@ public class Combo_PageObject extends Main_Page{
 	}
 	
 	public String conGetTooltip(){
-		Main_Class main_class = new Main_Class();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("combo_condition_combo03");
 		main_class.widget_moveToElement("combo_condition_combo02");
 		return conTooltip.getText();
@@ -615,7 +615,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement action_hint;
 	
 	public String actHint(){//Set Widget Property : hint
-		(new Main_Class()).widget_moveToElement("combo_action_combo09");
+		(new AllWidgetsProjectMain_Class()).widget_moveToElement("combo_action_combo09");
 		return action_hint.getAttribute("title");
 	}
 	

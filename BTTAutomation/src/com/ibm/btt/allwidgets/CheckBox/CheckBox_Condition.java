@@ -15,11 +15,11 @@ import org.openqa.selenium.support.ui.Select;
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.allwidgets.Message.Message_Action;
 import com.ibm.btt.util.Event;
-import com.ibm.btt.util.Main_Class;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
-public class CheckBox_Condition extends Main_Class{
+public class CheckBox_Condition extends AllWidgetsProjectMain_Class{
  /* private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
@@ -32,7 +32,7 @@ public class CheckBox_Condition extends Main_Class{
     /*driver = new FirefoxDriver();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get(baseUrl);*/
-	Main_Class.setUp();
+	AllWidgetsProjectMain_Class.setUp();
     drv=PageFactory.initElements(driver, CheckBox_PageObject.class);
 //    driver.navigate().to(Main_Class.baseUrl);
     drv.Establish();
@@ -100,7 +100,7 @@ public class CheckBox_Condition extends Main_Class{
 
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, Main_Class.allwidgets,CheckBox_Condition.class);
+	Tools.snapshot((TakesScreenshot)driver, AllWidgetsProjectMain_Class.allwidgets,CheckBox_Condition.class);
 	driver.quit();
 //	driver.navigate().refresh();
     String verificationErrorString = verificationErrors.toString();
