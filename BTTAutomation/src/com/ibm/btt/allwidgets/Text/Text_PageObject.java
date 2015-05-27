@@ -748,6 +748,188 @@ public class Text_PageObject extends Main_Page{
 		return Appearance.appearance_query(Appearance2_11.getAttribute("style"), temp);
 	}
 //###############################Text Appearance2###############################
+//###############################Text Submit####################################
+	@FindBy(id="Text_submit_text")
+	private WebElement subString;
+	
+	@FindBy(id="Text_submit_text01")
+	private WebElement subDate;
+	
+	@FindBy(id="Text_submit_text02")
+	private WebElement subCurrency;
+	
+	@FindBy(id="Text_submit_text03")
+	private WebElement subNumber;
+	
+	@FindBy(id="Text_submit_text06")
+	private WebElement subXMLGregorianCalendar;
+	
+	@FindBy(id="Text_submit_text07")
+	private WebElement subByte;
+	
+	@FindBy(id="Text_submit_text08")
+	private WebElement subShort;
+	
+	@FindBy(id="Text_submit_text09")
+	private WebElement subInteger;
+	
+	@FindBy(id="Text_submit_text10")
+	private WebElement subLong;
+	
+	@FindBy(id="Text_submit_text11")
+	private WebElement subFloat;
+	
+	@FindBy(id="Text_submit_text12")
+	private WebElement subDouble;
+	
+	@FindBy(id="Text_submit_text13")
+	private WebElement subBigInteger;
+	
+	@FindBy(id="Text_submit_text14")
+	private WebElement subDecimal;
+	
+	@FindBy(id="Text_submit_text15")
+	private WebElement subIsMandatoryT;
+	
+	@FindBy(id="Text_submit_text16")
+	private WebElement subIsMandatoryF;
+	
+	@FindBy(id="Text_submit_button")
+	private WebElement subButton;
+	
+	public String subButton(){
+		return subButton.getAttribute("aria-disabled");
+	}
+	
+	public String subData(){
+		subString.sendKeys("aaa");
+		subDate.sendKeys("2015-05-21");
+		subCurrency.sendKeys("$213.05");
+		subNumber.sendKeys("123");
+		subXMLGregorianCalendar.sendKeys("2015-05-26");
+		subByte.sendKeys("12");
+		subShort.sendKeys("23");
+		subInteger.sendKeys("123");
+		subLong.sendKeys("123");
+		subFloat.sendKeys("21.45");
+		subDouble.sendKeys("23.456");
+		subBigInteger.sendKeys("234");
+		subDecimal.sendKeys("334.563");
+		subIsMandatoryT.sendKeys("123");
+		subIsMandatoryF.sendKeys("");
+		return subButton.getAttribute("aria-disabled");
+	}
+	
+	public void ButtonClick(){
+		subButton.click();
+	}
+	
+//result page	
+	@FindBy(id="Text_submit_Result_text")
+	private WebElement subResultString;
+	
+	@FindBy(id="Text_submit_Result_text01")
+	private WebElement subResultDate;
+	
+	@FindBy(id="Text_submit_Result_text02")
+	private WebElement subResultCurrency;
+	
+	@FindBy(id="Text_submit_Result_text03")
+	private WebElement subResultNumber;
+	
+	@FindBy(id="Text_submit_Result_text06")
+	private WebElement subResultXMLGregorianCalendar;
+	
+	@FindBy(id="Text_submit_Result_text07")
+	private WebElement subResultByte;
+	
+	@FindBy(id="Text_submit_Result_text08")
+	private WebElement subResultShort;
+	
+	@FindBy(id="Text_submit_Result_text09")
+	private WebElement subResultInteger;
+	
+	@FindBy(id="Text_submit_Result_text10")
+	private WebElement subResultLong;
+	
+	@FindBy(id="Text_submit_Result_text11")
+	private WebElement subResultFloat;
+	
+	@FindBy(id="Text_submit_Result_text12")
+	private WebElement subResultDouble;
+	
+	@FindBy(id="Text_submit_Result_text13")
+	private WebElement subResultBigInteger;
+	
+	@FindBy(id="Text_submit_Result_text14")
+	private WebElement subResultBigDecimal;
+	
+	@FindBy(id="Text_submit_Result_text15")
+	private WebElement subResultIsMandatoryT;
+	
+	@FindBy(id="Text_submit_Result_text16")
+	private WebElement subResultIsMandatoryF;
+	
+	public String subResultString(){
+		return subResultString.getAttribute("value");
+	}
+	
+	public String subResultDate(){
+		return subResultDate.getAttribute("value");
+	}
+	
+	public String subResultCurrency(){
+		return subResultCurrency.getAttribute("value");
+	}
+	
+	public String subResultNumber(){
+		return subResultNumber.getAttribute("value");
+	}
+	
+	public String subResultXMLGregorianCalendar(){
+		return subResultXMLGregorianCalendar.getAttribute("value");
+	}
+	
+	public String subResultByte(){
+		return subResultByte.getAttribute("value");
+	}
+	
+	public String subResultShort(){
+		return subResultShort.getAttribute("value");
+	}
+	
+	public String subResultInteger(){
+		return subResultInteger.getAttribute("value");
+	}
+	
+	public String subResultLong(){
+		return subResultLong.getAttribute("value");
+	}
+	
+	public String subResultFloat(){
+		return subResultFloat.getAttribute("value");
+	}
+	
+	public String subResultDouble(){
+		return subResultDouble.getAttribute("value");
+	}
+	
+	public String subResultBigInteger(){
+		return subResultBigInteger.getAttribute("value");
+	}
+	
+	public String subResultBigDecimal(){
+		return subResultBigDecimal.getAttribute("value");
+	}
+	
+	public String subResultIsMandatoryT(){
+		return subResultIsMandatoryT.getAttribute("value");
+	}
+	
+	public String subResultIsMandatoryF(){
+		return subResultIsMandatoryF.getAttribute("value");
+	}
+//###############################Text Submit####################################
 
 
 }

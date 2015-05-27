@@ -11,6 +11,7 @@ import org.junit.runners.Suite;
 	Text_CSS.class,
 	Text_appearance1.class,
 	Text_appearance2.class,
+	Text_submit.class,
 	
 }) 
 public class TextSuite {
