@@ -7,6 +7,7 @@ import com.ibm.btt.allwidgets.Main_Page;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 
 public class Image_PageObject extends Main_Page{
 	
@@ -42,17 +43,19 @@ public class Image_PageObject extends Main_Page{
 	@FindBy(id="Image_properties_image02")
 	private WebElement Image_properties_hidden;
 	
-	public Boolean Image_properties_hidden(){
-		return Image_properties_hidden.isDisplayed();
+	public int Image_properties_hidden(){
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(Image_properties_hidden.getAttribute("style"), temp);
 	}
 	
 	@FindBy(id="Image_properties_image01")
 	private WebElement Image_properties_gone;
 	
-	public String Image_properties_gone(){
-		return Image_properties_gone.getAttribute("style");
+	public int Image_properties_gone(){
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(Image_properties_gone.getAttribute("style"), temp);
 	}
-	
+//html not support image disabled properties	
 	@FindBy(id="Image_properties_image")
 	private WebElement Image_properties_disableTrue;
 	
@@ -65,6 +68,49 @@ public class Image_PageObject extends Main_Page{
 	
 	public String Image_properties_disableFalse(){
 		return Image_properties_disableFalse.getAttribute("disabled");
+	}
+	
+	@FindBy(id="Image_properties_image06")
+	private WebElement propertiesTargetBlank;//target = _blank
+	
+	@FindBy(id="index_link13")
+	private WebElement propertiesTargetPage;
+	
+	public String proTargetBlank(){
+		propertiesTargetBlank.click();
+		return AllWidgetsProjectMain_Class.switchWindow();
+	}
+	
+	@FindBy(id="Image_properties_image08")
+	private WebElement propertiesTargetSelf;//target = _self
+	
+	public String propertiesTargetSelf(){
+		propertiesTargetSelf.click();
+		return propertiesTargetPage.getText();
+	}
+	
+	@FindBy(id="Image_properties_image09")
+	private WebElement propertiesTargetParent;//target = _parent
+	
+	public String propertiesTargetParent(){
+		propertiesTargetParent.click();
+		return propertiesTargetPage.getText();
+	}
+	
+	@FindBy(id="Image_properties_image10")
+	private WebElement propertiesTargetTop;//target = _top
+	
+	public String propertiesTargetTop(){
+		propertiesTargetTop.click();
+		return propertiesTargetPage.getText();
+	}
+	
+	@FindBy(id="Image_properties_image07")
+	private WebElement propertiesPageName;//extraparams : pageName = Image_css.jsp
+	
+	public Boolean propertiesPageName(){
+		propertiesPageName.click();
+		return ((Main_Class.getCurrentURL()).indexOf("Image_css.jsp") > -1);
 	}
 	
 	@FindBy(id="Image_properties_image03")
@@ -409,14 +455,27 @@ public class Image_PageObject extends Main_Page{
 		return Image_Action_disabled_text.getAttribute("value");
 	}
 	
-	/*@FindBy(id="Image_action_image04")
-	private WebElement Image_Action_target;
+	@FindBy(id="Image_action_image04")
+	private WebElement action_target;
 	
 	@FindBy(id="Image_action_text05")
-	private WebElement Image_Action_target_text;
+	private WebElement action_targetText;
 	
-	public Boolean Image_Action_target(){
-	}*/
+	public Boolean actTarget(){
+		action_target.click();
+		return AllWidgetsProjectMain_Class.getCurrentURL().indexOf("index.jsp")>-1;
+	}
+	
+	public String actTargetText(){
+		action_targetText.click();
+		return action_targetText.getAttribute("value");
+	}
+	
+	public Boolean actTargetImage(){
+		action_target.click();
+		AllWidgetsProjectMain_Class.switchWindow();
+		return AllWidgetsProjectMain_Class.getCurrentURL().indexOf("index.jsp")>-1;
+	}
 	
 	@FindBy(id="Image_action_image06")
 	private WebElement Image_Action_alt;

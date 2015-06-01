@@ -62,10 +62,27 @@ public class Image_Action extends AllWidgetsProjectMain_Class{
 	  assertEquals("image is disabled", drv.Image_Action_disabled());
   }
   
-/*  @Test
-  public void Image_Action_target(){
-	  assertEquals(false, drv.Text_Action_hidden());
-  }*/
+  @Test
+  public void actTarget(){
+	  assertEquals(true, drv.actTarget());
+	  driver.navigate().to(AllWidgetsProjectMain_Class.baseUrl);
+	  drv.Establish();
+	  drv.BTT8200_tab();
+	  drv.image_widget();
+	  drv.Image_action();
+  }
+  
+  @Test
+  public void actTargetText(){
+	  assertEquals("test target", drv.actTargetText());
+  }
+  
+  @Test
+  public void actTargetImage() throws Exception{
+	  assertEquals(true, drv.actTargetImage());
+	  driver.close();
+	  Image_Action.setUp();
+  }
   
   @Test
   public void Image_Action_alt(){

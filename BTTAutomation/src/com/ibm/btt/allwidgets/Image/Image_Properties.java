@@ -5,6 +5,7 @@ import static org.junit.Assert.fail;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -70,22 +71,69 @@ public class Image_Properties extends AllWidgetsProjectMain_Class {
 
 	@Test
 	public void Image_properties_hidden() {
-		assertEquals(false, drv.Image_properties_hidden());
+		assertEquals(1, drv.Image_properties_hidden());
 	}
 
 	@Test
 	public void Image_properties_gone() {
-		assertEquals("display: none; visibility: inherit;", drv.Image_properties_gone());
+		assertEquals(1, drv.Image_properties_gone());
 	}
 
-	@Test
+	@Ignore
 	public void Text_properties_disableTrue() {
 		assertEquals(null, drv.Image_properties_disableTrue());
 	}
 
-	@Test
+	@Ignore
 	public void Image_properties_disableFalse() {
 		assertEquals(null, drv.Image_properties_disableFalse());
+	}
+	
+	@Test
+	public void proTargetBlank() throws Exception {
+		assertEquals("about:blank", drv.proTargetBlank());
+		driver.close();
+		Image_Properties.setUp();
+	}
+	
+	@Test
+	public void propertiesTargetSelf() {
+		assertEquals("English", drv.propertiesTargetSelf());
+		driver.navigate().to(AllWidgetsProjectMain_Class.baseUrl);
+		drv.Establish();
+		drv.BTT8200_tab();
+		drv.image_widget();
+		drv.Image_properties();
+	}
+	
+	@Test
+	public void propertiesTargetParent() {
+		assertEquals("English", drv.propertiesTargetParent());
+		driver.navigate().to(AllWidgetsProjectMain_Class.baseUrl);
+		drv.Establish();
+		drv.BTT8200_tab();
+		drv.image_widget();
+		drv.Image_properties();
+	}
+	
+	@Test
+	public void propertiesTargetTop() {
+		assertEquals("English", drv.propertiesTargetTop());
+		driver.navigate().to(AllWidgetsProjectMain_Class.baseUrl);
+		drv.Establish();
+		drv.BTT8200_tab();
+		drv.image_widget();
+		drv.Image_properties();
+	}
+	
+	@Test
+	public void propertiesPageName() {
+		assertEquals(true, drv.propertiesPageName());
+		driver.navigate().to(AllWidgetsProjectMain_Class.baseUrl);
+		drv.Establish();
+		drv.BTT8200_tab();
+		drv.image_widget();
+		drv.Image_properties();
 	}
 
 	@Test
