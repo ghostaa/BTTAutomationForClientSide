@@ -109,7 +109,6 @@ public class Link_PageObject extends Main_Page{
 	
 	public String pro_blank() throws InterruptedException{//11. Click test page, and new blank page 
 		properties_blank.click();
-		Thread.sleep(2000);
 		return AllWidgetsProjectMain_Class.switchWindow();
 	}
 	
