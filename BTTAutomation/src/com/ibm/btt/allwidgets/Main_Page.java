@@ -106,6 +106,9 @@ public class Main_Page extends Index_Page{
 	@FindBy(id="Text_main_link04")
 	private WebElement Text_appearance2;
 	
+	@FindBy(id="Text_main_link07")
+	private WebElement Text_submit;
+	
 	public void Text_Properties(){
 		Text_Properties.click();
 	}
@@ -132,6 +135,10 @@ public class Main_Page extends Index_Page{
 	
 	public void Text_appearance2(){
 		Text_appearance2.click();
+	}
+	
+	public void Text_submit(){
+		Text_submit.click();
 	}
 //###############################For Text Main###################################
 //###############################For Image Main##################################
@@ -1097,6 +1104,55 @@ public class Main_Page extends Index_Page{
 		Table_colStandard.click();
 	}
 //###############################For Table Main#####################################
+//###############################For Form Main#######################################
+	@FindBy(id="form_main_link")
+	private WebElement Form_properties;
 	
+	@FindBy(id="form_main_link01")
+	private WebElement Form_eca;
+	
+	@FindBy(id="form_main_link04")
+	private WebElement Form_actionTab;
+	
+	@FindBy(id="form_main_link03")
+	private WebElement Form_style;
+	
+	@FindBy(id="form_main_link02")
+	private WebElement Form_appearance1;
+	
+	@FindBy(id="form_main_link06")
+	private WebElement Form_appearance2;
+	
+	@FindBy(id="form_main_link05")
+	private WebElement Form_xValidation;
+	
+	public void Form_properties(){
+		Form_properties.click();
+	}
+	
+	public void Form_eca(){
+		Form_eca.click();
+	}
+	
+	public void Form_appearance1(){
+		Form_appearance1.click();
+	}
+	
+	public void Form_appearance2(){
+		Form_appearance2.click();
+	}
+	
+	public void Form_actionTab(){
+		Form_actionTab.click();
+	}
+	
+	public void Form_style(){
+		Form_style.click();
+	}
+	
+	public void Form_xValidation(){
+		Form_xValidation.click();
+	}
+//###############################For Form Main#####################################
 } 
 

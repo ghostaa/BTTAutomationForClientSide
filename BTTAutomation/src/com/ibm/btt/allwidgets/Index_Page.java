@@ -177,6 +177,13 @@ public class Index_Page {
 	public void Table_widget(){
 		Table_widget.click();
 	}
+	
+	@FindBy(id="index_link51")
+	private WebElement Form_widget;
+	
+	public void Form_widget(){
+		Form_widget.click();
+	}
 
 
 } 
