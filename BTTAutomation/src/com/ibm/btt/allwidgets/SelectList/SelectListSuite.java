@@ -10,7 +10,7 @@ import org.junit.runners.Suite;
 	SelectList_Action.class,
 	SelectList_CSS.class,
 	SelectList_appearance.class,
-//	SelectList_Submit.class,
+	SelectList_Submit.class,
 	
 }) 
 public class SelectListSuite {

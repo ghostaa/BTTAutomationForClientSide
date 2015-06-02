@@ -70,13 +70,14 @@ public class SelectList_Properties extends AllWidgetsProjectMain_Class {
 		assertEquals("urlForlist", drv.proUrlForList());
 	}
 
-/*	@Test
-	public void proDataNameForList() {
-		String[] str = drv.proDataNameForL();
-		for(int i = 0; i< str.length; i++){
-			System.out.print(str[i].equals("Account"+i));
+	@Test
+	public void proDataNameForList(){
+		String[] strings = drv.proDataNameForL();
+		for(int i = 0; i < strings.length; i++){
+			assertEquals("Account" + i, strings[i]);
 		}
-	}*/
+	}
+	
 
 	@Test
 	public void proLabelField() {

@@ -14,6 +14,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class SelectList_PageObject extends Main_Page{
@@ -41,7 +42,7 @@ public class SelectList_PageObject extends Main_Page{
 		return properties_urlForList.getAttribute("name");
 	}
 	
-/*	@FindBy(xpath=".//*[@id='widget_SelectList_properties_selectList_06']/div[3]/input[2]")
+	@FindBy(id="SelectList_properties_selectList_06_popup")
 	private WebElement properties_dataNameForList;
 	
 	@FindBy(xpath=".//*[@id='widget_SelectList_properties_selectList_06']/div[1]/input")
@@ -49,9 +50,9 @@ public class SelectList_PageObject extends Main_Page{
 	
 	public String[] proDataNameForL(){// 4. SelectList's dataNameForList
 		properties_clickTrangle.click();
-		String[] elements = Main_Class.elementList("SelectList_properties_selectList_06_popup");
-		return elements;
-	}*/
+		String[] strings = properties_dataNameForList.getText().split("\n");
+		return strings;
+	}
 	
 	@FindBy(id="SelectList_properties_selectList_07")
 	private WebElement properties_labelField;
