@@ -724,159 +724,159 @@ public class SelectList_PageObject extends Main_Page{
 	}
 //###############################SelectList Appearance##################################
 //###############################SelectList Submit######################################
-//form	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList']/div[1]/input")
-	private WebElement submit_click1;
-	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList_popup1']")
-	private WebElement submit_String;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList_01']/div[1]/input")
-	private WebElement submit_click2;
-	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList_01_popup2']")
-	private WebElement submit_Date;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList01']/div[1]/input")
-	private WebElement submit_click3;
-	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList01_popup3']")
-	private WebElement submit_Currency;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList02']/div[1]/input")
-	private WebElement submit_click4;
-	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList02_popup0']")
-	private WebElement submit_Number;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList03']/div[1]/input")
-	private WebElement submit_click5;
-	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList03_popup0']")
-	private WebElement submit_Boolean;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList04']/div[1]/input")
-	private WebElement submit_click6;
-	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList04_popup4']")
-	private WebElement submit_Duration;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList05']/div[1]/input")
-	private WebElement submit_click7;
-	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList05_popup4']")
-	private WebElement submit_XMLGregorianCalendar;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList06']/div[1]/input")
-	private WebElement submit_click8;
-	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
-	private WebElement submit_Byte;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList07']/div[1]/input")
-	private WebElement submit_click9;
-	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
-	private WebElement submit_Short;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList08']/div[1]/input")
-	private WebElement submit_click10;
-	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
-	private WebElement submit_Integer;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList09']/div[1]/input")
-	private WebElement submit_click11;
-	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
-	private WebElement submit_Long;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList10']/div[1]/input")
-	private WebElement submit_click12;
-	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
-	private WebElement submit_Float;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList11']/div[1]/input")
-	private WebElement submit_click13;
-	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
-	private WebElement submit_Double;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList12']/div[1]/input")
-	private WebElement submit_click14;
-	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
-	private WebElement submit_BigInteger;
-	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList13']/div[1]/input")
-	private WebElement submit_click15;
-	
-	@FindBy(xpath="widget_selectlist_appearance_selectList14")
-	private WebElement submit_BigDecimal;
-	
+//form
 	@FindBy(id="SelectList_submit_button")
 	private WebElement submit_button;
 	
 	public void Submit(){
-		submit_click1.click();
-		submit_String.click();
-		submit_click2.click();
-		submit_Date.click();
-		submit_click3.click();
-		submit_Currency.click();
-		submit_click4.click();
-		submit_Number.click();
-		submit_click5.click();
-		submit_Boolean.click();
-		submit_click6.click();
-		submit_Duration.click();
-		submit_click7.click();
-		submit_XMLGregorianCalendar.click();
-		submit_click8.click();
-		submit_Byte.click();
-		submit_click9.click();
-		submit_Short.click();
-		submit_click10.click();
-		submit_Integer.click();
-		submit_click11.click();
-		submit_Long.click();
-		submit_click12.click();
-		submit_Float.click();
-		submit_click13.click();
-		submit_Double.click();
-		submit_click14.click();
-		submit_BigInteger.click();
-		submit_click15.click();
-		submit_BigDecimal.click();
 		submit_button.click();
 	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList")
+	private WebElement submitResult_String;
+	
+	public String subResultString(){
+		return submitResult_String.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList_01")
+	private WebElement submitResult_Date;
+	
+	public String subResultDate(){
+		return submitResult_Date.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList01")
+	private WebElement submitResult_Currency;
+	
+	public String subResultCurrency(){
+		return submitResult_Currency.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList02")
+	private WebElement submitResult_Number;
+	
+	public String subResultNumber(){
+		return submitResult_Number.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList03")
+	private WebElement submitResult_Boolean;
+	
+	public String subResultBoolean(){
+		return submitResult_Boolean.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList04")
+	private WebElement submitResult_Duration;
+	
+	public String subResultDuration(){
+		return submitResult_Duration.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList05")
+	private WebElement submitResult_XMLGregorianCalendar;
+	
+	public String subResultXMLGregorianCalendar(){
+		return submitResult_XMLGregorianCalendar.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList06")
+	private WebElement submitResult_Byte;
+	
+	public String subResultByte(){
+		return submitResult_Byte.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList07")
+	private WebElement submitResult_Short;
+	
+	public String subResultShort(){
+		return submitResult_Short.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList08")
+	private WebElement submitResult_Integer;
+	
+	public String subResultInteger(){
+		return submitResult_Integer.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList09")
+	private WebElement submitResult_Long;
+	
+	public String subResultLong(){
+		return submitResult_Long.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList10")
+	private WebElement submitResult_Float;
+	
+	public String subResultFloat(){
+		return submitResult_Float.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList11")
+	private WebElement submitResult_Double;
+	
+	public String subResultDouble(){
+		return submitResult_Double.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList12")
+	private WebElement submitResult_BigInteger;
+	
+	public String subResultBigInteger(){
+		return submitResult_BigInteger.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_selectList13")
+	private WebElement submitResult_BigDecimal;
+	
+	public String subResultBigDecimal(){
+		return submitResult_BigDecimal.getAttribute("value");
+	}
+	
+	@FindBy(id="SelectList_Result_submit_link")
+	private WebElement submitResult_return;
+	
+	public void subResultReturn(){
+		submitResult_return.click();
+	}
+	
 //form01	
-	@FindBy(xpath=".//*[@id='widget_SelectList_submit_selectList_copy']/div[1]/input")
-	private WebElement submit_click16;
-	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList_copy_popup2']")
-	private WebElement submit_Account2;
-	
-	@FindBy(xpath=".//*[@id='SelectList_submit_selectList_copy_popup3']")
-	private WebElement submit_Account3;
+	@FindBy(id="SelectList_submit_selectList_copy")
+	private WebElement submit_selectlistText;
 	
 	@FindBy(id="SelectList_submit_button01")
-	private WebElement submit_FormXValButton;
+	private WebElement submit_button2;
 	
 	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
 	private WebElement submit_FormXValHint;
 	
+	@FindBy(id="SelectList_submit_label16")
+	private WebElement submit_lable;
+	
+	public String subButtonDisableT(){
+		return submit_button2.getAttribute("aria-disabled");
+	}
+	
 	public String subFormVal(){
-		submit_click16.click();
-		submit_Account3.click();
+		submit_selectlistText.click();
+		submit_button2.click();
 		return submit_FormXValHint.getText();
 	}
 	
-	public Boolean subFormValHint(){
-		submit_click16.click();
-		submit_Account2.click();
-		return submit_FormXValButton.isEnabled();
+	public String subButtonDisableF(){
+		submit_selectlistText.clear();
+		submit_selectlistText.sendKeys("Account2");
+		submit_lable.click();
+		return submit_button2.getAttribute("aria-disabled");
+	}
+	
+	public String subForm01Submit(){
+		submit_button2.click();
+		return submitResult_String.getAttribute("value");
 	}
 	
 //###############################SelectList Submit######################################
