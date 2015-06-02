@@ -11,7 +11,7 @@ import org.junit.runners.Suite;
 	Image_CSS.class,
 	Image_appearance1.class,
 	Image_appearance2.class,
-//	Image_ActionTab.class,
+	Image_ActionTab.class,
 	
 }) 
 public class ImageSuite {
