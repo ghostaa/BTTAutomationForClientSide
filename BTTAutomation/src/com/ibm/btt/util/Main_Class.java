@@ -26,8 +26,10 @@ import com.ibm.btt.util.*;
 public class Main_Class {
 	
 	public static WebDriver driver;
+
 	public static Broswer broswer;
 	public static DriverController driverController;
+
 	private static Robot eventKey;
 	public static FirefoxProfile profile = new FirefoxProfile();
 	Actions event = new Actions(driver);
@@ -54,6 +56,13 @@ public class Main_Class {
 	 */
 	public static String getCurrentURL(){
 		return driver.getCurrentUrl();
+	}
+	
+	/*
+	 * Get Page title
+	 */
+	public static String getTitle(){
+		return driver.getTitle();
 	}
 	
 	/*
@@ -103,6 +112,20 @@ public class Main_Class {
 	 */
 	public void doubleClick(String id){
 		event.doubleClick(driver.findElement(By.id(id))).perform();
+	}
+	
+	/*
+	 * Double click
+	 */
+	public void doubleClickByXpath(String xpath){
+		event.doubleClick(driver.findElement(By.xpath(xpath))).perform();
+	}
+	
+	/*
+	 * Right click
+	 */
+	public void rightClick(){
+		event.contextClick().perform();
 	}
 
 	/*
@@ -157,24 +180,8 @@ public class Main_Class {
 		}
 		
 	}
+
 	
-	/*
-	 * 
-	 */
-/*	public static String[] elementList(String id){
-		List<WebElement> elements = (ArrayList<WebElement>) driver.findElements(By.id(id));
-		String[] str = new String[elements.size()];
-		for(WebElement element: elements){
-			element.getText();	
-		}
-	}*/
-	public static void elementList1(String xpathExpression){
-		List<WebElement> elements = driver.findElements(By.id(xpathExpression));
-		for(WebElement element: elements){
-			System.out.println("element:"+element);
-		}
-	
-	}
 	public static void waitUntilLoadElement(long second,final String elementID){
 		(new WebDriverWait(driver, second)).until(new ExpectedCondition<WebElement>(){
 
@@ -185,6 +192,15 @@ public class Main_Class {
 			}
 
 		});
+	}
+	
+	public void switchIframe(String id){
+		driver.switchTo().frame(id);
+		
+	}
+	
+	public void switchDefaultIframe(){
+		driver.switchTo().defaultContent();
 	}
 
 }
