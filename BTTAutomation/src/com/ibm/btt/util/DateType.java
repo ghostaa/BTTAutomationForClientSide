@@ -18,7 +18,7 @@ public class DateType {
 		if (str.indexOf(",") != -1){
 			str = str.replace(",", "");
 		}
-		boolean b = Pattern.matches("\\$\\d*+(.[0-9]{2})?$", str);
+		boolean b = Pattern.matches("\\$\\d*.[0-9]{2}", str);
 		return b;
 	}
 	
@@ -27,7 +27,7 @@ public class DateType {
 			str = str.replace(",", "");
 		}
 		
-		boolean b = Pattern.matches("\\d*$", str);
+		boolean b = Pattern.matches("\\d*", str);
 		return b;
 	}
 	
@@ -51,7 +51,7 @@ public class DateType {
 			str = str.replace(",", "");
 		}
 		
-		boolean b = Pattern.matches("^[+-]?\\d*$", str);
+		boolean b = Pattern.matches("^[+-]?\\d*", str);
 		return b;
 	}
 	
@@ -59,7 +59,7 @@ public class DateType {
 		if (str.indexOf(",") != -1){
 			str = str.replace(",", "");
 		}
-		boolean b = Pattern.matches("\\d*+(.[0-9]{3})?$", str);
+		boolean b = Pattern.matches("\\d*.[0-9]{3}", str);
 		return b;
 	}
 }
