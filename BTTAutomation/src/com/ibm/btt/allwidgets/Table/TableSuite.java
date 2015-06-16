@@ -4,7 +4,7 @@ import org.junit.runners.Suite;
   
 @RunWith(Suite.class)  
 @Suite.SuiteClasses({    
-	Table_Properties.class,    
+//	Table_Properties.class,    
 	Table_Event.class,
 	Table_Condition.class,
 	Table_Action.class,
