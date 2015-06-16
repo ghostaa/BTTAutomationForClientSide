@@ -19,6 +19,7 @@ import com.ibm.btt.allwidgets.*;
 public class Table_PageObject extends Main_Page{
 	
 //###############################Table Properties##################################
+//Table with default properties
 	@FindBy(xpath=".//*[@id='Table_properties_panel']/tbody/tr[1]/td[2]/div")
 	private WebElement properties_id;
 	
@@ -596,412 +597,467 @@ public class Table_PageObject extends Main_Page{
 	}
 //###############################Table Action######################################
 //###############################Table Appearance###################################
-		@FindBy(xpath=".//*[@id='Table_Appearance_group']/div/div/div/div")
-		private WebElement Appearance_1;
+	@FindBy(xpath=".//*[@id='Table_Appearance_group']/div/div/div/div")
+	private WebElement Appearance_1;
+	
+	public String Appearance_1(){//1.horizontal is left,vertical is top
+		String v = Appearance.appearance_place(Appearance_1.getAttribute("style"), "top");
+		String h = Appearance_1.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Table_Appearance_group01']/div/div/div/div")
+	private WebElement Appearance_2;
+	
+	public String Appearance_2(){//2.horizontal is left,vertical is center
+		String v = Appearance.appearance_place(Appearance_2.getAttribute("style"), "middle");
+		String h = Appearance_2.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Table_Appearance_group02']/div/div/div/div")
+	private WebElement Appearance_3;
+	
+	public String Appearance_3(){//3.horizontal is left,vertical is bottom
+		String v = Appearance.appearance_place(Appearance_3.getAttribute("style"), "bottom");
+		String h = Appearance_3.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Table_Appearance_group03']/div/div/div/div")
+	private WebElement Appearance_4;
+	
+	public String Appearance_4(){//4.horizontal is center,vertical is top
+		String v = Appearance.appearance_place(Appearance_4.getAttribute("style"), "top");
+		String h = Appearance_4.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Table_Appearance_group04']/div/div/div/div")
+	private WebElement Appearance_5;
+	
+	public String Appearance_5(){//5.horizontal is center,vertical is center
+		String v = Appearance.appearance_place(Appearance_5.getAttribute("style"), "middle");
+		String h = Appearance_5.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Table_Appearance_group05']/div/div/div/div")
+	private WebElement Appearance_6;
+	
+	public String Appearance_6(){//6.horizontal is center,vertical is bottom
+		String v =Appearance.appearance_place(Appearance_6.getAttribute("style"), "bottom");
+		String h = Appearance_6.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Table_Appearance_group06']/div/div/div/div")
+	private WebElement Appearance_7;
+	
+	public String Appearance_7(){//7.horizontal is right,vertical is top
+		String v = Appearance.appearance_place(Appearance_7.getAttribute("style"), "top");
+		String h = Appearance_7.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Table_Appearance_group07']/div/div/div[1]/div")
+	private WebElement Appearance_8;
+	
+	public String Appearance_8(){//8.horizontal is right,vertical is center
+		String v = Appearance.appearance_place(Appearance_8.getAttribute("style"), "middle");
+		String h = Appearance_8.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Table_Appearance_group08']/div/div/div/div")
+	private WebElement Appearance_9;
+	
+	public String Appearance_9(){//9.horizontal is right,vertical is bottom
+		String v = Appearance.appearance_place(Appearance_9.getAttribute("style"), "bottom");
+		String h = Appearance_9.getAttribute("align");
+		return h+"&"+v;
+	}
+	
+	@FindBy(xpath=".//*[@id='Table_Appearance_group09']/div/div/div/div")
+	private WebElement Appearance_10;
+	
+	public int Appearance_10(){//10.horizontal indent is 50px
+		String[] temp = {"padding-left: 50px"};
+		return Appearance.appearance_query(Appearance_10.getAttribute("style"), temp);
 		
-		public String Appearance_1(){//1.horizontal is left,vertical is top
-			String v = Appearance.appearance_place(Appearance_1.getAttribute("style"), "top");
-			String h = Appearance_1.getAttribute("align");
-			return h+"&"+v;
-		}
-		
-		@FindBy(xpath=".//*[@id='Table_Appearance_group01']/div/div/div/div")
-		private WebElement Appearance_2;
-		
-		public String Appearance_2(){//2.horizontal is left,vertical is center
-			String v = Appearance.appearance_place(Appearance_2.getAttribute("style"), "middle");
-			String h = Appearance_2.getAttribute("align");
-			return h+"&"+v;
-		}
-		
-		@FindBy(xpath=".//*[@id='Table_Appearance_group02']/div/div/div/div")
-		private WebElement Appearance_3;
-		
-		public String Appearance_3(){//3.horizontal is left,vertical is bottom
-			String v = Appearance.appearance_place(Appearance_3.getAttribute("style"), "bottom");
-			String h = Appearance_3.getAttribute("align");
-			return h+"&"+v;
-		}
-		
-		@FindBy(xpath=".//*[@id='Table_Appearance_group03']/div/div/div/div")
-		private WebElement Appearance_4;
-		
-		public String Appearance_4(){//4.horizontal is center,vertical is top
-			String v = Appearance.appearance_place(Appearance_4.getAttribute("style"), "top");
-			String h = Appearance_4.getAttribute("align");
-			return h+"&"+v;
-		}
-		
-		@FindBy(xpath=".//*[@id='Table_Appearance_group04']/div/div/div/div")
-		private WebElement Appearance_5;
-		
-		public String Appearance_5(){//5.horizontal is center,vertical is center
-			String v = Appearance.appearance_place(Appearance_5.getAttribute("style"), "middle");
-			String h = Appearance_5.getAttribute("align");
-			return h+"&"+v;
-		}
-		
-		@FindBy(xpath=".//*[@id='Table_Appearance_group05']/div/div/div/div")
-		private WebElement Appearance_6;
-		
-		public String Appearance_6(){//6.horizontal is center,vertical is bottom
-			String v =Appearance.appearance_place(Appearance_6.getAttribute("style"), "bottom");
-			String h = Appearance_6.getAttribute("align");
-			return h+"&"+v;
-		}
-		
-		@FindBy(xpath=".//*[@id='Table_Appearance_group06']/div/div/div/div")
-		private WebElement Appearance_7;
-		
-		public String Appearance_7(){//7.horizontal is right,vertical is top
-			String v = Appearance.appearance_place(Appearance_7.getAttribute("style"), "top");
-			String h = Appearance_7.getAttribute("align");
-			return h+"&"+v;
-		}
-		
-		@FindBy(xpath=".//*[@id='Table_Appearance_group07']/div/div/div[1]/div")
-		private WebElement Appearance_8;
-		
-		public String Appearance_8(){//8.horizontal is right,vertical is center
-			String v = Appearance.appearance_place(Appearance_8.getAttribute("style"), "middle");
-			String h = Appearance_8.getAttribute("align");
-			return h+"&"+v;
-		}
-		
-		@FindBy(xpath=".//*[@id='Table_Appearance_group08']/div/div/div/div")
-		private WebElement Appearance_9;
-		
-		public String Appearance_9(){//9.horizontal is right,vertical is bottom
-			String v = Appearance.appearance_place(Appearance_9.getAttribute("style"), "bottom");
-			String h = Appearance_9.getAttribute("align");
-			return h+"&"+v;
-		}
-		
-		@FindBy(xpath=".//*[@id='Table_Appearance_group09']/div/div/div/div")
-		private WebElement Appearance_10;
-		
-		public int Appearance_10(){//10.horizontal indent is 50px
-			String[] temp = {"padding-left: 50px"};
-			return Appearance.appearance_query(Appearance_10.getAttribute("style"), temp);
-			
-		}
-		
-		@FindBy(xpath=".//*[@id='Table_Appearance_group10']/div/div/div/div")
-		private WebElement Appearance_11;
-		
-		public int Appearance_11(){//11.horizontal indent is 10percent
-			String[] temp = {"padding-left: 10%"};
-			return Appearance.appearance_query(Appearance_11.getAttribute("style"), temp);
-		}
-//###############################Table Appearance##################################
-//###############################Table Submit######################################
-//Must execute step 1 ,2 ,3	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo']/div[1]/input")
-	private WebElement submit_click1;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo_popup0']")
-	private WebElement submit_Country0;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo_popup1']")
-	private WebElement submit_Country1;
-	
-	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
-	private WebElement submit_StringTooltip;
-	
-	public String subString(){//1. Please select Country1.
-		submit_click1.click();
-		submit_Country0.click();
-		return submit_StringTooltip.getText();
 	}
 	
-	public void subStringClick(){//String
-		submit_click1.click();
-		submit_Country1.click();
+	@FindBy(xpath=".//*[@id='Table_Appearance_group10']/div/div/div/div")
+	private WebElement Appearance_11;
+	
+	public int Appearance_11(){//11.horizontal indent is 10percent
+		String[] temp = {"padding-left: 10%"};
+		return Appearance.appearance_query(Appearance_11.getAttribute("style"), temp);
+	}
+//###############################Table Appearance###########################################
+//###############################table column standard #####################################
+	@FindBy(id="Table_Column_table01")
+	private WebElement colStandardTable;
+	
+	@FindBy(id="columnId0")
+	private WebElement col_AccountName;
+	
+	@FindBy(id="columnId1")
+	private WebElement col_TradeTime;
+	
+	@FindBy(id="columnId3")
+	private WebElement col_OpeningDate;
+	
+	@FindBy(id="columnId4")
+	private WebElement col_Balance;
+	
+	@FindBy(id="columnId5")
+	private WebElement col_Rate;
+	
+	@FindBy(id="columnId6")
+	private WebElement col_Usable;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[1]/table/tbody/tr/td[1]")
+	private WebElement col_row11;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[1]/table/tbody/tr/td[2]")
+	private WebElement col_row12;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[1]/table/tbody/tr/td[4]")
+	private WebElement col_row13;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[1]/table/tbody/tr/td[5]")
+	private WebElement col_row14;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[1]/table/tbody/tr/td[6]")
+	private WebElement col_row15;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[1]/table/tbody/tr/td[7]")
+	private WebElement col_row16;
+	
+/*
+1. This table is with fixed width 661px. relative size calculate to fixed size expected value is as bellow
+16% ~~ 160px
+14% ~~ 140px
+10% ~~ 100px
+*/
+	public int colFixed(){
+		String[] temp={"width: 661px"};
+		return Appearance.appearance_query(colStandardTable.getAttribute("style"), temp);
 	}
 	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo01']/div[1]/input")
-	private WebElement submit_click2;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo01_popup0']")
-	private WebElement submit_Date;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo02']/div[1]/input")
-	private WebElement submit_click3;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo02_popup0']")
-	private WebElement submit_Currency;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo03']/div[1]/input")
-	private WebElement submit_click4;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo03_popup0']")
-	private WebElement submit_Number;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo04']/div[1]/input")
-	private WebElement submit_click5;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo04_popup0']")
-	private WebElement submit_Boolean;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo05']/div[1]/input")
-	private WebElement submit_click6;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo05_popup0']")
-	private WebElement submit_Duration;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo06']/div[1]/input")
-	private WebElement submit_click7;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo06_popup0']")
-	private WebElement submit_XMLGregorianCalendar;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo07']/div[1]/input")
-	private WebElement submit_click8;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo07_popup0']")
-	private WebElement submit_Byte;
-	
-	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
-	private WebElement submit_ByteTooltip;
-	
-	public String subByteTooltip(){//2. Must select one.
-		return submit_ByteTooltip.getText();
+	public int colOpeningDate(){
+		String[] temp={"width: 16%"};
+		return Appearance.appearance_query(col_OpeningDate.getAttribute("style"), temp);
 	}
 	
-	public void subByte(){//Byte
-		submit_click8.click();
-		submit_Byte.click();
+	public int colBalance(){
+		String[] temp={"width: 14%"};
+		return Appearance.appearance_query(col_Balance.getAttribute("style"), temp);
 	}
 	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo08']/div[1]/input")
-	private WebElement submit_click9;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo08_popup0']")
-	private WebElement submit_Short;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo09']/div[1]/input")
-	private WebElement submit_click10;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo09_popup0']")
-	private WebElement submit_Integer;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo10']/div[1]/input")
-	private WebElement submit_click11;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo10_popup0']")
-	private WebElement submit_Long;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo11']/div[1]/input")
-	private WebElement submit_click12;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo11_popup0']")
-	private WebElement submit_Float;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo12']/div[1]/input")
-	private WebElement submit_click13;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo12_popup0']")
-	private WebElement submit_Double;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo13']/div[1]/input")
-	private WebElement submit_click14;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo13_popup0']")
-	private WebElement submit_BigInteger;
-	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo14']/div[1]/input")
-	private WebElement submit_click15;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo14_popup0']")
-	private WebElement submit_BigDecimal;
-	
-	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
-	private WebElement submit_isMandatoryTooltip;
-	
-	@FindBy(xpath="combo_submit_combo15")
-	private WebElement submit_isMandatoryT;
-	
-	public String subIsMandatoryTooltip(){//3. This is required.
-		return submit_isMandatoryTooltip.getText();
+	public int colRate(){
+		String[] temp={"width: 10%"};
+		return Appearance.appearance_query(col_Rate.getAttribute("style"), temp);
+	}
+//2. Allignment: the first two column allignment is left, the second two is centre and the last two is right
+	public int colAllignmentL1(){
+		String[] temp={"text-align: left"};
+		return Appearance.appearance_query(col_row11.getAttribute("style"), temp);
 	}
 	
-	public void submit_isMandatory(){
-		submit_isMandatoryT.sendKeys("aaa");
+	public int colAllignmentL2(){
+		String[] temp={"text-align: left"};
+		return Appearance.appearance_query(col_row12.getAttribute("style"), temp);
 	}
 	
-	@FindBy(xpath=".//*[@id='widget_combo_submit_combo17']/div[1]/input")
-	private WebElement submit_click16;
-	
-	@FindBy(xpath=".//*[@id='combo_submit_combo17_popup0']")
-	private WebElement submit_urlForList;
-
-	@FindBy(id="combo_submit_button")
-	private WebElement submit_button;
-	
-	public Boolean subButton(){
-		return submit_button.isEnabled();
+	public int colAllignmentC1(){
+		String[] temp={"text-align: center"};
+		return Appearance.appearance_query(col_row13.getAttribute("style"), temp);
 	}
 	
-	public void Submit(){
-		submit_click2.click();
-		submit_Date.click();
-		submit_click3.click();
-		submit_Currency.click();
-		submit_click4.click();
-		submit_Number.click();
-		submit_click5.click();
-		submit_Boolean.click();
-		submit_click6.click();
-		submit_Duration.click();
-		submit_click7.click();
-		submit_XMLGregorianCalendar.click();
-		submit_click9.click();
-		submit_Short.click();
-		submit_click10.click();
-		submit_Integer.click();
-		submit_click11.click();
-		submit_Long.click();
-		submit_click12.click();
-		submit_Float.click();
-		submit_click13.click();
-		submit_Double.click();
-		submit_click14.click();
-		submit_BigInteger.click();
-		submit_click15.click();
-		submit_BigDecimal.click();
-		submit_click16.click();
-		submit_urlForList.click();
-		submit_button.click();
+	public int colAllignmentC2(){
+		String[] temp={"text-align: center"};
+		return Appearance.appearance_query(col_row14.getAttribute("style"), temp);
 	}
 	
-//submit result
-	@FindBy(id="showcombo_submit_label")
-	private WebElement result_String;
-	
-	public String resString(){
-		return result_String.getText();
+	public int colAllignmentR1(){
+		String[] temp={"text-align: right"};
+		return Appearance.appearance_query(col_row15.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label01")
-	private WebElement result_Date;
+	public int colAllignmentR2(){
+		String[] temp={"text-align: right"};
+		return Appearance.appearance_query(col_row16.getAttribute("style"), temp);
+	}
+/*
+3. Tooltip:
+AccountName tooltip position: textEnd
+TradeTime tooltip position:right;
+Openning Date tooltip, position: mouse point;
+ */
+//###############################table column standard ######################################
+//###############################table style and column style################################
+//First table
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[5]/table/tbody/tr/td[1]")
+	private WebElement table1_CCS1;
 	
-	public String resDate(){
-		return result_Date.getText();
+	public int table1_CCS1(){//the fifth row of the AccountName text is red
+		String[] temp={"font-style", "red"};
+		return CSS.css_query(table1_CCS1.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label02")
-	private WebElement result_Currency;
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[2]/table/tbody/tr/td[2]")
+	private WebElement table1_CCS2_Odd;
 	
-	public String resCurrency(){
-		return result_Currency.getText();
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[1]/table/tbody/tr/td[2]")
+	private WebElement table1_CCS2_Even;
+	
+	public int table1_CCS2_Even(){//the even rows of the AccountType is bold
+		String[] temp={"font-style"};
+		return CSS.css_query(table1_CCS2_Even.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label03")
-	private WebElement result_Number;
-	
-	public String resNumber(){
-		return result_Number.getText();
+	public int table1_CCS2_Odd(){//the odd rows of 'AccountType' has a blue border
+		String[] temp={"border-style"};
+		return CSS.css_query(table1_CCS2_Odd.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label04")
-	private WebElement result_Boolean;
+	@FindBy(id="columnId2")
+	private WebElement table1_CCS3;
 	
-	public String resBoolean(){
-		return result_Boolean.getText();
+	public int table1_CCS3(){//AccountBalance's tiltle in dark blue color
+		String[] temp={"area_title"};
+		return CSS.css_query(table1_CCS3.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label05")
-	private WebElement result_Duration;
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[1]/table/tbody/tr/td[4]")
+	private WebElement table1_CCS4;
 	
-	public String resDuration(){
-		return result_Duration.getText();
+	public int table1_CCS4(){//Rate text is in blue color
+		String[] temp={"blue"};
+		return CSS.css_query(table1_CCS4.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label06")
-	private WebElement result_XMLGregorianCalendar;
+	@FindBy(id="columnId3")
+	private WebElement table1_CCS5_Header;
 	
-	public String resXMLGregorianCalendar(){
-		return result_XMLGregorianCalendar.getText();
+	@FindBy(xpath=".//*[@id='dojox_grid__View_1']/div/div/div/div[1]/table/tbody/tr/td[5]")
+	private WebElement table1_CCS5_cell;
+	
+	public int table1_CCS5_Header(){//Usable column has the bold text style on both header and cell rows
+		String[] temp={"font-style"};
+		return CSS.css_query(table1_CCS5_Header.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label07")
-	private WebElement result_Byte;
+	public int table1_CCS5_cell(){
+		String[] temp={"font-style"};
+		return CSS.css_query(table1_CCS5_cell.getAttribute("class"), temp);
+	}
+//Second table	
+//Header	
+	@FindBy(xpath=".//*[@id='Table_Style_Table01_copy']/div[1]/div/div/div/table/tbody/tr/th[1]")
+	private WebElement table2_Header1;
 	
-	public String resByte(){
-		return result_Byte.getText();
+	@FindBy(xpath=".//*[@id='Table_Style_Table01_copy']/div[1]/div/div/div/table/tbody/tr/th[2]")
+	private WebElement table2_Header2;
+	
+	@FindBy(xpath=".//*[@id='Table_Style_Table01_copy']/div[1]/div/div/div/table/tbody/tr/th[3]")
+	private WebElement table2_Header3;
+	
+	@FindBy(xpath=".//*[@id='Table_Style_Table01_copy']/div[1]/div/div/div/table/tbody/tr/th[4]")
+	private WebElement table2_Header4;
+	
+	@FindBy(xpath=".//*[@id='Table_Style_Table01_copy']/div[1]/div/div/div/table/tbody/tr/th[5]")
+	private WebElement table2_Header5;
+	
+	public int table2_Header1(){
+		String[] temp={"font-style", "h-align-right"};
+		return CSS.css_query(table2_Header1.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label08")
-	private WebElement result_Short;
-	
-	public String resShort(){
-		return result_Short.getText();
+	public int table2_Header2(){
+		String[] temp={"font-style", "h-align-right"};
+		return CSS.css_query(table2_Header2.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label09")
-	private WebElement result_Integer;
-	
-	public String resInteger(){
-		return result_Integer.getText();
+	public int table2_Header3(){
+		String[] temp={"font-style", "h-align-right"};
+		return CSS.css_query(table2_Header3.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label10")
-	private WebElement result_Long;
-	
-	public String resLong(){
-		return result_Long.getText();
+	public int table2_Header4(){
+		String[] temp={"font-style", "h-align-right"};
+		return CSS.css_query(table2_Header4.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label13")
-	private WebElement result_Float;
+	public int table2_Header5(){
+		String[] temp={"font-style", "h-align-right"};
+		return CSS.css_query(table2_Header5.getAttribute("class"), temp);
+	}
+//row0	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[1]/table/tbody/tr/td[1]")
+	private WebElement table2_row01;
 	
-	public String resFloat(){
-		return result_Float.getText();
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[1]/table/tbody/tr/td[2]")
+	private WebElement table2_row02;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[1]/table/tbody/tr/td[3]")
+	private WebElement table2_row03;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[1]/table/tbody/tr/td[4]")
+	private WebElement table2_row04;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[1]/table/tbody/tr/td[5]")
+	private WebElement table2_row05;
+//row1
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[2]/table/tbody/tr/td[1]")
+	private WebElement table2_row11;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[2]/table/tbody/tr/td[2]")
+	private WebElement table2_row12;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[2]/table/tbody/tr/td[3]")
+	private WebElement table2_row13;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[2]/table/tbody/tr/td[4]")
+	private WebElement table2_row14;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[2]/table/tbody/tr/td[5]")
+	private WebElement table2_row15;
+//row4
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[5]/table/tbody/tr/td[1]")
+	private WebElement table2_row41;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[5]/table/tbody/tr/td[2]")
+	private WebElement table2_row42;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[5]/table/tbody/tr/td[3]")
+	private WebElement table2_row43;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[5]/table/tbody/tr/td[4]")
+	private WebElement table2_row44;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[5]/table/tbody/tr/td[5]")
+	private WebElement table2_row45;
+//row5
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[6]/table/tbody/tr/td[1]")
+	private WebElement table2_row51;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[6]/table/tbody/tr/td[2]")
+	private WebElement table2_row52;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[6]/table/tbody/tr/td[3]")
+	private WebElement table2_row53;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[6]/table/tbody/tr/td[4]")
+	private WebElement table2_row54;
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_3']/div/div/div/div[6]/table/tbody/tr/td[5]")
+	private WebElement table2_row55;
+	
+	public int table2_row01(){
+		String[] temp={"font-Georgia", "h-align-right", "red"};
+		return CSS.css_query(table2_row01.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label15")
-	private WebElement result_Double;
-	
-	public String resDouble(){
-		return result_Double.getText();
+	public int table2_row02(){
+		String[] temp={"font-Georgia", "h-align-right", "red"};
+		return CSS.css_query(table2_row02.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label16")
-	private WebElement result_BigInteger;
-	
-	public String resBigInteger(){
-		return result_BigInteger.getText();
+	public int table2_row03(){
+		String[] temp={"font-Georgia", "h-align-right", "red"};
+		return CSS.css_query(table2_row03.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label17")
-	private WebElement result_BigDecimal;
-	
-	public String resBigDecimal(){
-		return result_BigDecimal.getText();
+	public int table2_row04(){
+		String[] temp={"font-Georgia", "h-align-right", "red"};
+		return CSS.css_query(table2_row04.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label18")
-	private WebElement result_isMandatoryT;
-	
-	public String resisMandatoryT(){
-		return result_isMandatoryT.getText();
+	public int table2_row05(){
+		String[] temp={"font-Georgia", "h-align-right", "red"};
+		return CSS.css_query(table2_row05.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label19")
-	private WebElement result_isMandatoryF;
 	
-	public String resisMandatoryF(){
-		return result_isMandatoryF.getText();
+	public int table2_row11(){
+		String[] temp={"font-Georgia", "h-align-right", "blue"};
+		return CSS.css_query(table2_row11.getAttribute("class"), temp);
 	}
 	
-	@FindBy(id="showcombo_submit_label20")
-	private WebElement result_urlForList;
-	
-	public String resurlForList(){
-		return result_urlForList.getText();
+	public int table2_row12(){
+		String[] temp={"font-Georgia", "h-align-right", "blue"};
+		return CSS.css_query(table2_row12.getAttribute("class"), temp);
 	}
 	
-//###############################Combo Submit######################################
+	public int table2_row13(){
+		String[] temp={"font-Georgia", "h-align-right", "blue"};
+		return CSS.css_query(table2_row13.getAttribute("class"), temp);
+	}
+	
+	public int table2_row14(){
+		String[] temp={"font-Georgia", "h-align-right", "blue"};
+		return CSS.css_query(table2_row14.getAttribute("class"), temp);
+	}
+	
+	public int table2_row15(){
+		String[] temp={"font-Georgia", "h-align-right", "blue"};
+		return CSS.css_query(table2_row15.getAttribute("class"), temp);
+	}
+	
+	public int table2_row41(){
+		String[] temp={"font-Georgia", "h-align-right", "red", "redblue"};
+		return CSS.css_query(table2_row41.getAttribute("class"), temp);
+	}
+	
+	public int table2_row42(){
+		String[] temp={"font-Georgia", "h-align-right", "red", "redblue"};
+		return CSS.css_query(table2_row42.getAttribute("class"), temp);
+	}
+	
+	public int table2_row43(){
+		String[] temp={"font-Georgia", "h-align-right", "red", "redblue"};
+		return CSS.css_query(table2_row43.getAttribute("class"), temp);
+	}
+	
+	public int table2_row44(){
+		String[] temp={"font-Georgia", "h-align-right", "red", "redblue"};
+		return CSS.css_query(table2_row44.getAttribute("class"), temp);
+	}
+	
+	public int table2_row45(){
+		String[] temp={"font-Georgia", "h-align-right", "red", "redblue"};
+		return CSS.css_query(table2_row45.getAttribute("class"), temp);
+	}
+	
+	public int table2_row51(){
+		String[] temp={"font-Georgia", "h-align-right", "blue", "redblue"};
+		return CSS.css_query(table2_row51.getAttribute("class"), temp);
+	}
+	
+	public int table2_row52(){
+		String[] temp={"font-Georgia", "h-align-right", "blue", "redblue"};
+		return CSS.css_query(table2_row52.getAttribute("class"), temp);
+	}
+	
+	public int table2_row53(){
+		String[] temp={"font-Georgia", "h-align-right", "blue", "redblue"};
+		return CSS.css_query(table2_row53.getAttribute("class"), temp);
+	}
+	
+	public int table2_row54(){
+		String[] temp={"font-Georgia", "h-align-right", "blue", "redblue"};
+		return CSS.css_query(table2_row54.getAttribute("class"), temp);
+	}
+	
+	public int table2_row55(){
+		String[] temp={"font-Georgia", "h-align-right", "blue", "redblue"};
+		return CSS.css_query(table2_row55.getAttribute("class"), temp);
+	}
+	
+//###############################table style and column style################################
 
 
 }

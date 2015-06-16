@@ -17,7 +17,7 @@ import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.util.Tools;
 
-public class Table_Action extends Main_Class{
+public class Table_colStandard extends Main_Class{
 
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
@@ -32,33 +32,64 @@ public class Table_Action extends Main_Class{
     drv.Establish();
     drv.BTT8200_tab();
     drv.Table_widget();
-    drv.Table_action();
-    Main_Class.waitUntilLoadElement(20, "Table_ECA_Action_table01");
+    drv.Table_colStandard();
+    Main_Class.waitUntilLoadElement(20, "Table_Column_table01");
+  }
+  
+  @Test
+  public void colFixed(){
+	  assertEquals(1, drv.colFixed());
+  }
+  
+  @Test
+  public void colOpeningDate(){
+	  assertEquals(1, drv.colOpeningDate());
+  }
+  
+  @Test
+  public void colBalance(){
+	  assertEquals(1, drv.colBalance());
+  }
+  
+  @Test
+  public void colRate(){
+	  assertEquals(1, drv.colRate());
+  }
+  
+  @Test
+  public void colAllignmentL1(){
+	  assertEquals(1, drv.colAllignmentL1());
+  }
+  
+  @Test
+  public void colAllignmentL2(){
+	  assertEquals(1, drv.colAllignmentL2());
+  }
+  
+  @Test
+  public void colAllignmentC1(){
+	  assertEquals(1, drv.colAllignmentC1());
+  }
+  
+  @Test
+  public void colAllignmentC2(){
+	  assertEquals(1, drv.colAllignmentC2());
+  }
+  
+  @Test
+  public void colAllignmentR1(){
+	  assertEquals(1, drv.colAllignmentR1());
+  }
+  
+  @Test
+  public void colAllignmentR2(){
+	  assertEquals(1, drv.colAllignmentR2());
   }
 
-  @Test
-  public void actFocus(){
-	  assertEquals(1, drv.actFocus());
-  }
   
-  @Test
-  public void actGetLengthOfRow(){
-	  assertEquals("3", drv.actGetLengthOfRow());
-  }
-  
-  @Test
-  public void actVisibleT(){
-	  assertEquals("true", drv.actVisibleT());
-  }
-  
-  @Test
-  public void actVisibleF(){
-	  assertEquals("false", drv.actVisibleF());
-  }
- 
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, AllWidgetsProjectMain_Class.allwidgets,Table_Action.class);
+	Tools.snapshot((TakesScreenshot)driver, AllWidgetsProjectMain_Class.allwidgets,Table_colStandard.class);
 	driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
