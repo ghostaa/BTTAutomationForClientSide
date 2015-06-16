@@ -102,377 +102,286 @@ public class RichText_PageObject extends Main_Page{
 	}
 //###############################RichText CSS#########################################
 //###############################RichText Event#######################################
-	@FindBy(xpath=".//*[@id='RichText_Event_group']/div/table/tbody/tr[2]/td[2]/div/div[2]/iframe")
-	private WebElement event_onClick;
+	@FindBy(id="dijitEditorBody")
+	private WebElement event_panel;
 	
 	@FindBy(id="RichText_Event_RichText_focus")
-	private WebElement event_display1; 
+	private WebElement event_RichText1;
 	
-	public int evtOnClick(){ //onClick
-		event_onClick.click();
-		String[] temp ={"visibility: hidden"};
-		return Appearance.appearance_query(event_display1.getAttribute("style"), temp);
+	public int evtOnClick(){//onClick
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Event_RichText_onClick_iframe");
+		event_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(event_RichText1.getAttribute("style"), temp);
 	}
-	
-	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_10']/span[1]")
-	private WebElement event_onFocus; 
 	
 	@FindBy(id="RichText_Event_RichText_visibility")
-	private WebElement event_display2; 
+	private WebElement event_RichText2;
 	
-	public int evtOnFocus(){ //onFocus
-		event_onFocus.click();
-		String[] temp ={"visibility: hidden"};
-		return Appearance.appearance_query(event_display2.getAttribute("style"), temp);
+	public int evtOnFocus(){//onfocus
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Event_RichText_onClick_copy_iframe");
+		event_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(event_RichText2.getAttribute("style"), temp);
 	}
-	
-	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_18']/span[1]")
-	private WebElement event_onBlur;
-	
-	@FindBy(id="RichText_Event_String_Data_copy_copy")
-	private WebElement event_label3;
 	
 	@FindBy(id="RichText_Event_RichText_visibility_01")
-	private WebElement event_display3;
+	private WebElement event_RichText3;
 	
-	public int evtOnBlur(){ //onBlur
-		event_onBlur.click();
-		event_label3.click();
-		String[] temp ={"visibility: hidden"};
-		return Appearance.appearance_query(event_display3.getAttribute("style"), temp);
+	@FindBy(id="RichText_Event_String_Data_copy_copy")
+	private WebElement event_label;
+	
+	public int evtOnBlur(){//onBlur
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Event_RichText_onBlur_iframe");
+		event_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		event_label.click();
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(event_RichText3.getAttribute("style"), temp);
 	}
-	
-	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_26']/span[1]")
-	private WebElement event_onKeyDown; 
 	
 	@FindBy(id="RichText_Event_RichText_visibility_02")
-	private WebElement event_display4;
+	private WebElement event_RichText4;
 	
-	public int evtOnKeyDown(){ //onKeyDown
-		event_onKeyDown.click();
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.keyDown(Keys.SHIFT);
-		main_class.keyUp(Keys.SHIFT);
-		String[] temp ={"visibility: hidden"};
-		return Appearance.appearance_query(event_display4.getAttribute("style"), temp);
+	public int evtOnKeyDown(){//onKeyDown
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Event_RichText_onKeyDown_iframe");
+		event_panel.click();
+		(new AllWidgetsProjectMain_Class()).keyDown(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyUp(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(event_RichText4.getAttribute("style"), temp);
 	}
-	
-	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_34']/span[1]")
-	private WebElement event_onKeyPress; 
 	
 	@FindBy(id="RichText_Event_RichText_visibility_03")
-	private WebElement event_display5;
+	private WebElement event_RichText5;
 	
-	public int evtOnKeyPress(){ //onKeyPress
-		event_onKeyPress.click();
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.keyPress(KeyEvent.VK_0);
-		main_class.keyRelease(KeyEvent.VK_0);
-		String[] temp ={"visibility: hidden"};
-		return Appearance.appearance_query(event_display5.getAttribute("style"), temp);
+	public int evtOnKeyPress(){//onKeyPress
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Event_RichText_onKeyPress_iframe");
+		event_panel.click();
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(event_RichText5.getAttribute("style"), temp);
 	}
-	
-	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_42']/span[1]")
-	private WebElement event_onKeyUp; 
 	
 	@FindBy(id="RichText_Event_RichText_visibility_04")
-	private WebElement event_display6;
+	private WebElement event_RichText6;
 	
-	public int evtOnKeyUp(){ //onKeyUp
-		event_onKeyUp.click();
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.keyDown(Keys.SHIFT);
-		main_class.keyUp(Keys.SHIFT);
-		String[] temp ={"visibility: hidden"};
-		return Appearance.appearance_query(event_display6.getAttribute("style"), temp);
+	public int evtOnKeyUp(){//onKeyUp
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Event_RichText_onKeyUp_iframe");
+		event_panel.click();
+		(new AllWidgetsProjectMain_Class()).keyDown(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).keyUp(Keys.SHIFT);
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(event_RichText6.getAttribute("style"), temp);
 	}
-
-	@FindBy(id="RichText_Event_RichText_onMouseEnter")
-	private WebElement event_onMouseEnter; 
 	
 	@FindBy(id="RichText_Event_RichText_visibility_05")
-	private WebElement event_display7;
-
-	public int evtOnMouseEnter(){ //onMouseEnter
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.widget_moveToElement("RichText_Event_RichText_onMouseEnter");
-		String[] temp ={"visibility: hidden"};
-		return Appearance.appearance_query(event_display7.getAttribute("style"), temp);
-	}
+	private WebElement event_RichText7;
 	
-	@FindBy(id="RichText_Event_RichText_onMouseLeave")
-	private WebElement event_onMouseLeave;
+	public int evtOnMouseEnter(){//onMouseEnter
+		(new AllWidgetsProjectMain_Class()).widget_moveToElement("RichText_Event_RichText_onMouseEnter");
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(event_RichText7.getAttribute("style"), temp);
+	}
 	
 	@FindBy(id="RichText_Event_RichText_visibility_06")
-	private WebElement event_display8;
-
-	public int evtOnMouseLeave(){ //onMouseLeave
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.widget_moveToElement("RichText_Event_RichText_onMouseLeave");
-		main_class.widget_moveToElement("RichText_Event_RichText_visibility_06");
-		String[] temp ={"visibility: hidden"};
-		return Appearance.appearance_query(event_display8.getAttribute("style"), temp);
-	}
+	private WebElement event_RichText8;
 	
-	@FindBy(id="RichText_Event_RichText_onMouseMove")
-	private WebElement event_onMouseMove;
+	public int evtOnMouseLeave(){//onMouseLeave
+		(new AllWidgetsProjectMain_Class()).widget_moveToElement("RichText_Event_RichText_onMouseLeave");
+		(new AllWidgetsProjectMain_Class()).widget_moveToElement("RichText_Event_RichText_onMouseEnter");
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(event_RichText8.getAttribute("style"), temp);
+	}
 	
 	@FindBy(id="RichText_Event_RichText_visibility_07")
-	private WebElement event_display9;
+	private WebElement event_RichText9;
 	
-	public int evtOnMouseMove(){ //onMouseMove
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.widget_moveToElement("RichText_Event_RichText_onMouseMove");
-		main_class.widget_moveToElement("RichText_Event_RichText_onChange");
-		String[] temp ={"visibility: hidden"};
-		return Appearance.appearance_query(event_display9.getAttribute("style"), temp);
+	public int evtOnMouseMove(){//onMouseMove
+		(new AllWidgetsProjectMain_Class()).widget_moveToElement("RichText_Event_RichText_onMouseMove");
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(event_RichText9.getAttribute("style"), temp);
 	}
-	
-	@FindBy(xpath=".//*[@id='dijit_form_ToggleButton_74']/span[1]")
-	private WebElement event_onChange; 
-	
-	@FindBy(id="RichText_Event_onChange")
-	private WebElement event_label10; 
 	
 	@FindBy(id="RichText_Event_RichText_visibility_08")
-	private WebElement event_display10; 
+	private WebElement event_RichText10;
 	
-	public int evtOnChange(){ //onChange
-		event_onChange.click();
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_0);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_0);
-		event_label10.click();
-		String[] temp ={"visibility: hidden"};
-		return Appearance.appearance_query(event_display10.getAttribute("style"), temp);
+	@FindBy(id="RichText_Event_onChange")
+	private WebElement event_onChangeLable;
+	
+	public int evtOnChange(){//onChange
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Event_RichText_onChange_iframe");
+		event_panel.sendKeys("aaa");
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		event_onChangeLable.click();
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(event_RichText10.getAttribute("style"), temp);
 	}
+	
 
 //###############################RichText Event######################################
 //###############################RichText Condition##################################
 	@FindBy(id="RichText_Condition_text")
 	private WebElement condition_text;
 	
-	@FindBy(xpath=".//*[@id='RichText_Condition_RichText_WidgetFunction']/div[2]")
-	private WebElement condition_isFocusable;
+	@FindBy(id="dijitEditorBody")
+	private WebElement condition_panel;
 	
 	public String conIsFocusable(){//Widget Function-isFocusable
-		condition_isFocusable.click();
-		System.out.println(condition_text.getAttribute("value"));
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Condition_RichText_WidgetFunction_iframe");
+		condition_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
 		return condition_text.getAttribute("value");
 	}
 	
-	@FindBy(id="CheckedMultiSelect_condition_checkedMultiSelect01")
-	private WebElement condition_disabled;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label02")
-	private WebElement condition_label2;
-	
-	public String conDisabled(){//Widget Property-disabled
-		(new AllWidgetsProjectMain_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect01");
-		return condition_label2.getText();
+	public String conReadonly(){//Widget Property : readOnly
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Condition_RichText_WidgetProperty_iframe");
+		condition_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		return condition_text.getAttribute("value");
 	}
 	
-	@FindBy(id="CheckedMultiSelect_condition_checkedMultiSelect01_copy")
-	private WebElement condition_readonly;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label03")
-	private WebElement condition_label3;
-	
-	public String conReadonly(){//Widget Property-readOnly
-		(new AllWidgetsProjectMain_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect01_copy");
-		return condition_label3.getText();
+	public String conExpIsFocusable(){//Expression-Widget Function : isFocusable
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Condition_RichText_Expression_iframe");
+		condition_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		return condition_text.getAttribute("value");
 	}
 
-	@FindBy(id="dijit_form_CheckBox_31")
-	private WebElement condition_ExpisFocusable;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label04")
-	private WebElement condition_label4;
-	
-	public String conExpisFocusable(){// Expression-Widget Function : isFocusable
-		condition_ExpisFocusable.click();
-		return condition_label4.getText();
+	public String conExpId(){//Expression-Widget Property : id
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Condition_RichText_Expression_id_iframe");
+		condition_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		return condition_text.getAttribute("value");
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_41")
-	private WebElement condition_ExpId;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label05")
-	private WebElement condition_label5;
-	
-	public String conExpId(){//Expression-Widget Property : id 
-		condition_ExpId.click();
-		return condition_label5.getText();
+	public String conExpValue(){//Expression-Widget Property : Value
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Condition_richText_iframe");
+		condition_panel.sendKeys("hello");
+		condition_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		return condition_text.getAttribute("value");
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_51")
-	private WebElement condition_ExpValue;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label06")
-	private WebElement condition_label6;
-	
-	public String conExpValue(){// 	Expression-Widget Property : value
-		condition_ExpValue.click();
-		return condition_label6.getText();
+	public String conExpVisibility(){//Expression-Widget Property : visibility
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Condition_RichText_Expression_visibility_iframe");
+		condition_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		return condition_text.getAttribute("value");
 	}
 	
-	@FindBy(id="CheckedMultiSelect_condition_label07")
-	private WebElement condition_label7;
-	
-	public String conVisible(){//Widget Expression Condition: visibility=visible
-		(new AllWidgetsProjectMain_Class()).widget_moveToElement("CheckedMultiSelect_condition_checkedMultiSelect04");
-		return condition_label7.getText();
+	public String conExpReadonly(){//Expression-Widget Property : readOnly
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Condition_RichText_Expression_readOnly_iframe");
+		condition_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		return condition_text.getAttribute("value");
 	}
 	
-	@FindBy(id="dijit_form_CheckBox_71")
-	private WebElement condition_ExpDisabled;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label09")
-	private WebElement condition_label8;
-	
-	public String conExpDisabled(){// 	Expression-Widget Property : disabled
-		condition_ExpDisabled.click();
-		return condition_label8.getText();
-	}
-	
-	@FindBy(id="dijit_form_CheckBox_81")
-	private WebElement condition_ExpReadonly;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label10")
-	private WebElement condition_label9;
-	
-	public String conExpReadonly(){// 	Expression-Widget Property : readonly
-		condition_ExpReadonly.click();
-		return condition_label9.getText();
-	}
-	
-	@FindBy(id="CheckedMultiSelect_condition_checkedMultiSelect07")
-	private WebElement condition_asyncStatus;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label12")
-	private WebElement condition_label10;
-	
-	public String conAsyncStatus(){//Expression-Widget Property : asyncStatus
-		condition_asyncStatus.click();
-		return condition_label10.getText();
-	}
-	
-	@FindBy(id="CheckedMultiSelect_condition_checkedMultiSelect07")
-	private WebElement condition_asyncErrorMessage;
-	
-	@FindBy(id="CheckedMultiSelect_condition_label13")
-	private WebElement condition_label11;
-	
-	public String conAsyncErrorMessage(){//Expression-Widget Property : asyncErrorMessage
-		condition_asyncErrorMessage.click();
-		return condition_label11.getText();
-	}
 //###############################RichText Condition##################################
 //###############################RichText Action#####################################
-	@FindBy(id="CheckedMultiSelect_action_checkedMultiSelect")
-	private WebElement action_focus;
+	@FindBy(id="dijitEditorBody")
+	private WebElement action_panel;
 	
-	@FindBy(id="CheckedMultiSelect_action_label03")
-	private WebElement action_clickMe1;
+	@FindBy(id="RichText_Action_RichText_focus")
+	private WebElement action_Focus;
 	
-	public int actFocus(){//Invoke Widget Function-focus()
-		action_clickMe1.click();
-		String[] temp = {"bttMultiSelectFocused", "dijitFocused"};
-		return CSS.css_query(action_focus.getAttribute("class"), temp);
+	public int actFocus(){//Action_focus
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_onClick_iframe");
+		action_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		String[] temp={"dijitEditorFocused"};
+		return CSS.css_query(action_Focus.getAttribute("class"), temp);
+	}
+
+	@FindBy(id="RichText_Action_RichText_visibility")
+	private WebElement action_hidden;
+	
+	public int actHidden(){//Action_Visibility_hidden
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_onClick_copy_iframe");
+		action_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(action_hidden.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="CheckedMultiSelect_action_label05")
-	private WebElement action_clickMe2;
+	@FindBy(id="RichText_Action_RichText_visibility_01")
+	private WebElement action_visible;
 	
-	@FindBy(id="widget_CheckedMultiSelect_action_checkedMultiSelect01")
-	private WebElement action_styleClass;
-	
-	public int actStyleClass(){//Set Widget Property-styleClass
-		action_clickMe2.click();
-		String[] temp = {"setBorder"};
-		return CSS.css_query(action_styleClass.getAttribute("class"), temp);
+	public Boolean actVisible(){//Action_Visibility_visible
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_onBlur_iframe");
+		action_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		return action_visible.isDisplayed();
 	}
 	
-	@FindBy(id="widget_CheckedMultiSelect_action_checkedMultiSelect03")
-	private WebElement action_visibility;
+	@FindBy(id="RichText_Action_RichText_visibility_02")
+	private WebElement action_gone;
 	
-	@FindBy(id="CheckedMultiSelect_action_label07")
-	private WebElement action_clickMe3;
-	
-	public Boolean actVisible(){//visible
-		action_clickMe3.click();
-		return action_visibility.isDisplayed();
+	public int actGone(){//Action_Visibility_gone
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_onKeyDown_iframe");
+		action_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		String[] temp={"display: none"};
+		return Appearance.appearance_query(action_gone.getAttribute("style"), temp);
 	}
 	
-	@FindBy(id="CheckedMultiSelect_action_label10")
-	private WebElement action_clickMe4;
-	
-	public String actHidden(){//hidden
-		action_clickMe4.click();
-		return action_visibility.getAttribute("style");
+	public String actReadonlyT(){//Action_readOnly_true
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_onKeyPress_iframe");
+		action_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_visibility_03_iframe");
+		return action_panel.getAttribute("contenteditable");
 	}
 	
-	@FindBy(id="CheckedMultiSelect_action_label13")
-	private WebElement action_clickMe5;
-	
-	public String actGone(){//gone
-		action_clickMe5.click();
-		return action_visibility.getAttribute("style");
+	public String actReadonlyF(){//Action_readOnly_false
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_onKeyUp_iframe");
+		action_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_visibility_04_iframe");
+		return action_panel.getAttribute("contenteditable");
 	}
 	
-	@FindBy(id="CheckedMultiSelect_action_label08")
-	private WebElement action_clickMe6;
-	
-	@FindBy(id="CheckedMultiSelect_action_checkedMultiSelect04")
-	private WebElement action_disableTrue;
-	
-	public String actDisableTrue(){//Set Widget Property : disable=true
-		action_clickMe6.click();
-		return action_disableTrue.getAttribute("disabled");
-	}
-	
-	@FindBy(id="CheckedMultiSelect_action_label16")
-	private WebElement action_clickMe7;
-	
-	@FindBy(id="widget_CheckedMultiSelect_action_checkedMultiSelect05")
-	private WebElement action_readonlyTrue;
-	
-	public int actReadonlyTrue(){//Set Widget Property : ReadOnly=true
-		action_clickMe7.click();
-		String[] temp = {"dojoxCheckedMultiSelectReadOnly", "dijitReadOnly"};
-		return CSS.css_query(action_readonlyTrue.getAttribute("class"), temp);
-	}
-	
-	@FindBy(id="CheckedMultiSelect_action_label18")
-	private WebElement action_clickMe8;
-	
-	@FindBy(id="widget_CheckedMultiSelect_action_checkedMultiSelect06")
+	@FindBy(xpath="/html/body")
 	private WebElement action_hint;
 	
-	public String actHint(){//Set Widget Property : Hint="test string"
-		action_clickMe8.click();
+	public String actHint(){//Action_hint "Say hello to you "
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_onMouseEnter_iframe");
+		action_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_visibility_05_iframe");
 		return action_hint.getAttribute("title");
 	}
 	
+	@FindBy(id="RichText_Action_RichText_visibility_06")
+	private WebElement action_styleClass;
 	
-	@FindBy(id="CheckedMultiSelect_action_label20")
-	private WebElement action_clickMe9;
-	
-	@FindBy(id="CheckedMultiSelect_action_checkedMultiSelect07")
-	private WebElement action_disable;
-	
-	@FindBy(id="widget_CheckedMultiSelect_action_checkedMultiSelect07")
-	private WebElement action_hint1;
-	
-	public String actDisable(){//disable=true and hint is "test string"
-		action_clickMe9.click();
-		return action_disable.getAttribute("disabled");
+	public int actStyleClass(){//Action_styleClass
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_onMouseLeave_iframe");
+		action_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		String[] temp={"richTextStyle1"};
+		return CSS.css_query(action_styleClass.getAttribute("class"), temp);
 	}
 	
-	public String actHint1(){
-		action_clickMe9.click();
-		return action_hint1.getAttribute("title");
+	@FindBy(id="RichText_Action_richText01")
+	private WebElement ActionGroup;
+	
+	public int actGroup(){//ActionGroup
+		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_richText_iframe");
+		action_panel.click();
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
+		String[] temp={"visibility: hidden"};
+		return Appearance.appearance_query(ActionGroup.getAttribute("style"), temp);
 	}
-
+	
 //###############################RichText Action#####################################
 //###############################RichText Appearance1################################
 	@FindBy(id="RichText_appearance1_richText")
@@ -648,7 +557,7 @@ public class RichText_PageObject extends Main_Page{
 	}
 //###############################RichText Appearance2###############################
 //###############################RichText Submit####################################
-	
+//form
 //###############################RichText Submit####################################
 
 
