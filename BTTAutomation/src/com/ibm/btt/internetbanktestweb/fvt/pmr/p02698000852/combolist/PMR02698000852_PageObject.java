@@ -33,53 +33,6 @@ public class PMR02698000852_PageObject {
 		VI_number_combo_link.click();
 	}
 
-	//fill  101.8
-	@FindBy(id="combo_submit_button02")
-	private WebElement AutoFill_button_101;
-
-	public WebElement getAutoFill_button_101() {
-		return AutoFill_button_101;
-	}
-
-	//fill 112.0
-	@FindBy(id="combo_submit_button01")
-	private WebElement AutoFill_button_112;
-
-	public WebElement getAutoFill_button_112() {
-		return AutoFill_button_112;
-	}
-	
-	//fill 1208.32
-	@FindBy(id="combo_submit_button03_copy")
-	private WebElement AutoFill_button_1208;
-
-	public WebElement getAutoFill_button_1208() {
-		return AutoFill_button_1208;
-	}
-	
-	//fill 1234.00
-	@FindBy(id="combo_submit_button03_copy02")
-	private WebElement AutoFill_button_1234;
-
-	public WebElement getAutoFill_button_1234() {
-		return AutoFill_button_1234;
-	}
-	
-	//fill 123456789.00
-	@FindBy(id="combo_submit_button03")
-	private WebElement AutoFill_button_123456789;
-
-	public WebElement getAutoFill_button_123456789() {
-		return AutoFill_button_123456789;
-	}
-	
-	//fill 123456789.123
-	@FindBy(id="combo_submit_button03_copy01")
-	private WebElement AutoFill_button_1_9;
-
-	public WebElement getAutoFill_button_1_9() {
-		return AutoFill_button_1_9;
-	}
 	
 	/*
 	 * 10 data types
@@ -93,7 +46,8 @@ public class PMR02698000852_PageObject {
 		return combo_submit_combo;
 	}
 
-	//Currency
+
+   //Currency
 	@FindBy(id="combo_submit_combo02")
 	private WebElement combo_submit_combo02;
 
@@ -197,7 +151,7 @@ public class PMR02698000852_PageObject {
 		return showcombo_submit_label;
 	}
 
-	
+
 	//Currency-combo
 	@FindBy(id="showcombo_submit_combo_copy")
 	private WebElement showcombo_submit_combo_copy;
@@ -229,7 +183,7 @@ public class PMR02698000852_PageObject {
 		return showcombo_submit_label03;
 	}
 	
-	
+		
 	//Short-combo
 	@FindBy(id="showcombo_submit_combo_copy_copy01")
 	private WebElement showcombo_submit_combo_copy_copy01;
