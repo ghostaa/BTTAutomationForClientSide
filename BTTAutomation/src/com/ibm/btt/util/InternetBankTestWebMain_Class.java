@@ -1,15 +1,7 @@
 package com.ibm.btt.util;
 
-import java.awt.Robot;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Window;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.interactions.Actions;
-
 import com.ibm.btt.common.drivercontroller.FirefoxDriverController;
 
 public class InternetBankTestWebMain_Class extends Main_Class{
@@ -20,7 +12,7 @@ public class InternetBankTestWebMain_Class extends Main_Class{
 	public static void setUp() throws Exception {
 		Main_Class.defaultSetup();	
 //		profile.setPreference("dom.disable_open_during_load", true);  
-//		driver = new FirefoxDriverController().getFirefoxDriver(null,"d:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+//		driver = new FirefoxDriverController().getFirefoxDriver(null,"c:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 		driver = new FirefoxDriverController().getFirefoxDriver();
 		
 		Window window = driver.manage().window();
