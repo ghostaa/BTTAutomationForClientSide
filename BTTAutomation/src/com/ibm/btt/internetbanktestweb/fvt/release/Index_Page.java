@@ -44,6 +44,13 @@ public class Index_Page {
 	public void IBK_19and21forInnerSubFolder(){
 		IBK_19and21forInnerSubFolder.click();
 	}
+	
+	@FindBy(id="index_IBK20And6")
+	private WebElement IBK20AndIBK6;//Click link to launch test case for IBK20 (new line character in table) and IBK6 (Combox supports disabling edit)
+		
+	public void IBK20AndIBK6(){
+		IBK20AndIBK6.click();
+	}
 
 
 } 
