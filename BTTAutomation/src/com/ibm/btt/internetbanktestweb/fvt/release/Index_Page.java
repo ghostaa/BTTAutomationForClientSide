@@ -51,6 +51,20 @@ public class Index_Page {
 	public void IBK20AndIBK6(){
 		IBK20AndIBK6.click();
 	}
+	
+	@FindBy(id="index_link11_copy")
+	private WebElement IBK31;//Click link to launch test case for IBK 31 (Changing Table/Grid Structure with DIV layout)
+		
+	public void IBK31(){
+		IBK31.click();
+	}
+	
+	@FindBy(id="index_IBK30")
+	private WebElement IBK30XHTML;//Click link to launch test case for IBK 30 XHTML support
+		
+	public void IBK30XHTML(){
+		IBK30XHTML.click();
+	}
 
 
 } 
