@@ -66,6 +66,12 @@ public class Index_Page {
 		IBK30XHTML.click();
 	}
 
+    @FindBy(id="index_link18_copy")
+    private WebElement IBK_F_018TableDataAppend; //Click link to launch test case for IBK_F_018: Table data append
+    
+    public void IBK_F_018TableDataAppend(){
+    	IBK_F_018TableDataAppend.click();
+    }
 
 } 
 
