@@ -12,14 +12,14 @@ public class PMR02698000852_PageObject {
 	public void Establish(){
 		Establish.click();
 	}
-	@FindBy(id="index_tabbedPane_tablist_index_ContentPane07")
+	@FindBy(id="index_tabbedPane_tablist_index_ContentPane08")
 	private WebElement PMR;
 	
 	public void PMR_tab(){
 		PMR.click();
 	}
 	
-	@FindBy(id="index_link55")
+	@FindBy(id="index_link57")
 	private WebElement PMR_link;
 		
 	public void PMR_link(){
