@@ -56,11 +56,6 @@ public class IBK4_12_PageObject extends Index_Page{
 		tableInGroupPopupButton.click();
 	}
 	
-	@FindBy(id="NonEditableTable_link01")  //Link to 'table in TabbedPane' page (1. link and button in the table 2. Table noresize 3.context menu)
-	private WebElement tableInTabbedPaneLink;
-	public void tableInTabbedPaneLink(){
-		tableInTabbedPaneLink.click();
-	}
 	
 	@FindBy(id="NonEditableTable_link04")  //Link to popup page(table in tabbedPane)
 	private WebElement tableInTabbedPanePopupLink;
