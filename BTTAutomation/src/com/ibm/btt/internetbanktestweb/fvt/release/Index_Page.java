@@ -23,6 +23,7 @@ public class Index_Page {
 	public void IBK_FVT_tab(){
 		IBK_FVT.click();
 	}
+
 	
 	@FindBy(id="index_link01")
 	private WebElement IBK_4_11;//Click link to launch test case for IBK4-11( muti-Widget )
@@ -30,12 +31,35 @@ public class Index_Page {
 	public void IBK_4_11(){
 		IBK_4_11.click();
 	}
+	@FindBy(id="index_link01_copy01")
+	private WebElement IBK_F001;
 	
+	public void IBK_F001(){
+		IBK_F001.click();
+	}
+	@FindBy(id="index_link12")
+	private WebElement IBK_F006;
+	
+	public void IBK_F006(){
+		IBK_F006.click();
+	}
 	@FindBy(id="index_link16")
 	private WebElement IBK_F_007;//Click link to launch test case for IBK_F_007:multilanguage switch
 		
 	public void IBK_F_007(){
 		IBK_F_007.click();
+	}
+	@FindBy(id="index_link07_copy01")
+	private WebElement IBK_19_21_sub;
+		
+	public void IBK_19_21_sub(){
+		IBK_19_21_sub.click();
+	}
+	@FindBy(id="index_IBK25")
+	private WebElement IBK_25_ButtonVerticalAlign;
+		
+	public void IBK_25_ButtonVerticalAlign(){
+		IBK_25_ButtonVerticalAlign.click();
 	}
 	
 	@FindBy(id="index_link07_copy01_copy")
