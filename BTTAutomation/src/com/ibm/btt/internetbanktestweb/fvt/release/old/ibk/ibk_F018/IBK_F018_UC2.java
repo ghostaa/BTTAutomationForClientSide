@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.ibm.btt.util.InternetBankTestWebMain_Class;
 import com.ibm.btt.util.Tools;
 
-/***SUPPORTER  BY  Jing GR Shang****/
+/***SUPPORT  BY  Jing GR Shang****/
 public class IBK_F018_UC2 extends InternetBankTestWebMain_Class{
 	private static IBK_F018_PageObject drv;
 	private static StringBuffer verificationErrors = new StringBuffer();

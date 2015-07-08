@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.ibm.btt.util.InternetBankTestWebMain_Class;
 import com.ibm.btt.util.Tools;
 
-/***SUPPORTER  BY  Jing GR Shang****/
+/***SUPPORT  BY  Jing GR Shang****/
 public class IBK_F018_UC3 extends InternetBankTestWebMain_Class{
 	private static IBK_F018_PageObject drv;
 	private static StringBuffer verificationErrors = new StringBuffer();
@@ -45,7 +45,8 @@ public class IBK_F018_UC3 extends InternetBankTestWebMain_Class{
 		drv.table_name_edit2();
 		drv.TableEdit_DeleteButton();
 		//TODO
-		//assertEquals(null,drv.getCustomer_age_view2());
+		//assertEquals(true,drv.getCustomer_age_view2().equals(null));
+		
 	}
 	
 	@Test

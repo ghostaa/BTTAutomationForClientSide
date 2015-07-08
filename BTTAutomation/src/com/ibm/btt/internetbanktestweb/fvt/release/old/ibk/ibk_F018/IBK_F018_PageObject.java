@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.ibm.btt.internetbanktestweb.fvt.release.Index_Page;
 
-/***SUPPORTER  BY  Jing GR Shang****/
+/***SUPPORT  BY  Jing GR Shang****/
 public class IBK_F018_PageObject extends Index_Page{
 	
 	/*-------the links in second page-----*/
