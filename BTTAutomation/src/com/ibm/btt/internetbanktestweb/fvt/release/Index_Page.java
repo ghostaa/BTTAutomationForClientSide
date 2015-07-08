@@ -73,5 +73,11 @@ public class Index_Page {
     	IBK_F_018TableDataAppend.click();
     }
 
+    @FindBy(id="index_link01_copy")
+    private WebElement IBK4_12TableExtension; //Click link to launch test case for IBK4-12( Table Widget Extension : Context menu support )
+    
+    public void IBK4_12TableExtension(){
+    	IBK4_12TableExtension.click();
+    }
 } 
 
