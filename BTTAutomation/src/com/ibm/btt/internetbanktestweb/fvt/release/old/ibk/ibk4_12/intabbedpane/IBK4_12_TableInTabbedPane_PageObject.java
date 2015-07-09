@@ -135,19 +135,19 @@ public class IBK4_12_TableInTabbedPane_PageObject extends Index_Page{
 		NonEditableTableInTabbedPane_ContentPane09.click();
 	}
 	
-	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[1]/a")  
+	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[1]/a")  //Link - dataNameforLink
 	private WebElement dataNameforLink;
 	public void dataNameforLink(){
 		dataNameforLink.click();
 	}
 	
-	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[2]/a")  
+	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[2]/a")  //Link - LinkText
 	private WebElement imageLinkText;
 	public void imageLinkText(){
 		imageLinkText.click();
 	}
 	
-	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[3]/a")  
+	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[3]/a")  //Link - changeFlowEvent
 	private WebElement changeFlowEvent;
 	public void changeFlowEvent(){
 		changeFlowEvent.click();
@@ -159,7 +159,7 @@ public class IBK4_12_TableInTabbedPane_PageObject extends Index_Page{
 		return changeFlowEventToPage.getText();
 	}
 	
-	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[4]/img")  
+	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[4]/img")  //Link - imageLink
 	private WebElement imageLink;
 	public void imageLink(){
 		imageLink.click();
@@ -179,53 +179,23 @@ public class IBK4_12_TableInTabbedPane_PageObject extends Index_Page{
 		NonEditableTableInTabbedPane_ContentPane10.click();
 	}
 	
-	@FindBy(xpath=".//*[@id='dojox_grid__View_13']/div/div/div/div[3]/table/tbody/tr/td[1]/span/span")  
+	@FindBy(xpath=".//*[@id='dojox_grid__View_13']/div/div/div/div[3]/table/tbody/tr/td[1]/span/span")   //Button - dataNameforButton
 	private WebElement dataNameforButton;
 	public void dataNameforButton(){
 		dataNameforButton.click();
 	}
 	
-	@FindBy(xpath=".//*[@id='dojox_grid__View_13']/div/div/div/div[4]/table/tbody/tr/td[2]/span/span/div/span")  
+	@FindBy(xpath=".//*[@id='dojox_grid__View_13']/div/div/div/div[4]/table/tbody/tr/td[2]/span/span/div/span")   //Button - LinkText
 	private WebElement buttonLinkText;
 	public void buttonLinkText(){
 		buttonLinkText.click();
 	}
 	
-	@FindBy(xpath=".//*[@id='dojox_grid__View_13']/div/div/div/div[5]/table/tbody/tr/td[3]/span/span/div/span")  
+	@FindBy(xpath=".//*[@id='dojox_grid__View_13']/div/div/div/div[5]/table/tbody/tr/td[3]/span/span/div/span")   //Button - ChangeflowEvent
 	private WebElement buttonChangeflowEvent;
 	public void buttonChangeflowEvent(){
 		buttonChangeflowEvent.click();
 	}
-	
-	/*@FindBy(id="SelectionResultInGroupPage_link_copy") 
-	private WebElement SelectionResultInGroupPage_link_copy;
-	public void SelectionResultInGroupPage_link_copy(){
-		SelectionResultInGroupPage_link_copy.click();
-	}*/
+
 	/*=============Button end====================*/
-	
-	/*=============NoneSelectionMode start====================*/
-	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane06")  //Pane
-	private WebElement NonEditableTableInTabbedPane_ContentPane06;
-	public void NonEditableTableInTabbedPane_ContentPane06(){
-		NonEditableTableInTabbedPane_ContentPane06.click();
-	}
-	/*=============NoneSelectionMode end====================*/
-	
-	/*=============SingleSelectionMode start====================*/
-	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane08")  //Pane
-	private WebElement NonEditableTableInTabbedPane_ContentPane08;
-	public void NonEditableTableInTabbedPane_ContentPane08(){
-		NonEditableTableInTabbedPane_ContentPane08.click();
-	}
-	/*=============SingleSelectionMode end====================*/
-	
-	/*=============MutipleSelectionMode start====================*/
-	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane07")  //Pane
-	private WebElement NonEditableTableInTabbedPane_ContentPane07;
-	public void NonEditableTableInTabbedPane_ContentPane07(){
-		NonEditableTableInTabbedPane_ContentPane07.click();
-	}
-	/*=============MutipleSelectionMode end====================*/
-	
 }
