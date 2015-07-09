@@ -6,6 +6,9 @@ import static org.junit.Assert.fail;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -19,7 +22,7 @@ import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.InternetBankTestWebMain_Class;
 import com.ibm.btt.util.Tools;
 
-public class IBK_31 extends InternetBankTestWebMain_Class{
+public class IBK_31_TableAndDivLayout extends InternetBankTestWebMain_Class{
 
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
@@ -39,38 +42,141 @@ public class IBK_31 extends InternetBankTestWebMain_Class{
   }
 
   @Test
-  public void TableStructureTr1Td1(){
-	assertEquals("td", drv.TableStructureTr1Td1());
+  public void FormTr1Td1(){
+	assertEquals("td", drv.FormTr1Td1());
   }
   
   @Test
-  public void TableStructureTr1Td2(){
-	assertEquals("td", drv.TableStructureTr1Td2());
+  public void FormTr1Td2(){
+	assertEquals("td", drv.FormTr1Td2());
   }
   
   @Test
-  public void TableStructureTr2Td1(){
-	assertEquals("td", drv.TableStructureTr2Td1());
+  public void FormTr1Td2RowSpan(){
+	assertEquals("4", drv.FormTr1Td2RowSpan());
   }
   
   @Test
-  public void TableStructureTr2Td2(){
-	assertEquals("td", drv.TableStructureTr2Td2());
+  public void FormTr2Td(){
+	assertEquals("td", drv.FormTr2Td());
   }
   
   @Test
-  public void TableStructureTr3Td(){
-	assertEquals("td", drv.TableStructureTr3Td());
+  public void FormTr3Td(){
+	assertEquals("td", drv.FormTr3Td());
   }
   
   @Test
-  public void TableStructureTr4Td1(){
-	assertEquals("td", drv.TableStructureTr4Td1());
+  public void FormTr4Td(){
+	assertEquals("td", drv.FormTr4Td());
   }
+  
+  @Test
+  public void GroupTr1Td1(){
+	assertEquals("td", drv.GroupTr1Td1());
+  }
+  
+  @Test
+  public void GroupTr1Td1RowSpan(){
+	assertEquals("2", drv.GroupTr1Td1RowSpan());
+  }
+  
+  @Test
+  public void GroupTr1Td2(){
+	assertEquals("td", drv.GroupTr1Td2());
+  }
+  
+  @Test
+  public void GroupTr2Td(){
+	assertEquals("td", drv.GroupTr2Td());
+  }
+  
+  @Test
+  public void TabbedPaneTr1Td(){
+	assertEquals("td", drv.TabbedPaneTr1Td());
+  }
+  
+  @Test
+  public void TabbedPaneTr1TdColSpan(){
+	assertEquals("4", drv.TabbedPaneTr1TdColSpan());
+  }
+  
+  @Test
+  public void TabbedPaneTr2Td2(){
+	assertEquals("td", drv.TabbedPaneTr2Td2());
+  }
+  
+  @Test
+  public void TabbedPaneTr3Td3(){
+	assertEquals("td", drv.TabbedPaneTr3Td3());
+  }
+  
+  @Test
+  public void TabbedPaneTr4Td4(){
+	assertEquals("td", drv.TabbedPaneTr4Td4());
+  }
+  
+  @Test
+  public void TabbedPaneTr5Td3(){
+	assertEquals("td", drv.TabbedPaneTr5Td3());
+  }
+  
+  @Test
+  public void TabbedPaneTr6Td2(){
+	assertEquals("td", drv.TabbedPaneTr6Td2());
+  }
+  
+  @Test
+  public void TabbedPaneTr7Td(){
+	assertEquals("td", drv.TabbedPaneTr7Td());
+  }
+  
+  @Test
+  public void TabbedPaneTr7TdColSpan(){
+	assertEquals("4", drv.TabbedPaneTr7TdColSpan());
+  }
+  
+ //non combine div layout
 
   @Test
-  public void TableStructureTr4Td2(){
-	assertEquals("td", drv.TableStructureTr4Td2());
+  public void FormDiv11(){
+	drv.skipToNonCombine();
+	assertEquals("div", drv.FormDiv11());
+  }
+  
+  @Test
+  public void FormDiv12(){
+	assertEquals("div", drv.FormDiv12());
+  }
+  
+  @Test
+  public void FormDiv21(){
+	assertEquals("div", drv.FormDiv21());
+  }
+  
+  @Test
+  public void FormDiv22(){
+	assertEquals("div", drv.FormDiv22());
+  }
+  
+  @Test
+  public void FormDiv31(){
+	assertEquals("div", drv.FormDiv31());
+  }
+  
+  @Test
+  public void FormDiv32(){
+	assertEquals("div", drv.FormDiv32());
+  }
+  
+  @Test
+  public void FormDiv41(){
+	assertEquals("div", drv.FormDiv41());
+  }
+  
+  @Test
+  public void FormDiv42(){
+	assertEquals("div", drv.FormDiv42());
   }
   
   @Test
@@ -128,9 +234,15 @@ public class IBK_31 extends InternetBankTestWebMain_Class{
 	assertEquals("div", drv.TabbedPaneDiv71());
   }
   
+  @Test
+  public void finalPage(){
+	  drv.skipToFinalPage();
+	assertEquals("This is the final page of the sample flow", drv.finalPage());
+  }
+  
   @AfterClass
   public static void tearDown() throws Exception {
-	Tools.snapshot((TakesScreenshot)driver, InternetBankTestWebMain_Class.InternetBankTestWeb,IBK_31.class);
+	Tools.snapshot((TakesScreenshot)driver, InternetBankTestWebMain_Class.InternetBankTestWeb,IBK_31_TableAndDivLayout.class);
 	driver.quit();
 	//driver.navigate().refresh();
     String verificationErrorString = verificationErrors.toString();
@@ -173,3 +285,4 @@ public class IBK_31 extends InternetBankTestWebMain_Class{
   }
 
 }
+
