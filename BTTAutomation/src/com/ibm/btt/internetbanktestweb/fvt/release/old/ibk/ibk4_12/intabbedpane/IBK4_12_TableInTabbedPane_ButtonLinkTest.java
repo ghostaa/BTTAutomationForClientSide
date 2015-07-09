@@ -10,7 +10,7 @@ import com.ibm.btt.util.InternetBankTestWebMain_Class;
 import com.ibm.btt.util.Tools;
 
 /***SUPPORT  BY  Jing GR Shang****/
-public class IBK4_12_TableInTabbedPane_LinkChangeFlowEvent extends InternetBankTestWebMain_Class{
+public class IBK4_12_TableInTabbedPane_ButtonLinkTest extends InternetBankTestWebMain_Class{
 	private static IBK4_12_TableInTabbedPane_PageObject drv;
 	private static StringBuffer verificationErrors = new StringBuffer();
 	
@@ -27,23 +27,18 @@ public class IBK4_12_TableInTabbedPane_LinkChangeFlowEvent extends InternetBankT
 	@Test
 	public void EnterTableInTabbedPane(){
 		drv.tableInTabbedPaneLink();
-		drv.NonEditableTableInTabbedPane_ContentPane09();
+		drv.NonEditableTableInTabbedPane_ContentPane10();
 	}
-
+	//TODO
 	@Test
-	public void changeFlowEventLink(){
-		drv.changeFlowEvent();
-		assertEquals("-> Selection Result in group",drv.changeFlowEventToPage());
-	}
-
-	@Test
-	public void ExitToMain(){
-		drv.SelectionResultInGroupPage_link_copy();
+	public void ButtonLinkTest(){
+		drv.buttonLinkText();
+		assertEquals("百度一下",drv.baiduId());
 	}
 	
 	@AfterClass
 	public static void tearDown(){
-		Tools.snapshot((TakesScreenshot) driver, InternetBankTestWebMain_Class.InternetBankTestWeb, IBK4_12_TableInTabbedPane_LinkChangeFlowEvent.class);
+		Tools.snapshot((TakesScreenshot) driver, InternetBankTestWebMain_Class.InternetBankTestWeb, IBK4_12_TableInTabbedPane_ButtonLinkTest.class);
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if(!"".endsWith(verificationErrorString)){

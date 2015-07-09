@@ -25,7 +25,7 @@ public class IBK4_12_TableInTabbedPane_Pane extends InternetBankTestWebMain_Clas
 	
 	
 	@Test
-	public void EnterTableInTabbedPan(){
+	public void EnterTableInTabbedPane(){
 		drv.tableInTabbedPaneLink();
 		drv.NonEditableTableInTabbedPane_ContentPane03();
 	}

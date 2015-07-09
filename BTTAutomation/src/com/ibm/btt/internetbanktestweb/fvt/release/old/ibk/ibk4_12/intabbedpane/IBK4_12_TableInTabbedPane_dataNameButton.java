@@ -25,13 +25,13 @@ public class IBK4_12_TableInTabbedPane_dataNameButton extends InternetBankTestWe
 	
 	
 	@Test
-	public void EnterTableInTabbedPan(){
+	public void EnterTableInTabbedPane(){
 		drv.tableInTabbedPaneLink();
 		drv.NonEditableTableInTabbedPane_ContentPane10();
 	}
 	//TODO
 	@Test
-	public void dataNameForLink(){
+	public void dataNameForButton(){
 		drv.dataNameforButton();
 		assertEquals("百度一下",drv.baiduId());
 	}

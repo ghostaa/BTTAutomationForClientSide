@@ -4,14 +4,13 @@ import static org.junit.Assert.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 import com.ibm.btt.util.InternetBankTestWebMain_Class;
 import com.ibm.btt.util.Tools;
 
 /***SUPPORT  BY  Jing GR Shang****/
-public class IBK4_12_TableInTabbedPane_NormalTab_ToPopupPane extends InternetBankTestWebMain_Class{
+public class IBK4_12_TableInTabbedPane_ButtonChangeFlowEvent extends InternetBankTestWebMain_Class{
 	private static IBK4_12_TableInTabbedPane_PageObject drv;
 	private static StringBuffer verificationErrors = new StringBuffer();
 	
@@ -24,37 +23,19 @@ public class IBK4_12_TableInTabbedPane_NormalTab_ToPopupPane extends InternetBan
 		drv.IBK4_12TableExtension();
 	}
 	
-	InternetBankTestWebMain_Class main_class = new InternetBankTestWebMain_Class();
-	String helen2AccountName = "";
-	String helen2AccountBalance = "";
-	String helen3AccountName = "";
 	
 	@Test
 	public void EnterTableInTabbedPane(){
 		drv.tableInTabbedPaneLink();
-		drv.NonEditableTableInTabbedPane_ContentPane01();
+		drv.NonEditableTableInTabbedPane_ContentPane10();
 	}
-	
-	//TODO
+
 	@Test
-	public void NormalTabSelect(){
-		helen2AccountName = drv.getHelen2AccountName();
-		helen2AccountBalance = drv.getHelen2AccountBalance();
-		helen3AccountName = drv.getHelen3AccountName();
-		drv.Helen2AccountName();
-		main_class.keyDown(Keys.CONTROL);
-		drv.Helen3AccountName();
-		main_class.keyUp(Keys.CONTROL);
-		drv.NonEditableTableInTabbedPane_button01_label();
+	public void changeFlowEventButton(){
+		drv.buttonChangeflowEvent();
+		assertEquals("-> Selection Result in group",drv.changeFlowEventToPage());
 	}
-	
-	@Test
-	public void ResultInPopupPage(){
-		assertEquals(helen2AccountName,drv.Helen2AccountNameResult());
-		assertEquals(helen2AccountBalance,drv.Helen2AccountBalanceResult());
-		assertEquals(helen3AccountName,drv.Helen3AccountNameResult());
-	}
-	
+
 	@Test
 	public void ExitToMain(){
 		drv.SelectionResultInGroupPage_link_copy();
@@ -62,7 +43,7 @@ public class IBK4_12_TableInTabbedPane_NormalTab_ToPopupPane extends InternetBan
 	
 	@AfterClass
 	public static void tearDown(){
-		Tools.snapshot((TakesScreenshot) driver, InternetBankTestWebMain_Class.InternetBankTestWeb, IBK4_12_TableInTabbedPane_NormalTab_ToPopupPane.class);
+		Tools.snapshot((TakesScreenshot) driver, InternetBankTestWebMain_Class.InternetBankTestWeb, IBK4_12_TableInTabbedPane_ButtonChangeFlowEvent.class);
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if(!"".endsWith(verificationErrorString)){

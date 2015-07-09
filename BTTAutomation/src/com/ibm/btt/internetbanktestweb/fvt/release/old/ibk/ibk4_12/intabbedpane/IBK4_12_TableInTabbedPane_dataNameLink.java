@@ -25,7 +25,7 @@ public class IBK4_12_TableInTabbedPane_dataNameLink extends InternetBankTestWebM
 	
 	
 	@Test
-	public void EnterTableInTabbedPan(){
+	public void EnterTableInTabbedPane(){
 		drv.tableInTabbedPaneLink();
 		drv.NonEditableTableInTabbedPane_ContentPane09();
 	}

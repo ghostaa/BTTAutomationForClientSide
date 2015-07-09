@@ -30,7 +30,7 @@ public class IBK4_12_TableInTabbedPane_NormalTab_ToGroup extends InternetBankTes
 	String helen3AccountName = "";
 	
 	@Test
-	public void EnterTableInTabbedPan(){
+	public void EnterTableInTabbedPane(){
 		drv.tableInTabbedPaneLink();
 		drv.NonEditableTableInTabbedPane_ContentPane01();
 	}

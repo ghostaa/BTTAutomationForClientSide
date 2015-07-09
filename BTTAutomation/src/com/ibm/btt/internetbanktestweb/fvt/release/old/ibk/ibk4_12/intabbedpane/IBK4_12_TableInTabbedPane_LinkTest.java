@@ -25,13 +25,13 @@ public class IBK4_12_TableInTabbedPane_LinkTest extends InternetBankTestWebMain_
 	
 	
 	@Test
-	public void EnterTableInTabbedPan(){
+	public void EnterTableInTabbedPane(){
 		drv.tableInTabbedPaneLink();
 		drv.NonEditableTableInTabbedPane_ContentPane09();
 	}
 	//TODO
 	@Test
-	public void dataNameForLink(){
+	public void imageLinkText(){
 		drv.imageLinkText();
 		assertEquals("百度一下",drv.baiduId());
 	}
