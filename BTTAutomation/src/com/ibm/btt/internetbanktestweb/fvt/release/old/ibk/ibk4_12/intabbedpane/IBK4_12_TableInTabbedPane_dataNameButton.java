@@ -10,7 +10,7 @@ import com.ibm.btt.util.InternetBankTestWebMain_Class;
 import com.ibm.btt.util.Tools;
 
 /***SUPPORT  BY  Jing GR Shang****/
-public class IBK4_12_TableInTabbedPane_ImageLink extends InternetBankTestWebMain_Class{
+public class IBK4_12_TableInTabbedPane_dataNameButton extends InternetBankTestWebMain_Class{
 	private static IBK4_12_TableInTabbedPane_PageObject drv;
 	private static StringBuffer verificationErrors = new StringBuffer();
 	
@@ -27,19 +27,18 @@ public class IBK4_12_TableInTabbedPane_ImageLink extends InternetBankTestWebMain
 	@Test
 	public void EnterTableInTabbedPan(){
 		drv.tableInTabbedPaneLink();
-		drv.NonEditableTableInTabbedPane_ContentPane09();
+		drv.NonEditableTableInTabbedPane_ContentPane10();
 	}
 	//TODO
 	@Test
 	public void dataNameForLink(){
-		drv.imageLink();
+		drv.dataNameforButton();
 		assertEquals("百度一下",drv.baiduId());
 	}
-
 	
 	@AfterClass
 	public static void tearDown(){
-		Tools.snapshot((TakesScreenshot) driver, InternetBankTestWebMain_Class.InternetBankTestWeb, IBK4_12_TableInTabbedPane_ImageLink.class);
+		Tools.snapshot((TakesScreenshot) driver, InternetBankTestWebMain_Class.InternetBankTestWeb, IBK4_12_TableInTabbedPane_dataNameButton.class);
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if(!"".endsWith(verificationErrorString)){

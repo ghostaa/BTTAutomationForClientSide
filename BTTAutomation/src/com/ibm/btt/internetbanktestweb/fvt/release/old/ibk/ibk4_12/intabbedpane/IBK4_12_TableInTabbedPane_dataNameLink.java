@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 import com.ibm.btt.util.InternetBankTestWebMain_Class;
@@ -37,7 +36,6 @@ public class IBK4_12_TableInTabbedPane_dataNameLink extends InternetBankTestWebM
 		assertEquals("百度一下",drv.baiduId());
 	}
 
-	
 	@AfterClass
 	public static void tearDown(){
 		Tools.snapshot((TakesScreenshot) driver, InternetBankTestWebMain_Class.InternetBankTestWeb, IBK4_12_TableInTabbedPane_dataNameLink.class);
