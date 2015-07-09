@@ -13,6 +13,13 @@ public class IBK4_12_TableInTabbedPane_PageObject extends Index_Page{
 	public void tableInTabbedPaneLink(){
 		tableInTabbedPaneLink.click();
 	}
+	
+	@FindBy(id="NonEditableTableInTabbedPane_link")  //non-editable table
+	private WebElement NonEditableTableInTabbedPane_link;
+	public void NonEditableTableInTabbedPane_link(){
+		NonEditableTableInTabbedPane_link.click();
+	}
+	
 	/*=============normalTab start====================*/
 	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane01")  //NormalTab
 	private WebElement NonEditableTableInTabbedPane_ContentPane01;
@@ -103,10 +110,22 @@ public class IBK4_12_TableInTabbedPane_PageObject extends Index_Page{
 		NonEditableTableInTabbedPane_ContentPane04.click();
 	}
 	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_7']/div/div/div/div[5]/table/tbody/tr/td[1]/div/span")
+	private WebElement tab01AccountName;
+	public String tab01AccountName(){
+		return tab01AccountName.getText();
+	}
+	
 	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane01_tablist_NonEditableTableInTabbedPane_ContentPane05")  //Pane-Tab02
 	private WebElement NonEditableTableInTabbedPane_ContentPane05;
 	public void NonEditableTableInTabbedPane_ContentPane05(){
 		NonEditableTableInTabbedPane_ContentPane05.click();
+	}
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_9']/div/div/div/div[3]/table/tbody/tr/td[1]/div/span")
+	private WebElement tab02AccountName;
+	public String tab02AccountName(){
+		return tab02AccountName.getText();
 	}
 	/*=============Pane end====================*/
 	
