@@ -79,6 +79,112 @@ public class IBK4_12_TableInTabbedPane_PageObject extends Index_Page{
 	public String Helen3AccountNameResult(){
 		return Helen3AccountNameResult.getText();
 	}
-	
 	/*=============normalTab end====================*/
+	
+	/*=============Group start====================*/
+	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane02")  //Group
+	private WebElement NonEditableTableInTabbedPane_ContentPane02;
+	public void NonEditableTableInTabbedPane_ContentPane02(){
+		NonEditableTableInTabbedPane_ContentPane02.click();
+	}
+	//TODO 如何测试table的表头 resizable = "false"
+	/*=============Group end====================*/
+	
+	/*=============Pane start====================*/
+	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane03")  //Pane
+	private WebElement NonEditableTableInTabbedPane_ContentPane03;
+	public void NonEditableTableInTabbedPane_ContentPane03(){
+		NonEditableTableInTabbedPane_ContentPane03.click();
+	}
+	
+	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane01_tablist_NonEditableTableInTabbedPane_ContentPane04")  //Pane-Tab01
+	private WebElement NonEditableTableInTabbedPane_ContentPane04;
+	public void NonEditableTableInTabbedPane_ContentPane04(){
+		NonEditableTableInTabbedPane_ContentPane04.click();
+	}
+	
+	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane01_tablist_NonEditableTableInTabbedPane_ContentPane05")  //Pane-Tab02
+	private WebElement NonEditableTableInTabbedPane_ContentPane05;
+	public void NonEditableTableInTabbedPane_ContentPane05(){
+		NonEditableTableInTabbedPane_ContentPane05.click();
+	}
+	/*=============Pane end====================*/
+	
+	/*=============Link start====================*/
+	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane09")  //Pane
+	private WebElement NonEditableTableInTabbedPane_ContentPane09;
+	public void NonEditableTableInTabbedPane_ContentPane09(){
+		NonEditableTableInTabbedPane_ContentPane09.click();
+	}
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[1]/a")  
+	private WebElement dataNameforLink;
+	public void dataNameforLink(){
+		dataNameforLink.click();
+	}
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[2]/a")  
+	private WebElement imageLinkText;
+	public void imageLinkText(){
+		imageLinkText.click();
+	}
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[3]/a")  
+	private WebElement changeFlowEvent;
+	public void changeFlowEvent(){
+		changeFlowEvent.click();
+	}
+	
+	@FindBy(id="SelectionResultInGroupPage_label")  
+	private WebElement changeToBlank;
+	public String changeToBlank(){
+		return changeToBlank.getText();
+	}
+	
+	
+	@FindBy(xpath=".//*[@id='dojox_grid__View_11']/div/div/div/div[1]/table/tbody/tr/td[4]/img")  
+	private WebElement imageLink;
+	public void imageLink(){
+		imageLink.click();
+	}
+	
+	@FindBy(id="su")  //跳转到baidu,判断搜索按钮是否为"百度一下"
+	private WebElement baiduId;
+	public String baiduId(){
+		return dataNameforLink.getAttribute("value");
+	}
+	/*=============Link end====================*/
+	
+	/*=============Button start====================*/
+	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane10")  //Pane
+	private WebElement NonEditableTableInTabbedPane_ContentPane10;
+	public void NonEditableTableInTabbedPane_ContentPane10(){
+		NonEditableTableInTabbedPane_ContentPane10.click();
+	}
+	/*=============Button end====================*/
+	
+	/*=============NoneSelectionMode start====================*/
+	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane06")  //Pane
+	private WebElement NonEditableTableInTabbedPane_ContentPane06;
+	public void NonEditableTableInTabbedPane_ContentPane06(){
+		NonEditableTableInTabbedPane_ContentPane06.click();
+	}
+	/*=============NoneSelectionMode end====================*/
+	
+	/*=============SingleSelectionMode start====================*/
+	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane08")  //Pane
+	private WebElement NonEditableTableInTabbedPane_ContentPane08;
+	public void NonEditableTableInTabbedPane_ContentPane08(){
+		NonEditableTableInTabbedPane_ContentPane08.click();
+	}
+	/*=============SingleSelectionMode end====================*/
+	
+	/*=============MutipleSelectionMode start====================*/
+	@FindBy(id="NonEditableTableInTabbedPane_tabbedPane_tablist_NonEditableTableInTabbedPane_ContentPane07")  //Pane
+	private WebElement NonEditableTableInTabbedPane_ContentPane07;
+	public void NonEditableTableInTabbedPane_ContentPane07(){
+		NonEditableTableInTabbedPane_ContentPane07.click();
+	}
+	/*=============MutipleSelectionMode end====================*/
+	
 }
