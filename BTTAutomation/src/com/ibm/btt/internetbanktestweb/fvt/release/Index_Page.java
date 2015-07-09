@@ -1,11 +1,6 @@
 package com.ibm.btt.internetbanktestweb.fvt.release;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class Index_Page {
@@ -60,6 +55,13 @@ public class Index_Page {
 		
 	public void IBK_25_ButtonVerticalAlign(){
 		IBK_25_ButtonVerticalAlign.click();
+	}
+	
+	@FindBy(id="index_link17")
+	private WebElement F003;//Click link to launch test case for F003:header merge and body cell merge
+		
+	public void F003(){
+		F003.click();
 	}
 	
 	@FindBy(id="index_link07_copy01_copy")
