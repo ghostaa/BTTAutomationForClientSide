@@ -11,7 +11,7 @@ import com.ibm.btt.util.InternetBankTestWebMain_Class;
 import com.ibm.btt.util.Tools;
 
 /***SUPPORT  BY  Jing GR Shang****/
-public class IBK4_12_TableInTabbedPane_LinkChangeFlowEvent extends InternetBankTestWebMain_Class{
+public class IBK4_12_TableInTabbedPane_LinkTest extends InternetBankTestWebMain_Class{
 	private static IBK4_12_TableInTabbedPane_PageObject drv;
 	private static StringBuffer verificationErrors = new StringBuffer();
 	
@@ -30,17 +30,17 @@ public class IBK4_12_TableInTabbedPane_LinkChangeFlowEvent extends InternetBankT
 		drv.tableInTabbedPaneLink();
 		drv.NonEditableTableInTabbedPane_ContentPane09();
 	}
-
+	//TODO
 	@Test
 	public void dataNameForLink(){
-		drv.changeFlowEvent();
-		assertEquals("-> Selection Result in group",drv.changeToBlank());
+		drv.imageLinkText();
+		assertEquals("百度一下",drv.baiduId());
 	}
 
 	
 	@AfterClass
 	public static void tearDown(){
-		Tools.snapshot((TakesScreenshot) driver, InternetBankTestWebMain_Class.InternetBankTestWeb, IBK4_12_TableInTabbedPane_LinkChangeFlowEvent.class);
+		Tools.snapshot((TakesScreenshot) driver, InternetBankTestWebMain_Class.InternetBankTestWeb, IBK4_12_TableInTabbedPane_LinkTest.class);
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if(!"".endsWith(verificationErrorString)){
