@@ -23,14 +23,14 @@ public class IBK_30_AllWidgets extends InternetBankTestWebMain_Class{
 
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
-  private static IBK_30XHTML_PageObject drv;
+  private static IBK_30XHTML_AllWidgets_PageObject drv;
   
 
   @BeforeClass
   public static void setUp() throws Exception {
     
 	InternetBankTestWebMain_Class.setUp();
-    drv=PageFactory.initElements(driver, IBK_30XHTML_PageObject.class);
+    drv=PageFactory.initElements(driver, IBK_30XHTML_AllWidgets_PageObject.class);
 //	    driver.navigate().to(Main_Class.baseUrl);
     drv.Establish();
     drv.IBK_FVT_tab();

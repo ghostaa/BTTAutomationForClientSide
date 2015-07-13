@@ -10,7 +10,7 @@ import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.InternetBankTestWebMain_Class;
 import com.ibm.btt.util.Main_Class;
 
-public class IBK_30XHTML_PageObject extends Index_Page {
+public class IBK_30XHTML_AllWidgets_PageObject extends Index_Page {
 	
 //###############################All Widgets##################################
 	@FindBy(id="IBK_Test_XHTML_index_link")
