@@ -13,6 +13,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class Link_PageObject extends Main_Page{
@@ -109,7 +110,8 @@ public class Link_PageObject extends Main_Page{
 	
 	public String pro_blank() throws InterruptedException{//11. Click test page, and new blank page 
 		properties_blank.click();
-		return AllWidgetsProjectMain_Class.switchWindow();
+		AllWidgetsProjectMain_Class.switchWindow(1);
+		return Main_Class.getCurrentURL();
 	}
 	
 	@FindBy(id="Link_properties_link06")
@@ -431,7 +433,8 @@ public class Link_PageObject extends Main_Page{
 	private WebElement condition_exptarget;
 	
 	public String conExpTarget(){//Link with condition--expression--widget property(target) 
-		return AllWidgetsProjectMain_Class.switchWindow();
+		AllWidgetsProjectMain_Class.switchWindow(1);
+		return Main_Class.getCurrentURL();
 	}
 	
 	public Boolean conExpLabel(){
@@ -517,7 +520,8 @@ public class Link_PageObject extends Main_Page{
 	public String actBlank(){//Link target is _blank
 		actionClick7.click();
 		action_LinkClick.click();
-		return AllWidgetsProjectMain_Class.switchWindow();
+		AllWidgetsProjectMain_Class.switchWindow(1);
+		return Main_Class.getCurrentURL();
 	}
 	
 	@FindBy(id="Link_action_label14")
