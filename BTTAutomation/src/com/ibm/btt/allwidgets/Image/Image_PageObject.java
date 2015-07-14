@@ -78,7 +78,9 @@ public class Image_PageObject extends Main_Page{
 	
 	public String proTargetBlank(){
 		propertiesTargetBlank.click();
-		return AllWidgetsProjectMain_Class.switchWindow();
+		AllWidgetsProjectMain_Class.switchWindow(1);
+		return Main_Class.getCurrentURL();
+		
 	}
 	
 	@FindBy(id="Image_properties_image08")
@@ -473,7 +475,7 @@ public class Image_PageObject extends Main_Page{
 	
 	public Boolean actTargetImage(){
 		action_target.click();
-		AllWidgetsProjectMain_Class.switchWindow();
+		AllWidgetsProjectMain_Class.switchWindow(1);
 		return AllWidgetsProjectMain_Class.getCurrentURL().indexOf("index.jsp")>-1;
 	}
 	
