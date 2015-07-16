@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 
 public class TableTestUtil {
 	
+	public static String tableEditCombobox = "com_ibm_btt_dijit_ComboBox_1";
+	public static String tableEditStrText = "com_ibm_btt_dijit_StringTextBox_1";
+	
 	/**
 	 * 
 	 * @param table
