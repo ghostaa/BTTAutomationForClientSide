@@ -19,7 +19,7 @@ import com.ibm.btt.util.TableTestUtil;
 public class F003_CellMergeTest extends InternetBankTestWebMain_Class {
 
 	private static F003_Index_PageObject drv;
-	private static F003_Cell_PageObject cell_drv;
+	private static F003_CellMerge_PageObject cell_drv;
 	private static F003_Result_BodyCell_PageObject result_drv;
 	private static StringBuffer verificationErrors = new StringBuffer();
 	
@@ -29,7 +29,7 @@ public class F003_CellMergeTest extends InternetBankTestWebMain_Class {
 		InternetBankTestWebMain_Class.setUp();
 		drv = PageFactory.initElements(driver, F003_Index_PageObject.class);
 		cell_drv = PageFactory.initElements(driver,
-				F003_Cell_PageObject.class);
+				F003_CellMerge_PageObject.class);
 		// driver.navigate().to(Main_Class.baseUrl);
 		result_drv = PageFactory.initElements(driver,
 				F003_Result_BodyCell_PageObject.class);

@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class F003_Cell_PageObject{
+public class F003_CellMerge_PageObject{
 	
 	//###############################F003 Cell Merge Page##################################
 	@FindBy(id="F003_BodyCell_table")
