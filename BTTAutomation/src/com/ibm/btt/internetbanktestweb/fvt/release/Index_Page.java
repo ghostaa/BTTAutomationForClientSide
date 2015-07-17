@@ -71,6 +71,13 @@ public class Index_Page {
 		IBK_19and21forInnerSubFolder.click();
 	}
 	
+	@FindBy(id="index_link07")
+	private WebElement IBK_19and21;//Click link to launch test case for IBK19 and 21(Popup window size, position and close box)
+		
+	public void IBK_19and21(){
+		IBK_19and21.click();
+	}
+	
 	@FindBy(id="index_IBK20And6")
 	private WebElement IBK20AndIBK6;//Click link to launch test case for IBK20 (new line character in table) and IBK6 (Combox supports disabling edit)
 		
