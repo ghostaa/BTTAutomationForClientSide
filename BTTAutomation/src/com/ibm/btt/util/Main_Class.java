@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
@@ -68,12 +69,11 @@ public class Main_Class {
 	/*
 	 * Click widget to start new Window, switch to new Window
 	 */
-	public static String switchWindow(){
+	public static void switchWindow(int index){
 		String[] handles = new String[driver.getWindowHandles().size()];
 		driver.getWindowHandles().toArray(handles);
 		driver.close();
-		WebDriver childWindow = driver.switchTo().window(handles[1]);
-		return driver.getCurrentUrl(); 
+		WebDriver childWindow = driver.switchTo().window(handles[index]);
 	}
 	
 	/*
@@ -202,5 +202,20 @@ public class Main_Class {
 	public void switchDefaultIframe(){
 		driver.switchTo().defaultContent();
 	}
+	
+	public static Boolean isWebElementExist(By by) { 
+
+        try { 
+
+            driver.findElement(by);
+            return true; 
+
+        } catch(NoSuchElementException e) { 
+
+            return false; 
+
+        } 
+
+    } 
 
 }
