@@ -657,7 +657,7 @@ public class Radio_PageObject extends Main_Page{
 	private WebElement Appearance1_3;
 	
 	public int Appearance1_3(){//3.Width is Fixed 100px,Height is AutoSize
-		String[] temp={"width: 83px"};
+		String[] temp={"width: 100px"};
 		return Appearance.appearance_query(Appearance1_3.getAttribute("style"), temp);
 	}
 	
@@ -665,7 +665,7 @@ public class Radio_PageObject extends Main_Page{
 	private WebElement Appearance1_4;
 	
 	public int Appearance1_4(){//4.Width is Fixed 100px,Height is Fixed 50px
-		String[] temp={"width: 83px", "height: 50px"};
+		String[] temp={"width: 100px", "height: 50px"};
 		return Appearance.appearance_query(Appearance1_4.getAttribute("style"), temp);
 	}
 	
