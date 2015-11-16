@@ -82,7 +82,7 @@
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac encoding="GBK" debug="true" debuglevel="${debuglevel}" srcdir="src" includes="**/*.java" destdir="bin" >
+        <javac encoding="GB18030" debug="true" debuglevel="${debuglevel}" srcdir="src" includes="**/*.java" destdir="bin" >
         	<classpath refid="BTTAutomation.classpath"/>
         </javac>
     </target>
