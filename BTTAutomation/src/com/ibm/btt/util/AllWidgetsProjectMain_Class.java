@@ -11,7 +11,8 @@ import com.ibm.btt.common.drivercontroller.InternetExplorerDriverController;
 
 public class AllWidgetsProjectMain_Class extends Main_Class{
 	public static String allwidgets="AllWidgetsProject";
-	public static String baseUrl="http://9.181.95.120:8080/"+allwidgets+"/";
+//	public static String baseUrl="http://9.181.95.120:8080/"+allwidgets+"/";
+	public static String baseUrl="http://9.115.33.83:8080/"+allwidgets+"/";
 
 	public static void setUp() throws Exception {
 		Main_Class.defaultSetup();	
