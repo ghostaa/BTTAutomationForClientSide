@@ -367,10 +367,10 @@ public class IBK_30XHTML_AllWidgets_PageObject extends Index_Page {
 	@FindBy(id="ShowAllWidght_link03")
 	private WebElement linkLaunchURL;
 	
-	public String linkLaunchURL(){//Launch Hello World Operation
+/*	public String linkLaunchURL(){//Launch Hello World Operation
 		linkLaunchURL.click();
 		return Main_Class.switchWindow();
-	} 
+	} */
 //Image
 	@FindBy(id="ShowAllWidght_image")
 	private WebElement ImageLocation;
@@ -405,11 +405,11 @@ public class IBK_30XHTML_AllWidgets_PageObject extends Index_Page {
 	@FindBy(id="ShowAllWidght_image02")
 	private WebElement ImageChangeFlowEvent;
 	
-	public String ImageChangeFlowEvent(){//Change flow event to final page
+/*	public String ImageChangeFlowEvent(){//Change flow event to final page
 		ImageChangeFlowEvent.click();
 		Main_Class.switchWindow();
 		return finalPage.getText();
-	}
+	}*/
 //RichText
 	@FindBy(id="dijitEditorBody")
 	private WebElement RichTextEditor;
