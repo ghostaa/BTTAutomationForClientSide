@@ -200,6 +200,14 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
+	<target name="Radio_submit">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Radio.Radio_submit" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
   	<!--Image-->
   	<target name="Image_Properties">
         <mkdir dir="${junit.output.dir}"/>

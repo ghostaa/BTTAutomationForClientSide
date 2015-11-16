@@ -273,6 +273,28 @@
   		            <classpath refid="BTTAutomation.classpath"/>
   		        </junit>
   	</target> 
-    
-        	
+	<target name="AllWidgetsSuite" 
+		depends=
+		"ButtonSuite,
+		CheckBoxSuite,
+		CheckedMultiSelectSuite,
+		ComboSuite,
+		HorizontalSliderSuite,
+		ImageSuite,
+		LabelSuite,
+		LinkSuite,
+		MessageSuite,
+		MultiSelectSuite,
+		PanelSuite,
+		RadioSuite,
+		RepetitivePanelSuite,
+		RichTextSuite,
+		SelectListSuite,
+		TextSuite,
+		TextAreaSuite,
+		TreeSuite,
+		VerticalSliderSuite"
+		
+		>
+	 </target>     	
 </project>
