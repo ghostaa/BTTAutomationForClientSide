@@ -2,9 +2,10 @@ package com.ibm.btt.testsuite;
 
 import com.ibm.btt.common.function.mail.AutomationResultReportMail;
 
-public class testmail {
-
+public class Sendmail {
+	
 	/**
+	 * ant中发邮件用这个
 	 * @param args
 	 */
 	public static void main(String[] args) {

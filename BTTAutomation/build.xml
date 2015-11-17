@@ -119,8 +119,8 @@
     </target>
             	
               	
-    <target name="testmail">
-        <java classname="com.ibm.btt.testsuite.testmail" failonerror="true" fork="yes">
+    <target name="sendmail">
+        <java classname="com.ibm.btt.testsuite.Sendmail" failonerror="true" fork="yes">
         	<classpath refid="BTTAutomation.classpath"/>
         </java>
     </target>

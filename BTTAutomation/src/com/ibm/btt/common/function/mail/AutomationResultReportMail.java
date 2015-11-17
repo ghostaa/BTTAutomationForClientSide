@@ -352,8 +352,10 @@ public class AutomationResultReportMail {
 	}
 	
 	public static void main(String[] args){
-
-		String mailBody = " <font color=red>BTT8200 automation test result</font> <a href=\"#\">Click Here</a>";
+		String mailBody = "<font color=red>BTT8200 automation test result</font> <a href=\"#\">Click Here</a></br>";
+		/*String mailBody = "<font color=red>BTT8200 automation test result</font> <a href=\"#\">Click Here</a></br>" +
+				"<font><a href=\"http://9.115.33.83:8085/job/BTT_Automation/ws/SnapShot/AllWidgetsProject/\">snap shot</a></font>";
+		*/
 		new AutomationResultReportMail().sendMailToAllTester(mailBody);
 
 	}
