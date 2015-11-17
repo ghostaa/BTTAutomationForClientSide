@@ -33,7 +33,7 @@ public class Main_Class {
 
 	private static Robot eventKey;
 	public static FirefoxProfile profile = new FirefoxProfile();
-	Actions event = new Actions(driver);
+	static Actions event;
 	
 	public static void defaultSetup(){
 		//if your firefox is not installed in default path,please non-annotation.
@@ -103,8 +103,9 @@ public class Main_Class {
 	 * Press Tab
 	 */
 	public static void widget_tabIndex(){
-		keyPress(KeyEvent.VK_TAB);
-		keyRelease(KeyEvent.VK_TAB);
+		/*keyPress(KeyEvent.VK_TAB);
+		keyRelease(KeyEvent.VK_TAB);*/
+		event.sendKeys(Keys.TAB).perform();
 	}
 	
 	/*
@@ -161,7 +162,20 @@ public class Main_Class {
 		}
 
 	}
-	
+	public  static void executeCombinationKey(CharSequence ... combinationKey){
+		String order = "";
+		for(int i=0;i<combinationKey.length;i++){
+			order+=combinationKey[i];
+		}
+		event.sendKeys(order).perform();
+//		event.sendKeys(Keys.ALT,Keys.SHIFT,"a").perform();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	/*
 	 * keyRelease
 	 * keycode: KeyEvent

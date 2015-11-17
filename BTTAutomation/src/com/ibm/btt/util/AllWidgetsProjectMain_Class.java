@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import com.ibm.btt.common.drivercontroller.FirefoxDriverController;
 import com.ibm.btt.common.drivercontroller.InternetExplorerDriverController;
@@ -26,6 +27,7 @@ public class AllWidgetsProjectMain_Class extends Main_Class{
 		deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(baseUrl);
+		event=new Actions(driver);
 	}
 
 }

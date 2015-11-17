@@ -100,13 +100,8 @@ public class Button_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='button_properties_panel']/tbody/tr[9]/td[2]/span")
 	private WebElement properties_shortcut;
 	
-	public int proShortcut(){//button shortcut is a
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_A);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_A);
+	public int proShortcut(){//button shortcut is Alt+Shift+a
+		AllWidgetsProjectMain_Class.executeCombinationKey(Keys.ALT,Keys.SHIFT,"a");
 		String[] temp = {"dijitButtonFocused", "dijitFocused"};
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}
