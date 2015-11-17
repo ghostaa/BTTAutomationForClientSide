@@ -14,6 +14,7 @@ import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.DateType;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class CheckBox_PageObject extends Main_Page{
@@ -103,12 +104,7 @@ public class CheckBox_PageObject extends Main_Page{
 	private WebElement CheckBox_properties_shortcut;
 	
 	public String CheckBox_properties_shortcut(){
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_C);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_C);
+		Main_Class.executeCombinationKey(Keys.ALT,Keys.SHIFT,"C");
         return CheckBox_properties_shortcut.getAttribute("aria-checked");
 	}
 
@@ -245,8 +241,7 @@ public class CheckBox_PageObject extends Main_Page{
 	
 	public String CheckBox_Event_checkBox_event_onKeyPress(){
 		CheckBox_Event_checkBox_event_onKeyPress.click();
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_6);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_6);
+		Main_Class.pressAnyKey(Keys.NUMPAD6);
 		return CheckBox_Event_checkBox_event_onKeyPress_label.getText();
 	}
 	
@@ -853,7 +848,6 @@ public class CheckBox_PageObject extends Main_Page{
 	public void CheckBox_submit_clickButton(){
 		CheckBox_submit_button.click();
 	}
-	
 	@FindBy(id="CheckBox_Result_String_Data")
 	private WebElement CheckBox_Result_String;
 	

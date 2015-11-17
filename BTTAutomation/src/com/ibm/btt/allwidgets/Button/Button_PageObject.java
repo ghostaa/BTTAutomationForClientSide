@@ -13,6 +13,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class Button_PageObject extends Main_Page{
@@ -225,8 +226,7 @@ public class Button_PageObject extends Main_Page{
 	
 	public String ecaOnKeyPress(){//onKeyPress
 		eca_onKeyPress.click();
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_C);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_C);
+		Main_Class.pressAnyKey("a");
 		return eca_label5.getText();
 	}
 	

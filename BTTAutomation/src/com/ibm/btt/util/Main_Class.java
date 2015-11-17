@@ -142,7 +142,9 @@ public class Main_Class {
 	public void keyUp(Keys theKey){
 		event.keyUp(theKey).perform();;
 	}
-	
+	public static void pressAnyKey(CharSequence key){
+		event.sendKeys(key).perform();
+	}
 	/*
 	 * keyPress
 	 * keycode: KeyEvent
@@ -169,12 +171,6 @@ public class Main_Class {
 		}
 		event.sendKeys(order).perform();
 //		event.sendKeys(Keys.ALT,Keys.SHIFT,"a").perform();
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	/*
 	 * keyRelease

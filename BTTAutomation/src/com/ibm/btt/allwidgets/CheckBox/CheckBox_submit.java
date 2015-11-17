@@ -54,7 +54,7 @@ public class CheckBox_submit extends AllWidgetsProjectMain_Class{
   @Test
   public void CheckBox_submit_clickButton() throws InterruptedException{
 	  drv.CheckBox_submit_clickButton();
-	  Thread.sleep(3000);
+	  this.waitUntilLoadElement(10, "CheckBox_Result_link");
   }
   
   @Test

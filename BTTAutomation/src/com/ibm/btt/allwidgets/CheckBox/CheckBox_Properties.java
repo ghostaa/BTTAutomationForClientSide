@@ -3,15 +3,6 @@ package com.ibm.btt.allwidgets.CheckBox;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-import java.awt.event.KeyEvent;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.*;
-
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-import org.openqa.selenium.*;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -20,17 +11,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
-import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-import com.ibm.btt.util.Event;
 
 public class CheckBox_Properties extends AllWidgetsProjectMain_Class {
 	/*
@@ -54,21 +38,21 @@ public class CheckBox_Properties extends AllWidgetsProjectMain_Class {
 		drv.BTT8200_tab();
 		drv.CheckBox_widget();
 		drv.CheckBox_properties();
-		waitUntilLoadElement(20,"CheckBox_properties_checkBox_id");
+		waitUntilLoadElement(20,"CheckBox_properties_link");
+		
 	}
 	
 	@Test
 	public void CheckBox_TabIndex() throws InterruptedException{
-		
-		AllWidgetsProjectMain_Class.widget_tabIndex();
+		widget_tabIndex();
 		assertEquals(2, drv.CheckBox_properties_tabIndex1Focus());
-		AllWidgetsProjectMain_Class.widget_tabIndex();
+		widget_tabIndex();
 		assertEquals(2, drv.CheckBox_properties_tabIndex2Focus());
-		AllWidgetsProjectMain_Class.widget_tabIndex();	
+		widget_tabIndex();
 		assertEquals(2, drv.CheckBox_properties_tabIndex3Focus());
 	}
 	@Test
-	public void Radio_properties_id() {
+	public void CheckBox_properties_id() {
 		assertEquals("CheckBox_properties_checkBox_id", drv.CheckBox_properties_id());
 	}
 
@@ -200,4 +184,5 @@ public class CheckBox_Properties extends AllWidgetsProjectMain_Class {
 			acceptNextAlert = true;
 		}
 	}
+	
 }
