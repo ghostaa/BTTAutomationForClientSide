@@ -44,6 +44,7 @@ public class CheckBox_Properties extends AllWidgetsProjectMain_Class {
 	
 	@Test
 	public void CheckBox_TabIndex() throws InterruptedException{
+		drv.loseFocus();
 		widget_tabIndex();
 		assertEquals(2, drv.CheckBox_properties_tabIndex1Focus());
 		widget_tabIndex();
@@ -51,6 +52,7 @@ public class CheckBox_Properties extends AllWidgetsProjectMain_Class {
 		widget_tabIndex();
 		assertEquals(2, drv.CheckBox_properties_tabIndex3Focus());
 	}
+	
 	@Test
 	public void CheckBox_properties_id() {
 		assertEquals("CheckBox_properties_checkBox_id", drv.CheckBox_properties_id());
@@ -140,7 +142,7 @@ public class CheckBox_Properties extends AllWidgetsProjectMain_Class {
 	public void CheckBox_properties_NLS(){
 		assertEquals("MaximumAmount", drv.CheckBox_properties_NLS());
 	}
-
+	
 	@AfterClass
 	public static void tearDown() throws Exception {
 		Tools.snapshot((TakesScreenshot) driver, AllWidgetsProjectMain_Class.allwidgets,CheckBox_Properties.class);

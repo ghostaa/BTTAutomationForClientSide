@@ -131,6 +131,12 @@ public class CheckBox_PageObject extends Main_Page{
 	public String CheckBox_properties_tabIndex1(){
 		return CheckBox_properties_tabIndex1.getAttribute("tabindex");
 	}
+	/**
+	 * Lose focus for test tabindex.
+	 */
+	public void loseFocus(){
+		Main_Class.moveToFrontOfFirstFocusWidget(CheckBox_properties_tabIndex1);
+	}
 	
 	public int CheckBox_properties_tabIndex1Focus(){
 		String[] temp = {"dijitCheckBoxFocused", "dijitFocused"};

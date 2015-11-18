@@ -107,7 +107,14 @@ public class Main_Class {
 		keyRelease(KeyEvent.VK_TAB);*/
 		event.sendKeys(Keys.TAB).perform();
 	}
-	
+	/**
+	 * Use Shift+Tab to move the focus to front of  first tabindex widget as LostFocus's useage.
+	 * @param w The first focused web element
+	 */
+	public static void moveToFrontOfFirstFocusWidget(WebElement w){
+		event.sendKeys(w, Keys.chord(Keys.SHIFT,Keys.TAB)).perform();
+		event.sendKeys(Keys.NULL);
+	}
 	/*
 	 * Double click
 	 */
@@ -165,11 +172,13 @@ public class Main_Class {
 
 	}
 	public  static void executeCombinationKey(CharSequence ... combinationKey){
-		String order = "";
+		/*String order = "";
 		for(int i=0;i<combinationKey.length;i++){
 			order+=combinationKey[i];
-		}
-		event.sendKeys(order).perform();
+		}*/
+		event.sendKeys(Keys.chord(combinationKey)).perform();
+		//event.sendKeys(order).perform();
+		event.sendKeys(Keys.NULL);
 //		event.sendKeys(Keys.ALT,Keys.SHIFT,"a").perform();
 	}
 	/*
