@@ -162,7 +162,7 @@ public class Form_ECA extends AllWidgetsProjectMain_Class{
   public void actionClick(){
 	  drv.conditionBack();
 	  drv.actionClick();
-	  Main_Class.waitUntilLoadElement(20, "form_action_text01");
+	  AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "form_action_text01");
   }
   
   @Test

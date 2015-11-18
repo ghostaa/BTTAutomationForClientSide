@@ -5,7 +5,9 @@ import static org.junit.Assert.fail;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -15,7 +17,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CheckBox_Properties extends AllWidgetsProjectMain_Class {
 	/*
 	 * private static WebDriver driver; private static String
@@ -43,8 +45,7 @@ public class CheckBox_Properties extends AllWidgetsProjectMain_Class {
 	}
 	
 	@Test
-	public void CheckBox_TabIndex() throws InterruptedException{
-		drv.loseFocus();
+	public void CheckBox_1_TabIndex() throws InterruptedException{
 		widget_tabIndex();
 		assertEquals(2, drv.CheckBox_properties_tabIndex1Focus());
 		widget_tabIndex();

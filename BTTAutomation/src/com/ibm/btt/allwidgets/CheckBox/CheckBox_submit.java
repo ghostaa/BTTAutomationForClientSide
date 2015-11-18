@@ -3,13 +3,18 @@ package com.ibm.btt.allwidgets.CheckBox;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
+import java.lang.reflect.Method;
+
 import org.apache.commons.lang3.text.translate.NumericEntityUnescaper.OPTION;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -19,8 +24,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.Tools;
-
-@FixMethodOrder(MethodSorters.JVM)
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CheckBox_submit extends AllWidgetsProjectMain_Class{
  /* private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
@@ -44,17 +48,17 @@ public class CheckBox_submit extends AllWidgetsProjectMain_Class{
   }
 
   @Test
-  public void CheckBox_submit_getTooltip() throws InterruptedException{
+  public void CheckBox_1_submit_getTooltip() throws InterruptedException{
 	  assertEquals("Please check the String checkBox", drv.CheckBox_submit_getTooltip());
   }
   
   @Test
-  public void CheckBox_submit_TooltipVerify(){
+  public void CheckBox_2_submit_TooltipVerify(){
 	  assertEquals(false, drv.CheckBox_submit_TooltipVerify());
   }
   
   @Test
-  public void CheckBox_submit_clickButton() throws InterruptedException{
+  public void CheckBox_3_submit_clickButton() throws InterruptedException{
 	  drv.CheckBox_submit_clickButton();
 	  this.waitUntilLoadElement(10, "CheckBox_Result_link");
   }
