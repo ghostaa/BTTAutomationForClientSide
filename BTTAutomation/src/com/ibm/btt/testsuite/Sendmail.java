@@ -10,7 +10,7 @@ public class Sendmail {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String mailBody = " <font color=red>BTT Automation test result</font> <a href=http://9.115.33.83:8085/job/BTT_Automation/ws/junit/index.html>Click here for more detailed</a>";
+		String mailBody = " <font color=red>BTT Automation test result</font> <a href=http://9.115.33.83:8085/job/BTT_Automation/ws/junit/index.html>Click here for more detailed</a></br>Please pass the BSO authorization";
 		new AutomationResultReportMail().sendMailToAllTester(mailBody);
 
 	}

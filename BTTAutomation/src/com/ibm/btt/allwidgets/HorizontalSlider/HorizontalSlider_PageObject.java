@@ -14,6 +14,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class HorizontalSlider_PageObject extends Main_Page{
@@ -178,8 +179,11 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	private WebElement event_label2; 
 	
 	public String evtOnDbClick(){ //onDoubleClick
+		event_onDoubleClick.click();
+		event_onDoubleClick.click();
 		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.doubleClick("HorizontalSlider_event_horizontalSlider01");
+		
 		return event_label2.getText();
 	}
 	
@@ -204,8 +208,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 	
 	public String evtOnKeyPress(){ //onKeyPress
 		event_onKeyPress.click();
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_0);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_0);
+		Main_Class.executeCombinationKey("0");
 		return event_label4.getText();
 	}
 	
@@ -450,6 +453,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		
 		public String conExpCompare(){//compare(var1,var2)
 			condition_compare.click();
+			condition_compare.click();
 			return condition_label11.getText();
 		}
 		
@@ -493,6 +497,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		
 		public String conProId(){//id
 			condition_id.click();
+			condition_id.click();
 			return condition_label13.getText();
 		}
 		
@@ -503,6 +508,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		private WebElement condition_label14;
 		
 		public String conProFocus(){//focus
+			condition_focus.click();
 			condition_focus.click();
 			return condition_label14.getText();
 		}
@@ -515,6 +521,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		
 		public String conProDisabled(){//disabled
 			condition_label15.click();
+			condition_label15.click();
 			return condition_label15.getText();
 		}
 		
@@ -525,6 +532,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		private WebElement condition_label16;
 		
 		public String conProValue(){//value
+			condition_value.click();
 			condition_value.click();
 			return condition_label16.getText();
 		}
@@ -537,6 +545,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		
 		public String conProWidgetName(){//WidgetName
 			condition_WidgetName.click();
+			condition_WidgetName.click();
 			return condition_label17.getText();
 		}
 		
@@ -547,6 +556,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		private WebElement condition_label18;
 		
 		public String conProReadonly(){//Readonly
+			condition_Readonly.click();
 			condition_Readonly.click();
 			return condition_label18.getText();
 		}
@@ -559,6 +569,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		
 		public String conProClickSelect(){//ClickSelect
 			condition_ClickSelect.click();
+			condition_ClickSelect.click();
 			return condition_label19.getText();
 		}
 		
@@ -569,6 +580,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		private WebElement condition_label20;
 		
 		public String conProDiscreateValues(){//discreateValues
+			condition_discreateValues.click();
 			condition_discreateValues.click();
 			return condition_label20.getText();
 		}
@@ -581,6 +593,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		
 		public String conProHovering(){//Hovering
 			condition_Hovering.click();
+			condition_Hovering.click();
 			return condition_label21.getText();
 		}
 		
@@ -591,6 +604,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		private WebElement condition_label22;
 		
 		public String conProintermediaChanges(){//intermediaChanges
+			condition_intermediaChanges.click();
 			condition_intermediaChanges.click();
 			return condition_label22.getText();
 		}
@@ -603,6 +617,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		
 		public String conProMaximum(){//Maximum
 			condition_Maximum.click();
+			condition_Maximum.click();
 			return condition_label23.getText();
 		}
 		
@@ -613,6 +628,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		private WebElement condition_label24;
 		
 		public String conProMinimum(){//Minimum
+			condition_Minimum.click();
 			condition_Minimum.click();
 			return condition_label24.getText();
 		}
@@ -625,6 +641,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		
 		public String conPropageIncrement(){//pageIncrement
 			condition_pageIncrement.click();
+			condition_pageIncrement.click();
 			return condition_label25.getText();
 		}
 		
@@ -636,6 +653,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		
 		public String conProshowButtons(){//showButtons
 			condition_ProshowButtons.click();
+			condition_ProshowButtons.click();
 			return condition_label26.getText();
 		}
 		
@@ -646,6 +664,7 @@ public class HorizontalSlider_PageObject extends Main_Page{
 		private WebElement condition_label27;
 		
 		public String conProslideDuration(){//slideDuration
+			condition_slideDuration.click();
 			condition_slideDuration.click();
 			return condition_label27.getText();
 		}

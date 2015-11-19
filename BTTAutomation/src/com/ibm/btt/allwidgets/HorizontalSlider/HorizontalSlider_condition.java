@@ -1,22 +1,23 @@
 package com.ibm.btt.allwidgets.HorizontalSlider;
 
-import java.util.regex.Pattern;
-import java.util.concurrent.TimeUnit;
-import org.junit.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
-import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
-import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class HorizontalSlider_condition extends AllWidgetsProjectMain_Class{
 
   private boolean acceptNextAlert = true;
@@ -36,37 +37,37 @@ public class HorizontalSlider_condition extends AllWidgetsProjectMain_Class{
   }
 
   @Test
-  public void conFocused(){
+  public void con_01_Focused(){
 	  assertEquals("Focus is true. Test OK", drv.conFocused());
   }
   
   @Test
-  public void conDisabled(){
+  public void con_02_Disabled(){
 	  assertEquals("Disabled is true. Test OK", drv.conDisabled());
   }
   
   @Test
-  public void conReadonly(){
+  public void con_03_Readonly(){
 	  assertEquals("Readonly is true. Test OK", drv.conReadonly());
   }
   
   @Test
-  public void conClickSelect(){
+  public void con_05_ClickSelect(){
 	  assertEquals("Clickselect is true. Test OK", drv.conClickSelect());
   }
   
   @Test
-  public void conHover(){
+  public void con_06_Hover(){
 	  assertEquals("Hovering is true. Test OK", drv.conHover());
   }
   
   @Test
-  public void conHntermediatechanges(){
+  public void con_08_Hntermediatechanges(){
 	  assertEquals("intermediatechange", drv.conHntermediatechanges());
   }
    
   @Test
-  public void conShowButtons(){
+  public void con_09_ShowButtons(){
 	  assertEquals("showButton is true. Test OK", drv.conShowButtons());
   }
   
@@ -81,7 +82,7 @@ public class HorizontalSlider_condition extends AllWidgetsProjectMain_Class{
   }*/
   
   @Test
-  public void conExpCompare(){
+  public void con_15_ExpCompare(){
 	  assertEquals("compare works. Test OK", drv.conExpCompare());
   }
   
@@ -91,77 +92,77 @@ public class HorizontalSlider_condition extends AllWidgetsProjectMain_Class{
   }*/
   
   @Test
-  public void conProId(){
+  public void con_18_ProId(){
 	  assertEquals("id ok", drv.conProId());
   }
   
   @Test
-  public void conProFocus(){
+  public void con_19_ProFocus(){
 	  assertEquals("Focus is true", drv.conProFocus());
   }
   
   @Test
-  public void conProDisabled(){
+  public void con_21_ProDisabled(){
 	  assertEquals("disabled is ok", drv.conProDisabled());
   }
   
   @Test
-  public void conProValue(){
+  public void con_22_ProValue(){
 	  assertEquals("value is 20", drv.conProValue());
   }
   
   @Test
-  public void conProWidgetName(){
+  public void con_23_ProWidgetName(){
 	  assertEquals("widget name is termLength", drv.conProWidgetName());
   }
   
   @Test
-  public void conProReadonly(){
+  public void con_25_ProReadonly(){
 	  assertEquals("Readonly is true", drv.conProReadonly());
   }
   
   @Test
-  public void conProClickSelect(){
+  public void con_26_ProClickSelect(){
 	  assertEquals("ClickSelect is true", drv.conProClickSelect());
   }
   
   @Test
-  public void conProDiscreateValues(){
+  public void con_27_ProDiscreateValues(){
 	  assertEquals("discreateValues 50", drv.conProDiscreateValues());
   }
   
   @Test
-  public void conProHovering(){
+  public void con_29_ProHovering(){
 	  assertEquals("Hovering is true", drv.conProHovering());
   }
   
   @Test
-  public void conProintermediaChanges(){
+  public void con_31_ProintermediaChanges(){
 	  assertEquals("intermediaChanges is true", drv.conProintermediaChanges());
   }
   
   @Test
-  public void conProMaximum(){
+  public void con_32_ProMaximum(){
 	  assertEquals("Max is 1000", drv.conProMaximum());
   }
  
   @Test
-  public void conProMinimum(){
+  public void con_33_ProMinimum(){
 	  assertEquals("Minimum is 10", drv.conProMinimum());
   }
   
   @Test
-  public void conPropageIncrement(){
+  public void con_34_PropageIncrement(){
 	  assertEquals("20", drv.conPropageIncrement());
   }
   
   @Test
-  public void conProshowButtons(){
+  public void con_35_ProshowButtons(){
 	  assertEquals("showButtons is true", drv.conProshowButtons());
   }
   
   @Test
-  public void conProslideDuration(){
+  public void con_36_ProslideDuration(){
 	  assertEquals("slideDuration works", drv.conProslideDuration());
   }
  

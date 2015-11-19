@@ -29,7 +29,7 @@
   	            <classpath refid="BTTAutomation.classpath"/>
   	        </junit>
     </target>
-	<target name="Button_appearance1">
+	<target name="Button_Appearance1">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -37,11 +37,68 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="Button_appearance2">
+	<target name="Button_Appearance2">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
 	            <test name="com.ibm.btt.allwidgets.Button.Button_appearance2" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<!--Combo--> 
+  	<target name="Combo_Properties">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="com.ibm.btt.allwidgets.Combo.Combo_Properties" todir="${junit.output.dir}"/>
+            <classpath refid="BTTAutomation.classpath"/>
+        </junit>
+  	</target>
+  	<target name="Combo_Event">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Combo.Combo_Event" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Combo_Condition">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Combo.Combo_Condition" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Combo_Action">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Combo.Combo_Action" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+  	<target name="Combo_CSS">
+        <mkdir dir="${junit.output.dir}"/>
+  	        <junit fork="yes" printsummary="withOutAndErr">
+  	            <formatter type="xml"/>
+  	            <test name="com.ibm.btt.allwidgets.Combo.Combo_CSS" todir="${junit.output.dir}"/>
+  	            <classpath refid="BTTAutomation.classpath"/>
+  	        </junit>
+    </target>
+	<target name="Combo_Appearance">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Combo.Combo_appearance" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+    </target>
+	<target name="Combo_Submit">
+        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.Combo.Combo_Submit" todir="${junit.output.dir}"/>
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
@@ -127,7 +184,7 @@
   	            <classpath refid="BTTAutomation.classpath"/>
   	        </junit>
     </target>
-	<target name="Text_appearance1">
+	<target name="Text_Appearance1">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -135,7 +192,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="Text_appearance2">
+	<target name="Text_Appearance2">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -184,7 +241,7 @@
   	            <classpath refid="BTTAutomation.classpath"/>
   	        </junit>
     </target>
-	<target name="Radio_appearance1">
+	<target name="Radio_Appearance1">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -192,7 +249,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="Radio_appearance2">
+	<target name="Radio_Appearance2">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -200,7 +257,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="Radio_submit">
+	<target name="Radio_Submit">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -249,7 +306,7 @@
   	            <classpath refid="BTTAutomation.classpath"/>
   	        </junit>
     </target>
-	<target name="Image_appearance1">
+	<target name="Image_Appearance1">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -257,7 +314,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="Image_appearance2">
+	<target name="Image_Appearance2">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -306,7 +363,7 @@
   	            <classpath refid="BTTAutomation.classpath"/>
   	        </junit>
     </target>
-	<target name="CheckBox_submit">
+	<target name="CheckBox_Submit">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -446,7 +503,7 @@
   	            <classpath refid="BTTAutomation.classpath"/>
   	        </junit>
     </target>
-	<target name="MultiSelect_appearance1">
+	<target name="MultiSelect_Appearance1">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -454,7 +511,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="MultiSelect_appearance2">
+	<target name="MultiSelect_Appearance2">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -471,7 +528,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
   	</target>
-  	<target name="HorizontalSlider_event">
+  	<target name="HorizontalSlider_Event">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -479,7 +536,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="HorizontalSlider_condition">
+	<target name="HorizontalSlider_Condition">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -487,7 +544,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-  	<target name="HorizontalSlider_action">
+  	<target name="HorizontalSlider_Action">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -503,7 +560,7 @@
   	            <classpath refid="BTTAutomation.classpath"/>
   	        </junit>
     </target>
-	<target name="HorizontalSlider_appearance1">
+	<target name="HorizontalSlider_Appearance1">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -511,7 +568,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="HorizontalSlider_appearance2">
+	<target name="HorizontalSlider_Appearance2">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -528,7 +585,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
   	</target>
-  	<target name="VerticalSlider_event">
+  	<target name="VerticalSlider_Event">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -536,7 +593,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="VerticalSlider_condition">
+	<target name="VerticalSlider_Condition">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -544,7 +601,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-  	<target name="VerticalSlider_action">
+  	<target name="VerticalSlider_Action">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -560,7 +617,7 @@
   	            <classpath refid="BTTAutomation.classpath"/>
   	        </junit>
     </target>
-	<target name="VerticalSlider_appearance1">
+	<target name="VerticalSlider_Appearance1">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -568,7 +625,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="VerticalSlider_appearance2">
+	<target name="VerticalSlider_Appearance2">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -585,7 +642,7 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
   	</target>
-  	<target name="CheckedMultiSelect_event">
+  	<target name="CheckedMultiSelect_Event">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -593,7 +650,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="CheckedMultiSelect_condition">
+	<target name="CheckedMultiSelect_Condition">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -601,7 +658,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-  	<target name="CheckedMultiSelect_action">
+  	<target name="CheckedMultiSelect_Action">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -617,7 +674,7 @@
   	            <classpath refid="BTTAutomation.classpath"/>
   	        </junit>
     </target>
-	<target name="CheckedMultiSelect_appearance1">
+	<target name="CheckedMultiSelect_Appearance1">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -625,7 +682,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="CheckedMultiSelect_appearance2">
+	<target name="CheckedMultiSelect_Appearance2">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -633,7 +690,7 @@
 	            <classpath refid="BTTAutomation.classpath"/>
 	        </junit>
     </target>
-	<target name="CheckedMultiSelect_appearance3">
+	<target name="CheckedMultiSelect_Appearance3">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
 	            <formatter type="xml"/>
@@ -643,19 +700,20 @@
     </target>
     
      <!--
-    <target depends="Button_Properties, Button_ECA, Button_CSS, Button_appearance1, Button_appearance2" name="Button"/>
+    <target depends="Button_Properties, Button_ECA, Button_CSS, Button_Appearance1, Button_Appearance2" name="Button"/>
+    <target depends="Combo_Properties,Combo_Event,Combo_Condition,Combo_Action,Combo_CSS,Combo_Appearance,Combo_Submit" name="Combo"/>
     <target depends="Label_Properties, Label_ECA, Label_CSS, Label_Appearance, Label_Appearance1" name="Label"/>
-  	<target depends="Text_Properties, Text_Event, Text_Condition, Text_Action, Text_CSS, Text_appearance1, Text_appearance2" name="Text"/>     
-    <target depends="Radio_Properties, Radio_Event, Radio_Condition, Radio_Action, Radio_CSS, Radio_appearance1, Radio_appearance2" name="Radio"/> 
-	<target depends="Image_Properties, Image_Event, Image_Condition, Image_Action, Image_CSS, Image_appearance1, Image_appearance2" name="Image"/> 
-	<target depends="CheckBox_Properties, CheckBox_Event, CheckBox_Condition, CheckBox_Action, CheckBox_CSS, CheckBox_submit" name="CheckBox"/> 
+  	<target depends="Text_Properties, Text_Event, Text_Condition, Text_Action, Text_CSS, Text_Appearance1, Text_appearance2" name="Text"/>     
+    <target depends="Radio_Properties, Radio_Event, Radio_Condition, Radio_Action, Radio_CSS, Radio_Appearance1, Radio_Appearance2" name="Radio"/> 
+	<target depends="Image_Properties, Image_Event, Image_Condition, Image_Action, Image_CSS, Image_Appearance1, Image_Appearance2" name="Image"/> 
+	<target depends="CheckBox_Properties, CheckBox_Event, CheckBox_Condition, CheckBox_Action, CheckBox_CSS, CheckBox_Submit" name="CheckBox"/> 
 	<target depends="Message_Properties, Message_Action, Message_CSS" name="Message"/> 
 	<target depends="Link_Properties, Link_Action, Link_Condition, Link_Event, Link_CSS" name="Link"/> 
 	<target depends="SelectList_Properties, SelectList_Action, SelectList_Condition, SelectList_Event, SelectList_CSS" name="SelectList"/> 
-	<target depends="MultiSelect_Properties, MultiSelect_ECA, MultiSelect_CSS, MultiSelect_appearance1, MultiSelect_appearance2" name="MultiSelect"/> 
-	<target depends="HorizontalSlider_Properties, HorizontalSlider_event, HorizontalSlider_condition, HorizontalSlider_action, HorizontalSlider_CSS, HorizontalSlider_appearance1, HorizontalSlider_appearance2" name="HorizontalSlider"/> 
-	<target depends="VerticalSlider_Properties, VerticalSlider_event, VerticalSlider_condition, VerticalSlider_action, VerticalSlider_CSS, VerticalSlider_appearance1, VerticalSlider_appearance2" name="VerticalSlider"/> 
-	<target depends="CheckedMultiSelect_Properties, CheckedMultiSelect_event, CheckedMultiSelect_condition, CheckedMultiSelect_action, CheckedMultiSelect_CSS, CheckedMultiSelect_appearance1, CheckedMultiSelect_appearance2, CheckedMultiSelect_appearance3" name="CheckedMultiSelect"/>
+	<target depends="MultiSelect_Properties, MultiSelect_ECA, MultiSelect_CSS, MultiSelect_Appearance1, MultiSelect_Appearance2" name="MultiSelect"/> 
+	<target depends="HorizontalSlider_Properties, HorizontalSlider_Event, HorizontalSlider_Condition, HorizontalSlider_Action, HorizontalSlider_CSS, HorizontalSlider_Appearance1, HorizontalSlider_appearance2" name="HorizontalSlider"/> 
+	<target depends="VerticalSlider_Properties, VerticalSlider_Event, VerticalSlider_Condition, VerticalSlider_Action, VerticalSlider_CSS, VerticalSlider_Appearance1, VerticalSlider_Appearance2" name="VerticalSlider"/> 
+	<target depends="CheckedMultiSelect_Properties, CheckedMultiSelect_Event, CheckedMultiSelect_Condition, CheckedMultiSelect_Action, CheckedMultiSelect_CSS, CheckedMultiSelect_Appearance1, CheckedMultiSelect_Appearance2, CheckedMultiSelect_Appearance3" name="CheckedMultiSelect"/>
 	-->           	
     
     </project>
