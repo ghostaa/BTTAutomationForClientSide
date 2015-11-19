@@ -15,6 +15,7 @@ import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.DateType;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class Combo_PageObject extends Main_Page{
@@ -90,12 +91,7 @@ public class Combo_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 	
 	public int proShortcut(){//9. SelectList's shortcut is 'w'
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_W);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_W);
+		Main_Class.executeCombinationKey(Keys.SHIFT,Keys.ALT,"w");
 		String[] temp={"dijitComboBoxFocused", "dijitFocused"};
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}

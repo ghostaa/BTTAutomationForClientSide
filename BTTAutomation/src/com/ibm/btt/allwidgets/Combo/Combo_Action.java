@@ -3,6 +3,7 @@ package com.ibm.btt.allwidgets.Combo;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -17,7 +18,7 @@ import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Combo_Action extends AllWidgetsProjectMain_Class{
 
   private boolean acceptNextAlert = true;
@@ -52,7 +53,7 @@ public class Combo_Action extends AllWidgetsProjectMain_Class{
   }
   
   @Test
-  public void actShowErrorMessage(){
+  public void act_1_ShowErrorMessage(){
 	  assertEquals("This is hint test", drv.actShowErrorMessage());
   }
   
@@ -62,7 +63,7 @@ public class Combo_Action extends AllWidgetsProjectMain_Class{
   }
   
   @Test
-  public void actIsMandatory(){
+  public void act_2_IsMandatory(){
 	  assertEquals("This value is required.", drv.actIsMandatory());
   }
   

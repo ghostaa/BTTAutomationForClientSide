@@ -3,6 +3,7 @@ package com.ibm.btt.allwidgets.Combo;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -17,7 +18,7 @@ import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Combo_Condition extends AllWidgetsProjectMain_Class{
 
   private boolean acceptNextAlert = true;
@@ -37,77 +38,77 @@ public class Combo_Condition extends AllWidgetsProjectMain_Class{
   }
 
   @Test
-  public void conIsFocusable(){
+  public void con_01_IsFocusable(){
 	  assertEquals("true", drv.conIsFocusable());
   }
   
   @Test
-  public void conIsMandatoryTrue(){
+  public void con_02_IsMandatoryTrue(){
 	  assertEquals("true", drv.conIsMandatoryTrue());
   }
   
   @Test
-  public void conIsMandatoryFalse(){
+  public void con_03_IsMandatoryFalse(){
 	  assertEquals("false", drv.conIsMandatoryFalse());
   }
   
   @Test
-  public void conDisable(){
+  public void con_05_Disable(){
 	  assertEquals("This is nls test", drv.conDisable());
   }
   
   @Test
-  public void conReadonly(){
+  public void con_06_Readonly(){
 	  assertEquals("true", drv.conReadonly());
   }
   
   @Test
-  public void conGetTooltip(){
+  public void con_07_GetTooltip(){
 	  assertEquals("readOnly", drv.conGetTooltip());
   }
   
   @Test
-  public void conExpisFocusable(){
+  public void con_08_ExpisFocusable(){
 	  assertEquals("The combo value is required.", drv.conExpisFocusable());
   }
   
   @Test
-  public void conExpId(){
+  public void con_09_ExpId(){
 	  assertEquals("this is combo05.", drv.conExpId());
   }
   
   @Test
-  public void conExpisMandatory(){
+  public void con_10_ExpisMandatory(){
 	  assertEquals("This value is required.", drv.conExpisMandatory());
   }
   
   @Test
-  public void conExpVisible(){
+  public void con_11_ExpVisible(){
 	  assertEquals(false, drv.conExpVisible());
   }
   
   @Test
-  public void conExplabel01(){
+  public void con_12_Explabel01(){
 	  assertEquals("The combe is hidden.", drv.conExplabel01());
   }
   
   @Test
-  public void conExpDisabled(){
+  public void con_13_ExpDisabled(){
 	  assertEquals("true", drv.conExpDisabled());
   }
   
   @Test
-  public void conExpReadonly(){
+  public void con_14_ExpReadonly(){
 	  assertEquals("true", drv.conExpReadonly());
   }
   
   @Test
-  public void conExpCheckBox(){
+  public void con_15_ExpCheckBox(){
 	  assertEquals(true, drv.conExpCheckBox());
   }
   
   @Test
-  public void conExpValue(){
+  public void con_16_ExpValue(){
 	  assertEquals("Please select CHINA.", drv.conExpValue());
   }
  

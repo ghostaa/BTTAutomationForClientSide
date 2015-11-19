@@ -1,22 +1,23 @@
 package com.ibm.btt.allwidgets.Combo;
 
-import java.util.regex.Pattern;
-import java.util.concurrent.TimeUnit;
-import org.junit.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
-import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
-import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Combo_Submit extends AllWidgetsProjectMain_Class{
 
   private boolean acceptNextAlert = true;
@@ -36,32 +37,32 @@ public class Combo_Submit extends AllWidgetsProjectMain_Class{
   }
   
   @Test
-  public void subButtonBefore(){
+  public void prepare_01_subButtonBefore(){
 	  assertEquals("true", drv.subButton());
   }
   
   @Test
-  public void subString(){
+  public void prepare_05_subString(){
 	  assertEquals("Please select Country1.", drv.subString());
 	  drv.subStringClick();
   }
   
   @Test
-  public void subByteTooltip() throws InterruptedException{
+  public void prepare_10_subByteTooltip() throws InterruptedException{
 	  Thread.sleep(1000);
 	  assertEquals("Must select one.", drv.subByteTooltip());
 	  drv.subByte();
   }
   
   @Test
-  public void subIsMandatoryTooltip() throws InterruptedException{
+  public void prepare_15_subIsMandatoryTooltip() throws InterruptedException{
 	  Thread.sleep(1000);
 	  assertEquals("This is required.", drv.subIsMandatoryTooltip());
 	  drv.submit_isMandatory();
   }
   
   @Test
-  public void subButton(){
+  public void prepare_30_subButton(){
 	  assertEquals("false", drv.subButton());
 	  drv.Submit();
   }
