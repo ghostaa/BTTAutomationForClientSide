@@ -14,6 +14,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class CheckedMultiSelect_PageObject extends Main_Page{
@@ -100,12 +101,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 	
 	public int proShortcut(){//9. shortcut is 'c'(shift+alt+c)
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_C);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_C);
+		Main_Class.executeCombinationKey(Keys.SHIFT,Keys.ALT,"C");
 		String[] temp = {"dojoxCheckedMultiSelectFocused", "dijitFocused"};
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}
@@ -229,9 +225,7 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	
 	public String evtOnKeyPress(){ //onKeyPress
 		event_onKeyPress.click();
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.keyPress(KeyEvent.VK_0);
-		main_class.keyRelease(KeyEvent.VK_0);
+		Main_Class.pressAnyKey("0");
 		return event_label5.getText();
 	}
 	
@@ -382,7 +376,11 @@ public class CheckedMultiSelect_PageObject extends Main_Page{
 	@FindBy(id="CheckedMultiSelect_condition_label06")
 	private WebElement condition_label6;
 	
+	@FindBy(id="widget_CheckedMultiSelect_condition_checkedMultiSelect03")
+	private WebElement checkedMultiSelect03;
+	
 	public String conExpValue(){// 	Expression-Widget Property : value
+		checkedMultiSelect03.click();
 		condition_ExpValue.click();
 		return condition_label6.getText();
 	}

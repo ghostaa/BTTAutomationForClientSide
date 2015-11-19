@@ -149,6 +149,7 @@ public class Main_Class {
 	public void keyUp(Keys theKey){
 		event.keyUp(theKey).perform();;
 	}
+	//按下任意键
 	public static void pressAnyKey(CharSequence key){
 		event.sendKeys(key).perform();
 	}
