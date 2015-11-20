@@ -1,20 +1,14 @@
 package com.ibm.btt.allwidgets.Link;
 
-import java.awt.event.KeyEvent;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
+import com.ibm.btt.allwidgets.Main_Page;
+import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
-import com.ibm.btt.util.Event;
-import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.Main_Class;
-import com.ibm.btt.allwidgets.*;
 
 public class Link_PageObject extends Main_Page{
 	
@@ -78,12 +72,7 @@ public class Link_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 
 	public String proShortcut(){//8. Shift+Alt+w. Start new pages.
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_W);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_W);
+		Main_Class.executeCombinationKey(Keys.SHIFT,Keys.ALT,"w");
 		return AllWidgetsProjectMain_Class.getCurrentURL();
 	}
 	
@@ -242,9 +231,8 @@ public class Link_PageObject extends Main_Page{
 	private WebElement event_onKeyPressLabel;
 	
 	public Boolean evtOnKeyPress(){ //onKeyPress
-		event_onKeyPress.click();;
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_3);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_3);
+		event_onKeyPress.click();
+		Main_Class.pressAnyKey("3");
 		return event_onKeyPressLabel.isDisplayed();
 	}
 	

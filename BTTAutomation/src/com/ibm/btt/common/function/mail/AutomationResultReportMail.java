@@ -258,7 +258,30 @@ public class AutomationResultReportMail {
 		}
 
 	}
+	
+	public boolean setCC(String to){
 
+		System.out.println("设置cc收信人");
+
+		if (to == null)
+
+			return false;
+
+		try{
+
+			InternetAddress[] iaToList = new InternetAddress().parse(to);
+
+			mimeMsg.setRecipients(Message.RecipientType.CC, iaToList);
+
+			return true;
+
+		}catch (Exception e){
+
+			return false;
+
+		}
+
+	}
 	public boolean setCopyTo(String copyto){
 
 		System.out.println("发送附件到");
@@ -337,7 +360,9 @@ public class AutomationResultReportMail {
 		// 收件人邮箱
 		if (themail.setTo(config.getAllTester()) == false)
 			return;
-
+		// 收件人邮箱
+		if (themail.setCC(config.getBTTAll()) == false)
+		return;
 		// 发件人邮箱
 		if (themail.setFrom(config.getSendFrom()) == false)
 			return;

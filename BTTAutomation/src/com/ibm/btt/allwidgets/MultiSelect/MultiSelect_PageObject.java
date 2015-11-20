@@ -14,6 +14,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class MultiSelect_PageObject extends Main_Page{
@@ -219,9 +220,7 @@ public class MultiSelect_PageObject extends Main_Page{
 	
 	public String evtOnKeyPress(){ //onKeyPress
 		event_onKeyPress.click();
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.keyPress(KeyEvent.VK_0);
-		main_class.keyRelease(KeyEvent.VK_0);
+		Main_Class.pressAnyKey("0");
 		return event_label5.getText();
 	}
 	

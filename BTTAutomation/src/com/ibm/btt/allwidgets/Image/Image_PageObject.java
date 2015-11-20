@@ -531,23 +531,18 @@ public class Image_PageObject extends Main_Page{
 	@FindBy(id="Image_actionTab_image01")
 	private WebElement actionTab_changeFlow;
 	
-	@FindBy(id="index_tabbedPane_tablist_index_ContentPane02")
-	private WebElement actionTab_index;
 	
 	public String actTabChangeFlow(){//Change Flow Event
 		actionTab_changeFlow.click();
-		return actionTab_index.getText();
+		return BTT8200_tab.getText();
 	}
 	
 	@FindBy(id="Image_actionTab_image01")
 	private WebElement actionTab_Operation;
 	
-	@FindBy(id="index_tabbedPane_tablist_index_ContentPane02")
-	private WebElement actionTab_index1;
-	
 	public String actTabOperation(){//Launch Operation
 		actionTab_Operation.click();
-		return actionTab_index1.getText();
+		return BTT8200_tab.getText();
 	}
 //###############################Image ActionTab###################################
 //###########################Image Appearance1#####################################

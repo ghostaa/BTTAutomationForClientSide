@@ -18,7 +18,7 @@ public class Index_Page {
 	}
 
 	@FindBy(id="index_tabbedPane_tablist_index_ContentPane05")
-	private WebElement BTT8200_tab;
+	protected WebElement BTT8200_tab;
 	
 	public void BTT8200_tab(){
 		BTT8200_tab.click();

@@ -59,7 +59,22 @@ public class MailConfigAdapter {
 		
 		return sb.toString();
 	}
-	
+	/**
+	 * 
+	 * @return 从配置文件中获得所有人员的列表
+	 */
+	public String getBTTAll(){
+		List allTesterList= root.element("User").element("UserGroup").element("BTTAll").elements();
+		StringBuffer sb =new StringBuffer();
+		for(Iterator iter = allTesterList.iterator(); iter.hasNext();){
+			Element e = (Element)iter.next();
+			
+			System.out.println(e.getText());
+			sb.append(e.getText()+",");
+		}
+		
+		return sb.toString();
+	}
 	public String getSendFrom(){
 		Element sendFrom =  root.element("User").element("SendFrom");
 		return sendFrom.getText();

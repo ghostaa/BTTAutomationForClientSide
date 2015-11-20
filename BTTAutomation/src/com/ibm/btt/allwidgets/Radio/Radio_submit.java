@@ -3,6 +3,7 @@ package com.ibm.btt.allwidgets.Radio;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -17,7 +18,7 @@ import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Radio_submit extends AllWidgetsProjectMain_Class{
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
@@ -37,22 +38,22 @@ public class Radio_submit extends AllWidgetsProjectMain_Class{
   }
 
   @Test
-  public void subTooltipVerify(){
+  public void Radio_100_subTooltipVerify(){
 	  assertEquals("Please check the Radio_String radio.", drv.subTooltipVerify());
   }
   
   @Test
-  public void subTooltipDisappear() throws InterruptedException{
+  public void Radio_110_subTooltipDisappear() throws InterruptedException{
 	  assertEquals(false, drv.subTooltipDisappear());
   }
   
   @Test
-  public void subButton(){
+  public void Radio_120_subButton(){
 	  assertEquals(true, drv.subButton());
   }
   
   @Test
-  public void subResultString(){
+  public void Radio_130_subResultString(){
 	  drv.submit();
 	  AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "ShowRadio_result_radio13_copy");
 	  assertEquals(true, drv.subResultString());

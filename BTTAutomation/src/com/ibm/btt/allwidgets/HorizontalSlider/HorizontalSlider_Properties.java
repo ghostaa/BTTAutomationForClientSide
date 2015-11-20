@@ -45,7 +45,7 @@ public class HorizontalSlider_Properties extends AllWidgetsProjectMain_Class {
 		drv.BTT8200_tab();
 		drv.HorizontalSlider_widget();
 		drv.HorizontalSlider_properties();
-		AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "MultiSelect_properties_multiSelect");
+		AllWidgetsProjectMain_Class.waitUntilLoadElement(5, "HorizontalSlider_properties1_link");
 
 	}
 	

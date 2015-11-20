@@ -5,7 +5,9 @@ import static org.junit.Assert.fail;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -15,7 +17,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Image_ActionTab extends AllWidgetsProjectMain_Class{
  /* private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
@@ -38,22 +40,22 @@ public class Image_ActionTab extends AllWidgetsProjectMain_Class{
   }
   
   @Test
-  public void actTabNewFlow(){
+  public void Image_ActionTab_100_actTabNewFlow(){
 	  assertEquals("Image_actionTab", drv.actTabNewFlow());
   }
   
   @Test
-  public void actTabChangeFlow(){
+  public void Image_ActionTab_110_actTabChangeFlow(){
 	  drv.Image_actionTab();
-	  assertEquals("Banco Popular-FVT", drv.actTabChangeFlow());
+	  assertEquals("BTT8200 FVT", drv.actTabChangeFlow());
   }
   
   @Test
-  public void actTabOperation() throws Exception{
+  public void Image_ActionTab_120_actTabOperation() throws Exception{
 	  drv.BTT8200_tab();
 	  drv.image_widget();
 	  drv.Image_actionTab();
-	  assertEquals("Banco Popular-FVT", drv.actTabOperation());
+	  assertEquals("BTT8200 FVT", drv.actTabOperation());
   }
 
   

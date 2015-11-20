@@ -3,6 +3,7 @@ package com.ibm.btt.allwidgets.MultiSelect;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -16,7 +17,7 @@ import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MultiSelect_ECA extends AllWidgetsProjectMain_Class{
 
   private boolean acceptNextAlert = true;
@@ -37,139 +38,139 @@ public class MultiSelect_ECA extends AllWidgetsProjectMain_Class{
 
  //Event
   @Test
-  public void evtOnClick(){
+  public void MultiSelect_100_evtOnClick(){
 	  assertEquals("onClick is triggered!", drv.evtOnClick());
   }
   
   @Test
-  public void evtOnFocus(){
+  public void MultiSelect_110_evtOnFocus(){
 	  assertEquals("onFocus is triggered!", drv.evtOnFocus());
   }
   
   @Test
-  public void evtOnBlur(){
+  public void MultiSelect_120_evtOnBlur(){
 	  assertEquals("onBlur is triggered!", drv.evtOnBlur());
   }
   
   @Test
-  public void evtOnKeyDown(){
+  public void MultiSelect_130_evtOnKeyDown(){
 	  assertEquals("onKeyDown is triggered!", drv.evtOnKeyDown());
   }
   
   @Test
-  public void evtOnKeyPress(){
+  public void MultiSelect_140_evtOnKeyPress(){
 	  assertEquals("onKeyPress is triggered!", drv.evtOnKeyPress());
   }
   
   @Test
-  public void evtOnKeyUp(){
+  public void MultiSelect_150_evtOnKeyUp(){
 	  assertEquals("onKeyUp is triggered!", drv.evtOnKeyUp());
   }
   
   @Test
-  public void evtOnMouseDown(){
+  public void MultiSelect_160_evtOnMouseDown(){
 	  assertEquals("onMouseDown is triggered!", drv.evtOnMouseDown());
   }
    
   @Test
-  public void evtOnMouseUp(){
+  public void MultiSelect_170_evtOnMouseUp(){
 	  assertEquals("onMouseUp is triggered!", drv.evtOnMouseUp());
   }
   
   @Test
-  public void evtOnMouseEnter(){
+  public void MultiSelect_180_evtOnMouseEnter(){
 	  assertEquals("onMouseEnter is Triggered", drv.evtOnMouseEnter());
   }
   
   @Test
-  public void evtOnMouseLeave(){
+  public void MultiSelect_190_evtOnMouseLeave(){
 	  assertEquals("onMouseLeave is triggered!", drv.evtOnMouseLeave());
   }
   
   @Test
-  public void evtOnMouseMove(){
+  public void MultiSelect_200_evtOnMouseMove(){
 	  assertEquals("onMouseMove is triggered!", drv.evtOnMouseMove());
   }
   
   @Test
-  public void evtOnChange(){
+  public void MultiSelect_210_evtOnChange(){
 	  assertEquals("onChange is triggered!", drv.evtOnChange());
   }
   
 //Action
   @Test
-  public void actFocus(){
+  public void MultiSelect_220_actFocus(){
 	  drv.actconTabbedPane();
 	  assertEquals(2, drv.actFocus());
   }
   
   @Test
-  public void actStyleClassBlue(){
+  public void MultiSelect_230_actStyleClassBlue(){
 	  assertEquals(1, drv.actStyleClassBlue());
   }
   
   @Test
-  public void actStyleClassRed(){
+  public void MultiSelect_240_actStyleClassRed(){
 	  assertEquals(1, drv.actStyleClassRed());
   }
   
   @Test
-  public void actmultiSelectValue1(){
+  public void MultiSelect_250_actmultiSelectValue1(){
 	  assertEquals("2", drv.actmultiSelectValue1());
   }
   
   @Test
-  public void actmultiSelectValue5(){
+  public void MultiSelect_260_actmultiSelectValue5(){
 	  assertEquals("5", drv.actmultiSelectValue5());
   }
   
   @Test
-  public void actVisible(){
+  public void MultiSelect_270_actVisible(){
 	  assertEquals(true, drv.actVisible());
   }
   
   @Test
-  public void actHidden(){
+  public void MultiSelect_280_actHidden(){
 	  assertEquals(1, drv.actHidden());
   }
   
   @Test
-  public void actGone(){
+  public void MultiSelect_290_actGone(){
 	  assertEquals(1, drv.actGone());
   }
   
   @Test
-  public void actDisableTrue(){
+  public void MultiSelect_300_actDisableTrue(){
 	  assertEquals("true", drv.actDisableTrue());
   }
   
   @Test
-  public void actDisableFalse(){
+  public void MultiSelect_310_actDisableFalse(){
 	  assertEquals(true, drv.actDisableFalse());
   }
   
   @Test
-  public void actReadonlyTrue(){
+  public void MultiSelect_320_actReadonlyTrue(){
 	  assertEquals("true", drv.actReadonlyTrue());
   }
   
   @Test
-  public void actReadonlyFalse(){
+  public void MultiSelect_330_actReadonlyFalse(){
 	  assertEquals(true, drv.actReadonlyFalse());
   }
  
   @Test
-  public void actHint(){
+  public void MultiSelect_340_actHint(){
 	  assertEquals("This is hint~", drv.actHint());
   }
   
   @Test
-  public void actHint1(){
+  public void MultiSelect_350_actHint1(){
 	  assertEquals("Credit Cards", drv.actHint1());
   }
   
   @Test
-  public void actGroupGone(){
+  public void MultiSelect_360_actGroupGone(){
 	  assertEquals(1, drv.actGroupGone());
   }
   
