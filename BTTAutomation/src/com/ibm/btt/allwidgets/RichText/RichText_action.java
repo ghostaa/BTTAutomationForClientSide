@@ -1,23 +1,24 @@
 package com.ibm.btt.allwidgets.RichText;
 
-import java.util.regex.Pattern;
-import java.util.concurrent.TimeUnit;
-import org.junit.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
-import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
-import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.Main_Class;
-import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class RichText_action extends Main_Class{
 
   private boolean acceptNextAlert = true;
@@ -37,47 +38,47 @@ public class RichText_action extends Main_Class{
   }
 
   @Test
-  public void actFocus(){
+  public void RichText_100_action_actFocus(){
 	  assertEquals(1, drv.actFocus());
   }
   
   @Test
-  public void actHidden(){
+  public void RichText_110_action_actHidden(){
 	  assertEquals(1, drv.actHidden());
   }
   
   @Test
-  public void actVisible(){
+  public void RichText_120_action_actVisible(){
 	  assertEquals(true, drv.actVisible());
   }
   
   @Test
-  public void actGone(){
+  public void RichText_130_action_actGone(){
 	  assertEquals(1, drv.actGone());
   }
  
   @Test
-  public void actReadonlyT(){
+  public void RichText_140_action_actReadonlyT(){
 	  assertEquals("false", drv.actReadonlyT());
   }
   
   @Test
-  public void actReadonlyF(){
+  public void RichText_150_action_actReadonlyF(){
 	  assertEquals("true", drv.actReadonlyF());
   }
   
   @Test
-  public void actHint(){
+  public void RichText_160_action_actHint(){
 	  assertEquals("Say hello to you ", drv.actHint());
   }
   
   @Test
-  public void actStyleClass(){
+  public void RichText_170_action_actStyleClass(){
 	  assertEquals(1, drv.actStyleClass());
   }
   
   @Test
-  public void actGroup(){
+  public void RichText_180_action_actGroup(){
 	  assertEquals(1, drv.actGroup());
   }
 

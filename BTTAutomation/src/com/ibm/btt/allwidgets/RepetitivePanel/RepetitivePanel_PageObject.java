@@ -12,6 +12,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.Index_Page;
 import com.ibm.btt.allwidgets.Main_Page;
 
@@ -49,8 +50,7 @@ public class RepetitivePanel_PageObject extends Main_Page{
 
 	public String Evt_onKeyPress(){//2.Key press in the text, the label will change
 		Evt_onKeyPress.click();
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_0);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_0);
+		Main_Class.pressAnyKey("0");
 		return Evt_label2.getText();
 	}
 

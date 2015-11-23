@@ -14,6 +14,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class Tree_PageObject extends Main_Page{
@@ -154,8 +155,7 @@ public class Tree_PageObject extends Main_Page{
 	
 	public String evtOnKeypress(){ //onKeypress
 		event_onKeypress.click();
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_1);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_1);
+		Main_Class.pressAnyKey("1");
 		return event_label5.getText();
 	}
 	

@@ -3,6 +3,7 @@ package com.ibm.btt.allwidgets.RichText;
 import java.awt.event.KeyEvent;
 import java.util.List;
 
+import org.apache.james.mime4j.field.address.Mailbox;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +15,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class RichText_PageObject extends Main_Page{
@@ -161,8 +163,7 @@ public class RichText_PageObject extends Main_Page{
 	public int evtOnKeyPress(){//onKeyPress
 		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Event_RichText_onKeyPress_iframe");
 		event_panel.click();
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
+		Main_Class.pressAnyKey(Keys.SHIFT);
 		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
 		String[] temp={"visibility: hidden"};
 		return Appearance.appearance_query(event_RichText5.getAttribute("style"), temp);
@@ -364,6 +365,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement action_styleClass;
 	
 	public int actStyleClass(){//Action_styleClass
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
 		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_RichText_onMouseLeave_iframe");
 		action_panel.click();
 		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
@@ -375,6 +377,7 @@ public class RichText_PageObject extends Main_Page{
 	private WebElement ActionGroup;
 	
 	public int actGroup(){//ActionGroup
+		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();
 		(new AllWidgetsProjectMain_Class()).switchIframe("RichText_Action_richText_iframe");
 		action_panel.click();
 		(new AllWidgetsProjectMain_Class()).switchDefaultIframe();

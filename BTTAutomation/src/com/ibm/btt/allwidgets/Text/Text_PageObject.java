@@ -13,6 +13,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class Text_PageObject extends Main_Page{
@@ -80,12 +81,7 @@ public class Text_PageObject extends Main_Page{
 	private WebElement Text_properties_shortcut;
 	
 	public Boolean Text_properties_shortcut(){
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_C);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_C);	
+		Main_Class.executeCombinationKey(Keys.SHIFT,Keys.ALT,"C");	
 		Boolean b = AllWidgetsProjectMain_Class.widget_isFocus("Text_properties_text08");
 		return b;
 	}
@@ -234,8 +230,7 @@ public class Text_PageObject extends Main_Page{
 	
 	public Boolean Text_event_onKeyPress(){
 		Text_event_onKeyPress.click();
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_C);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_C);
+		Main_Class.pressAnyKey("C");
 		return Text_event_onKeyPress_label.isDisplayed();
 	}
 	

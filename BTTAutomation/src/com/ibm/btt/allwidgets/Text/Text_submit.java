@@ -3,6 +3,7 @@ package com.ibm.btt.allwidgets.Text;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -18,7 +19,7 @@ import com.ibm.btt.util.Event;
 import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Text_submit extends Main_Class{
  /* private static WebDriver driver;
   private static String baseUrl = PropertiesUtil.baseUrl;*/
@@ -41,89 +42,89 @@ public class Text_submit extends Main_Class{
   }
 
   @Test
-  public void subButton(){
+  public void Text_100_subButton(){
 	  assertEquals("true", drv.subButton());
   }
   
   @Test
-  public void subData(){
+  public void Text_110_subData(){
 	  assertEquals("false", drv.subData());
 	  drv.ButtonClick();
   }
   
   @Test
-  public void subResultString(){
+  public void Text_200_subResultString(){
 	  AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "Text_submit_Result_text16");
 	  assertEquals("aaa", drv.subResultString());
   }
   
   @Test
-  public void subResultDate(){
+  public void Text_200_subResultDate(){
 	  assertEquals("2015-05-21", drv.subResultDate());
   }
   
   @Test
-  public void subResultCurrency(){
+  public void Text_200_subResultCurrency(){
 	  assertEquals("$213.05", drv.subResultCurrency());
   }
   
   @Test
-  public void subResultNumber(){
+  public void Text_200_subResultNumber(){
 	  assertEquals("123", drv.subResultNumber());
   }
   
   @Test
-  public void subResultXMLGregorianCalendar(){
+  public void Text_200_subResultXMLGregorianCalendar(){
 	  assertEquals("2015-05-26", drv.subResultXMLGregorianCalendar());
   }
   
   @Test
-  public void subResultByte(){
+  public void Text_200_subResultByte(){
 	  assertEquals("12", drv.subResultByte());
   }
   
   @Test
-  public void subResultShort(){
+  public void Text_200_subResultShort(){
 	  assertEquals("23", drv.subResultShort());
   }
   
   @Test
-  public void subResultInteger(){
+  public void Text_200_subResultInteger(){
 	  assertEquals("123", drv.subResultInteger());
   }
   
   @Test
-  public void subResultLong(){
+  public void Text_200_subResultLong(){
 	  assertEquals("123", drv.subResultLong());
   }
   
   @Test
-  public void subResultFloat(){
+  public void Text_200_subResultFloat(){
 	  assertEquals("21.45", drv.subResultFloat());
   }
   
   @Test
-  public void subResultDouble(){
+  public void Text_200_subResultDouble(){
 	  assertEquals("23.456", drv.subResultDouble());
   }
   
   @Test
-  public void subResultBigInteger(){
+  public void Text_200_subResultBigInteger(){
 	  assertEquals("234", drv.subResultBigInteger());
   }
   
   @Test
-  public void subResultBigDecimal(){
+  public void Text_200_subResultBigDecimal(){
 	  assertEquals("334.563", drv.subResultBigDecimal());
   }
   
   @Test
-  public void subResultIsMandatoryT(){
+  public void Text_200_subResultIsMandatoryT(){
 	  assertEquals("123", drv.subResultIsMandatoryT());
   }
   
   @Test
-  public void subResultIsMandatoryF(){
+  public void Text_200_subResultIsMandatoryF(){
 	  assertEquals("", drv.subResultIsMandatoryF());
   }
 

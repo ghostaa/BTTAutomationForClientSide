@@ -15,6 +15,7 @@ import org.openqa.selenium.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -29,7 +30,7 @@ import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 import com.ibm.btt.util.Event;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Text_Properties extends AllWidgetsProjectMain_Class {
 	/*
 	 * private static WebDriver driver; private static String
@@ -107,7 +108,7 @@ public class Text_Properties extends AllWidgetsProjectMain_Class {
 	}
 
 	@Test
-	public void Text_shortcut() {
+	public void Text_1_shortcut() {
 		assertEquals(true, drv.Text_properties_shortcut());
 	}
 	
@@ -123,7 +124,7 @@ public class Text_Properties extends AllWidgetsProjectMain_Class {
 	}
 	
 	@Test
-	public void Text_getTabIndex() {
+	public void Text_0_getTabIndex() {
 		assertEquals("2", drv.Text_properties_tabIndex_getTabIndex());
 	}
 	

@@ -15,6 +15,7 @@ import org.openqa.selenium.*;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -29,7 +30,7 @@ import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 import com.ibm.btt.util.Event;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TextArea_Properties extends AllWidgetsProjectMain_Class {
 
 	private boolean acceptNextAlert = true;
@@ -49,62 +50,62 @@ public class TextArea_Properties extends AllWidgetsProjectMain_Class {
 	}
 	
 	@Test
-	public void proId(){
+	public void TextArea_200_proId(){
 		assertEquals("textArea_properties_mytextArea", drv.proId());
 	}
 	
 	@Test
-	public void proVisible() {
+	public void TextArea_200_proVisible() {
 		assertEquals(true, drv.proVisible());
 	}
 
 	@Test
-	public void proHidden() {
+	public void TextArea_200_proHidden() {
 		assertEquals(1, drv.proHidden());
 	}
 
 	@Test
-	public void proGone() {
+	public void TextArea_200_proGone() {
 		assertEquals(1, drv.proGone());
 	}
 	
 	@Test
-	public void proDisableTrue() {
+	public void TextArea_200_proDisableTrue() {
 		assertEquals("true", drv.proDisableTrue());
 	}
 	
 	@Test
-	public void proDisableFalse(){
+	public void TextArea_200_proDisableFalse(){
 		assertEquals(true, drv.proDisableFalse());
 	}
 
 	@Test
-	public void proReadonlyTrue() {
+	public void TextArea_200_proReadonlyTrue() {
 		assertEquals("true", drv.proReadonlyTrue());
 	}
 	
 	@Test
-	public void proReadonlyFlase(){
+	public void TextArea_200_proReadonlyFlase(){
 		assertEquals(true, drv.proReadonlyFlase());
 	}
 	
 	@Test
-	public void proShortcut(){
+	public void TextArea_120_proShortcut(){
 		assertEquals(2, drv.proShortcut());
 	}
 
 	@Test
-	public void proHint(){
+	public void TextArea_200_proHint(){
 		assertEquals("stock name", drv.proHint());
 	}
 	
 	@Test
-	public void proTabIndex(){
+	public void TextArea_110_proTabIndex(){
 		assertEquals("0", drv.proTabIndex());
 	}
 	
 	@Test
-	public void proCols(){
+	public void TextArea_200_proCols(){
 		assertEquals("10", drv.proCols());
 	}
 	

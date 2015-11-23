@@ -8,7 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -24,7 +26,7 @@ import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
 
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class RepetitivePanel_ECA extends AllWidgetsProjectMain_Class{
   /*public static WebDriver driver;
   private static String baseUrl = Main_Class.baseUrl;*/
@@ -50,64 +52,64 @@ public class RepetitivePanel_ECA extends AllWidgetsProjectMain_Class{
 
 //###############################For Label Event###################################### 
   @Test
-  public void Evt_onKeyDown(){
+  public void RepetitivePanel_100_Evt_onKeyDown(){
 	  assertEquals("press down ok", drv.Evt_onKeyDown());
   }
 
   @Test
-  public void Evt_onKeyPress(){
+  public void RepetitivePanel_110_Evt_onKeyPress(){
 	  assertEquals("test onkeypress", drv.Evt_onKeyPress());
   }
 
   @Test
-  public void Evt_onKeyUp(){
+  public void RepetitivePanel_120_Evt_onKeyUp(){
 	  assertEquals("key up up up", drv.Evt_onKeyUp());
   }
 
   @Test
-  public void Evt_onKeyDown1(){
+  public void RepetitivePanel_130_Evt_onKeyDown1(){
 	  drv.Evt_onKeyDown1();
 	  assertEquals(1, drv.Evt_StyleCSS());
   }
 
   @Test
-  public void Evt_buttonDisable(){
+  public void RepetitivePanel_140_Evt_buttonDisable(){
 	  assertEquals("true", drv.Evt_buttonDisable());
   }
 
   @Test
-  public void Evt_buttonText(){
+  public void RepetitivePanel_150_Evt_buttonText(){
 	  assertEquals("hit me", drv.Evt_buttonText());
   }
   
   @Test
-  public void Evt_labelFocus(){
+  public void RepetitivePanel_160_Evt_labelFocus(){
 	  assertEquals(2, drv.Evt_labelFocus());
   }
   
   @Test
-  public void Evt_buttonVisibility(){
+  public void RepetitivePanel_170_Evt_buttonVisibility(){
 	  assertEquals(true, drv.Evt_buttonVisibility());
   }
   
   @Test
-  public void Evt_label(){
+  public void RepetitivePanel_180_Evt_label(){
 	  assertEquals("4is ok", drv.Evt_label());
   }
 //###############################For Label Event######################################
 //###############################For Label Condition##################################
   @Test
-  public void Con_Constant(){
+  public void RepetitivePanel_190_Con_Constant(){
 	  assertEquals("expression test ok", drv.Con_Constant());
   }
 
   @Test
-  public void con_Click(){
+  public void RepetitivePanel_200_con_Click(){
 	  assertEquals("expression test ok",drv.con_Click());
   }
 
   @Test
-  public void con_Click1(){
+  public void RepetitivePanel_210_con_Click1(){
 	  assertEquals("ActionGroup test success",drv.con_Click1());
   }
 //###############################For Label Condition##################################

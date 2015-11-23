@@ -14,6 +14,7 @@ import com.ibm.btt.util.Appearance;
 import com.ibm.btt.util.CSS;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.allwidgets.*;
 
 public class TextArea_PageObject extends Main_Page{
@@ -81,12 +82,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 	
 	public int proShortcut(){//9. shortcut:z
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_Z);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_Z);
+		Main_Class.executeCombinationKey(Keys.SHIFT,Keys.ALT,"Z");
 		String[] temp = {"dijitTextAreaFocused", "dijitFocused"};
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}
@@ -203,8 +199,7 @@ public class TextArea_PageObject extends Main_Page{
 	public String evtOnKeyPress(){ //onKeyPress
 		event_onKeyPress.click();
 		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.keyPress(KeyEvent.VK_0);
-		main_class.keyRelease(KeyEvent.VK_0);
+		Main_Class.pressAnyKey("0");
 		return event_label5.getText();
 	}
 	
