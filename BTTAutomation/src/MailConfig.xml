@@ -4,12 +4,14 @@
   	<SendFrom>dpyan@cn.ibm.com</SendFrom>
     <UserGroup>
       <AllTester>
-      	<user>"BTT Test"</user>
+       <user>dpyan@cn.ibm.com</user>
+       <!-- <user>"BTT Test"</user> -->
        <!-- <user>zhaomm@cn.ibm.com, vndliyj@cn.ibm.com, vndlmmli@cn.ibm.com,</user> -->
       </AllTester>
       <AllDeveloper />
       <BTTAll>
-      	<user>"BTT All"</user>
+      	<user></user>
+      	<!-- <user>"BTT All"</user> -->
       </BTTAll>
       <Manager />
     </UserGroup>
