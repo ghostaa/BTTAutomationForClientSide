@@ -3,6 +3,7 @@ package com.ibm.btt.allwidgets.SelectList;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -16,7 +17,7 @@ import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SelectList_Event extends AllWidgetsProjectMain_Class{
 
   private boolean acceptNextAlert = true;
@@ -36,62 +37,62 @@ public class SelectList_Event extends AllWidgetsProjectMain_Class{
   }
 
   @Test
-  public void evtOnClick(){
+  public void SelectList_100_evtOnClick(){
 	  assertEquals("onClick", drv.evtOnClick());
   }
   
   @Test
-  public void evtOnKeyDown(){
+  public void SelectList_110_evtOnKeyDown(){
 	  assertEquals("onKeyDown", drv.evtOnKeyDown());
   }
   
   @Test
-  public void evtOnKeypress(){
+  public void SelectList_120_evtOnKeypress(){
 	  assertEquals("onKeypress", drv.evtOnKeypress());
   }
   
   @Test
-  public void evtOnKeyUp(){
+  public void SelectList_130_evtOnKeyUp(){
 	  assertEquals("onKeyUp", drv.evtOnKeyUp());
   }
   
   @Test
-  public void evtOnMouseDown(){
+  public void SelectList_140_evtOnMouseDown(){
 	  assertEquals("onMouseDown", drv.evtOnMouseDown());
   }
   
   @Test
-  public void evtOnMouseUp(){
+  public void SelectList_150_evtOnMouseUp(){
 	  assertEquals("onMouseUp", drv.evtOnMouseUp());
   }
   
   @Test
-  public void event_onMouseEnter(){
+  public void SelectList_160_event_onMouseEnter(){
 	  assertEquals("onMouseEnter", drv.evtOnMouseEnter());
   }
    
   @Test
-  public void event_onMouseMove(){
+  public void SelectList_170_event_onMouseMove(){
 	  assertEquals("onMouseMove", drv.evtOnMouseMove());
   }
   
   @Test
-  public void evtOnChange(){
+  public void SelectList_180_evtOnChange(){
 	  assertEquals("onChange", drv.evtOnChange());
   }
   
   @Test
-  public void event_onMouseLeave(){
+  public void SelectList_190_event_onMouseLeave(){
 	  assertEquals("onMouseLeave", drv.evtOnMouseLeave());
   }
   
   @Test
-  public void evtOnFocus(){
+  public void SelectList_200_evtOnFocus(){
 	  assertEquals("onFocus", drv.evtOnFocus());
   }
   
   @Test
-  public void evtOnBlur(){
+  public void SelectList_210_evtOnBlur(){
 	  assertEquals("onBlur", drv.evtOnBlur());
   }
  
