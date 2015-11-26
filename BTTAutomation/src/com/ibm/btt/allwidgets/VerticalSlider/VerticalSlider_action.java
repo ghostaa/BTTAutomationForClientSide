@@ -3,6 +3,7 @@ package com.ibm.btt.allwidgets.VerticalSlider;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
@@ -16,7 +17,7 @@ import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class VerticalSlider_action extends AllWidgetsProjectMain_Class{
 
   private boolean acceptNextAlert = true;
@@ -36,27 +37,27 @@ public class VerticalSlider_action extends AllWidgetsProjectMain_Class{
   }
 
   @Test
-  public void actGetName(){
+  public void V_100_actGetName(){
 	  assertEquals("VerticalSlider_action_verticalSlider", drv.actGetName());
   }
   
   @Test
-  public void actSetName(){
+  public void V_110_actSetName(){
 	  assertEquals("test", drv.actSetName());
   }
   
   @Test
-  public void actCompare(){
+  public void V_120_actCompare(){
 	  assertEquals("0", drv.actCompare());
   }
   
   @Test
-  public void actFocus(){
+  public void V_130_actFocus(){
 	  assertEquals(2, drv.actFocus());
   }
   
   @Test
-  public void actReset(){
+  public void V_140_actReset(){
 	  assertEquals("0", drv.actReset());
   }
   

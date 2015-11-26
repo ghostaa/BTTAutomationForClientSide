@@ -201,6 +201,20 @@ public class Main_Class {
 		
 	}
 
+	/*
+	 * Mouse Hold
+	 */
+	public static void mouseHold(WebElement onElement){
+		event.clickAndHold(onElement).perform();
+		
+	}
+	/*
+	 * Mouse Hold
+	 */
+	public static void mouseRelease(WebElement onElement){
+		event.release(onElement).perform();
+		
+	}
 	
 	public static void waitUntilLoadElement(long second,final String elementID){
 		(new WebDriverWait(driver, second)).until(new ExpectedCondition<WebElement>(){

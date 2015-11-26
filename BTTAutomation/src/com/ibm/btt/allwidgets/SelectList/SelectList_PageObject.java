@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.touch.MoveAction;
 import org.openqa.selenium.support.FindBy;
 
 import com.ibm.btt.util.Appearance;
@@ -121,12 +122,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement properties_shortcut;
 	
 	public int proShortcut(){//14. SelectList's shortcut is 'v'
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_V);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_SHIFT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_ALT);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_V);
+		Main_Class.executeCombinationKey(Keys.SHIFT,Keys.ALT,"v");
 		String[] temp={"dijitComboBoxFocused", "dijitFocused"};
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}
@@ -232,9 +228,8 @@ public class SelectList_PageObject extends Main_Page{
 	
 	public String evtOnKeyDown(){ //onKeyDown
 		event_onKeyDown.click();
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.keyDown(Keys.SHIFT);
-		main_class.keyUp(Keys.SHIFT);
+		event_onKeyDown.click();
+		Main_Class.pressAnyKey(Keys.SHIFT);
 		return event_message.getText();
 	}
 	
@@ -243,8 +238,8 @@ public class SelectList_PageObject extends Main_Page{
 	
 	public String evtOnKeypress(){ //onKeypress
 		event_onKeypress.click();
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_1);
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_1);
+		event_onKeypress.click();
+		Main_Class.pressAnyKey("1");
 		return event_message.getText();
 	}
 	
@@ -253,9 +248,7 @@ public class SelectList_PageObject extends Main_Page{
 	
 	public String evtOnKeyUp(){ //onKeyUp
 		event_onKeyUp.click();
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.keyDown(Keys.SHIFT);
-		main_class.keyUp(Keys.SHIFT);
+		Main_Class.pressAnyKey(Keys.SHIFT);
 		return event_message.getText();
 	}
 
@@ -263,7 +256,9 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement event_onMouseDown;
 	
 	public String evtOnMouseDown(){ //onMouseDown
-		event_onMouseDown.click();;
+		event_onMouseDown.click();
+		Main_Class.mouseHold(event_onMouseDown);
+		Main_Class.mouseRelease(event_onMouseDown);
 		return event_message.getText();
 	}
 	
@@ -272,6 +267,8 @@ public class SelectList_PageObject extends Main_Page{
 	
 	public String evtOnMouseUp(){ //onMouseUp
 		event_onMouseUp.click();
+		Main_Class.mouseHold(event_onMouseUp);
+		Main_Class.mouseRelease(event_onMouseUp);
 		return event_message.getText();
 	}
 	
@@ -279,6 +276,7 @@ public class SelectList_PageObject extends Main_Page{
 	private WebElement event_onMouseEnter; 
 
 	public String evtOnMouseEnter(){ //onMouseEnter
+		event_message.click();
 		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("SelectList_event_selectList_onMouseEnter");
 		return event_message.getText();
@@ -326,9 +324,14 @@ public class SelectList_PageObject extends Main_Page{
 	@FindBy(id="SelectList_event_selectList_onBlur")
 	private WebElement event_onBlur;
 	
+	@FindBy(id="SelectList_event_label15_copy_copy")
+	private WebElement onBlur_label;
+	
+	
 	public String evtOnBlur(){//onBlur
 		event_onBlur.click();
-		event_message.click();
+		event_onBlur.click();
+		onBlur_label.click();
 		return event_message.getText();
 	}
 	

@@ -58,7 +58,7 @@ public class Text_Properties extends AllWidgetsProjectMain_Class {
 	}
 	
 	@Test
-	public void Text_tabIndex() {
+	public void Text_100_tabIndex() {
 		AllWidgetsProjectMain_Class.widget_tabIndex();
 		assertEquals(true, AllWidgetsProjectMain_Class.widget_isFocus("Text_properties_text09"));
 		AllWidgetsProjectMain_Class.widget_tabIndex();
@@ -108,7 +108,7 @@ public class Text_Properties extends AllWidgetsProjectMain_Class {
 	}
 
 	@Test
-	public void Text_1_shortcut() {
+	public void Text_120_shortcut() {
 		assertEquals(true, drv.Text_properties_shortcut());
 	}
 	
@@ -124,7 +124,7 @@ public class Text_Properties extends AllWidgetsProjectMain_Class {
 	}
 	
 	@Test
-	public void Text_0_getTabIndex() {
+	public void Text_110_getTabIndex() {
 		assertEquals("2", drv.Text_properties_tabIndex_getTabIndex());
 	}
 	

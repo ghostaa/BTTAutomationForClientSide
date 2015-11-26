@@ -5,7 +5,9 @@ import static org.junit.Assert.fail;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -17,7 +19,7 @@ import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.DateType;
 import com.ibm.btt.util.Main_Class;
 import com.ibm.btt.util.Tools;
-
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SelectList_Submit extends Main_Class{
 
   private boolean acceptNextAlert = true;
@@ -34,88 +36,88 @@ public class SelectList_Submit extends Main_Class{
     drv.BTT8200_tab();
     drv.SelectList_widget();
     drv.SelectList_submit();
+    drv.Submit();
   }
 //form
   @Test
-  public void subResultString(){
-	  drv.Submit();
+  public void selectList_100_subResultString(){
 	  assertEquals("Account0", drv.subResultString());
   }
   
   @Test
-  public void subResultDate(){
+  public void selectList_110_subResultDate(){
 	  boolean b = DateType.Date(drv.subResultDate());
 	  assertEquals(true, b);
   }
   
   @Test
-  public void subResultCurrency(){
+  public void selectList_120_subResultCurrency(){
 	  boolean b = DateType.Currency(drv.subResultCurrency());
 	  assertEquals(true, b);
   }
   
   @Test
-  public void subResultNumber(){
+  public void selectList_130_subResultNumber(){
 	  boolean b = DateType.Number(drv.subResultNumber());
 	  assertEquals(true, b);
   }
   
   @Test
-  public void subResultBoolean(){
+  public void selectList_140_subResultBoolean(){
 	  boolean b = DateType.Boolean(drv.subResultBoolean());
 	  assertEquals(true, b);
   }
   
   @Test
-  public void subResultDuration(){
+  public void selectList_150_subResultDuration(){
 	  boolean b = DateType.Duration(drv.subResultDuration());
 	  assertEquals(true, b);
   }
   
   @Test
-  public void subResultXMLGregorianCalendar(){
+  public void selectList_160_subResultXMLGregorianCalendar(){
 	  assertEquals("2012-07-18", drv.subResultXMLGregorianCalendar());
   }
   
   @Test
-  public void subResultByte(){
+  public void selectList_170_subResultByte(){
 	  assertEquals("98", drv.subResultByte());
   }
   
   @Test
-  public void subResultShort(){
+  public void selectList_180_subResultShort(){
 	  assertEquals("-12,321", drv.subResultShort());
   }
   
   @Test
-  public void subResultInteger(){
+  public void selectList_190_subResultInteger(){
 	  boolean b = DateType.Integer(drv.subResultInteger());
 	  assertEquals(true, b);
   }
   
   @Test
-  public void subResultLong(){
+  public void selectList_200_subResultLong(){
 	  boolean b = DateType.Integer(drv.subResultLong());
 	  assertEquals(true, b);
   }
  
   @Test
-  public void subResultFloat(){
+  public void selectList_210_subResultFloat(){
 	  assertEquals("3.12", drv.subResultFloat());
   }
   
   @Test
-  public void subResultDouble(){
+  public void selectList_220_subResultDouble(){
 	  assertEquals("8.220", drv.subResultDouble());
   }
   
   @Test
-  public void subResultBigInteger(){
+  public void selectList_230_subResultBigInteger(){
 	  assertEquals("123", drv.subResultBigInteger());
   }
   
   @Test
-  public void subResultBigDecimal(){
+  public void selectList_240_subResultBigDecimal(){
 	  boolean b = DateType.BigDecimal(drv.subResultBigDecimal());
 	  assertEquals(true, b);
 	  drv.subResultReturn();
@@ -124,22 +126,22 @@ public class SelectList_Submit extends Main_Class{
   
 // form01
   @Test
-  public void subButtonDisableT(){
+  public void selectList_250_subButtonDisableT(){
 	  assertEquals("true", drv.subButtonDisableT());
   }
   
   @Test
-  public void subFormVal(){
+  public void selectList_260_subFormVal(){
 	  assertEquals("Please select Account2.", drv.subFormVal());
   }
   
   @Test
-  public void subButtonDisableF(){
+  public void selectList_270_subButtonDisableF(){
 	  assertEquals("false", drv.subButtonDisableF());
   }
   
   @Test
-  public void subForm01Submit(){
+  public void selectList_280_subForm01Submit(){
 	  assertEquals("Account2", drv.subForm01Submit());
   }
   

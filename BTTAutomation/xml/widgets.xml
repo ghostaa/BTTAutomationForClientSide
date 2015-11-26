@@ -724,6 +724,22 @@
             <classpath refid="BTTAutomation.classpath"/>
         </junit>
   	</target>
+	<target name="SelectList_Submit">
+	        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.SelectList.SelectList_Submit" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+	 </target>
+	<target name="SelectList_Appearance">
+	        <mkdir dir="${junit.output.dir}"/>
+	        <junit fork="yes" printsummary="withOutAndErr">
+	            <formatter type="xml"/>
+	            <test name="com.ibm.btt.allwidgets.SelectList.SelectList_appearance" todir="${junit.output.dir}"/>
+	            <classpath refid="BTTAutomation.classpath"/>
+	        </junit>
+	  	</target>
   	<target name="SelectList_Event">
         <mkdir dir="${junit.output.dir}"/>
 	        <junit fork="yes" printsummary="withOutAndErr">
