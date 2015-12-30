@@ -710,6 +710,229 @@ public class MultiSelect_PageObject extends Main_Page{
 	}
 //###############################MultiSelect Appearance2###############################
 //###############################MultiSelect Submit####################################
+//General submit
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect']/option[2]")
+	private WebElement submit_String;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect']/option[3]")
+	private WebElement submit_defaultString;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy']/option[2]")
+	private WebElement submit_Date;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy']/option[1]")
+	private WebElement submit_defaultDate;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy01']/option[4]")
+	private WebElement submit_Currency;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy01']/option[3]")
+	private WebElement submit_defaultCurrency;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy02']/option[3]")
+	private WebElement submit_Number;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy03']/option[2]")
+	private WebElement submit_Boolean;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy03']/option[1]")
+	private WebElement submit_defaultBoolean;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy04']/option[1]")
+	private WebElement submit_Duration;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy04']/option[3]")
+	private WebElement submit_defaultDuration;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy05']/option[2]")
+	private WebElement submit_XMLGregorianCalendar;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy05']/option[3]")
+	private WebElement submit_defaultXMLGregorianCalendar;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy07']/option[10]")
+	private WebElement submit_Short;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy07']/option[3]")
+	private WebElement submit_defaultShort;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy08']/option[9]")
+	private WebElement submit_Integer;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy08']/option[3]")
+	private WebElement submit_defaultInteger;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy09']/option[8]")
+	private WebElement submit_Long;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy09']/option[1]")
+	private WebElement submit_defaultLong;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy10']/option[3]")
+	private WebElement submit_Float;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy10']/option[1]")
+	private WebElement submit_defaultFloat;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy11']/option[10]")
+	private WebElement submit_Double;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy11']/option[1]")
+	private WebElement submit_defaultDouble;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy11_copy']/option[8]")
+	private WebElement submit_BigDecimal;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy11_copy']/option[1]")
+	private WebElement submit_defaultBigDecimal;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy11_copy01']/option[7]")
+	private WebElement submit_BigInteger;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy11_copy01']/option[1]")
+	private WebElement submit_defaultBigInteger;
+	
+	@FindBy(id="MultiSelect_submit_button")
+	private WebElement subButton;
+	
+	public void subGeneralSubmit(){
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_CONTROL);
+		submit_defaultString.click();
+		submit_defaultDate.click();
+		submit_defaultCurrency.click();
+		submit_Number.click();
+		submit_defaultBoolean.click();
+		submit_defaultDuration.click();
+		submit_defaultXMLGregorianCalendar.click();
+		submit_defaultShort.click();
+		submit_defaultInteger.click();
+		submit_defaultLong.click();
+		submit_defaultFloat.click();
+		submit_defaultDouble.click();
+		submit_defaultBigDecimal.click();
+		submit_defaultBigInteger.click();
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_CONTROL);
+		submit_String.click();
+		submit_Date.click();
+		submit_Currency.click();
+		submit_Number.click();
+		submit_Boolean.click();
+		submit_Duration.click();
+		submit_XMLGregorianCalendar.click();
+		submit_Short.click();
+		submit_Integer.click();
+		submit_Long.click();
+		submit_Float.click();
+		submit_Double.click();
+		submit_BigDecimal.click();
+		submit_BigInteger.click();
+		subButton.click();
+	}
+//Generate submit result
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect']/option")
+	private WebElement subResultString;
+	
+	public String subResultString(){
+		return subResultString.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy']/option")
+	private WebElement subResultDate;
+	
+	public String subResultDate(){
+		return subResultDate.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy01']/option")
+	private WebElement subResultCurrency;
+	
+	public String subResultCurrency(){
+		return subResultCurrency.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy02']/option")
+	private WebElement subResultNumber;
+	
+	public String subResultNumber(){
+		return subResultNumber.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy03']/option")
+	private WebElement subResultBoolean;
+	
+	public String subResultBoolean(){
+		return subResultBoolean.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy04']/option")
+	private WebElement subResultDuration;
+	
+	public String subResultDuration(){
+		return subResultDuration.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy05']/option")
+	private WebElement subResultXMLGregorianCalendar;
+	
+	public String subResultXMLGregorianCalendar(){
+		return subResultXMLGregorianCalendar.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy06']/option")
+	private WebElement subResultByte;
+	
+	public String subResultByte(){
+		return subResultByte.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy07']/option")
+	private WebElement subResultShort;
+	
+	public String subResultShort(){
+		return subResultShort.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy08']/option")
+	private WebElement subResultInteger;
+	
+	public String subResultInteger(){
+		return subResultInteger.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy09']/option")
+	private WebElement subResultLong;
+	
+	public String subResultLong(){
+		return subResultLong.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy10']/option")
+	private WebElement subResultFloat;
+	
+	public String subResultFloat(){
+		return subResultFloat.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy11']/option")
+	private WebElement subResultDouble;
+	
+	public String subResultDouble(){
+		return subResultDouble.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy11_copy']/option")
+	private WebElement subResultBigDecimal;
+	
+	public String subResultBigDecimal(){
+		return subResultBigDecimal.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy11_copy01']/option")
+	private WebElement subResultBigInteger;
+	
+	public String subResultBigInteger(){
+		return subResultBigInteger.getText();
+	}
 	
 //###############################MultiSelect Submit####################################
 
