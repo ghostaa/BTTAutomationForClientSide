@@ -38,7 +38,7 @@ public class IBK_30_AllWidgets extends InternetBankTestWebMain_Class{
     drv.AllWidgets();
  
   }
-
+//*********************************NLS*************************************
   @Test
   public void LinkChinese(){
 	assertEquals("ª∂”≠‰Ø¿¿BTT æ∑∂“≥√Ê", drv.LinkChinese());
@@ -118,15 +118,182 @@ public class IBK_30_AllWidgets extends InternetBankTestWebMain_Class{
   public void ImageSpanishURL(){
 	assertEquals(true, drv.ImageSpanishURL());
   }
-  
-  /*@Test
-  public void TabbedPaneDiv62(){
-	assertEquals("div", drv.TabbedPaneDiv62());
+//*************************************Lable*****************************************  
+  @Test
+  public void visiableLable(){
+	assertEquals(true, drv.visiableLable());
   }
   
   @Test
-  public void TabbedPaneDiv71(){
-	assertEquals("div", drv.TabbedPaneDiv71());
+  public void hiddenLable(){
+	assertEquals(1, drv.hiddenLable());
+  }
+  
+  @Test
+  public void goneLable(){
+	assertEquals(1, drv.goneLable());
+  }
+ //***************************************Radio**************************************
+  @Test
+  public void maleRadio(){
+	assertEquals("checked", drv.maleRadio());
+  }
+  
+  @Test
+  public void femaleRadio(){
+	assertEquals("false", drv.femaleRadio());
+  }
+  
+  @Test
+  public void hiddenRadio(){
+	assertEquals(1, drv.hiddenRadio());
+  }
+  
+  @Test
+  public void goneRadio(){
+	assertEquals(1, drv.goneRadio());
+  }
+  
+  @Test
+  public void radioDisableT(){
+	assertEquals("true", drv.radioDisableT());
+  }
+  
+  @Test
+  public void radioReadonlyT(){
+	assertEquals("true", drv.radioReadonlyT());
+  }
+ //*********************************checkbox**********************************
+  
+  @Test
+  public void visibleCheckbox(){
+	assertEquals(true, drv.visibleCheckbox());
+  }
+  
+  @Test
+  public void checkboxChecked(){
+	assertEquals("checked", drv.checkboxChecked());
+  }
+  
+  @Test
+  public void CheckboxDisableT(){
+	assertEquals("true", drv.CheckboxDisableT());
+  }
+  
+  @Test
+  public void CheckboxReadonlyT(){
+	assertEquals("true", drv.CheckboxReadonlyT());
+  }
+ //************************************Text**********************************
+  
+  @Test
+  public void Text(){
+	assertEquals("888", drv.Text());
+  }
+  
+  @Test
+  public void TextIsMandatoryT(){
+	assertEquals("true", drv.TextIsMandatoryT());
+  }
+  
+  @Test
+  public void hiddenText(){
+	assertEquals(1, drv.hiddenText());
+  }
+  
+  @Test
+  public void goneText(){
+	assertEquals(1, drv.goneText());
+  }
+  
+  @Test
+  public void TextDisableT(){
+	assertEquals("true", drv.TextDisableT());
+  }
+  
+  @Test
+  public void TextReadonlyT(){
+	assertEquals("true", drv.TextReadonlyT());
+  }
+  
+  @Test
+  public void TextPasswordT(){
+	assertEquals("password", drv.TextPasswordT());
+  }
+//*********************************Select List*******************************
+  
+  @Test
+  public void xValidationTooltip(){
+	assertEquals("The selection must be selected 'City1' ,this test case is used for xValidations of 'form' widget", drv.xValidationTooltip());
+  }
+  
+  @Test
+  public void selectListDataNameForList(){
+	assertEquals("City0", drv.selectListDataNameForList());
+  }
+  
+  @Test
+  public void selectListDataNameForListName(){
+	assertEquals("Select_DataName_result", drv.selectListDataNameForListName());
+  }
+  
+  @Test
+  public void selectListCity1(){
+	assertEquals("City1", drv.selectListCity1());
+  }
+  
+  @Test
+  public void selectListURLForList(){
+	assertEquals("BeiJing", drv.selectListURLForList());
+  }
+  
+  @Test
+  public void selectListURLForListName(){
+	assertEquals("Select_UrlList_result", drv.selectListURLForListName());
+  }
+//***********************************ComboList******************************************
+  
+  public void comboDataNameForList(){
+	assertEquals("Combo_DataName_result", drv.comboDataNameForList());
+  }
+  
+  @Test
+  public void comboURLForList(){
+	assertEquals("Combo_UrlList_result", drv.comboURLForList());
+  }
+
+//************************************Link***********************************************
+  @Test
+  public void linkFinalPage(){
+	driver.navigate().to(InternetBankTestWebMain_Class.baseUrl);
+	drv.Establish();
+	drv.IBK_FVT_tab();
+	drv.IBK30XHTML();
+	drv.AllWidgets();
+	assertEquals("This is the final page of the sample flow", drv.linkFinalPage());
+  }
+  
+  @Test
+  public void linkLanchNewFlow(){
+	driver.navigate().refresh();
+	drv.IBK_FVT_tab();
+	drv.IBK30XHTML();
+	drv.AllWidgets();
+	assertEquals("This page is result of 'Launch Flow'", drv.linkLanchNewFlow());
+  }
+  
+  /*@Test
+  public void linkLaunchOperation(){
+	assertEquals("This is the final page of the sample flow", drv.linkLaunchOperation());
+	driver.navigate().refresh();
+	drv.IBK_FVT_tab();
+	drv.IBK30XHTML();
+	drv.AllWidgets();
+  }
+  
+  @Test
+  public void linkLaunchURL(){
+	assertEquals("http://www.naver.com/", drv.linkLaunchURL());
   }
   */
   @AfterClass
