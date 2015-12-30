@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.DateType;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
@@ -36,83 +37,82 @@ public class MultiSelect_Submit extends AllWidgetsProjectMain_Class{
   }
 
   @Test
-  public void evtOnClick(){
-	  assertEquals("onClick is triggered!", drv.evtOnClick());
+  public void subResultString(){
+	  drv.subGeneralSubmit();
+	  assertEquals("sample-1", drv.subResultString());
   }
   
   @Test
-  public void evtOnFocus(){
-	  assertEquals("onFocus is triggered!", drv.evtOnFocus());
+  public void subResultDate(){
+	  assertEquals("sample-Mon Feb 24 00:00:00 CST 2014", drv.subResultDate());
   }
   
   @Test
-  public void evtOnBlur(){
-	  assertEquals("onBlur is triggered!", drv.evtOnBlur());
+  public void subResultCurrency(){
+	  assertEquals("USD:32870375 - 3", drv.subResultCurrency());
   }
   
   @Test
-  public void evtOnKeyDown(){
-	  assertEquals("onKeyDown is triggered!", drv.evtOnKeyDown());
+  public void subResultNumber(){
+	  assertEquals("677009676.7499120235443115234375 selected", drv.subResultNumber());
   }
   
   @Test
-  public void evtOnKeyPress(){
-	  assertEquals("onKeyPress is triggered!", drv.evtOnKeyPress());
+  public void subResultBoolean(){
+	  assertEquals("sample-false", drv.subResultBoolean());
   }
   
   @Test
-  public void evtOnKeyUp(){
-	  assertEquals("onKeyUp is triggered!", drv.evtOnKeyUp());
+  public void subResultDuration(){
+	  assertEquals("P2015Y8M8DT8H20M22S - 0", drv.subResultDuration());
   }
   
   @Test
-  public void evtOnMouseDown(){
-	  assertEquals("onMouseDown is triggered!", drv.evtOnMouseDown());
+  public void subResultXMLGregorianCalendar(){
+	  assertEquals("2014-07-18T13:20:20.020+00:08 - 1", drv.subResultXMLGregorianCalendar());
   }
    
   @Test
-  public void evtOnMouseUp(){
-	  assertEquals("onMouseUp is triggered!", drv.evtOnMouseUp());
+  public void subResultByte(){
+	  assertEquals("null", drv.subResultByte());
   }
   
   @Test
-  public void evtOnMouseEnter(){
-	  assertEquals("onMouseEnter is Triggered", drv.evtOnMouseEnter());
+  public void subResultShort(){
+	  assertEquals("sample-11231", drv.subResultShort());
   }
   
   @Test
-  public void evtOnMouseLeave(){
-	  assertEquals("onMouseLeave is triggered!", drv.evtOnMouseLeave());
+  public void subResultInteger(){
+	  assertEquals("sample-23", drv.subResultInteger());
   }
   
   @Test
-  public void evtOnMouseMove(){
-	  assertEquals("onMouseMove is triggered!", drv.evtOnMouseMove());
+  public void subResultLong(){
+	  assertEquals("sample-84322238006", drv.subResultLong());
   }
-  
-//Action
+ 
   @Test
-  public void actFocus(){
-	  drv.actconTabbedPane();
-	  assertEquals(2, drv.actFocus());
-  }
-  
-  @Test
-  public void actStyleClassBlue(){
-	  assertEquals(1, drv.actStyleClassBlue());
+  public void subResultFloat(){
+	  assertEquals("Selected is true", drv.subResultFloat());
   }
   
   @Test
-  public void actStyleClassRed(){
-	  assertEquals(1, drv.actStyleClassRed());
+  public void subResultDouble(){
+	  assertEquals("sample-6.66", drv.subResultDouble());
   }
   
   @Test
-  public void actmultiSelectValue1(){
-	  assertEquals("2", drv.actmultiSelectValue1());
+  public void subResultBigDecimal(){
+	  assertEquals("sample-751384515.6830341815948486328125", drv.subResultBigDecimal());
   }
   
   @Test
+  public void subResultBigInteger(){
+	  assertEquals("sample-153", drv.subResultBigInteger());
+  }
+  
+  /*@Test
   public void actmultiSelectValue5(){
 	  assertEquals("5", drv.actmultiSelectValue5());
   }
@@ -228,7 +228,7 @@ public class MultiSelect_Submit extends AllWidgetsProjectMain_Class{
   public void conasyncErrorMessage(){
 	  assertEquals("It's false : multiSelect_copy11.asyncErrorMessage = \"error\"", drv.conasyncErrorMessage());
   }
- 
+ */
  
   @AfterClass
   public static void tearDown() throws Exception {
