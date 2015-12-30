@@ -1,5 +1,7 @@
 package com.ibm.btt.internetbanktestweb.fvt.release.old.ibk.ibk_30XHTML;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -93,7 +95,6 @@ public class IBK_30XHTML_AllWidgets_PageObject extends Index_Page {
 	
 	public Boolean ImageChineseURL(){
 		String ch = "dse_nextEventName=ch";
-		System.out.println(InternetBankTestWebMain_Class.getCurrentURL());
 		return InternetBankTestWebMain_Class.getCurrentURL().indexOf(ch)> -1;
 	}
 
@@ -203,15 +204,18 @@ public class IBK_30XHTML_AllWidgets_PageObject extends Index_Page {
 		return radioReadonlyT.getAttribute("readonly");
 	}
 //checkbox
-	@FindBy(id="ShowAllWidght_checkBox")
+	@FindBy(xpath=".//*[@id='ShowAllWidght_group02']/div/div/div/div[1]/label")
 	private WebElement visibleCheckbox;
+	
+	@FindBy(id="ShowAllWidght_checkBox")
+	private WebElement checkboxChecked;
 	
 	public Boolean visibleCheckbox(){
 		return visibleCheckbox.isDisplayed();
 	}
 	
 	public String checkboxChecked(){
-		return visibleCheckbox.getAttribute("aria-checked");
+		return checkboxChecked.getAttribute("aria-checked");
 	}
 	
 	@FindBy(id="ShowAllWidght_checkBox03")
@@ -292,32 +296,34 @@ public class IBK_30XHTML_AllWidgets_PageObject extends Index_Page {
 		return xValidationTooltip.getText();
 	}
 	
-	@FindBy(id="ShowAllWidght_selectList")
+	@FindBy(id="widget_ShowAllWidght_selectList")
 	private WebElement selectListDataNameForList;
 	
 	public String selectListDataNameForList(){
-		return selectListDataNameForList.getAttribute("value");
+		return selectListDataNameForList.findElement(By.id("ShowAllWidght_selectList")).getAttribute("value");
 	}
 	
 	public String selectListDataNameForListName(){
-		return selectListDataNameForList.getAttribute("name");
+		List<WebElement> list = selectListDataNameForList.findElements(By.tagName("input"));
+		return list.get(3).getAttribute("name");
 	}
 	
 	public String selectListCity1(){
 		selectListClick.click();
 		selectListCity1.click();
-		return selectListDataNameForList.getAttribute("value");
+		return selectListDataNameForList.findElement(By.id("ShowAllWidght_selectList")).getAttribute("value");
 	}
 	
-	@FindBy(id="ShowAllWidght_selectList")
+	@FindBy(id="widget_ShowAllWidght_selectList01")
 	private WebElement selectListURLForList;
 	
 	public String selectListURLForList(){
-		return selectListURLForList.getAttribute("value");
+		return selectListURLForList.findElement(By.id("ShowAllWidght_selectList01")).getAttribute("value");
 	}
 	
 	public String selectListURLForListName(){
-		return selectListURLForList.getAttribute("name");
+		List<WebElement> list = selectListURLForList.findElements(By.tagName("input"));
+		return list.get(3).getAttribute("name");
 	}
 //ComboList
 	@FindBy(id="ShowAllWidght_combo")
@@ -369,7 +375,8 @@ public class IBK_30XHTML_AllWidgets_PageObject extends Index_Page {
 	
 /*	public String linkLaunchURL(){//Launch Hello World Operation
 		linkLaunchURL.click();
-		return Main_Class.switchWindow();
+		Main_Class.switchWindow(1);
+		return Main_Class.getCurrentURL();
 	} */
 //Image
 	@FindBy(id="ShowAllWidght_image")
@@ -407,7 +414,7 @@ public class IBK_30XHTML_AllWidgets_PageObject extends Index_Page {
 	
 /*	public String ImageChangeFlowEvent(){//Change flow event to final page
 		ImageChangeFlowEvent.click();
-		Main_Class.switchWindow();
+		Main_Class.switchWindow(1);
 		return finalPage.getText();
 	}*/
 //RichText
