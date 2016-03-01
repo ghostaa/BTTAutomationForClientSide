@@ -109,6 +109,12 @@ public class TextArea_Properties extends AllWidgetsProjectMain_Class {
 		assertEquals("10", drv.proCols());
 	}
 	
+	@Test
+	public void TextArea_210_proMaxLength(){
+		assertEquals("10", drv.proMaxLen());
+		assertEquals(10, drv.setValueofMaxLen().length());
+	}
+	
 	@AfterClass
 	public static void tearDown() throws Exception {
 		Tools.snapshot((TakesScreenshot) driver, AllWidgetsProjectMain_Class.allwidgets,TextArea_Properties.class);

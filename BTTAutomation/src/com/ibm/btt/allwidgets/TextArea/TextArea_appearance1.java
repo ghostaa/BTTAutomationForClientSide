@@ -38,7 +38,7 @@ public class TextArea_appearance1 extends AllWidgetsProjectMain_Class{
 
   @Test
   public void Appearance1_1(){
-	  assertEquals(0, drv.Appearance1_1());
+	  assertEquals(true, drv.Appearance1_1());
   }
   
   @Test

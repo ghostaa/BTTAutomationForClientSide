@@ -54,7 +54,7 @@ public class TextArea_PageObject extends Main_Page{
 	private WebElement properties_disableTrue;
 
 	public String proDisableTrue(){//5. disabled:true
-		return properties_disableTrue.getAttribute("disabled");
+		return properties_disableTrue.getAttribute("aria-disabled");
 	}
 	
 	@FindBy(id="textArea_properties_textArea")
@@ -106,6 +106,18 @@ public class TextArea_PageObject extends Main_Page{
 	
 	public String proCols(){//12. textArea cols = 10
 		return properties_cols.getAttribute("cols");
+	}
+	
+	@FindBy(id="textArea_properties_textArea11")
+	private WebElement properties_maxLength;
+	
+	public String proMaxLen(){//13. textArea maxLength = 10
+		return properties_maxLength.getAttribute("maxlength");
+	}
+	
+	public String setValueofMaxLen(){
+		properties_maxLength.sendKeys("helloworld!");
+		return properties_maxLength.getAttribute("value");
 	}
 //###############################TextArea Properties##################################
 //###############################TextArea CSS#########################################
@@ -457,7 +469,7 @@ public class TextArea_PageObject extends Main_Page{
 	@FindBy(id="textArea_action_text04")
 	private WebElement action_clickMe3;
 	
-	public String actValue(){//value
+	public String actValue(){//Set Widget Property-value
 		action_clickMe3.click();
 		return action_value.getAttribute("value");
 	}
@@ -468,7 +480,7 @@ public class TextArea_PageObject extends Main_Page{
 	@FindBy(id="textArea_action_text05")
 	private WebElement action_clickMe4;
 	
-	public int actIsMandatory(){//isMandatory
+	public int actIsMandatory(){//Set Widget Property-isMandatory
 		action_isMandatory.click();
 		action_clickMe4.click();
 		String[] temp={"dijitTextAreaError"};
@@ -481,7 +493,7 @@ public class TextArea_PageObject extends Main_Page{
 	@FindBy(id="textArea_action_text06")
 	private WebElement action_clickMe5;
 	
-	public int actVisibility(){//visibility
+	public int actVisibility(){//Set Widget Property-visibility
 		action_clickMe5.click();
 		String[] temp={"visibility: hidden"};
 		return Appearance.appearance_query(action_visibility.getAttribute("style"), temp);
@@ -549,9 +561,8 @@ public class TextArea_PageObject extends Main_Page{
 	@FindBy(id="textArea_appearance1_textArea")
 	private WebElement Appearance1_1;
 	
-	public int Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
-		String[] temp={""};
-		return Appearance.appearance_query(Appearance1_1.getAttribute("style"), temp);
+	public boolean Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
+		return Appearance.appearance_autosize(Appearance1_1.getAttribute("style"));
 	}
 	
 	@FindBy(id="textArea_appearance1_textArea_copy")
@@ -776,7 +787,160 @@ public class TextArea_PageObject extends Main_Page{
 	}
 //###############################TextArea Appearance2###############################
 //###############################TextArea Submit####################################
+	@FindBy(id="textArea_submit_textArea02")
+	private WebElement Textarea_mandatory_true;
 	
+	@FindBy(id="textArea_submit_textArea24")
+	private WebElement Textarea_mandatory_false;
+	
+	@FindBy(id="textArea_submit_textArea10")
+	private WebElement Textarea_currency;
+	
+	@FindBy(id="textArea_submit_textArea11")
+	private WebElement Textarea_number;
+	
+	@FindBy(id="textArea_submit_textArea23")
+	private WebElement Textarea_bigDecimal;
+	
+	@FindBy(id="textArea_submit_button")
+	private WebElement textArea_submit_button;
+	
+	@FindBy(id="textArea_submit_button01")
+	private WebElement textArea_submitwithnodata_button;
+	
+	@FindBy(id="textArea_submit_button02")
+	private WebElement textArea_submitwithoutvalidation_button;
+	
+	public String ButtonStatus(){
+		return textArea_submit_button.getAttribute("aria-disabled");
+	}
+	
+	public void clearInitialValue(){
+		Textarea_currency.clear();
+		Textarea_number.clear();
+		Textarea_bigDecimal.clear();
+	}
+	
+	public void setNumericValue(){
+		Textarea_currency.sendKeys("$9,355,070.01");
+		Textarea_number.sendKeys("183,062,862");
+		Textarea_bigDecimal.sendKeys("862,085,646.964");
+	}
+	
+	public void setMandatory(){
+		if(textArea_submit_button.getAttribute("aria-disabled").equals("true")){
+			Textarea_mandatory_true.sendKeys("hello");
+		}
+	}
+	
+	public void setMandatoryFalse(){
+		Textarea_mandatory_false.sendKeys("NoMandatory");
+	}
+	
+	public void SubmitButtonClick(){
+		textArea_submit_button.click();
+	}
+	
+	public void SubmitWithNoDataButtonClick(){
+		textArea_submitwithnodata_button.click();
+	}
+	
+	public void SubmitWithoutValidationButtonClick(){
+		textArea_submitwithoutvalidation_button.click();
+	}
+	
+	//result page
+	@FindBy(id="showTextArea_submit_textArea01")
+	private WebElement textArea_StringResult;
+	
+	public String textArea_StringResult(){
+		return textArea_StringResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea10")
+	private WebElement textArea_CurrencyResult;
+	
+	public String textArea_CurrencyResult(){
+		return textArea_CurrencyResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea11")
+	private WebElement textArea_NumberResult;
+	
+	public String textArea_NumberResult(){
+		return textArea_NumberResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea15")
+	private WebElement textArea_LongResult;
+	
+	public String textArea_LongResult(){
+		return textArea_LongResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea12")
+	private WebElement textArea_ByteResult;
+	
+	public String textArea_ByteResult(){
+		return textArea_ByteResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea13")
+	private WebElement textArea_ShortResult;
+	
+	public String textArea_ShortResult(){
+		return textArea_ShortResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea14")
+	private WebElement textArea_IntegerResult;
+	
+	public String textArea_IntegerResult(){
+		return textArea_IntegerResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea23")
+	private WebElement textArea_BigDecimalResult;
+	
+	public String textArea_BigDecimalResult(){
+		return textArea_BigDecimalResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea20")
+	private WebElement textArea_FloatResult;
+	
+	public String textArea_FloatResult(){
+		return textArea_FloatResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea21")
+	private WebElement textArea_DoubleResult;
+	
+	public String textArea_DoubleResult(){
+		return textArea_DoubleResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea22")
+	private WebElement textArea_BigIntegerResult;
+	
+	public String textArea_BigIntegerResult(){
+		return textArea_BigIntegerResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea02")
+	private WebElement textArea_MandatoryResult;
+	
+	public String textArea_MandatoryResult(){
+		return textArea_MandatoryResult.getAttribute("value");
+	}
+	
+	@FindBy(id="showTextArea_submit_textArea24")
+	private WebElement textArea_NonMandatoryResult;
+	
+	public String textArea_NonMandatoryResult(){
+		return textArea_NonMandatoryResult.getAttribute("value");
+	}
+
 //###############################TextArea Submit####################################
 
 
