@@ -26,32 +26,45 @@ public class Button_PageObject extends Main_Page{
 		return properties_id.getAttribute("id");
 	}
 	
-	@FindBy(xpath=".//*[@id='button_properties_button01_label']/span")
+	@FindBy(xpath=".//*[@id='button_properties_form']/div/div[2]/div/span/input")
 	private WebElement properties_typeSubmit;
 	
 	public String proTypeSubmit(){//submit
-		return properties_typeSubmit.getText();
+		return properties_typeSubmit.getAttribute("type");
 	}
 	
-	@FindBy(xpath=".//*[@id='button_properties_button02_label']/span")
+	@FindBy(xpath=".//*[@id='button_properties_form']/div/div[3]/div/span/input")
 	private WebElement properties_typeReset;
 	
 	public String proTypeReset(){//reset
-		return properties_typeReset.getText();
+		return properties_typeReset.getAttribute("type");
 	}
 	
-	@FindBy(xpath=".//*[@id='button_properties_button03_label']/span")
+	@FindBy(xpath=".//*[@id='button_properties_form']/div/div[4]/div/span/input")
 	private WebElement properties_typeSubmitNoData;
+	@FindBy(xpath=".//*[@id='button_properties_button03_label']/span")
+	private WebElement properties_typeSubmitNoData_text;
 	
 	public String proTypeSubmitNoData(){//submit without data
-		return properties_typeSubmitNoData.getText();
+		return properties_typeSubmitNoData.getAttribute("type");
 	}
 	
-	@FindBy(xpath=".//*[@id='button_properties_button04_label']/span")
+	public String proTypeSubmitNoData_text(){//submit without data
+		return properties_typeSubmitNoData_text.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='button_properties_form']/div/div[5]/div/span/input")
 	private WebElement properties_typeSubmitNoValidation;
 	
+	@FindBy(xpath=".//*[@id='button_properties_button04_label']/span")
+	private WebElement properties_typeSubmitNoValidation_text;
+	
 	public String proTypeSubmitNoValidation(){//submit without validation
-		return properties_typeSubmitNoValidation.getText();
+		return properties_typeSubmitNoValidation.getAttribute("type");
+	}
+	
+	public String proTypeSubmitNoValidation_text(){//submit without validation
+		return properties_typeSubmitNoValidation_text.getText();
 	}
 	
 	@FindBy(xpath=".//*[@id='button_properties_button06_label']/span")

@@ -80,12 +80,14 @@ public class Button_Properties extends AllWidgetsProjectMain_Class {
 	
 	@Test
 	public void proTypeSubmitNoData() {
-		assertEquals("submit with no data", drv.proTypeSubmitNoData());
+		assertEquals("text", drv.proTypeSubmitNoData());
+		assertEquals("submit with no data", drv.proTypeSubmitNoData_text());
 	}
 	
 	@Test
 	public void proTypeSubmitNoValidation() {
-		assertEquals("submit withhout validation", drv.proTypeSubmitNoValidation());
+		assertEquals("text", drv.proTypeSubmitNoValidation());
+		assertEquals("submit without validation", drv.proTypeSubmitNoValidation_text());
 	}
 	
 	@Test
