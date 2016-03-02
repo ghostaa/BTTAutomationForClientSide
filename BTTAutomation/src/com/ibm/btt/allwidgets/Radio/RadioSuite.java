@@ -12,7 +12,9 @@ import org.junit.runners.Suite;
 	Radio_submit.class,
 	Radio_appearance1.class,
 	Radio_appearance2.class,
-	
+	Radio_submitWithNoData.class,
+	Radio_submitWithoutValidation.class,
+	Radio_ECA.class,
 }) 
 public class RadioSuite {
 

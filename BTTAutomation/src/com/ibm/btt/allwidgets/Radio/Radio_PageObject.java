@@ -200,6 +200,8 @@ public class Radio_PageObject extends Main_Page{
 	}
 //###############################Radio CSS#########################################
 //###############################Radio Event#######################################
+	AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
+	
 	@FindBy(id="Radio_Event_radio_onClick")
 	private WebElement Radio_Event_radio_onClick;
 	
@@ -220,7 +222,6 @@ public class Radio_PageObject extends Main_Page{
 	
 	public String Radio_Event_radio_onKeyDown(){
 		Radio_Event_radio_onKeyDown.click();
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return Radio_Event_radio_Text.getText();
@@ -247,7 +248,6 @@ public class Radio_PageObject extends Main_Page{
 	
 	public Boolean Radio_Event_radio_onKeyUp(){
 		Radio_Event_radio_onKeyUp.click();
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return Radio_Event_radio_disabled.isEnabled();
@@ -272,6 +272,7 @@ public class Radio_PageObject extends Main_Page{
 	
 	public String Radio_Event_radio_onMouseUp(){
 		Radio_Event_radio_onMouseUp.click();
+		main_class.rightClick();
 		return Radio_Event_radio_isChecked .getAttribute("aria-checked");
 	}
 	
@@ -282,7 +283,6 @@ public class Radio_PageObject extends Main_Page{
 	private WebElement Radio_Event_radio_hint;
 	
 	public String Radio_Event_radio_onMouseEnter(){
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Radio_Event_radio_onMouseEnter");
 		return Radio_Event_radio_hint.getAttribute("title");
 	}
@@ -294,7 +294,6 @@ public class Radio_PageObject extends Main_Page{
 	private WebElement Radio_Event_radio_addClass;
 	
 	public int Radio_Event_radio_onMouseLeave(){
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Radio_Event_radio_onMouseLeave");
 		main_class.widget_moveToElement("Radio_Event_radio_addClass");
 		String[] temp = {"grid_titlebg"};
@@ -309,7 +308,6 @@ public class Radio_PageObject extends Main_Page{
 	private WebElement Radio_Event_radio_invokeActionGroup;
 	
 	public String Radio_Event_radio_onMouseMove(){
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Radio_Event_radio_onMouseMove");
 		return Radio_Event_radio_invokeActionGroup.getText();
 	}
@@ -677,7 +675,7 @@ public class Radio_PageObject extends Main_Page{
 	private WebElement Appearance1_6;
 	
 	public int Appearance1_6(){//6.Width textwrap is false
-		String[] temp = {""};
+		String[] temp = {"dijitLabelWrap"};
 		return CSS.css_query(Appearance1_6.getAttribute("class"), temp);
 	}
 //###############################Radio Appearance1###############################
@@ -793,6 +791,12 @@ public class Radio_PageObject extends Main_Page{
 	@FindBy(id="Radio_submit_button")
 	private WebElement sub_Button;
 	
+	@FindBy(id="Radio_submit_button01")
+	private WebElement sub_with_no_data;
+	
+	@FindBy(id="Radio_submit_button02")
+	private WebElement sub_without_validation;
+	
 	public String subTooltipVerify(){
 		sub_String.click();
 		return sub_tooltipVerify.getText();
@@ -806,6 +810,14 @@ public class Radio_PageObject extends Main_Page{
 	
 	public Boolean subButton(){
 		return sub_Button.isEnabled();
+	}
+	
+	public void subClick(){
+		sub_Button.click();
+	}
+	
+	public void NodataClick(){
+		sub_with_no_data.click();
 	}
 	
 	@FindBy(id="Radio_submit_radio04")
@@ -857,17 +869,28 @@ public class Radio_PageObject extends Main_Page{
 		sub_Double.click();
 		sub_BigInteger.click();
 		sub_BigDecimal.click();
-		sub_Button.click();
 	}
 	
+	public void selectString_Data(){
+		sub_String.click();
+		sub_without_validation.click();
+	}
+	//resutls page
+	@FindBy(id="ShowRadio_result_radio")
+	private WebElement subResult_String1;
+	
 	@FindBy(id="ShowRadio_result_radio22")
-	private WebElement subResult_String;
+	private WebElement subResult_String2;
 	
 	@FindBy(id="ShowRadio_result_label")
 	private WebElement subResult_label1;
 	
-	public Boolean subResultString(){
-		return subResult_String.isSelected();
+	public Boolean subResultString1(){
+		return subResult_String1.isSelected();
+	}
+	
+	public Boolean subResultString2(){
+		return subResult_String2.isSelected();
 	}
 	
 	public String subResultText1(){
@@ -875,13 +898,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio04")
-	private WebElement subResult_Date;
+	private WebElement subResult_Date1;
+	
+	@FindBy(id="ShowRadio_result_radio05")
+	private WebElement subResult_Date2;
 	
 	@FindBy(id="ShowRadio_result_label01")
 	private WebElement subResult_label2;
 	
-	public Boolean subResultDate(){
-		return subResult_Date.isSelected();
+	public Boolean subResultDate1(){
+		return subResult_Date1.isSelected();
+	}
+	
+	public Boolean subResultDate2(){
+		return subResult_Date2.isSelected();
 	}
 	
 	public String subResultText2(){
@@ -889,13 +919,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio01")
-	private WebElement subResult_Currency;
+	private WebElement subResult_Currency1;
+	
+	@FindBy(id="ShowRadio_result_radio01_copy")
+	private WebElement subResult_Currency2;
 	
 	@FindBy(id="ShowRadio_result_label02")
 	private WebElement subResult_label3;
 	
-	public Boolean subResultCurrency(){
-		return subResult_Currency.isSelected();
+	public Boolean subResultCurrency1(){
+		return subResult_Currency1.isSelected();
+	}
+	
+	public Boolean subResultCurrency2(){
+		return subResult_Currency2.isSelected();
 	}
 	
 	public String subResultText3(){
@@ -903,13 +940,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio02")
-	private WebElement subResult_Number;
+	private WebElement subResult_Number1;
+	
+	@FindBy(id="ShowRadio_result_radio02_copy")
+	private WebElement subResult_Number2;
 	
 	@FindBy(id="ShowRadio_result_label03")
 	private WebElement subResult_label4;
 	
-	public Boolean subResultNumber(){
-		return subResult_Number.isSelected();
+	public Boolean subResultNumber1(){
+		return subResult_Number1.isSelected();
+	}
+	
+	public Boolean subResultNumber2(){
+		return subResult_Number2.isSelected();
 	}
 	
 	public String subResultText4(){
@@ -917,13 +961,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio03")
-	private WebElement subResult_Boolean;
+	private WebElement subResult_Boolean1;
+	
+	@FindBy(id="ShowRadio_result_radio03_copy")
+	private WebElement subResult_Boolean2;
 	
 	@FindBy(id="ShowRadio_result_label04")
 	private WebElement subResult_label5;
 	
-	public Boolean subResultBoolean(){
-		return subResult_Boolean.isSelected();
+	public Boolean subResultBoolean1(){
+		return subResult_Boolean1.isSelected();
+	}
+	
+	public Boolean subResultBoolean2(){
+		return subResult_Boolean2.isSelected();
 	}
 	
 	public String subResultText5(){
@@ -931,13 +982,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio07")
-	private WebElement subResult_Byte;
+	private WebElement subResult_Byte1;
+	
+	@FindBy(id="ShowRadio_result_radio07_copy")
+	private WebElement subResult_Byte2;
 	
 	@FindBy(id="ShowRadio_result_label08")
 	private WebElement subResult_label6;
 	
-	public Boolean subResultByte(){
-		return subResult_Byte.isSelected();
+	public Boolean subResultByte1(){
+		return subResult_Byte1.isSelected();
+	}
+	
+	public Boolean subResultByte2(){
+		return subResult_Byte2.isSelected();
 	}
 	
 	public String subResultText6(){
@@ -945,13 +1003,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio23")
-	private WebElement subResult_Short;
+	private WebElement subResult_Short1;
+	
+	@FindBy(id="ShowRadio_result_radio23_copy")
+	private WebElement subResult_Short2;
 	
 	@FindBy(id="ShowRadio_result_label09")
 	private WebElement subResult_label7;
 	
-	public Boolean subResultShort(){
-		return subResult_Short.isSelected();
+	public Boolean subResultShort1(){
+		return subResult_Short1.isSelected();
+	}
+	
+	public Boolean subResultShort2(){
+		return subResult_Short2.isSelected();
 	}
 	
 	public String subResultText7(){
@@ -959,13 +1024,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio08")
-	private WebElement subResult_Integer;
+	private WebElement subResult_Integer1;
+	
+	@FindBy(id="ShowRadio_result_radio08_copy")
+	private WebElement subResult_Integer2;
 	
 	@FindBy(id="ShowRadio_result_label10")
 	private WebElement subResult_label8;
 	
-	public Boolean subResultInteger(){
-		return subResult_Integer.isSelected();
+	public Boolean subResultInteger1(){
+		return subResult_Integer1.isSelected();
+	}
+	
+	public Boolean subResultInteger2(){
+		return subResult_Integer2.isSelected();
 	}
 	
 	public String subResultText8(){
@@ -973,13 +1045,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio09")
-	private WebElement subResult_Long;
+	private WebElement subResult_Long1;
+	
+	@FindBy(id="ShowRadio_result_radio09_copy")
+	private WebElement subResult_Long2;
 	
 	@FindBy(id="ShowRadio_result_label11")
 	private WebElement subResult_label9;
 	
-	public Boolean subResultLong(){
-		return subResult_Long.isSelected();
+	public Boolean subResultLong1(){
+		return subResult_Long1.isSelected();
+	}
+	
+	public Boolean subResultLong2(){
+		return subResult_Long2.isSelected();
 	}
 	
 	public String subResultText9(){
@@ -987,13 +1066,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio10")
-	private WebElement subResult_Float;
+	private WebElement subResult_Float1;
+	
+	@FindBy(id="ShowRadio_result_radio10_copy")
+	private WebElement subResult_Float2;
 	
 	@FindBy(id="ShowRadio_result_label12")
 	private WebElement subResult_label10;
 	
-	public Boolean subResultFloat(){
-		return subResult_Float.isSelected();
+	public Boolean subResultFloat1(){
+		return subResult_Float1.isSelected();
+	}
+	
+	public Boolean subResultFloat2(){
+		return subResult_Float2.isSelected();
 	}
 	
 	public String subResultText10(){
@@ -1001,13 +1087,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio11")
-	private WebElement subResult_Double;
+	private WebElement subResult_Double1;
+	
+	@FindBy(id="ShowRadio_result_radio11_copy")
+	private WebElement subResult_Double2;
 	
 	@FindBy(id="ShowRadio_result_label13")
 	private WebElement subResult_label11;
 	
-	public Boolean subResultDouble(){
-		return subResult_Double.isSelected();
+	public Boolean subResultDouble1(){
+		return subResult_Double1.isSelected();
+	}
+	
+	public Boolean subResultDouble2(){
+		return subResult_Double2.isSelected();
 	}
 	
 	public String subResultText11(){
@@ -1015,13 +1108,20 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio12")
-	private WebElement subResult_BigInteger;
+	private WebElement subResult_BigInteger1;
+	
+	@FindBy(id="ShowRadio_result_radio12_copy")
+	private WebElement subResult_BigInteger2;
 	
 	@FindBy(id="ShowRadio_result_label14")
 	private WebElement subResult_label12;
 	
-	public Boolean subResultBigInteger(){
-		return subResult_BigInteger.isSelected();
+	public Boolean subResultBigInteger1(){
+		return subResult_BigInteger1.isSelected();
+	}
+	
+	public Boolean subResultBigInteger2(){
+		return subResult_BigInteger2.isSelected();
 	}
 	
 	public String subResultText12(){
@@ -1029,18 +1129,160 @@ public class Radio_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="ShowRadio_result_radio13")
-	private WebElement subResult_BigDecimal;
+	private WebElement subResult_BigDecimal1;
+	
+	@FindBy(id="ShowRadio_result_radio13_copy")
+	private WebElement subResult_BigDecimal2;
 	
 	@FindBy(id="ShowRadio_result_label15")
 	private WebElement subResult_label13;
 	
-	public Boolean subResultBigDecimal(){
-		return subResult_BigDecimal.isSelected();
+	public Boolean subResultBigDecimal1(){
+		return subResult_BigDecimal1.isSelected();
+	}
+	
+	public Boolean subResultBigDecimal2(){
+		return subResult_BigDecimal2.isSelected();
 	}
 	
 	public String subResultText13(){
 		return subResult_label13.getText();
 	}
 //###############################Radio Submit######################################
+//###############################Radio ECA#########################################
+	
+	@FindBy(id="Radio_ECA_radio_onClick")
+	private WebElement Radio_ECA_radio_onClick;
+	
+	@FindBy(xpath=".//*[@id='Radio_ECA_form']/div/div[1]/div[3]/div")
+	private WebElement Radio_ECA_Radio_Focus;
+	
+	public int Radio_ECA_radio_onClick(){
+		Radio_ECA_radio_onClick.click();
+		String[] temp = {"dijitRadioFocused", "dijitFocused"};
+		return CSS.css_query(Radio_ECA_Radio_Focus.getAttribute("class"), temp);
+	}
+	
+	@FindBy(id="Radio_ECA_radio_Expression")
+	private WebElement Radio_ECA_radio_Expression;
+	
+	@FindBy(xpath=".//*[@id='Radio_ECA_form']/div/div[2]/div[3]/label")
+	private WebElement Radio_ECA_radio_styleClass;
+	
+	public int Radio_ECA_radio_Expression(){
+		Radio_ECA_radio_Expression.click();
+		String[] temp = {"BTN"};
+		return CSS.css_query(Radio_ECA_radio_styleClass.getAttribute("class"), temp);
+	}
+	
+	@FindBy(id="Radio_ECA_radio_onKeyDown")
+	private WebElement Radio_ECA_radio_onKeyDown;
+	
+	@FindBy(xpath=".//*[@id='Radio_ECA_form']/div/div[3]/div[3]/label")
+	private WebElement Radio_ECA_radio_Text;
+	
+	public String Radio_ECA_radio_onKeyDown(){
+		Radio_ECA_radio_onKeyDown.click();
+		main_class.keyDown(Keys.SHIFT);
+		main_class.keyUp(Keys.SHIFT);
+		return Radio_ECA_radio_Text.getText();
+	}
+
+	@FindBy(id="Radio_ECA_radio_onKeypress")
+	private WebElement Radio_ECA_radio_onKeypress;
+	
+	@FindBy(id="Radio_ECA_radio_visibility")
+	private WebElement Radio_ECA_radio_visibility;
+	
+	public Boolean Radio_ECA_radio_onKeypress(){
+		Radio_ECA_radio_onKeypress.click();
+		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_6);
+		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_6);
+		return Radio_ECA_radio_visibility.isDisplayed();
+	}
+	
+	@FindBy(id="Radio_ECA_radio_onKeyUp")
+	private WebElement Radio_ECA_radio_onKeyUp;
+	
+	@FindBy(id="Radio_ECA_radio_disabled")
+	private WebElement Radio_ECA_radio_disabled;
+	
+	public Boolean Radio_ECA_radio_onKeyUp(){
+		Radio_ECA_radio_onKeyUp.click();
+		main_class.keyDown(Keys.SHIFT);
+		main_class.keyUp(Keys.SHIFT);
+		return Radio_ECA_radio_disabled.isEnabled();
+	}
+	
+	@FindBy(id="Radio_ECA_radio_onMouseDown")
+	private WebElement Radio_ECA_radio_onMouseDown;
+	
+	@FindBy(id="Radio_ECA_radio_readOnly")
+	private WebElement Radio_ECA_radio_readOnly;
+	
+	public String Radio_ECA_radio_onMouseDown(){
+		Radio_ECA_radio_onMouseDown.click();
+		return Radio_ECA_radio_readOnly.getAttribute("readonly");
+	}
+	
+	@FindBy(id="Radio_ECA_radio_onMouseUp")
+	private WebElement Radio_ECA_radio_onMouseUp;
+	
+	@FindBy(id="Radio_ECA_radio_isChecked ")
+	private WebElement Radio_ECA_radio_isChecked ;
+	
+	public String Radio_ECA_radio_onMouseUp(){
+		Radio_ECA_radio_onMouseUp.click();
+		main_class.rightClick();
+		return Radio_ECA_radio_isChecked .getAttribute("aria-checked");
+	}
+	
+	@FindBy(id="Radio_ECA_radio_onMouseEnter")
+	private WebElement Radio_ECA_radio_onMouseEnter;
+	
+	@FindBy(id="Radio_ECA_radio_hint")
+	private WebElement Radio_ECA_radio_hint;
+	
+	public String Radio_ECA_radio_onMouseEnter(){
+		main_class.widget_moveToElement("Radio_ECA_radio_onMouseEnter");
+		return Radio_ECA_radio_hint.getAttribute("title");
+	}
+	
+	@FindBy(id="Radio_ECA_radio_onMouseLeave")
+	private WebElement Radio_ECA_radio_onMouseLeave;
+	
+	@FindBy(xpath=".//*[@id='Radio_ECA_form']/div/div[9]/div[3]/label")
+	private WebElement Radio_ECA_radio_addClass;
+	
+	public int Radio_ECA_radio_onMouseLeave(){
+		main_class.widget_moveToElement("Radio_ECA_radio_onMouseLeave");
+		main_class.widget_moveToElement("Radio_ECA_radio_addClass");
+		String[] temp = {"grid_titlebg"};
+		int num = CSS.css_query(Radio_ECA_radio_addClass.getAttribute("class"), temp);
+		return num;
+	}
+	
+	@FindBy(id="Radio_ECA_radio_onMouseMove")
+	private WebElement Radio_ECA_radio_onMouseMove;
+	
+	@FindBy(xpath=".//*[@id='Radio_ECA_form']/div/div[10]/div[3]/label")
+	private WebElement Radio_ECA_radio_invokeActionGroup;
+	
+	public String Radio_ECA_radio_onMouseMove(){
+		main_class.widget_moveToElement("Radio_ECA_radio_onMouseMove");
+		return Radio_ECA_radio_invokeActionGroup.getText();
+	}
+	
+	@FindBy(id="Radio_ECA_radio_onChange")
+	private WebElement Radio_ECA_radio_onChange;
+	
+	@FindBy(id="Radio_ECA_radio_inlineScript")
+	private WebElement Radio_ECA_radio_inlineScript;
+	
+	public String Radio_ECA_radio_onChange(){
+		Radio_ECA_radio_onChange.click();
+		return Radio_ECA_radio_inlineScript.getAttribute("disabled");
+	}
+//###############################Radio ECA#########################################
 
 }

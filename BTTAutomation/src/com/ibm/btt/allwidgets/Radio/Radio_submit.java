@@ -55,80 +55,81 @@ public class Radio_submit extends AllWidgetsProjectMain_Class{
   @Test
   public void Radio_130_subResultString(){
 	  drv.submit();
+	  drv.subClick();
 	  AllWidgetsProjectMain_Class.waitUntilLoadElement(20, "ShowRadio_result_radio13_copy");
-	  assertEquals(true, drv.subResultString());
+	  assertEquals(true, drv.subResultString2());
 	  assertEquals("String_Data2", drv.subResultText1());
   }
   
   @Test
   public void subResultDate(){
-	  assertEquals(true, drv.subResultDate());
+	  assertEquals(true, drv.subResultDate1());
 	  assertEquals("2014-10-08", drv.subResultText2());
   }
   
   @Test
   public void subResultCurrency(){
-	  assertEquals(true, drv.subResultCurrency());
+	  assertEquals(true, drv.subResultCurrency1());
 	  assertEquals("$12.00", drv.subResultText3());
   }
   
   @Test
   public void subResultNumber(){
-	  assertEquals(true, drv.subResultNumber());
+	  assertEquals(true, drv.subResultNumber1());
 	  assertEquals("1", drv.subResultText4());
   }
   
   @Test
   public void subResultBoolean(){
-	  assertEquals(true, drv.subResultBoolean());
+	  assertEquals(true, drv.subResultBoolean1());
 	  assertEquals("true", drv.subResultText5());
   }
   
   @Test
   public void subResultByte(){
-	  assertEquals(true, drv.subResultByte());
+	  assertEquals(true, drv.subResultByte1());
 	  assertEquals("3", drv.subResultText6());
   }
   
   @Test
   public void subResultShort(){
-	  assertEquals(true, drv.subResultShort());
+	  assertEquals(true, drv.subResultShort1());
 	  assertEquals("5", drv.subResultText7());
   }
   
   @Test
   public void subResultInteger(){
-	  assertEquals(true, drv.subResultInteger());
+	  assertEquals(true, drv.subResultInteger1());
 	  assertEquals("7", drv.subResultText8());
   }
   
   @Test
   public void subResultLong(){
-	  assertEquals(true, drv.subResultLong());
+	  assertEquals(true, drv.subResultLong1());
 	  assertEquals("12", drv.subResultText9());
   }
   
   @Test
   public void subResultFloat(){
-	  assertEquals(true, drv.subResultFloat());
+	  assertEquals(true, drv.subResultFloat1());
 	  assertEquals("1.20", drv.subResultText10());
   }
   
   @Test
   public void subResultDouble(){
-	  assertEquals(true, drv.subResultDouble());
+	  assertEquals(true, drv.subResultDouble1());
 	  assertEquals("14.000", drv.subResultText11());
   }
   
   @Test
   public void subResultBigInteger(){
-	  assertEquals(true, drv.subResultBigInteger());
+	  assertEquals(true, drv.subResultBigInteger1());
 	  assertEquals("1,000", drv.subResultText12());
   }
   
   @Test
   public void subResultBigDecimal(){
-	  assertEquals(true, drv.subResultBigDecimal());
+	  assertEquals(true, drv.subResultBigDecimal1());
 	  assertEquals("1.200", drv.subResultText13());
   }
 

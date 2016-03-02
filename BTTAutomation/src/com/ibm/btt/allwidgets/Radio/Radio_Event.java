@@ -54,6 +54,11 @@ public class Radio_Event extends AllWidgetsProjectMain_Class{
   }
   
   @Test
+  public void Radio_Event_radio_onKeyUp(){
+	  assertEquals(true, drv.Radio_Event_radio_onKeyUp());
+  }
+  
+  @Test
   public void Radio_Event_radio_onMouseDown(){
 	  assertEquals("true", drv.Radio_Event_radio_onMouseDown());
   }
@@ -65,7 +70,7 @@ public class Radio_Event extends AllWidgetsProjectMain_Class{
   
   @Test
   public void Radio_Event_radio_onMouseEnter(){
-	  assertEquals("Move mouse enter radio_onMouseEnter , radio_hint will show hint", drv.Radio_Event_radio_onMouseEnter());
+	  assertEquals("hi,radio", drv.Radio_Event_radio_onMouseEnter());
   }
   
   @Test
