@@ -23,11 +23,8 @@ import com.ibm.btt.util.AllWidgetsProjectMain_Class;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
-
-
 public class Label_ECA extends AllWidgetsProjectMain_Class{
-  /*public static WebDriver driver;
-  private static String baseUrl = Main_Class.baseUrl;*/
+
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private String result_txt="Passed";
@@ -36,12 +33,8 @@ public class Label_ECA extends AllWidgetsProjectMain_Class{
 
   @BeforeClass
   public static void setUp() throws Exception {
-	/*driver = new FirefoxDriver();
-	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	driver.get(baseUrl);*/
 	AllWidgetsProjectMain_Class.setUp();
 	drv=PageFactory.initElements(driver, Label_PageObject.class);
-//	drv.setObject(driver);
 	drv.Establish();
     drv.BTT8200_tab();
     drv.Label_widget();
@@ -83,19 +76,13 @@ public class Label_ECA extends AllWidgetsProjectMain_Class{
   @Test
   public void ID_exp(){
 	  drv.ID_exp();
-	  assertEquals("ok", drv.ID_exp_getText());
+	  assertEquals("false", drv.ID_exp_getText());
   }
 
   @Test
   public void Text_exp(){
 	  drv.Text_exp();
 	  assertEquals("ok",drv.Text_exp_getText());
-  }
-
-  @Test
-  public void ID_false(){
-	  drv.ID_false();
-	  assertEquals("false",drv.ID_false_getText());
   }
 
   @Test

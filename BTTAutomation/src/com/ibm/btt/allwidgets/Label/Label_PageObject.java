@@ -215,7 +215,7 @@ public class Label_PageObject extends Main_Page{
 		 return Evt_onMousedown.getText();
 	}
 
-//label Condition
+   //label Condition
 	@FindBy(id="label_ECA_label04")
 	private WebElement ID_exp_result;
 
@@ -242,20 +242,6 @@ public class Label_PageObject extends Main_Page{
 
 	public String Text_exp_getText(){
 		return Text_exp_result.getText();
-	}
-
-	@FindBy(id="label_ECA_label07")
-	private WebElement ID_false;
-
-	public void ID_false(){
-		ID_false.click();
-	}
-
-	@FindBy(id="label_ECA_label08")
-	private WebElement ID_false_result;
-
-	public String ID_false_getText(){
-		return ID_false_result.getText();
 	}
 
 	@FindBy(id="label_ECA_label05")
@@ -360,9 +346,8 @@ public class Label_PageObject extends Main_Page{
 	@FindBy(id="label_appearance_label01")
 	private WebElement appearance1;
 
-	public int appearance1(){//1.Width is AutoSize,Height is AutoSize
-		String[] temp={"visibility: inherit"};
-		return Appearance.appearance_query(appearance1.getAttribute("style"), temp);
+	public boolean appearance1(){//1.Width is AutoSize,Height is AutoSize
+		return Appearance.appearance_autosize(appearance1.getAttribute("style"));
 	}
 	
 	@FindBy(id="label_appearance_label01_copy")
@@ -584,7 +569,4 @@ public class Label_PageObject extends Main_Page{
 		return Appearance.appearance_query(Appearance1_11.getAttribute("style"), temp);
 	}
 //###############################For Label Appearance1################################
-
-
-
 } 

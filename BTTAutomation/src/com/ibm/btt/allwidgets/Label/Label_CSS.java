@@ -18,8 +18,6 @@ import com.ibm.btt.allwidgets.Text.Text_Properties;
 import com.ibm.btt.util.*;
 
 public class Label_CSS extends AllWidgetsProjectMain_Class{
-  /*private static WebDriver driver;
-  private static String baseUrl = Main_Class.baseUrl;*/
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private static Label_PageObject drv;
@@ -27,9 +25,6 @@ public class Label_CSS extends AllWidgetsProjectMain_Class{
 
   @BeforeClass
   public static void setUp() throws Exception {
-    /*driver = new FirefoxDriver();
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-    driver.get(baseUrl);*/
 	AllWidgetsProjectMain_Class.setUp();
     drv=PageFactory.initElements(driver, Label_PageObject.class);
     drv.Establish();

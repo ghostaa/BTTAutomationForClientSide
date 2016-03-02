@@ -1,6 +1,5 @@
 package com.ibm.btt.allwidgets.Label;
 
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
@@ -27,8 +26,6 @@ import com.ibm.btt.util.Tools;
 import com.ibm.btt.allwidgets.Text.Text_Condition;
 
 public class Label_Appearance extends AllWidgetsProjectMain_Class{
-  /*private static WebDriver driver;
-  private static String baseUrl = PropertiesUtil.baseUrl;*/
   private boolean acceptNextAlert = true;
   private static StringBuffer verificationErrors = new StringBuffer();
   private String result_txt="Passed";
@@ -37,9 +34,6 @@ public class Label_Appearance extends AllWidgetsProjectMain_Class{
 
   @BeforeClass
   public static void setUp() throws Exception {
-	/*driver = new FirefoxDriver();
-	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	driver.get(baseUrl);*/
 	AllWidgetsProjectMain_Class.setUp();
 	drv=PageFactory.initElements(driver, Label_PageObject.class);
 	drv.Establish();
@@ -50,7 +44,7 @@ public class Label_Appearance extends AllWidgetsProjectMain_Class{
 
   @Test
   public void appearance1(){
-	  assertEquals(1, drv.appearance1());
+	  assertEquals(true, drv.appearance1());
   }
   
   @Test
