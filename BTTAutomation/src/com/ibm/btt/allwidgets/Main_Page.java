@@ -205,6 +205,9 @@ public class Main_Page extends Index_Page{
 	@FindBy(id="Radio_main_link")
 	private WebElement Radio_submmit;
 	
+	@FindBy(id="Radio_main_link01")
+	private WebElement Radio_ECA;
+	
 	@FindBy(id="Radio_main_link02")
 	private WebElement Radio_css;
 	
@@ -253,6 +256,10 @@ public class Main_Page extends Index_Page{
 	
 	public void Radio_Condition(){
 		Radio_Condition.click();
+	}
+	
+	public void Radio_ECA(){
+		Radio_ECA.click();
 	}
 //###############################For Radio Main##################################
 //###############################For CheckBox Main###############################
@@ -772,7 +779,7 @@ public class Main_Page extends Index_Page{
 		TextArea_condition.click();
 	}
 	
-		public void TextArea_submit(){
+	public void TextArea_submit(){
 		TextArea_submit.click();
 	}
 	
