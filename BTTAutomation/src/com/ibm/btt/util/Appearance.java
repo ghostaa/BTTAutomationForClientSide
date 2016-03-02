@@ -38,4 +38,18 @@ public class Appearance {
 		  }
 		  return valign;
 	  }
+	/*
+	 * Widget appearance - AutoSize(special)
+	 * special : There is no width and height in html element's style attribute
+	 * appearance: The html element's style attribute
+	 * return: flag is to confirm there exists width or height or not
+	 * Support: jshang@cn.ibm.com
+	 */
+	public static boolean appearance_autosize(String appearance){
+		boolean flag = true;
+		if(appearance.contains("width") || appearance.contains("height")){
+			flag = false;
+		}
+		return flag;
+	}
 }
