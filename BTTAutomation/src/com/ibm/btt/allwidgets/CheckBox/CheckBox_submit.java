@@ -48,17 +48,17 @@ public class CheckBox_submit extends AllWidgetsProjectMain_Class{
   }
 
   @Test
-  public void CheckBox_1_submit_getTooltip() throws InterruptedException{
+  public void CheckBox_100_submit_getTooltip() throws InterruptedException{
 	  assertEquals("Please check the String checkBox", drv.CheckBox_submit_getTooltip());
   }
   
   @Test
-  public void CheckBox_2_submit_TooltipVerify(){
+  public void CheckBox_110_submit_TooltipVerify(){
 	  assertEquals(false, drv.CheckBox_submit_TooltipVerify());
   }
   
   @Test
-  public void CheckBox_3_submit_clickButton() throws InterruptedException{
+  public void CheckBox_120_submit_clickButton() throws InterruptedException{
 	  drv.CheckBox_submit_clickButton();
 	  this.waitUntilLoadElement(10, "CheckBox_Result_link");
   }
@@ -74,12 +74,7 @@ public class CheckBox_submit extends AllWidgetsProjectMain_Class{
 	  assertEquals("true", drv.CheckBox_Result_Date());
 	  assertEquals("2014-08-10", drv.CheckBox_Result_Date_label());
   }
-  
-  @Ignore
-  public void CheckBox_Result_Duration(){
-	  assertEquals("true", drv.CheckBox_Result_Duration());
-	  assertEquals("63609099622001", drv.CheckBox_Result_Duration_label());
-  }
+
   
   @Test
   public void CheckBox_Result_Short(){

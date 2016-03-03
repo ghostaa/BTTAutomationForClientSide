@@ -40,14 +40,10 @@ public class CheckBox_Condition extends AllWidgetsProjectMain_Class{
     drv.CheckBox_widget();
     drv.CheckBox_Condition();
   }
-  
-  @Test
-  public void CheckBox_Condition_Expression_isChecked(){
-	  assertEquals(true,drv.CheckBox_Condition_Expression_isChecked());
-  }
+
 
   @Test
-  public void CheckBox_Condtion_checkBox_isFocusable  (){
+  public void CheckBox_Condtion_checkBox_isFocusable(){
 	  assertEquals(2, drv.CheckBox_Condtion_checkBox_isFocusable());
   }
   
@@ -96,6 +92,12 @@ public class CheckBox_Condition extends AllWidgetsProjectMain_Class{
   @Test
   public void CheckBox_Expression_readOnly(){
 	  assertEquals(true,drv.CheckBox_Expression_readOnly());
+  }
+  
+  
+  @Test
+  public void CheckBox_Condition_Expression_isChecked(){
+	  assertEquals(true,drv.CheckBox_Condition_Expression_isChecked());
   }
 
   @AfterClass

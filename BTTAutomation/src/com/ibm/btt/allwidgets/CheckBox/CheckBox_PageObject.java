@@ -351,15 +351,15 @@ public class CheckBox_PageObject extends Main_Page{
 	}
 	
 	@FindBy(id="CheckBox_Condtion_CheckBox_onKeyDown")
-	private WebElement CheckBox_Condtion_CheckBox_doubleClick;
+	private WebElement CheckBox_Condtion_CheckBox_onKeyDown;
 	
 	@FindBy(xpath=".//*[@id='CheckBox_Condtion_panel']/tbody/tr[2]/td[3]/label")
-	private WebElement CheckBox_Condtion_CheckBox_isChecked;
+	private WebElement CheckBox_Condtion_CheckBox_text;
 	
 	public String CheckBox_Condtion_CheckBox_isChecked(){
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.doubleClick("CheckBox_Condtion_CheckBox_onKeyDown");
-		return CheckBox_Condtion_CheckBox_isChecked.getText();
+		CheckBox_Condtion_CheckBox_onKeyDown.click();
+		CheckBox_Condtion_CheckBox_onKeyDown.click();
+		return CheckBox_Condtion_CheckBox_text.getText();
 	}
 
 	@FindBy(id="CheckBox_Condtion_CheckBox_onKeyPress")
@@ -467,12 +467,12 @@ public class CheckBox_PageObject extends Main_Page{
 	@FindBy(id="CheckBox_Condtion_CheckBox_onChnge_copy")
 	private WebElement CheckBox_Condtion_CheckBox_onChnge_copy;
 	
-	@FindBy(id="CheckBox_Condtion_CheckBox_InlineScript_copy")
-	private WebElement CheckBox_Condition_Expression_isChecked;
+	@FindBy(id="CheckBox_Condtion_CheckBox_Expression_isChecked")
+	private WebElement CheckBox_Condtion_CheckBox_Expression_isChecked;
 
 	public Boolean CheckBox_Condition_Expression_isChecked(){
 		CheckBox_Condtion_CheckBox_onChnge_copy.click();
-		return CheckBox_Condition_Expression_isChecked.isSelected();
+		return CheckBox_Condtion_CheckBox_Expression_isChecked.isSelected();
 	}
 
 //###############################CheckBox Condition###################################
@@ -810,9 +810,6 @@ public class CheckBox_PageObject extends Main_Page{
 	@FindBy(id="CheckBox_submit_checkBox")
 	private WebElement CheckBox_submit_Date;
 	
-	@FindBy(id="CheckBox_submit_checkBox03")
-	private WebElement CheckBox_submit_Duration;
-	
 	@FindBy(id="CheckBox_submit_checkBox06")
 	private WebElement CheckBox_submit_Short;
 	
@@ -821,6 +818,12 @@ public class CheckBox_PageObject extends Main_Page{
 	
 	@FindBy(id="CheckBox_submit_button")
 	private WebElement CheckBox_submit_button;
+	
+	@FindBy(id="CheckBox_submit_button01")
+	private WebElement CheckBox_submit_withnodata_button;
+	
+	@FindBy(id="CheckBox_submit_button02")
+	private WebElement CheckBox_submit_without_validation_button;
 	
 	@FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
 	private WebElement CheckBox_submit_Tooltip;
@@ -841,7 +844,6 @@ public class CheckBox_PageObject extends Main_Page{
 		CheckBox_submit_Long.click();
 		CheckBox_submit_BigInteger.click();
 		CheckBox_submit_Date.click();
-		CheckBox_submit_Duration.click();
 		CheckBox_submit_Short.click();
 		CheckBox_submit_Double.click();
 		CheckBox_submit_String.click();
@@ -851,9 +853,26 @@ public class CheckBox_PageObject extends Main_Page{
 		return CheckBox_submit_Tooltip.isDisplayed();
 	}
 	
+	public void CheckBox_submit_data(){
+		CheckBox_submit_Float.click();
+		CheckBox_submit_BigDecimal.click();
+		CheckBox_submit_Currency.click();
+		CheckBox_submit_Long.click();
+		CheckBox_submit_Date.click();
+	}
+	
 	public void CheckBox_submit_clickButton(){
 		CheckBox_submit_button.click();
 	}
+	
+	public void CheckBox_submit_nodata_click(){
+		CheckBox_submit_withnodata_button.click();
+	}
+	
+	public void CheckBox_submit_without_validation_click(){
+		CheckBox_submit_without_validation_button.click();
+	}
+	
 	@FindBy(id="CheckBox_Result_String_Data")
 	private WebElement CheckBox_Result_String;
 	
@@ -878,22 +897,12 @@ public class CheckBox_PageObject extends Main_Page{
 		return CheckBox_Result_Date.getAttribute("checked");
 	}
 	
+	public String CheckBox_Result_Data_Uncheck(){
+		return CheckBox_Result_Date.getAttribute("aria-checked");
+	}
+	
 	public String CheckBox_Result_Date_label(){
 		return CheckBox_Result_Date_label.getText();
-	}
-	
-	@FindBy(id="CheckBox_Result_checkBox03")
-	private WebElement CheckBox_Result_Duration;
-	
-	@FindBy(id="CheckBox_Result_label04")
-	private WebElement CheckBox_Result_Duration_label;
-	
-	public String CheckBox_Result_Duration(){
-		return CheckBox_Result_Duration.getAttribute("checked");
-	}
-	
-	public String CheckBox_Result_Duration_label(){
-		return CheckBox_Result_Duration_label.getText();
 	}
 	
 	@FindBy(id="CheckBox_Result_checkBox06")
@@ -948,6 +957,10 @@ public class CheckBox_PageObject extends Main_Page{
 		return CheckBox_Result_Currency.getAttribute("checked");
 	}
 	
+	public String CheckBox_Result_Currency_Uncheck(){
+		return CheckBox_Result_Currency.getAttribute("aria-checked");
+	}
+	
 	public String CheckBox_Result_Currency_label(){
 		return CheckBox_Result_Currency_label.getText();
 	}
@@ -974,6 +987,10 @@ public class CheckBox_PageObject extends Main_Page{
 	
 	public String CheckBox_Result_Long(){
 		return CheckBox_Result_Long.getAttribute("checked");
+	}
+	
+	public String CheckBox_Result_Long_Uncheck(){
+		return CheckBox_Result_Long.getAttribute("aria-checked");
 	}
 	
 	public String CheckBox_Result_Long_label(){
@@ -1046,6 +1063,10 @@ public class CheckBox_PageObject extends Main_Page{
 		return CheckBox_Result_Float.getAttribute("checked");
 	}
 	
+	public String CheckBox_Result_Float_Uncheck(){
+		return CheckBox_Result_Float.getAttribute("aria-checked");
+	}
+	
 	public String CheckBox_Result_Float_label(){
 		return CheckBox_Result_Float_label.getText();
 	}
@@ -1060,10 +1081,154 @@ public class CheckBox_PageObject extends Main_Page{
 		return CheckBox_Result_BigDecimal.getAttribute("checked");
 	}
 	
+	public String CheckBox_Result_BigDecimal_Uncheck(){
+		return CheckBox_Result_BigDecimal.getAttribute("aria-checked");
+	}
+	
 	public String CheckBox_Result_BigDecimal_label(){
 		return CheckBox_Result_BigDecimal_label.getText();
 	}
 	
 //###############################CheckBox Submit######################################
-
+//###############################CheckBox ECA######################################
+	@FindBy(id="CheckBox_ECA_checkBox_onClick")
+	private WebElement CheckBox_ECA_checkBox_onClick;
+	
+	@FindBy(xpath=".//*[@id='CheckBox_ECA_panel']/tbody/tr[1]/td[3]/div")
+	private WebElement CheckBox_ECA_checkBox_focus;
+	
+	public int CheckBox_ECA_checkBox_focus(){
+		CheckBox_ECA_checkBox_onClick.click();
+		String[] temp = {"dijitCheckBoxFocused", "dijitFocused"};
+		return CSS.css_query(CheckBox_ECA_checkBox_focus.getAttribute("class"), temp);
+	}
+	
+	@FindBy(id="CheckBox_ECA_checkBox_Expression")
+	private WebElement CheckBox_ECA_checkBox_Expression;
+	
+	@FindBy(xpath=".//*[@id='CheckBox_ECA_panel']/tbody/tr[2]/td[3]/label")
+	private WebElement CheckBox_ECA_checkBox_styleClass;
+	
+	public int CheckBox_ECA_CheckBox_styleClass(){
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
+		main_class.keyDown(Keys.CONTROL);
+		CheckBox_ECA_checkBox_Expression.click();
+		String[] temp = {"BTN"};
+		int num = CSS.css_query(CheckBox_ECA_checkBox_styleClass.getAttribute("class"), temp);
+		main_class.keyUp(Keys.CONTROL);
+		return num;
+	}
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_onKeyDown")
+	private WebElement CheckBox_ECA_CheckBox_onKeyDown;
+	
+	@FindBy(xpath=".//*[@id='CheckBox_ECA_panel']/tbody/tr[3]/td[3]/label")
+	private WebElement CheckBox_ECA_checkBox_text;
+	
+	public String CheckBox_ECA_CheckBox_Text(){
+		CheckBox_ECA_CheckBox_onKeyDown.click();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
+		main_class.keyDown(Keys.SHIFT);
+		main_class.keyUp(Keys.SHIFT);
+		return CheckBox_ECA_checkBox_text.getText();
+	}
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_onKeyPress")
+	private WebElement CheckBox_ECA_CheckBox_onKeyPress;
+	
+	@FindBy(xpath=".//*[@id='CheckBox_ECA_panel']/tbody/tr[4]/td[3]/div")
+	private WebElement CheckBox_ECA_checkBox_hidden;
+	
+	public String CheckBox_ECA_CheckBox_visible(){
+		CheckBox_ECA_CheckBox_onKeyPress.click();
+		Main_Class.pressAnyKey(Keys.SPACE);
+		return CheckBox_ECA_checkBox_hidden.getAttribute("style");
+	}
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_onKeyUp")
+	private WebElement CheckBox_ECA_CheckBox_onKeyUp;
+	
+	@FindBy(xpath=".//*[@id='CheckBox_ECA_panel']/tbody/tr[5]/td[3]/div")
+	private WebElement CheckBox_ECA_checkBox_disabled;
+	
+	public Boolean CheckBox_ECA_CheckBox_enabled(){
+		CheckBox_ECA_CheckBox_onKeyUp.click();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
+		main_class.keyDown(Keys.SHIFT);
+		main_class.keyUp(Keys.SHIFT);
+		return CheckBox_ECA_checkBox_disabled.isEnabled();
+	}
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_onMouseDown")
+	private WebElement CheckBox_ECA_CheckBox_onMouseDown;
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_readOnly")
+	private WebElement CheckBox_ECA_checkBox_readonly;
+	
+	public String CheckBox_ECA_CheckBox_readOnly(){
+		CheckBox_ECA_CheckBox_onMouseDown.click();
+		return CheckBox_ECA_checkBox_readonly.getAttribute("readonly");
+	}
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_onMouseUp")
+	private WebElement CheckBox_ECA_CheckBox_onMouseUp;
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_isChecked")
+	private WebElement CheckBox_ECA_CheckBox_isChecked;
+	
+	public String CheckBox_ECA_CheckBox_isChecked(){
+		CheckBox_ECA_CheckBox_onMouseUp.click();
+		return CheckBox_ECA_CheckBox_isChecked.getAttribute("aria-checked");
+	}
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_onMouseEnter")
+	private WebElement CheckBox_ECA_CheckBox_onMouseEnter;
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_hint")
+	private WebElement CheckBox_ECA_CheckBox_hint;
+	
+	public String CheckBox_ECA_CheckBox_hint(){
+		CheckBox_ECA_CheckBox_onMouseEnter.click();
+		return CheckBox_ECA_CheckBox_hint.getAttribute("title");
+	}
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_onMouseLeave")
+	private WebElement CheckBox_ECA_CheckBox_onMouseLeave;
+	
+	@FindBy(id="CheckBox_main_link01")
+	private WebElement CheckBox_main_link01;
+	
+	public void CheckBox_ECA_checkBox_LaunchNew(){
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
+		main_class.widget_moveToElement("CheckBox_ECA_CheckBox_onMouseLeave");
+		main_class.widget_moveToElement("CheckBox_ECA_CheckBox_onMouseEnter");
+	}
+	
+	public String CheckBox_ECA_mainLink(){
+		return CheckBox_main_link01.getAttribute("text");
+	}
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_onMouseMove")
+	private WebElement CheckBox_ECA_CheckBox_onMouseMove;
+	
+	@FindBy(xpath=".//*[@id='CheckBox_ECA_panel']/tbody/tr[10]/td[3]/label")
+	private WebElement CheckBox_ECA_CheckBox_actgroup;
+	
+	public String CheckBox_ECA_CheckBox_gone(){
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
+		main_class.widget_moveToElement("CheckBox_ECA_CheckBox_onMouseMove");
+		return CheckBox_ECA_CheckBox_actgroup.getAttribute("style");
+	}
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_onChnge")
+	private WebElement CheckBox_ECA_CheckBox_onChnge;
+	
+	@FindBy(id="CheckBox_ECA_CheckBox_InlineScript")
+	private WebElement CheckBox_ECA_CheckBox_InlineScript;
+	
+	public String CheckBox_ECA_CheckBox_Checked(){
+		CheckBox_ECA_CheckBox_onChnge.click();
+		return CheckBox_ECA_CheckBox_InlineScript.getAttribute("aria-checked");
+	}
+//###############################CheckBox ECA######################################
 }
