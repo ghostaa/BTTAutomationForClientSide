@@ -287,6 +287,9 @@ public class Main_Page extends Index_Page{
 	@FindBy(id="CheckBox_main_link07")
 	private WebElement CheckBox_Condition;
 	
+	@FindBy(id="CheckBox_main_link01")
+	private WebElement CheckBox_ECA;
+	
 	public void CheckBox_properties(){
 		CheckBox_properties.click();
 	}
@@ -317,6 +320,10 @@ public class Main_Page extends Index_Page{
 	
 	public void CheckBox_Condition(){
 		CheckBox_Condition.click();
+	}
+	
+	public void CheckBox_ECA(){
+		CheckBox_ECA.click();
 	}
 //###############################For CheckBox Main###############################
 //###############################For Message Main################################
