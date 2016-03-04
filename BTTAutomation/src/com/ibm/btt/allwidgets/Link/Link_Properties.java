@@ -129,6 +129,11 @@ public class Link_Properties extends AllWidgetsProjectMain_Class {
 	public void Link_240_pro_tabIndex(){
 		assertEquals("3", drv.pro_tabIndex());
 	}
+	
+	@Test
+	public void Link_250_pro_extraParams() throws Exception{
+		assertEquals("Test Image Css",drv.pro_extraParams());
+	}
 
 	@AfterClass
 	public static void tearDown() throws Exception {

@@ -109,8 +109,9 @@ public class Link_PageObject extends Main_Page{
 	@FindBy(id="Image_css_label04")
 	private WebElement properties_ImageCSS;
 	
-	public String pro_extraParams(){//12. Image_css.jsp will be shown 
+	public String pro_extraParams() throws Exception{//12. Image_css.jsp will be shown 
 		properties_extraParams.click();
+		Thread.sleep(3000);
 		return properties_ImageCSS.getText();
 	}
 	

@@ -85,8 +85,8 @@ public class Link_Condition extends AllWidgetsProjectMain_Class{
   public void conExpTarget() throws Exception{
 	  assertEquals(true, drv.conExpLabel());
 	  assertEquals("about:blank", drv.conExpTarget());
-	  driver.close();
-	  Link_Condition.setUp();
+	  //driver.close();
+	  // Link_Condition.setUp();
   }
  
   @AfterClass
