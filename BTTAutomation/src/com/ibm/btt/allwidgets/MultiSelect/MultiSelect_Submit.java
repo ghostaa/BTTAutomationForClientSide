@@ -37,198 +37,75 @@ public class MultiSelect_Submit extends AllWidgetsProjectMain_Class{
   }
 
   @Test
-  public void subResultString(){
+  public void subResult_30_String(){
 	  drv.subGeneralSubmit();
 	  assertEquals("sample-1", drv.subResultString());
   }
   
   @Test
-  public void subResultDate(){
-	  assertEquals("sample-Mon Feb 24 00:00:00 CST 2014", drv.subResultDate());
+  public void subResult_31_Date(){
+	  assertEquals(true, drv.subResultDate().contains("CST 2014"));
   }
   
   @Test
-  public void subResultCurrency(){
-	  assertEquals("USD:32870375 - 3", drv.subResultCurrency());
+  public void subResult_32_Currency(){
+	  assertEquals(true, drv.subResultCurrency().contains("USD:"));
   }
   
   @Test
-  public void subResultNumber(){
-	  assertEquals("677009676.7499120235443115234375 selected", drv.subResultNumber());
+  public void subResult_33_Number(){
+	  assertEquals(true, drv.subResultNumber().contains("- 3"));
   }
   
   @Test
-  public void subResultBoolean(){
+  public void subResult_34_Boolean(){
 	  assertEquals("sample-false", drv.subResultBoolean());
   }
   
   @Test
-  public void subResultDuration(){
+  public void subResult_35_Duration(){
 	  assertEquals("P2015Y8M8DT8H20M22S - 0", drv.subResultDuration());
   }
   
   @Test
-  public void subResultXMLGregorianCalendar(){
+  public void subResult_36_XMLGregorianCalendar(){
 	  assertEquals("2014-07-18T13:20:20.020+00:08 - 1", drv.subResultXMLGregorianCalendar());
-  }
-   
-  @Test
-  public void subResultByte(){
-	  assertEquals("null", drv.subResultByte());
   }
   
   @Test
-  public void subResultShort(){
+  public void subResult_37_Short(){
 	  assertEquals("sample-11231", drv.subResultShort());
   }
   
   @Test
-  public void subResultInteger(){
+  public void subResult_38_Integer(){
 	  assertEquals("sample-23", drv.subResultInteger());
   }
   
   @Test
-  public void subResultLong(){
+  public void subResult_39_Long(){
 	  assertEquals("sample-84322238006", drv.subResultLong());
   }
  
   @Test
-  public void subResultFloat(){
-	  assertEquals("Selected is true", drv.subResultFloat());
+  public void subResult_40_Float(){
+	  assertEquals("sample-5.12", drv.subResultFloat());
   }
   
   @Test
-  public void subResultDouble(){
+  public void subResult_41_Double(){
 	  assertEquals("sample-6.66", drv.subResultDouble());
   }
   
   @Test
-  public void subResultBigDecimal(){
-	  assertEquals("sample-751384515.6830341815948486328125", drv.subResultBigDecimal());
+  public void subResult_42_BigDecimal(){
+	  assertEquals(true, drv.subResultBigDecimal().contains("sample-"));
   }
   
   @Test
-  public void subResultBigInteger(){
+  public void subResult_43_BigInteger(){
 	  assertEquals("sample-153", drv.subResultBigInteger());
   }
-  
-  /*@Test
-  public void actmultiSelectValue5(){
-	  assertEquals("5", drv.actmultiSelectValue5());
-  }
-  
-  @Test
-  public void actVisible(){
-	  assertEquals(true, drv.actVisible());
-  }
-  
-  @Test
-  public void actHidden(){
-	  assertEquals("visibility: hidden; width: 153px;", drv.actHidden());
-  }
-  
-  @Test
-  public void actGone(){
-	  assertEquals("visibility: inherit; width: 153px; display: none;", drv.actGone());
-  }
-  
-  @Test
-  public void actDisableTrue(){
-	  assertEquals("true", drv.actDisableTrue());
-  }
-  
-  @Test
-  public void actDisableFalse(){
-	  assertEquals(true, drv.actDisableFalse());
-  }
-  
-  @Test
-  public void actReadonlyTrue(){
-	  assertEquals("true", drv.actReadonlyTrue());
-  }
-  
-  @Test
-  public void actReadonlyFalse(){
-	  assertEquals(true, drv.actReadonlyFalse());
-  }
- 
-  @Test
-  public void actHint(){
-	  assertEquals("This is hint~", drv.actHint());
-  }
-  
-  @Test
-  public void actHint1(){
-	  assertEquals("Credit Cards", drv.actHint1());
-  }
-  
-  @Test
-  public void actGroupGone(){
-	  assertEquals("visibility: inherit; width: 153px; display: none;", drv.actGroupGone());
-  }
-  
-//Condition
-  @Test
-  public void conFocus(){
-	  assertEquals("Yes, MultiSelect is focusable!", drv.conFocus());
-  }
-  
-  @Test
-  public void conDisabled(){
-	  assertEquals(true, drv.conDisabled());
-	  assertEquals("MultiSelect- disabled- false", drv.conLabelText2());
-  }
-  
-  @Test
-  public void conReadonly(){
-	  assertEquals(true, drv.conReadonly());
-	  assertEquals("MultiSelect- readOnly - false", drv.conLabelText3());
-  }
-  
-  @Test
-  public void conisFocusable(){
-	  assertEquals("it 's true : multiSelect_copy11.isFocusable() == true", drv.conisFocusable());
-  }
-  
-  @Test
-  public void conId(){
-	  assertEquals("MultiSelect_eca_multiSelect_copy11", drv.conId());
-	  assertEquals("It's true: multiSelect_copy11.id == \"multiSelect_copy11\"", drv.conLabelText5());
-  }
-  
-  @Test
-  public void conValue(){
-	  assertEquals("It is false: multiSelect_copy11.value == 1", drv.conValue());
-  }
-  
-  @Test
-  public void conVisible(){
-	  assertEquals(true, drv.conVisible());
-	  assertEquals("it's true: multiSelect_copy11.visibility=visible", drv.conLabelText7());
-  }
-  
-  @Test
-  public void conDisable(){
-	  assertEquals(true, drv.conDisable());
-	  assertEquals("It's false: multiSelect_copy11.disabled==true", drv.conLabelText8());
-  }
-  
-  @Test
-  public void conditionReadonly(){
-	  assertEquals(true, drv.conditionReadonly());
-	  assertEquals("it's false : multiSelect_copy11.readOnly == true", drv.conLabelText9());
-  }
-  
-  @Test
-  public void conAsync(){
-	  assertEquals("It's false : multiSelect_copy11.asyncStatus=ok", drv.conAsync());
-  }
-  
-  @Test
-  public void conasyncErrorMessage(){
-	  assertEquals("It's false : multiSelect_copy11.asyncErrorMessage = \"error\"", drv.conasyncErrorMessage());
-  }
- */
  
   @AfterClass
   public static void tearDown() throws Exception {

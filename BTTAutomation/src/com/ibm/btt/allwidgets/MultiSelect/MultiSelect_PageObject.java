@@ -93,9 +93,8 @@ public class MultiSelect_PageObject extends Main_Page{
 		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
 	}
 	
-	public int proTabIndex3(){//tabIndex = 3
-		String[] temp = {"bttMultiSelectFocused", "dijitFocused"};
-		return CSS.css_query(properties_shortcut.getAttribute("class"), temp);
+	public String proTabIndex3(){//tabIndex = 3
+		return properties_shortcut.getAttribute("tabindex");
 	}
 	
 	@FindBy(id="MultiSelect_properties_multiSelect_copy07")
@@ -105,9 +104,8 @@ public class MultiSelect_PageObject extends Main_Page{
 		return properties_hintNLS.getAttribute("title");
 	}
 	
-	public int proTabIndex1(){//tabIndex = 1
-		String[] temp = {"bttMultiSelectFocused", "dijitFocused"};
-		return CSS.css_query(properties_hintNLS.getAttribute("class"), temp);
+	public String proTabIndex1(){//tabIndex = 1
+		return properties_hintNLS.getAttribute("tabindex");
 	}
 	
 	@FindBy(id="MultiSelect_properties_multiSelect_copy07_copy")
@@ -124,9 +122,8 @@ public class MultiSelect_PageObject extends Main_Page{
 		return properties_tabIndex2.getAttribute("tabindex");
 	}
 	
-	public int proTabIndex2Focus(){//tabIndex = 2
-		String[] temp = {"bttMultiSelectFocused", "dijitFocused"};
-		return CSS.css_query(properties_tabIndex2.getAttribute("class"), temp);
+	public String proTabIndex2Focus(){//tabIndex = 2
+		return properties_tabIndex2.getAttribute("tabindex");
 	}
 //###############################MultiSelect Properties##################################
 //###############################MultiSelect CSS#########################################
@@ -297,18 +294,6 @@ public class MultiSelect_PageObject extends Main_Page{
 		return event_label11.getText();
 	}
 	
-	@FindBy(xpath=".//*[@id='MultiSelect_eca_multiSelect_copy10']/option[2]")
-	private WebElement event_onChange; 
-	
-	@FindBy(id="MultiSelect_eca_label_copy10")
-	private WebElement event_label12; 
-	
-	public String evtOnChange(){ //onChange
-		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_CONTROL);
-		event_onChange.click();
-		AllWidgetsProjectMain_Class.keyRelease(KeyEvent.VK_CONTROL);
-		return event_label12.getText();
-	}
 //Action
 	@FindBy(id="MultiSelect_eca_tabbedPane_tablist_MultiSelect_eca_ContentPane03")
 	private WebElement actcon_tabbedPane; 
@@ -581,9 +566,8 @@ public class MultiSelect_PageObject extends Main_Page{
 	@FindBy(id="MultiSelect_appearance1_multiSelect")
 	private WebElement Appearance1_1;
 	
-	public int Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
-		String[] temp={""};
-		return Appearance.appearance_query(Appearance1_1.getAttribute("style"), temp);
+	public boolean Appearance1_1(){//1.Width is AutoSize,Height is AutoSize
+		return Appearance.appearance_autosize(Appearance1_1.getAttribute("style"));
 	}
 	
 	@FindBy(id="MultiSelect_appearance1_multiSelect_copy")
@@ -608,6 +592,102 @@ public class MultiSelect_PageObject extends Main_Page{
 	public int Appearance1_4(){//4.Width is Fill,Height is AutoSize
 		String[] temp={"width: 100%"};
 		return Appearance.appearance_query(Appearance1_4.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect01")
+	private WebElement Appearance1_5;
+	
+	public int Appearance1_5(){//5.Width is AutoSize,Height is Fixed 50px
+		String[] temp={"height: 50px"};
+		return Appearance.appearance_query(Appearance1_5.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect02")
+	private WebElement Appearance1_6;
+	
+	public int Appearance1_6(){//6.Width is Fixed 200px,Height is Fixed 50px
+		String[] temp={"width: 200px","height: 50px"};
+		return Appearance.appearance_query(Appearance1_6.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect03")
+	private WebElement Appearance1_7;
+	
+	public int Appearance1_7(){//7.Width is Relavtive 30%,Height is Fixed 50px
+		String[] temp={"width: 30%","height: 50px"};
+		return Appearance.appearance_query(Appearance1_7.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect04")
+	private WebElement Appearance1_8;
+	
+	public int Appearance1_8(){//8.Width is Fill,Height is Fixed 50px
+		String[] temp={"width: 100%","height: 50px"};
+		return Appearance.appearance_query(Appearance1_8.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect10")
+	private WebElement Appearance1_9;
+	
+	public int Appearance1_9(){//9.Width is AutoSize,Height is Relative 30%
+		String[] temp={"height: 30%"};
+		return Appearance.appearance_query(Appearance1_9.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect09")
+	private WebElement Appearance1_10;
+	
+	public int Appearance1_10(){//10.Width is Fixed 200px,Height is Relative 30%
+		String[] temp={"width: 200px","height: 30%"};
+		return Appearance.appearance_query(Appearance1_10.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect08")
+	private WebElement Appearance1_11;
+	
+	public int Appearance1_11(){//11.Width is Relavtive 30%,Height is Relative 30%
+		String[] temp={"width: 30%","height: 30%"};
+		return Appearance.appearance_query(Appearance1_11.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect07")
+	private WebElement Appearance1_12;
+	
+	public int Appearance1_12(){//12.Width is Fill,Height is Relative 30%
+		String[] temp={"width: 100%","height: 30%"};
+		return Appearance.appearance_query(Appearance1_12.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect06")
+	private WebElement Appearance1_13;
+	
+	public int Appearance1_13(){//13.Width is AutoSize,Height is Fill
+		String[] temp={"height: 100%"};
+		return Appearance.appearance_query(Appearance1_13.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect05")
+	private WebElement Appearance1_14;
+	
+	public int Appearance1_14(){//14.Width is Fixed 200px,Height is Fill
+		String[] temp={"width: 200px","height: 100%"};
+		return Appearance.appearance_query(Appearance1_14.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect11")
+	private WebElement Appearance1_15;
+	
+	public int Appearance1_15(){//15.Width is Relavtive 30%,Height is Fill
+		String[] temp={"width: 30%","height: 100%"};
+		return Appearance.appearance_query(Appearance1_15.getAttribute("style"), temp);
+	}
+	
+	@FindBy(id="MultiSelect_appearance1_multiSelect12")
+	private WebElement Appearance1_16;
+	
+	public int Appearance1_16(){//16.Width is Fill,Height is Fill
+		String[] temp={"width: 100%","height: 100%"};
+		return Appearance.appearance_query(Appearance1_16.getAttribute("style"), temp);
 	}
 //###############################MultiSelect Appearance1###############################
 //###############################MultiSelect Appearance2###############################
@@ -730,6 +810,9 @@ public class MultiSelect_PageObject extends Main_Page{
 	private WebElement submit_defaultCurrency;
 	
 	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy02']/option[3]")
+	private WebElement submit_defaultNumber;
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy02']/option[4]")
 	private WebElement submit_Number;
 	
 	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy03']/option[2]")
@@ -768,7 +851,7 @@ public class MultiSelect_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy09']/option[1]")
 	private WebElement submit_defaultLong;
 	
-	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy10']/option[3]")
+	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy10']/option[4]")
 	private WebElement submit_Float;
 	
 	@FindBy(xpath=".//*[@id='MultiSelect_submit_multiSelect_copy10']/option[1]")
@@ -795,12 +878,40 @@ public class MultiSelect_PageObject extends Main_Page{
 	@FindBy(id="MultiSelect_submit_button")
 	private WebElement subButton;
 	
+	@FindBy(id="MultiSelect_submit_button01")
+	private WebElement sub_withnodata_Button;
+	
+	@FindBy(id="MultiSelect_submit_button04")
+	private WebElement sub_withoutvalidation_Button;
+	
+	public void withNoData_submit(){
+		sub_withnodata_Button.click();
+	}
+	
+	public void multi_submit(){
+		submit_String.click();
+		submit_Date.click();
+		submit_Currency.click();
+		submit_Number.click();
+		submit_Boolean.click();
+		submit_Duration.click();
+		submit_XMLGregorianCalendar.click();
+		submit_Short.click();
+		submit_Integer.click();
+		submit_Long.click();
+		submit_Float.click();
+		submit_Double.click();
+		submit_BigDecimal.click();
+		submit_BigInteger.click();
+		sub_withoutvalidation_Button.click();
+	}
+	
 	public void subGeneralSubmit(){
 		AllWidgetsProjectMain_Class.keyPress(KeyEvent.VK_CONTROL);
 		submit_defaultString.click();
 		submit_defaultDate.click();
 		submit_defaultCurrency.click();
-		submit_Number.click();
+		submit_defaultNumber.click();
 		submit_defaultBoolean.click();
 		submit_defaultDuration.click();
 		submit_defaultXMLGregorianCalendar.click();
@@ -878,13 +989,6 @@ public class MultiSelect_PageObject extends Main_Page{
 		return subResultXMLGregorianCalendar.getText();
 	}
 	
-	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy06']/option")
-	private WebElement subResultByte;
-	
-	public String subResultByte(){
-		return subResultByte.getText();
-	}
-	
 	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy07']/option")
 	private WebElement subResultShort;
 	
@@ -935,7 +1039,210 @@ public class MultiSelect_PageObject extends Main_Page{
 	}
 	
 //###############################MultiSelect Submit####################################
-
-
-
+//###############################MultiSelect-multi Submit####################################
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect']/option[1]")
+	private WebElement ResultString1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect']/option[2]")
+	private WebElement ResultString2;
+	
+	public String ResultString1(){
+		return ResultString1.getText();
+	}
+	public String ResultString2(){
+		return ResultString2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy']/option[1]")
+	private WebElement ResultDate1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy']/option[2]")
+	private WebElement ResultDate2;
+	
+	public String ResultDate1(){
+		return ResultDate1.getText();
+	}
+	public String ResultDate2(){
+		return ResultDate2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy01']/option[1]")
+	private WebElement ResultCurrency1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy01']/option[2]")
+	private WebElement ResultCurrency2;
+	
+	public String ResultCurrency1(){
+		return ResultCurrency1.getText();
+	}
+	public String ResultCurrency2(){
+		return ResultCurrency2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy02']/option[1]")
+	private WebElement ResultNumber1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy02']/option[2]")
+	private WebElement ResultNumber2;
+	
+	public String ResultNumber1(){
+		return ResultNumber1.getText();
+	}
+	public String ResultNumber2(){
+		return ResultNumber2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy03']/option[1]")
+	private WebElement ResultBoolean1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy03']/option[2]")
+	private WebElement ResultBoolean2;
+	
+	public String ResultBoolean1(){
+		return ResultBoolean1.getText();
+	}
+	public String ResultBoolean2(){
+		return ResultBoolean2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy04']/option[1]")
+	private WebElement ResultDuration1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy04']/option[2]")
+	private WebElement ResultDuration2;
+	
+	public String ResultDuration1(){
+		return ResultDuration1.getText();
+	}
+	public String ResultDuration2(){
+		return ResultDuration2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy05']/option[1]")
+	private WebElement ResultXMLGregorianCalendar1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy05']/option[2]")
+	private WebElement ResultXMLGregorianCalendar2;
+	
+	public String ResultXMLGregorianCalendar1(){
+		return ResultXMLGregorianCalendar1.getText();
+	}
+	public String ResultXMLGregorianCalendar2(){
+		return ResultXMLGregorianCalendar2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy07']/option[1]")
+	private WebElement ResultShort1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy07']/option[2]")
+	private WebElement ResultShort2;
+	
+	public String ResultShort1(){
+		return ResultShort1.getText();
+	}
+	public String ResultShort2(){
+		return ResultShort2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy08']/option[1]")
+	private WebElement ResultInteger1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy08']/option[2]")
+	private WebElement ResultInteger2;
+	
+	public String ResultInteger1(){
+		return ResultInteger1.getText();
+	}
+	public String ResultInteger2(){
+		return ResultInteger2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy09']/option[1]")
+	private WebElement ResultLong1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy09']/option[2]")
+	private WebElement ResultLong2;
+	
+	public String ResultLong1(){
+		return ResultLong1.getText();
+	}
+	public String ResultLong2(){
+		return ResultLong2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy10']/option[1]")
+	private WebElement ResultFloat1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy10']/option[2]")
+	private WebElement ResultFloat2;
+	
+	public String ResultFloat1(){
+		return ResultFloat1.getText();
+	}
+	public String ResultFloat2(){
+		return ResultFloat2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy11']/option[1]")
+	private WebElement ResultDouble1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy11']/option[2]")
+	private WebElement ResultDouble2;
+	
+	public String ResultDouble1(){
+		return ResultDouble1.getText();
+	}
+	public String ResultDouble2(){
+		return ResultDouble2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy11_copy']/option[1]")
+	private WebElement ResultBigDecimal1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy11_copy']/option[2]")
+	private WebElement ResultBigDecimal2;
+	
+	public String ResultBigDecimal1(){
+		return ResultBigDecimal1.getText();
+	}
+	public String ResultBigDecimal2(){
+		return ResultBigDecimal2.getText();
+	}
+	
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy11_copy01']/option[1]")
+	private WebElement ResultBigInteger1;
+	@FindBy(xpath=".//*[@id='MultiSelect_submit2_multiSelect_copy11_copy01']/option[2]")
+	private WebElement ResultBigInteger2;
+	
+	public String ResultBigInteger1(){
+		return ResultBigInteger1.getText();
+	}
+	public String ResultBigInteger2(){
+		return ResultBigInteger2.getText();
+	}
+//###############################MultiSelect-multi Submit####################################
+//###############################MultiSelect Validation####################################
+   @FindBy(id="MultiSelect_submit_tabbedPane_tablist_MultiSelect_submit_ContentPane03")
+   private WebElement validation_tab;
+   public void Click_ValidationTab(){
+	   validation_tab.click();
+   }
+   
+   @FindBy(id="MultiSelect_submit_button02")
+   private WebElement Disable_button;
+   public void Click_DisableButton(){
+	   Disable_button.click();
+   }
+   
+   @FindBy(id="MultiSelect_submit_multiSelect_copy12_copy")
+   private WebElement number1_list;
+   public String number1_status(){
+	   return number1_list.getAttribute("aria-disabled");
+   }
+   
+   @FindBy(id="MultiSelect_submit_button03")
+   private WebElement enable_button;
+   public void Click_EnableButton(){
+	   enable_button.click();
+   }
+   
+   @FindBy(xpath=".//*[@id='dijit__MasterTooltip_0']/div[2]")
+   private WebElement alert_tip;
+   public String alter_tip(){
+	   return alert_tip.getText();
+   }
+   
+   @FindBy(id="MultiSelect_submit_button_copy12_copy")
+   private WebElement submit_button;
+   public String button_status(){
+	   return submit_button.getAttribute("aria-disabled");
+   }
+//###############################MultiSelect Validation####################################
 }

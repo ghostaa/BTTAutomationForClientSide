@@ -92,11 +92,6 @@ public class MultiSelect_ECA extends AllWidgetsProjectMain_Class{
 	  assertEquals("onMouseMove is triggered!", drv.evtOnMouseMove());
   }
   
-  @Test
-  public void MultiSelect_210_evtOnChange(){
-	  assertEquals("onChange is triggered!", drv.evtOnChange());
-  }
-  
 //Action
   @Test
   public void MultiSelect_220_actFocus(){

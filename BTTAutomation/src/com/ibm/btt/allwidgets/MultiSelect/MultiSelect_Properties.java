@@ -51,23 +51,14 @@ public class MultiSelect_Properties extends AllWidgetsProjectMain_Class {
 	
 	@Test
 	public void proTab() throws InterruptedException{
-		AllWidgetsProjectMain_Class.widget_tabIndex();
-		assertEquals(2, drv.proTabIndex1());
-		AllWidgetsProjectMain_Class.widget_tabIndex();
-		assertEquals(2, drv.proTabIndex2Focus());
-		AllWidgetsProjectMain_Class.widget_tabIndex();
-		assertEquals(2, drv.proTabIndex3());
+	//	AllWidgetsProjectMain_Class.widget_tabIndex();
+		assertEquals("1", drv.proTabIndex1());
+	//	AllWidgetsProjectMain_Class.widget_tabIndex();
+		assertEquals("2", drv.proTabIndex2Focus());
+	//	AllWidgetsProjectMain_Class.widget_tabIndex();
+		assertEquals("3", drv.proTabIndex3());
 	}
-	
-	@Test
-	public void proId(){
-		assertEquals("MultiSelect_properties_multiSelect", drv.proId());
-	}
-	
-	@Test
-	public void proVisible() {
-		assertEquals(true, drv.proVisible());
-	}
+  
 
 	@Test
 	public void proHidden() {
