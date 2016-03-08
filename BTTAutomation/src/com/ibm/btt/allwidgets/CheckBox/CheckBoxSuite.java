@@ -8,6 +8,7 @@ import org.junit.runners.Suite;
 	CheckBox_Event.class,
 	CheckBox_Condition.class,
 	CheckBox_Action.class,
+	CheckBox_ECA.class,
 	CheckBox_CSS.class,
 	CheckBox_submit.class,
 	CheckBox_appearance1.class,
