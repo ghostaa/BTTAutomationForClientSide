@@ -101,7 +101,7 @@ public class Index_Page {
 		HorizontalSlider_widget.click();
 	}
 	
-	@FindBy(id="index_link80")
+	@FindBy(id="index_link65")
 	private WebElement VerticalSlider_widget;
 	
 	public void VerticalSlider_widget(){
