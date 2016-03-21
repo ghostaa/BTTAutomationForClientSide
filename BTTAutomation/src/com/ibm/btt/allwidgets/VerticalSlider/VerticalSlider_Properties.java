@@ -45,9 +45,83 @@ public class VerticalSlider_Properties extends AllWidgetsProjectMain_Class {
 		drv.BTT8200_tab();
 		drv.VerticalSlider_widget();
 		drv.VerticalSlider_properties();
-
 	}
 	
+	@Test
+	public void isIDRight(){
+		assertEquals("VerticalSlider_properties1_VerticalSlider_my",drv.proId());
+	}
+	
+	@Test
+	public void disabledSlider(){
+		assertEquals(2,drv.proDisableTrue());
+	}
+	
+	@Test
+	public void readonlySlider(){
+		assertEquals(2,drv.proReadonlyTrue());
+	}
+	
+/*	@Test
+	public void nameSlider(){ //4. name - this properties is not show any feature on page,so I used the attribute to judge
+		assertEquals("nameValue",drv.proName());
+	}*/
+	
+	@Test
+	public void valueSlider(){
+		assertEquals("30",drv.proValue());
+	}
+	
+	@Test
+	public void clickselectSlider(){
+		assertEquals("0",drv.proClickselect());
+	}
+	
+	@Test
+	public void maxiumSlider(){
+		assertEquals("200",drv.proMaxium());
+	}
+	
+	@Test
+	public void miniumSlider(){
+		assertEquals("10",drv.proMinium());
+	}
+	
+	@Test
+	public void showbuttonSlider(){
+		assertEquals("display: none;",drv.proShowButton1());
+		assertEquals("display: none;",drv.proShowButton2());
+	}
+	
+	@Test
+	public void leftLabel_count_fontSize(){
+		assertEquals("font-size: 20px;",drv.proLeftLableFontSize());
+		assertEquals("0%",drv.proLeftlabelCount1());
+		assertEquals("25%",drv.proLeftlabelCount2());
+		assertEquals("50%",drv.proLeftlabelCount3());
+		assertEquals("75%",drv.proLeftlabelCount4());
+		assertEquals("100%",drv.proLeftlabelCount5());
+	}
+	
+	@Test
+	public void leftLabel_labels_color(){
+		assertEquals("0",drv.proLeftlabelsLabel1());
+		assertEquals("100",drv.proLeftlabelsLabel2());
+		assertEquals(true,drv.proLeftlabelsColor1().contains("color: rgb(255, 0, 0);"));
+		assertEquals(true,drv.proLeftlabelsColor2().contains("color: rgb(255, 0, 0);"));
+	}
+	
+	@Test
+	public void leftRules_count_width1(){
+		//assertEquals("3",drv.proLeftRulesCount1());
+		assertEquals("width: 10px;",drv.proLeftRulesWidth1());
+	}
+	
+	@Test
+	public void leftRules_count_width2(){
+		//assertEquals("3",drv.proLeftRulesCount1());
+		assertEquals("width: 30px;",drv.proLeftRulesWidth2());
+	}
 	
 	
 	@AfterClass

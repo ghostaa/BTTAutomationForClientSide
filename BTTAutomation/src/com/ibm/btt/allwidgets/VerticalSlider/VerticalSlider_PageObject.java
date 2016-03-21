@@ -20,18 +20,19 @@ import com.ibm.btt.allwidgets.*;
 public class VerticalSlider_PageObject extends Main_Page{
 	
 //###############################VerticalSlider Properties##################################	
-	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_panel']/div[2]/div[2]/table")
+	@FindBy(id="VerticalSlider_properties1_VerticalSlider_my")
 	private WebElement properties_id;
 	
 	public String proId(){//1.VerticalSlider's id is"VerticalSlider_my"
-		return properties_id.getAttribute("id");
+		return properties_id.getAttribute("widgetid");
 	}
 	
-	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider01']/tbody/tr[3]/td[2]/center/div[2]/div/div")
+	@FindBy(id="VerticalSlider_properties1_verticalSlider01")
 	private WebElement properties_disableTrue;
 	
-	public String proDisableTrue(){//2.VerticalSlider is disabled
-		return properties_disableTrue.getAttribute("disabled");
+	public int proDisableTrue(){//2.VerticalSlider is disabled
+		String[] temp={"dijitSliderDisabled","dijitDisabled"};
+		return CSS.css_query(properties_disableTrue.getAttribute("class"), temp);
 	}
 	
 	@FindBy(id="VerticalSlider_properties1_verticalSlider02")
@@ -42,62 +43,144 @@ public class VerticalSlider_PageObject extends Main_Page{
 		return CSS.css_query(properties_readonlyTrue.getAttribute("class"), temp);
 	}
 	
+	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider19']/tbody/tr[3]/td[2]/input")
+	private WebElement properties_name;
+	
+	public String proName(){// 4.VerticalSlider name is nameValue = 25
+		return properties_name.getAttribute("name");
+	}
+	
+	
 	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider03']/tbody/tr[3]/td[2]/center/div[2]/div/div")
 	private WebElement properties_value;
 	
-	public String proValue(){//4.VerticalSlider value is 30
+	public String proValue(){//5.VerticalSlider value is 30
 		return properties_value.getAttribute("aria-valuenow");
 	}
 	
-	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider04']/tbody/tr[3]/td[2]/center/div[1]")
-	private WebElement properties_bar;
-	
-	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider04']/tbody/tr[3]/td[2]/center/div[2]")
+	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider04']/tbody/tr[3]/td[2]/center")
 	private WebElement properties_pressbar;
+	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider04']/tbody/tr[3]/td[2]/center/div[2]/div/div")
+	private WebElement properties_clickselect;
 	
-	public String proClickSelectFalse(){//5.VerticalSlider clickselect is false
-		properties_bar.click();
-		return properties_pressbar.getAttribute("style");
+	public String proClickselect(){//6.clickselect = false
+		properties_pressbar.click();
+		return properties_clickselect.getAttribute("aria-valuenow");
 	}
 	
-/*	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider04']/tbody/tr[3]/td[2]/center/div[1]")
-	private WebElement properties_bar;
-	
-	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider04']/tbody/tr[3]/td[2]/center/div[2]")
-	private WebElement properties_pressbar;
-	
-	public String proClickSelectFalse(){//6.VerticalSlider discreteValues is 60
-		properties_bar.click();
-		return properties_pressbar.getAttribute("style");
-	}*/
-	
 	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider06']/tbody/tr[3]/td[2]/center/div[2]/div/div")
-	private WebElement properties_HandleMax;
-
-	public String proMaximum(){//7.VerticalSlider maximum is 200 
-		return properties_HandleMax.getAttribute("aria-valuemin");
+	private WebElement properties_maxium;
+	
+	public String proMaxium(){//9.maximum = 200
+		return properties_maxium.getAttribute("aria-valuemax");
 	}
 	
 	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider07']/tbody/tr[3]/td[2]/center/div[2]/div/div")
-	private WebElement properties_HandleMin;
-
-	public String proMinimum(){//8.VerticalSlider minimum is 10 
-		return properties_HandleMin.getAttribute("aria-valuemin");
+	private WebElement properties_minium;
+	
+	public String proMinium(){//10. minimum = 10
+		return properties_minium.getAttribute("aria-valuemin");
 	}
 	
-/*	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider07']/tbody/tr[3]/td[2]/center/div[2]/div/div")
-	private WebElement properties_HandleMin;
+/*	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider06']/tbody/tr[3]/td[2]/center/div[2]/div/div")
+	private WebElement properties_HandleMax;
 
-	public String proMinimum(){//9. VerticalSlider pageIncrement is 10 
-		return properties_HandleMin.getAttribute("aria-valuemin");
+	public String proMaximum(){//11.pageIncrement = 10
+		return properties_HandleMax.getAttribute("aria-valuemin");
 	}*/
 	
-	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_panel']/div[12]/div[2]/table/tbody/tr[1]/td[2]/div")
-	private WebElement properties_showButton;
+	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider09']/tbody/tr[1]/td[2]/div")
+	private WebElement properties_showbutton1;
+	@FindBy(xpath=".//*[@id='VerticalSlider_properties1_verticalSlider09']/tbody/tr[5]/td[2]/div")
+	private WebElement properties_showbutton2;
 
-	public String proShowButton(){//10.VerticalSlider showButton is false
-		return properties_showButton.getAttribute("style");
+	public String proShowButton1(){// 12.showButton = false
+		return properties_showbutton1.getAttribute("style");
 	}
+	public String proShowButton2(){// 12.showButton = false
+		return properties_showbutton2.getAttribute("style");
+	}
+	
+	@FindBy(id="dijit_form_VerticalRuleLabels_2")
+	private WebElement properties_leftlabels_fontsize;
+	@FindBy(xpath=".//*[@id='dijit_form_VerticalRuleLabels_2']/div[1]/span")
+	private WebElement properties_leftlabels_count1;
+	@FindBy(xpath=".//*[@id='dijit_form_VerticalRuleLabels_2']/div[2]/span")
+	private WebElement properties_leftlabels_count2;
+	@FindBy(xpath=".//*[@id='dijit_form_VerticalRuleLabels_2']/div[3]/span")
+	private WebElement properties_leftlabels_count3;
+	@FindBy(xpath=".//*[@id='dijit_form_VerticalRuleLabels_2']/div[4]/span")
+	private WebElement properties_leftlabels_count4;
+	@FindBy(xpath=".//*[@id='dijit_form_VerticalRuleLabels_2']/div[5]/span")
+	private WebElement properties_leftlabels_count5;
+	
+	public String proLeftLableFontSize(){//14.leftLabels is true : font size is 20
+		return properties_leftlabels_fontsize.getAttribute("style");
+	}
+	public String proLeftlabelCount1(){//14.leftLabels is true : count is 5 
+		return properties_leftlabels_count1.getText();
+	}
+	public String proLeftlabelCount2(){
+		return properties_leftlabels_count2.getText();
+	}
+	public String proLeftlabelCount3(){
+		return properties_leftlabels_count3.getText();
+	}
+	public String proLeftlabelCount4(){
+		return properties_leftlabels_count4.getText();
+	}
+	public String proLeftlabelCount5(){
+		return properties_leftlabels_count5.getText();
+	}
+	
+/*	@FindBy(id="dijit_form_VerticalRuleLabels_3")
+	private WebElement properties_leftlabels_width;
+	@FindBy(xpath=".//*[@id='dijit_form_VerticalRuleLabels_3']/div[2]/span")
+	private WebElement properties_leftlabels_numericmargin;*/
+	
+	@FindBy(xpath=".//*[@id='dijit_form_VerticalRuleLabels_4']/div[1]/span")
+	private WebElement properties_leftlabels_labels1;
+	@FindBy(xpath=".//*[@id='dijit_form_VerticalRuleLabels_4']/div[2]/span")
+	private WebElement properties_leftlabels_labels2;
+	@FindBy(xpath=".//*[@id='dijit_form_VerticalRuleLabels_4']/div[1]")
+	private WebElement properties_leftlabels_labelsColor1;
+	@FindBy(xpath=".//*[@id='dijit_form_VerticalRuleLabels_4']/div[2]")
+	private WebElement properties_leftlabels_labelsColor2;
+	
+	public String proLeftlabelsLabel1(){//14.leftLabels is true :labels is 0
+		return properties_leftlabels_labels1.getText();
+	}
+	public String proLeftlabelsLabel2(){//14.leftLabels is true :labels is 100
+		return properties_leftlabels_labels2.getText();
+	}
+	public String proLeftlabelsColor1(){//14.leftLabels is true :labelsColor is red
+		return properties_leftlabels_labelsColor1.getAttribute("style");
+	}
+	public String proLeftlabelsColor2(){//14.leftLabels is true :labelsColor is red
+		return properties_leftlabels_labelsColor2.getAttribute("style");
+	}
+	
+	@FindBy(id="dijit_form_VerticalRule_0")
+	private WebElement properties_leftRules_width1;
+	
+	/*public String proLeftRulesCount1(){//15.VerticalSlider leftRules is true - count is 3
+		return properties_leftRules_count1.getSize().toString();
+	}*/
+	public String proLeftRulesWidth1(){//15.VerticalSlider leftRules is true -  width is 10
+		return properties_leftRules_width1.getAttribute("style");
+	}
+	
+	@FindBy(id="dijit_form_VerticalRule_1")
+	private WebElement properties_leftRules_width2;
+	
+	/*public String proLeftRulesCount2(){//15.VerticalSlider leftRules is true - count is 5
+		return properties_leftRules_count2.getSize().toString();
+	}*/
+	public String proLeftRulesWidth2(){//15.VerticalSlider leftRules is true -  width is 30
+		return properties_leftRules_width2.getAttribute("style");
+	}
+	
+
 //###############################VerticalSlider Properties##################################
 //###############################VerticalSlider CSS#########################################
 	@FindBy(id="VerticalSlider_css_verticalSlider")
@@ -132,7 +215,8 @@ public class VerticalSlider_PageObject extends Main_Page{
 		return CSS.css_query(css_style4.getAttribute("class"), temp);
 	}
 //###############################VerticalSlider CSS#########################################
-//###############################VerticalSlider Event#######################################	
+//###############################VerticalSlider Event#######################################
+	
 	@FindBy(id="VerticalSlider_event_verticalSlider")
 	private WebElement event_VerticalSlider;
 	
@@ -159,6 +243,16 @@ public class VerticalSlider_PageObject extends Main_Page{
 	@FindBy(xpath=".//*[@id='VerticalSlider_event_verticalSlider']/tbody/tr[3]/td[2]/center/div[2]")
 	private WebElement event_VerticalSliderV;
 	
+	@FindBy(id="VerticalSlider_event_label08")
+	private WebElement event_label4;
+	
+	public String evtOnKeyPress(){ //onKeyPress
+		event_VerticalSliderV.click();
+		Main_Class.keyPress(65);
+		Main_Class.keyRelease(65);
+		return event_label4.getText();
+	}
+	
 	@FindBy(id="VerticalSlider_event_label06")
 	private WebElement event_label3;
 	
@@ -168,15 +262,6 @@ public class VerticalSlider_PageObject extends Main_Page{
 		main_class.keyDown(Keys.SHIFT);
 		main_class.keyUp(Keys.SHIFT);
 		return event_label3.getText();
-	}
-	
-	@FindBy(id="VerticalSlider_event_label08")
-	private WebElement event_label4;
-	
-	public String evtOnKeyPress(){ //onKeyPress
-		event_VerticalSliderV.click();
-		Main_Class.pressAnyKey("0");
-		return event_label4.getText();
 	}
 	
 	@FindBy(id="VerticalSlider_event_label10")
@@ -195,6 +280,8 @@ public class VerticalSlider_PageObject extends Main_Page{
 	
 	public String evtOnMouseDown(){ //onMouseDown
 		event_VerticalSlider.click();
+		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
+		main_class.rightClick();
 		return event_label6.getText();
 	}
 	
@@ -377,8 +464,8 @@ public class VerticalSlider_PageObject extends Main_Page{
 	private WebElement condition_label10;
 	
 	public String conExpSet(){//set(name,value)
-		condition_clickHere9.click();
-		return condition_label9.getText();
+		condition_clickHere10.click();
+		return condition_label10.getText();
 	}
 	
 	@FindBy(id="VerticalSlider_condition_label73")
@@ -748,22 +835,6 @@ public class VerticalSlider_PageObject extends Main_Page{
 		return h+"&"+v;
 	}
 	
-	@FindBy(xpath=".//*[@id='VerticalSlider_appearance2_group09']/div/div/div/div")
-	private WebElement Appearance2_10;
-	
-	public int Appearance2_10(){//10.horizontal indent is 50px
-		String[] temp={"padding-left: 50px"};
-		return Appearance.appearance_query(Appearance2_10.getAttribute("style"), temp);
-		
-	}
-	
-	@FindBy(xpath=".//*[@id='VerticalSlider_appearance2_group10']/div/div/div/div")
-	private WebElement Appearance2_11;
-	
-	public int Appearance2_11(){//11.horizontal indent is 10percent
-		String[] temp={"padding-left: 10%"};
-		return Appearance.appearance_query(Appearance2_11.getAttribute("style"), temp);
-	}
 //###############################VerticalSlider Appearance2###############################
 
 

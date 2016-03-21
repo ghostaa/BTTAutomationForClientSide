@@ -34,79 +34,79 @@ public class VerticalSlider_event extends AllWidgetsProjectMain_Class{
     drv.VerticalSlider_widget();
     drv.VerticalSlider_event();
   }
+  
+  @Test
+  public void evt_200_OnKeyPress(){
+	  assertEquals("onKeyPress works.", drv.evtOnKeyPress());
+  }
 
   @Test
-  public void evtOnClick(){
+  public void evt_201_OnClick(){
 	  assertEquals("onClick works", drv.evtOnClick());
   }
   
   @Test
-  public void evtOnDbClick(){
+  public void evt_202_OnDbClick(){
 	  assertEquals("onDbClick works", drv.evtOnDbClick());
   }
   
   @Test
-  public void evtOnKeyDown(){
+  public void evt_203_OnKeyDown(){
 	  assertEquals("onKeyDown", drv.evtOnKeyDown());
   }
   
   @Test
-  public void evtOnKeyPress(){
-	  assertEquals("onKeyPress works.", drv.evtOnKeyPress());
-  }
-  
-  @Test
-  public void evtOnKeyUP(){
+  public void evt_204_OnKeyUP(){
 	  assertEquals("onKeyUp works", drv.evtOnKeyUP());
   }
   
   @Test
-  public void evtOnMouseDown(){
+  public void evt_205_OnMouseDown(){
 	  assertEquals("onKeyDown works", drv.evtOnMouseDown());
   }
    
   @Test
-  public void evtOnMouseEnter(){
+  public void evt_206_OnMouseEnter(){
 	  assertEquals("onKeyEnter works", drv.evtOnMouseEnter());
   }
   
   @Test
-  public void evtOnMouseLeave(){
+  public void evt_207_OnMouseLeave(){
 	  assertEquals("onMouseLeave works", drv.evtOnMouseLeave());
   }
   
   @Test
-  public void evtOnMouseMove(){
+  public void evt_208_OnMouseMove(){
 	  assertEquals("onMouseMove works", drv.evtOnMouseMove());
   }
   
   @Test
-  public void evtOnMouseOut(){
+  public void evt_209_OnMouseOut(){
 	  assertEquals("onMouseOut works", drv.evtOnMouseOut());
   }
   
   @Test
-  public void evtOnMouseOver(){
+  public void evt_210_OnMouseOver(){
 	  assertEquals("onMouseOver works", drv.evtOnMouseOver());
   }
   
   @Test
-  public void evtOnMouseUp(){
+  public void evt_211_OnMouseUp(){
 	  assertEquals("onMouseUp", drv.evtOnMouseUp());
   }
   
   @Test
-  public void evtOnFocus(){
+  public void evt_212_OnFocus(){
 	  assertEquals("onFocus works", drv.evtOnFocus());
   }
   
   @Test
-  public void evtOnBlur(){
+  public void evt_213_OnBlur(){
 	  assertEquals("onBlur works", drv.evtOnBlur());
   }
   
   @Test
-  public void evtOnChange(){
+  public void evt_214_OnChange(){
 	  assertEquals("onChange works", drv.evtOnChange());
   }
  

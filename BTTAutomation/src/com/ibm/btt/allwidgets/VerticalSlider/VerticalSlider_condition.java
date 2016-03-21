@@ -78,7 +78,7 @@ public class VerticalSlider_condition extends AllWidgetsProjectMain_Class{
   
   @Test
   public void conExpSet(){
-	  assertEquals("onMouseLeave is triggered!", drv.conExpSet());
+	  assertEquals("set(name,value) works", drv.conExpSet());
   }
   
   @Test

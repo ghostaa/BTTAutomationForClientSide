@@ -80,16 +80,6 @@ public class VerticalSlider_appearance2 extends AllWidgetsProjectMain_Class{
   public void Appearance2_9(){
 	  assertEquals("right&bottom", drv.Appearance2_9());
   }
-  
-  @Test
-  public void Appearance2_10(){
-	  assertEquals(1, drv.Appearance2_10());
-  }
-  
-  @Test
-  public void Appearance2_11(){
-	  assertEquals(1, drv.Appearance2_11());
-  }
  
   @AfterClass
   public static void tearDown() throws Exception {

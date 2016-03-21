@@ -4,7 +4,7 @@ import org.junit.runners.Suite;
   
 @RunWith(Suite.class)  
 @Suite.SuiteClasses({    
-//	VerticalSlider_Properties.class,    
+	VerticalSlider_Properties.class,    
 	VerticalSlider_event.class,
 	VerticalSlider_condition.class,
 	VerticalSlider_action.class,
