@@ -76,7 +76,7 @@ public class Label_ECA extends AllWidgetsProjectMain_Class{
   @Test
   public void ID_exp(){
 	  drv.ID_exp();
-	  assertEquals("false", drv.ID_exp_getText());
+	  assertEquals("ok", drv.ID_exp_getText());
   }
 
   @Test
