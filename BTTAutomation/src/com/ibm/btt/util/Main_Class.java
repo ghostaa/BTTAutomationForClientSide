@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.interactions.Actions;
 
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -32,7 +33,8 @@ public class Main_Class {
 	public static DriverController driverController;
 
 	private static Robot eventKey;
-	public static FirefoxProfile profile = new FirefoxProfile();
+//	public static FirefoxProfile profile = new ProfilesIni().getProfile();
+	public static FirefoxProfile profile = new ProfilesIni().getProfile("default");
 	static Actions event;
 	
 	public static void defaultSetup(){
@@ -178,8 +180,11 @@ public class Main_Class {
 			order+=combinationKey[i];
 		}*/
 		event.sendKeys(Keys.chord(combinationKey)).perform();
+		for(int i=0;i<combinationKey.length;i++){
+			event.sendKeys(combinationKey[i]).sendKeys(Keys.NULL).perform();
+		}
 		//event.sendKeys(order).perform();
-		event.sendKeys(Keys.NULL);
+		event.sendKeys(Keys.NULL).perform();
 //		event.sendKeys(Keys.ALT,Keys.SHIFT,"a").perform();
 	}
 	/*
