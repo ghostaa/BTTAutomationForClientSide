@@ -13,11 +13,12 @@ import com.ibm.btt.common.drivercontroller.InternetExplorerDriverController;
 public class AllWidgetsProjectMain_Class extends Main_Class{
 	public static String allwidgets="AllWidgetsProject";
 //	public static String baseUrl="http://9.181.95.120:8080/"+allwidgets+"/";
-	public static String baseUrl="http://9.115.33.83:8080/"+allwidgets+"/";
+//	public static String baseUrl="http://9.115.33.83:8080/"+allwidgets+"/";
+	public static String baseUrl="http://9.115.33.99:8080/"+allwidgets+"/";
 
 	public static void setUp() throws Exception {
 		Main_Class.defaultSetup();	
-		profile.setPreference("intl.accept_languages", "en-US");  
+		profile.setPreference("intl.accept_languages", Main_Class.LOCATE);  
 //		profile.setPreference("dom.disable_open_during_load", true);  
 //		driver = new FirefoxDriverController().getFirefoxDriver(null,"d:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 		driver = new FirefoxDriverController().getFirefoxDriver(profile);

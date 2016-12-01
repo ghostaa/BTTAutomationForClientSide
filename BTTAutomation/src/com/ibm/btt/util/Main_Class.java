@@ -31,7 +31,7 @@ public class Main_Class {
 
 	public static Broswer broswer;
 	public static DriverController driverController;
-
+	public static String LOCATE="en-US";
 	private static Robot eventKey;
 //	public static FirefoxProfile profile = new ProfilesIni().getProfile();
 	public static FirefoxProfile profile = new ProfilesIni().getProfile("default");
@@ -42,7 +42,7 @@ public class Main_Class {
 		//System.setProperty("webdriver.firefox.bin", "d:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 		//System.setProperty("webdriver.firefox.bin", "d:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 //		driverController = driverController.switchDriverController(Broswer.FF);
-		profile.setPreference("intl.accept_languages", "en-US");  
+		profile.setPreference("intl.accept_languages", LOCATE);  
 //		profile.setPreference("dom.disable_open_during_load", true);  
 	}
 	/*

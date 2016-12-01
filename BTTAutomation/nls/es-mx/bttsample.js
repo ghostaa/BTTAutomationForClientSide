@@ -1,0 +1,11 @@
+define({"Click_Link_Run_Flow":"Haga clic en este v\u00ednculo para iniciar el flujo de la muestra",
+"lang_English":"English",
+"Final_Page_Flow":"Esta es la \u00faltima p\u00e1gina del flujo de la muestra",
+"lang_Korean":"\ud55c\uad6d\uc758",
+"lang_sp_MX":"lengua espa\u00f1ola(Mexico)",
+"lang_ch":"\u4e2d\u6587",
+"nls_test_sample":"Esto es prueba de nls",
+"lang_sp":"lengua espa\u00f1ola",
+"Welcome_To_Btt_Sample":"Bienvenido a la p\u00e1gina de ejemplo BTT",
+"hint_test":"Esta es la prueba de pista",
+"pic_alt":"No hay foto"});
