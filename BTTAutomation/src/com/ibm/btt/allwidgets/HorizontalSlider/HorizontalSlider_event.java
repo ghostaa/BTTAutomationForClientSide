@@ -61,6 +61,7 @@ public class HorizontalSlider_event extends AllWidgetsProjectMain_Class{
   }
   
   @Test
+  @Ignore
   public void evtOnMouseDown(){
 	  assertEquals("onMouseDown works", drv.evtOnMouseDown());
   }
