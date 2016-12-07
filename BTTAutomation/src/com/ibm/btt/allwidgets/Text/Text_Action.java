@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.LocateManager;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
@@ -38,6 +39,8 @@ public class Text_Action extends AllWidgetsProjectMain_Class{
     drv.Text_widget();
     drv.Text_action();
   }
+  
+  LocateManager lm = new LocateManager();
 
   @Test
   public void Text_Action_focus(){
@@ -46,7 +49,8 @@ public class Text_Action extends AllWidgetsProjectMain_Class{
   
   @Test
   public void Text_Action_showErrorMessage(){
-	  assertEquals("Hello ?", drv.Text_Action_showErrorMessage());
+	  
+	  assertEquals(lm.getNLSValue("bttsample","client_greetings"), drv.Text_Action_showErrorMessage());
   }
   
   @Test

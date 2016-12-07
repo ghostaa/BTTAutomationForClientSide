@@ -380,7 +380,13 @@ public class Text_PageObject extends Main_Page{
 	public String Text_condition_getTooltip(){
 		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("Text_condition_text03");
-		main_class.widget_moveToElement("Text_condition_text04");
+		try {
+			Thread.sleep(1000);
+			main_class.widget_moveToElement("Text_condition_text04");
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return Text_condition_readonlyTrue_tooltip.getText();
 	}
 	
@@ -523,6 +529,11 @@ public class Text_PageObject extends Main_Page{
 	
 	public String Text_Action_showErrorMessage(){
 		Text_Action_showErrorMessage.click();
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return Text_Action_showErrorMessage_tooltip.getText();
 	}
 	

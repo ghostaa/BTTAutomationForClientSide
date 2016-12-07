@@ -15,6 +15,7 @@ import org.openqa.selenium.support.ui.Select;
 import com.ibm.btt.allwidgets.Label.Label_PageObject;
 import com.ibm.btt.util.Event;
 import com.ibm.btt.util.AllWidgetsProjectMain_Class;
+import com.ibm.btt.util.LocateManager;
 import com.ibm.btt.util.PropertiesUtil;
 import com.ibm.btt.util.Tools;
 
@@ -38,6 +39,8 @@ public class Text_Condition extends AllWidgetsProjectMain_Class{
     drv.Text_widget();
     drv.Text_condition();
   }
+  
+  LocateManager lm = new LocateManager();
 
   @Test
   public void Text_condition_isFocusable(){
@@ -64,7 +67,7 @@ public class Text_Condition extends AllWidgetsProjectMain_Class{
   @Test
   public void Text_condition_readOnly(){
 	  assertEquals("true", drv.Text_condition_readonlyTrue());
-	  assertEquals("Exit", drv.Text_condition_getTooltip());
+	  assertEquals(lm.getNLSValue("bttsample","exit"), drv.Text_condition_getTooltip());
   }
   
   @Test
