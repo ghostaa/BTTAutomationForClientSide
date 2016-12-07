@@ -560,7 +560,261 @@ public class RichText_PageObject extends Main_Page{
 	}
 //###############################RichText Appearance2###############################
 //###############################RichText Submit####################################
-//form
+	//submit page
+	//string
+	@FindBy(id="RichText_submit_RichText_String_Data_iframe")
+	private WebElement submit_string_iframe;
+	//date
+	@FindBy(id="RichText_submit_RichText_Date_Data_iframe")
+	private WebElement submit_date_iframe;
+	//currency
+	@FindBy(id="RichText_submit_RichText_Currency_Data_iframe")
+	private WebElement submit_currency_iframe;
+	//number
+	@FindBy(id="RichText_submit_RichText_Number_Data_iframe")
+	private WebElement submit_number_iframe;
+	//boolean
+	@FindBy(id="RichText_submit_RichText_Boolean_Data_iframe")
+	private WebElement submit_boolean_iframe;
+	//duration
+	@FindBy(id="RichText_submit_RichText_Duration_Data_iframe")
+	private WebElement submit_duration_iframe;
+	//XMLGregorianCalendar
+	@FindBy(id="RichText_submit_RichText_XMLGregorianCalendar_Data_iframe")
+	private WebElement submit_XMLGregorianCalendar_iframe;
+	//Byte
+	@FindBy(id="RichText_submit_RichText_Byte_Data_iframe")
+	private WebElement submit_byte_iframe;
+	//Short
+	@FindBy(id="RichText_submit_RichText_Short_Data_iframe")
+	private WebElement submit_short_iframe;
+	//Integer
+	@FindBy(id="RichText_submit_RichText_Integer_Data_iframe")
+	private WebElement submit_integer_iframe;
+	//Long
+	@FindBy(id="RichText_submit_RichText_Long_Data_iframe")
+	private WebElement submit_long_iframe;
+	//Float
+	@FindBy(id="RichText_submit_RichText_Float_Data_iframe")
+	private WebElement submit_float_iframe;
+	//Double
+	@FindBy(id="RichText_submit_RichText_Double_Data_iframe")
+	private WebElement submit_double_iframe;
+	//BigInteger
+	@FindBy(id="RichText_submit_RichText_BigInteger_Data_iframe")
+	private WebElement submit_bigInteger_iframe;
+	//BigDecimal
+	@FindBy(id="RichText_submit_RichText_BigDecimal_Data_iframe")
+	private WebElement submit_bigDecimal_iframe;
+	//data in iframe
+	@FindBy(xpath=".//*[@id='dijitEditorBody']")
+	private WebElement data_in_iframe;
+	//submit data
+	public void submit_data(WebDriver driver){
+		//string
+		driver.switchTo().frame(submit_string_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("aaa");
+		driver.switchTo().defaultContent();
+		//Date
+		driver.switchTo().frame(submit_date_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("2016-12-06");
+		driver.switchTo().defaultContent();
+		//Currency
+		driver.switchTo().frame(submit_currency_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("987123654.11");
+		driver.switchTo().defaultContent();
+		//Number
+		driver.switchTo().frame(submit_number_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("123456");
+		driver.switchTo().defaultContent();
+		//Boolean
+		driver.switchTo().frame(submit_boolean_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("true");
+		driver.switchTo().defaultContent();
+		//Duration
+		driver.switchTo().frame(submit_duration_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("2345678");
+		driver.switchTo().defaultContent();
+		//XMLGregorianCalendar
+		driver.switchTo().frame(submit_XMLGregorianCalendar_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("2016-12-11");
+		driver.switchTo().defaultContent();
+		//Byte
+		driver.switchTo().frame(submit_byte_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("125");
+		driver.switchTo().defaultContent();
+		//Short
+		driver.switchTo().frame(submit_short_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("1234");
+		driver.switchTo().defaultContent();
+		//Integer
+		driver.switchTo().frame(submit_integer_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("324");
+		driver.switchTo().defaultContent();
+		//Long
+		driver.switchTo().frame(submit_long_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("123456789");
+		driver.switchTo().defaultContent();
+		//Float
+		driver.switchTo().frame(submit_float_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("123456.78");
+		driver.switchTo().defaultContent();
+		//Double
+		driver.switchTo().frame(submit_double_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("123456789.012345");
+		driver.switchTo().defaultContent();
+		//BigInteger
+		driver.switchTo().frame(submit_bigInteger_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("987654321");
+		driver.switchTo().defaultContent();
+		//BigDecimal
+		driver.switchTo().frame(submit_bigDecimal_iframe);
+		data_in_iframe.clear();
+		data_in_iframe.sendKeys("5555.6666");
+		driver.switchTo().defaultContent();
+	}
+	//click submit button
+	@FindBy(id="RichText_submit_button")
+	private WebElement submit_button;
+	public void submitButtonClick(){
+		submit_button.click();
+	}
+	//result page
+	
+	//rich text id
+	@FindBy(id="RichText_result_RichText_id_iframe")
+	private WebElement result_richtext_id_iframe;
+	
+	public WebElement getRichTextIdFrame(){
+		return result_richtext_id_iframe;
+	}
+	
+	//string
+	@FindBy(id="RichText_result_RichText_String_Data_iframe")
+	private WebElement result_string_iframe;
+	
+	public WebElement getStringFrame(){
+		return result_string_iframe;
+	}
+	//Date
+	@FindBy(id="RichText_result_RichText_Date_Data_iframe")
+	private WebElement result_date_iframe;
+	
+	public WebElement getDateFrame(){
+		return result_date_iframe;
+	}
+	//Currency
+	@FindBy(id="RichText_result_RichText_Currency_Data_iframe")
+	private WebElement result_currency_iframe;
+	
+	public WebElement getCurrencyFrame(){
+		return result_currency_iframe;
+	}
+	//Number
+	@FindBy(id="RichText_result_RichText_Number_Data_iframe")
+	private WebElement result_number_iframe;
+	
+	public WebElement getNumberFrame(){
+		return result_number_iframe;
+	}
+	//Boolean
+	@FindBy(id="RichText_result_RichText_Boolean_Data_iframe")
+	private WebElement result_boolean_iframe;
+	
+	public WebElement getBooleanFrame(){
+		return result_boolean_iframe;
+	}
+	//Duration
+	@FindBy(id="RichText_result_RichText_Duration_Data_iframe")
+	private WebElement result_duration_iframe;
+	
+	public WebElement getDurationFrame(){
+		return result_duration_iframe;
+	}
+	//XMLGregorianCalendar
+	@FindBy(id="RichText_result_RichText_XMLGregorianCalendar_Data_iframe")
+	private WebElement result_XMLGregorianCalendar_iframe;
+	
+	public WebElement getXMLGregorianCalendarFrame(){
+		return result_XMLGregorianCalendar_iframe;
+	}
+	//Byte
+	@FindBy(id="RichText_result_RichText_Byte_Data_iframe")
+	private WebElement result_byte_iframe;
+	
+	public WebElement getByteFrame(){
+		return result_byte_iframe;
+	}
+	//Short
+	@FindBy(id="RichText_result_RichText_Short_Data_iframe")
+	private WebElement result_short_iframe;
+	
+	public WebElement getShortFrame(){
+		return result_short_iframe;
+	}
+	//Integer
+	@FindBy(id="RichText_result_RichText_Integer_Data_iframe")
+	private WebElement result_integer_iframe;
+	
+	public WebElement getIntegerFrame(){
+		return result_integer_iframe;
+	}
+	//Long
+	@FindBy(id="RichText_result_RichText_Long_Data_iframe")
+	private WebElement result_long_iframe;
+	
+	public WebElement getLongFrame(){
+		return result_long_iframe;
+	}
+	//Float
+	@FindBy(id="RichText_result_RichText_Float_Data_iframe")
+	private WebElement result_float_iframe;
+	
+	public WebElement getFloatFrame(){
+		return result_float_iframe;
+	}
+	//Double
+	@FindBy(id="RichText_result_RichText_Double_Data_iframe")
+	private WebElement result_double_iframe;
+	
+	public WebElement getDoubleFrame(){
+		return result_double_iframe;
+	}
+	//BigInteger
+	@FindBy(id="RichText_result_RichText_BigInteger_Data_iframe")
+	private WebElement result_bigInteger_iframe;
+	
+	public WebElement getBigIntegerFrame(){
+		return result_bigInteger_iframe;
+	}
+	//BigDecimal
+	@FindBy(id="RichText_result_RichText_BigDecimal_Data_iframe")
+	private WebElement result_bigDecimal_iframe;
+	
+	public WebElement getBigDecimalFrame(){
+		return result_bigDecimal_iframe;
+	}
+	//result in iframe
+	@FindBy(xpath=".//*[@id='dijitEditorBody']")
+	private WebElement result_in_iframe;
+	
+	public String get_result_in_iframe(){
+		return result_in_iframe.getText();
+	}
 //###############################RichText Submit####################################
 
 

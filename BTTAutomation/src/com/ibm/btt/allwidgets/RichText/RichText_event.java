@@ -5,6 +5,7 @@ import static org.junit.Assert.fail;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -56,6 +57,7 @@ public class RichText_event extends Main_Class{
   }
   
   @Test
+  @Ignore
   public void evtOnKeyPress(){
 	  assertEquals(1, drv.evtOnKeyPress());
   }

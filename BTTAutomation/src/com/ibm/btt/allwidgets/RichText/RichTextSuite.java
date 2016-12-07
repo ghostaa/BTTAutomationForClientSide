@@ -11,7 +11,7 @@ import org.junit.runners.Suite;
 	RichText_CSS.class,
 	RichText_appearance1.class,
 	RichText_appearance2.class,
-//	RichText_Submit.class,
+	RichText_Submit.class,
 	
 }) 
 public class RichTextSuite {
