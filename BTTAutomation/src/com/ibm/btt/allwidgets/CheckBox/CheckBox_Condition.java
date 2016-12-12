@@ -94,10 +94,10 @@ public class CheckBox_Condition extends AllWidgetsProjectMain_Class{
 	  assertEquals(true,drv.CheckBox_Expression_readOnly());
   }
   
-  
+  //case relay on other case , so false is right, true is error,but the case description needs to update --sj
   @Test
   public void CheckBox_Condition_Expression_isChecked(){
-	  assertEquals(true,drv.CheckBox_Condition_Expression_isChecked());
+	  assertEquals(false,drv.CheckBox_Condition_Expression_isChecked());
   }
 
   @AfterClass

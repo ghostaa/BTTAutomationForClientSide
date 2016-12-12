@@ -12,9 +12,7 @@ import org.junit.runners.Suite;
 	CheckBox_CSS.class,
 	CheckBox_submit.class,
 	CheckBox_appearance1.class,
-	CheckBox_appearance2.class,
-	CheckBox_submitWithNoData.class,
-	CheckBox_submitWithoutValidation.class,
+	CheckBox_appearance2.class
 }) 
 public class CheckBoxSuite {
 

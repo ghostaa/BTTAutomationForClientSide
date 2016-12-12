@@ -467,12 +467,12 @@ public class CheckBox_PageObject extends Main_Page{
 	@FindBy(id="CheckBox_Condtion_CheckBox_onChnge_copy")
 	private WebElement CheckBox_Condtion_CheckBox_onChnge_copy;
 	
-	@FindBy(id="CheckBox_Condtion_CheckBox_Expression_isChecked")
-	private WebElement CheckBox_Condtion_CheckBox_Expression_isChecked;
+	@FindBy(id="CheckBox_Condtion_CheckBox_InlineScript_copy")
+	private WebElement CheckBox_Condtion_CheckBox_InlineScript_copy;
 
 	public Boolean CheckBox_Condition_Expression_isChecked(){
 		CheckBox_Condtion_CheckBox_onChnge_copy.click();
-		return CheckBox_Condtion_CheckBox_Expression_isChecked.isSelected();
+		return CheckBox_Condtion_CheckBox_InlineScript_copy.isSelected();
 	}
 
 //###############################CheckBox Condition###################################
@@ -1110,13 +1110,11 @@ public class CheckBox_PageObject extends Main_Page{
 	private WebElement CheckBox_ECA_checkBox_styleClass;
 	
 	public int CheckBox_ECA_CheckBox_styleClass(){
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.keyDown(Keys.CONTROL);
+		String[] temp = {"channelSummaryListDate"};
 		CheckBox_ECA_checkBox_Expression.click();
-		String[] temp = {"BTN"};
 		int num = CSS.css_query(CheckBox_ECA_checkBox_styleClass.getAttribute("class"), temp);
-		main_class.keyUp(Keys.CONTROL);
 		return num;
+		
 	}
 	
 	@FindBy(id="CheckBox_ECA_CheckBox_onKeyDown")
@@ -1126,10 +1124,14 @@ public class CheckBox_PageObject extends Main_Page{
 	private WebElement CheckBox_ECA_checkBox_text;
 	
 	public String CheckBox_ECA_CheckBox_Text(){
-		CheckBox_ECA_CheckBox_onKeyDown.click();
-		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
-		main_class.keyDown(Keys.SHIFT);
-		main_class.keyUp(Keys.SHIFT);
+		try {
+			Thread.sleep(1000);
+			CheckBox_ECA_CheckBox_onKeyDown.click();
+			Main_Class.pressAnyKey("A");
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return CheckBox_ECA_checkBox_text.getText();
 	}
 	
@@ -1201,7 +1203,7 @@ public class CheckBox_PageObject extends Main_Page{
 	public void CheckBox_ECA_checkBox_LaunchNew(){
 		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("CheckBox_ECA_CheckBox_onMouseLeave");
-		main_class.widget_moveToElement("CheckBox_ECA_CheckBox_onMouseEnter");
+		//main_class.widget_moveToElement("CheckBox_ECA_CheckBox_onMouseEnter");
 	}
 	
 	public String CheckBox_ECA_mainLink(){
@@ -1211,12 +1213,14 @@ public class CheckBox_PageObject extends Main_Page{
 	@FindBy(id="CheckBox_ECA_CheckBox_onMouseMove")
 	private WebElement CheckBox_ECA_CheckBox_onMouseMove;
 	
-	@FindBy(xpath=".//*[@id='CheckBox_ECA_panel']/tbody/tr[10]/td[3]/label")
+	@FindBy(xpath=".//*[@id='CheckBox_ECA_panel']/tbody/tr[9]/td[3]/div")
+	//@FindBy(xpath="/html/body/div[1]/table/tbody/tr[10]/td[3]/div")
 	private WebElement CheckBox_ECA_CheckBox_actgroup;
 	
 	public String CheckBox_ECA_CheckBox_gone(){
 		AllWidgetsProjectMain_Class main_class = new AllWidgetsProjectMain_Class();
 		main_class.widget_moveToElement("CheckBox_ECA_CheckBox_onMouseMove");
+		//main_class.widget_moveToElement("CheckBox_ECA_CheckBox_actgroup");
 		return CheckBox_ECA_CheckBox_actgroup.getAttribute("style");
 	}
 	
