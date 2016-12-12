@@ -102,20 +102,20 @@ public class VerticalSlider_Properties extends AllWidgetsProjectMain_Class {
 		assertEquals("75%",drv.proLeftlabelCount4());
 		assertEquals("100%",drv.proLeftlabelCount5());
 	}
-	
+/*	
 	@Test
 	public void leftLabel_labels_color(){
 		assertEquals("0",drv.proLeftlabelsLabel1());
 		assertEquals("100",drv.proLeftlabelsLabel2());
 		assertEquals(true,drv.proLeftlabelsColor1().contains("color: rgb(255, 0, 0);"));
 		assertEquals(true,drv.proLeftlabelsColor2().contains("color: rgb(255, 0, 0);"));
-	}
+	}*/
 	
-	@Test
+/*	@Test
 	public void leftRules_count_width1(){
 		//assertEquals("3",drv.proLeftRulesCount1());
 		assertEquals("width: 10px;",drv.proLeftRulesWidth1());
-	}
+	}*/
 	
 	@Test
 	public void leftRules_count_width2(){

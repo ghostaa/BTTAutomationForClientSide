@@ -76,10 +76,10 @@ public class VerticalSlider_condition extends AllWidgetsProjectMain_Class{
 	  assertEquals("test OK. get(id)=verticalSlider01", drv.conExpId());
   }
   
-  @Test
+/*  @Test
   public void conExpSet(){
 	  assertEquals("set(name,value) works", drv.conExpSet());
-  }
+  }*/
   
   @Test
   public void conExpCompare(){

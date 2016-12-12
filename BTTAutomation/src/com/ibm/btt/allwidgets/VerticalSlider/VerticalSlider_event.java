@@ -60,10 +60,10 @@ public class VerticalSlider_event extends AllWidgetsProjectMain_Class{
 	  assertEquals("onKeyUp works", drv.evtOnKeyUP());
   }
   
-  @Test
+/*  @Test
   public void evt_205_OnMouseDown(){
 	  assertEquals("onKeyDown works", drv.evtOnMouseDown());
-  }
+  }*/
    
   @Test
   public void evt_206_OnMouseEnter(){
