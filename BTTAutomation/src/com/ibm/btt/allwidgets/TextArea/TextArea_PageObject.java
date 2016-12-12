@@ -802,14 +802,14 @@ public class TextArea_PageObject extends Main_Page{
 	@FindBy(id="textArea_submit_textArea23")
 	private WebElement Textarea_bigDecimal;
 	
-	@FindBy(id="textArea_submit_button")
+	@FindBy(id="textArea_submit_button01")
 	private WebElement textArea_submit_button;
 	
-	@FindBy(id="textArea_submit_button01")
+/*	@FindBy(id="textArea_submit_button01")
 	private WebElement textArea_submitwithnodata_button;
 	
 	@FindBy(id="textArea_submit_button02")
-	private WebElement textArea_submitwithoutvalidation_button;
+	private WebElement textArea_submitwithoutvalidation_button;*/
 	
 	public String ButtonStatus(){
 		return textArea_submit_button.getAttribute("aria-disabled");
@@ -841,13 +841,13 @@ public class TextArea_PageObject extends Main_Page{
 		textArea_submit_button.click();
 	}
 	
-	public void SubmitWithNoDataButtonClick(){
+/*	public void SubmitWithNoDataButtonClick(){
 		textArea_submitwithnodata_button.click();
 	}
 	
 	public void SubmitWithoutValidationButtonClick(){
 		textArea_submitwithoutvalidation_button.click();
-	}
+	}*/
 	
 	//result page
 	@FindBy(id="showTextArea_submit_textArea01")

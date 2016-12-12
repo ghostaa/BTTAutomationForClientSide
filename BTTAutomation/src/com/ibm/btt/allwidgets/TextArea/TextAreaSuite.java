@@ -12,8 +12,6 @@ import org.junit.runners.Suite;
 	TextArea_appearance1.class,
 	TextArea_appearance2.class,
 	TextArea_Submit.class,
-	TextArea_SubmitWithNoData.class,
-	TextArea_SubmitWithoutValidation.class,
 }) 
 public class TextAreaSuite {
 

@@ -32,11 +32,11 @@ public class TextArea_SubmitWithoutValidation extends Main_Class{
 	    drv.TextArea_submit();
 	  }
 	  
-	  @Test
+	/*  @Test
 	  public void WithoutValidation_120_Button() throws Exception{
 		  assertEquals("true",drv.ButtonStatus());
 		  drv.SubmitWithNoDataButtonClick();
-	  }
+	  }*/
 	  
 	  @Test
 	  public void WithoutValidation_121_Result(){

@@ -31,12 +31,12 @@ public class TextArea_SubmitWithNoData extends Main_Class{
 	    drv.TextArea_widget();
 	    drv.TextArea_submit();
 	  }
-	  
+	/*  
 	  @Test
 	  public void NoData_50_Button() throws Exception{
 		  drv.setMandatoryFalse();
 		  drv.SubmitWithNoDataButtonClick();
-	  }
+	  }*/
 	  
 	  @Test
 	  public void NoData_51_Result(){
